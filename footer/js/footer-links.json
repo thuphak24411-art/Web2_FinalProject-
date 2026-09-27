@@ -1,0 +1,46 @@
+{
+  "columns": [
+    {
+      "title": "Về ECOCycle",
+      "links": [
+        { "label": "Câu chuyện thương hiệu", "href": "/cau-chuyen" },
+        { "label": "Tác động cộng đồng", "href": "/tac-dong" },
+        { "label": "Tuyển dụng", "href": "/tuyen-dung" },
+        { "label": "Liên hệ hợp tác", "href": "/hop-tac" }
+      ]
+    },
+    {
+      "title": "Hỗ trợ khách hàng",
+      "links": [
+        { "label": "Trung tâm trợ giúp", "href": "/tro-giup" },
+        { "label": "Hướng dẫn mua sắm", "href": "/huong-dan-mua-sam" },
+        { "label": "Hướng dẫn sửa chữa", "href": "/huong-dan-sua-chua" },
+        { "label": "Hướng dẫn tái chế", "href": "/huong-dan-tai-che" }
+      ]
+    },
+    {
+      "title": "Chính sách",
+      "links": [
+        { "label": "Chính sách giao hàng", "href": "/chinh-sach-giao-hang" },
+        { "label": "Chính sách đổi trả", "href": "/chinh-sach-doi-tra" },
+        { "label": "Chính sách bảo hành", "href": "/chinh-sach-bao-hanh" },
+        { "label": "Điều khoản sử dụng", "href": "/dieu-khoan" }
+      ]
+    },
+    {
+      "title": "Danh mục",
+      "links": [
+        { "label": "Điện thoại tân trang", "href": "/danh-muc/dien-thoai" },
+        { "label": "Laptop tân trang", "href": "/danh-muc/laptop" },
+        { "label": "Đồ gia dụng tái chế", "href": "/danh-muc/gia-dung" },
+        { "label": "Phụ kiện điện tử", "href": "/danh-muc/phu-kien" }
+      ]
+    }
+  ],
+  "sustainabilityTags": [
+    "Tiêu dùng có trách nhiệm",
+    "Ít hơn rác thải",
+    "Nhiều hơn những cơ hội"
+  ],
+  "copyright": "© 2026 ECOCycle. Tất cả quyền được bảo lưu."
+}

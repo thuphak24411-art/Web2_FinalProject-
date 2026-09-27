@@ -1,0 +1,214 @@
+.site-footer {
+  background: var(--color-surface-2);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  margin-top: var(--space-6);
+  box-shadow: 0 -12px 30px rgba(36, 31, 26, 0.05);
+}
+
+.footer-top {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4) var(--space-5);
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
+  gap: var(--space-5);
+}
+
+.footer-brand .logo-text {
+  font-size: 21px;
+}
+
+.footer-tagline {
+  margin-top: var(--space-3);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--color-dill);
+}
+
+.footer-desc {
+  margin-top: var(--space-2);
+  color: var(--color-ink-muted);
+  font-size: 14px;
+  max-width: 30ch;
+}
+
+.footer-social {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-ink-muted);
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.footer-social a:hover {
+  background: var(--color-dill);
+  border-color: var(--color-dill);
+  color: var(--color-on-brand);
+}
+
+.footer-social svg {
+  width: 17px;
+  height: 17px;
+}
+
+.footer-col h3 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-bottom: var(--space-3);
+}
+
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col a {
+  font-size: 14px;
+  color: var(--color-ink-muted);
+  transition: color var(--transition-fast);
+}
+
+.footer-col a:hover {
+  color: var(--color-dill-dark);
+}
+
+/* Cột đăng ký nhận tin */
+.footer-newsletter h3 {
+  font-size: 13.5px;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.footer-newsletter p {
+  font-size: 13.5px;
+  color: var(--color-ink-muted);
+  margin: 0 0 var(--space-3);
+}
+
+.newsletter {
+  display: flex;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.newsletter input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 14px;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  border: 1px solid var(--color-border-strong);
+  border-right: none;
+  font-size: 13.5px;
+}
+
+.newsletter input::placeholder {
+  color: var(--color-ink-dim);
+}
+
+.newsletter button {
+  padding: 0 18px;
+  background: var(--color-dill);
+  color: var(--color-on-brand);
+  font-weight: 700;
+  font-size: 13.5px;
+  transition: background var(--transition-fast);
+}
+
+.newsletter button:hover {
+  background: var(--color-dill-dark);
+}
+
+.newsletter-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: var(--space-3);
+  font-size: 12.5px;
+  color: var(--color-ink-dim);
+}
+
+.newsletter-consent input {
+  margin-top: 2px;
+  accent-color: var(--color-dill);
+}
+
+.newsletter-note {
+  margin-top: var(--space-2);
+  font-size: 12px;
+  color: var(--color-dill-dark);
+}
+
+/* Dòng dưới cùng */
+.footer-bottom {
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-bottom-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--color-ink-dim);
+}
+
+.footer-tags {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.footer-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-dill-dark);
+  font-weight: 600;
+}
+
+.footer-tag svg {
+  width: 14px;
+  height: 14px;
+  color: var(--color-dill);
+}
+
+@media (max-width: 980px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 620px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+}

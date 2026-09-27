@@ -1,0 +1,258 @@
+.site-header {
+  position: sticky;
+  top: var(--space-3);
+  z-index: 100;
+  padding: 0 var(--space-4);
+}
+
+.header-card {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  height: var(--header-height);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-pop);
+  padding: 0 10px 0 var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.logo-mark {
+  width: 72px;
+  height: 72px;
+}
+
+.logo-text {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  color: var(--color-dill);
+}
+
+/* Nav chính: đúng 4 mục, một hàng duy nhất */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+}
+
+.main-nav a {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--color-ink-muted);
+  padding: 10px 18px;
+  border-radius: var(--radius-pill);
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.main-nav a:hover {
+  color: var(--color-dill-dark);
+  background: var(--color-dill-light);
+}
+
+.main-nav a.is-active {
+  color: var(--color-on-brand);
+  background: var(--color-dill);
+}
+
+/* Hành động bên phải */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--color-ink-muted);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.icon-btn:hover {
+  background: var(--color-dill-light);
+  color: var(--color-dill-dark);
+}
+
+.icon-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.cart-btn {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 4px;
+  border-radius: var(--radius-pill);
+  background: var(--color-cherry);
+  color: var(--color-on-brand);
+  font-size: 10.5px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  line-height: 1;
+  box-shadow: 0 0 0 2px var(--color-surface);
+}
+
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.menu-toggle:hover {
+  background: var(--color-dill-light);
+}
+
+.menu-toggle svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Menu mobile: nav trượt ra dạng drawer, header-card thu gọn */
+@media (max-width: 860px) {
+  .header-card {
+    border-radius: var(--radius-md);
+    padding: 0 6px 0 var(--space-3);
+  }
+
+  .main-nav {
+    position: fixed;
+    top: calc(var(--header-height) + var(--space-3) * 2);
+    left: var(--space-3);
+    right: var(--space-3);
+    background: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-pop);
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--space-2);
+    gap: var(--space-1);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity var(--transition-med), transform var(--transition-med);
+  }
+
+  .main-nav.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .main-nav a {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+
+  .menu-toggle {
+    display: grid;
+  }
+}
+/* =========================
+   SEARCH BOX
+========================= */
+
+.search-box {
+    width: 320px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 0 18px;
+
+    border: 1px solid #E5E1D8;
+    border-radius: 999px;
+
+    background: #FBFAF7;
+
+    color: #6B665C;
+
+    transition: .25s ease;
+}
+
+
+.search-box svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+
+.search-box input {
+
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+
+    color: #333;
+
+}
+
+
+.search-box input::placeholder {
+    color: #8B877F;
+}
+
+
+/* =========================
+   NOTIFICATION
+========================= */
+
+
+.notification-btn {
+    position: relative;
+}
+
+
+.notification-dot {
+
+    position: absolute;
+
+    top: 3px;
+    right: 3px;
+
+    width: 10px;
+    height: 10px;
+
+    background: #D63B32;
+
+    border-radius: 50%;
+
+    border: 2px solid white;
+
+}

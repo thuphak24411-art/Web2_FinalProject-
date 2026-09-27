@@ -1,0 +1,9 @@
+{
+  "mainNav": [
+    { "label": "Mua hàng", "href": "/mua-hang", "active": true },
+    { "label": "Sửa chữa", "href": "/sua-chua" },
+    { "label": "Tái chế", "href": "/tai-che" },
+    { "label": "Về chúng tôi", "href": "/ve-chung-toi" }
+  ],
+  "cartCount": 3
+}
