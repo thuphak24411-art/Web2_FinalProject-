@@ -1,0 +1,31 @@
+<app-header></app-header>
+
+@if (toastMessage()) {
+  <div 
+    class="fixed top-24 right-5 z-50 flex items-center gap-3 px-5 py-3.5 rounded-2xl shadow-xl border backdrop-blur-md transition-all duration-300 animate-bounce"
+    [class.bg-emerald-600]="toastMessage()?.type === 'success'"
+    [class.text-white]="toastMessage()?.type === 'success'"
+    [class.bg-red-600]="toastMessage()?.type === 'error'"
+    [class.text-white]="toastMessage()?.type === 'error'"
+    [class.bg-blue-600]="toastMessage()?.type === 'info'"
+    [class.text-white]="toastMessage()?.type === 'info'"
+  >
+    @if (toastMessage()?.type === 'success') {
+      <i class="bi bi-check-circle-fill text-xl"></i>
+    } @else if (toastMessage()?.type === 'error') {
+      <i class="bi bi-exclamation-triangle-fill text-xl"></i>
+    } @else {
+      <i class="bi bi-info-circle-fill text-xl"></i>
+    }
+    <span class="text-xs font-bold tracking-wide">{{ toastMessage()?.message }}</span>
+    <button (click)="closeToast()" class="ml-2 hover:opacity-75 text-sm font-bold">
+      <i class="bi bi-x-lg"></i>
+    </button>
+  </div>
+}
+
+<main class="min-h-screen pt-[96px] pb-12">
+  <router-outlet></router-outlet>
+</main>
+
+<app-footer></app-footer>

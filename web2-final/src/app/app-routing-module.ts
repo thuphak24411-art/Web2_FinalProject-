@@ -1,0 +1,27 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { ProductList } from './modules/marketplace/components/product-list/product-list';
+import { ProductDetail } from './modules/marketplace/components/product-detail/product-detail';
+import { ProductPost } from './modules/marketplace/components/product-post/product-post';
+import { Cart } from './modules/order/components/cart/cart';
+import { Checkout } from './modules/order/components/checkout/checkout';
+import { OrdersList } from './modules/order/components/orders-list/orders-list';
+import { OrderDetail } from './modules/order/components/order-detail/order-detail';
+
+const routes: Routes = [
+  { path: '', redirectTo: 'mua-hang', pathMatch: 'full' },
+  { path: 'mua-hang', component: ProductList },
+  { path: 'san-pham/:id', component: ProductDetail },
+  { path: 'dang-ban', component: ProductPost },
+  { path: 'gio-hang', component: Cart },
+  { path: 'thanh-toan', component: Checkout },
+  { path: 'don-hang-da-dat', component: OrdersList },
+  { path: 'chi-tiet-don-hang/:id', component: OrderDetail },
+  { path: '**', redirectTo: 'mua-hang' }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
