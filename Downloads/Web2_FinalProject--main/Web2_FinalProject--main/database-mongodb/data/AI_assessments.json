@@ -1,0 +1,2520 @@
+[{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa17d"
+  },
+  "assessmentID": "AI000001",
+  "requestID": "RQ000001",
+  "productInfo": {
+    "productName": "Máy tính bảng Samsung Galaxy Tab S9 WiFi 8GB/128GB",
+    "condition": "Máy đã qua sử dụng 6 tháng, ngoại hình 95%, cảm ứng mượt mà"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "400.000đ",
+  "estimatedResalePrice": "2.300.000đ",
+  "estimatedRecycleCost": "10.000đ",
+  "co2Reduced": "2.1kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2100
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa17e"
+  },
+  "assessmentID": "AI000002",
+  "requestID": "RQ000002",
+  "productInfo": {
+    "productName": "Máy tính bảng Samsung Galaxy Tab S9 5G 12GB/256GB",
+    "condition": "Vỏ máy trầy xước nhẹ viền theo thời gian, mọi chức năng hoạt động hoàn hảo"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "500.000đ",
+  "estimatedResalePrice": "2.500.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "3.0kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3000
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa17f"
+  },
+  "assessmentID": "AI000003",
+  "requestID": "RQ000003",
+  "productInfo": {
+    "productName": "Máy tính bảng TCL Tab 10L Gen 2 WiFi 3GB/32GB",
+    "condition": "Máy đã qua sử dụng 6 tháng, ngoại hình 95%, cảm ứng mượt mà"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "400.000đ",
+  "estimatedResalePrice": "3.700.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "1.8kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1800
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa180"
+  },
+  "assessmentID": "AI000004",
+  "requestID": "RQ000004",
+  "productInfo": {
+    "productName": "Máy tính bảng Lenovo Tab M11 WiFi 4GB/128GB",
+    "condition": "Máy chính chủ sử dụng kỹ, pin còn 92%, màn hình dán cường lực từ đầu"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "300.000đ",
+  "estimatedResalePrice": "4.200.000đ",
+  "estimatedRecycleCost": "10.000đ",
+  "co2Reduced": "2.0kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2000
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa181"
+  },
+  "assessmentID": "AI000005",
+  "requestID": "RQ000005",
+  "productInfo": {
+    "productName": "Máy tính bảng Samsung Galaxy Tab A9+ 5G 4GB/64GB",
+    "condition": "Mặt lưng xước dăm nhẹ do không dùng ốp, màn hình đẹp keng không trầy"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "200.000đ",
+  "estimatedResalePrice": "3.400.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "2.4kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2400
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa182"
+  },
+  "assessmentID": "AI000006",
+  "requestID": "RQ000006",
+  "productInfo": {
+    "productName": "Máy tính bảng Samsung Galaxy Tab S6 Lite 2024 4G 4GB/64GB",
+    "condition": "Ngoại hình mới 98%, máy nguyên bản chưa qua sửa chữa, pin trâu"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "500.000đ",
+  "estimatedResalePrice": "3.300.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "3.3kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3300
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa183"
+  },
+  "assessmentID": "AI000007",
+  "requestID": "RQ000007",
+  "productInfo": {
+    "productName": "Máy tính bảng Xiaomi Redmi Pad SE 8.7 WiFi 4GB/64GB",
+    "condition": "Máy likenew 99%, đầy đủ phụ kiện zin theo máy, bảo hành chính hãng"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "600.000đ",
+  "estimatedResalePrice": "2.400.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "2.0kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2000
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa184"
+  },
+  "assessmentID": "AI000008",
+  "requestID": "RQ000008",
+  "productInfo": {
+    "productName": "Máy tính bảng OPPO Pad 2 WiFi 8GB/256GB",
+    "condition": "Máy likenew 99%, đầy đủ phụ kiện zin theo máy, bảo hành chính hãng"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "400.000đ",
+  "estimatedResalePrice": "1.500.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "3.5kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3500
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa185"
+  },
+  "assessmentID": "AI000009",
+  "requestID": "RQ000009",
+  "productInfo": {
+    "productName": "Máy tính bảng OPPO Pad Air WiFi 4GB/64GB",
+    "condition": "Mặt lưng xước dăm nhẹ do không dùng ốp, màn hình đẹp keng không trầy"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "600.000đ",
+  "estimatedResalePrice": "3.800.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "1.8kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1800
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa186"
+  },
+  "assessmentID": "AI000010",
+  "requestID": "RQ000010",
+  "productInfo": {
+    "productName": "Máy tính bảng iPad Air 6 M2 13 inch 5G 128GB",
+    "condition": "Vỏ máy trầy xước nhẹ viền theo thời gian, mọi chức năng hoạt động hoàn hảo"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "200.000đ",
+  "estimatedResalePrice": "3.500.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "3.2kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3200
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa187"
+  },
+  "assessmentID": "AI000011",
+  "requestID": "RQ000011",
+  "productInfo": {
+    "productName": "Máy tính bảng OPPO Pad Neo WiFi 6GB/128GB",
+    "condition": "Máy likenew 99%, đầy đủ phụ kiện zin theo máy, bảo hành chính hãng"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "300.000đ",
+  "estimatedResalePrice": "2.900.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "2.2kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2200
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa188"
+  },
+  "assessmentID": "AI000012",
+  "requestID": "RQ000012",
+  "productInfo": {
+    "productName": "Máy tính bảng OPPO Pad Neo 4G 8GB/128GB",
+    "condition": "Khung viền hơi sờn sơn nhẹ, chức năng nghe gọi và camera ổn định"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "600.000đ",
+  "estimatedResalePrice": "4.100.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "2.9kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2900
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa189"
+  },
+  "assessmentID": "AI000013",
+  "requestID": "RQ000013",
+  "productInfo": {
+    "productName": "Máy tính bảng iPad Air 6 M2 13 inch WiFi 128GB",
+    "condition": "Máy chính chủ sử dụng kỹ, pin còn 92%, màn hình dán cường lực từ đầu"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "300.000đ",
+  "estimatedResalePrice": "2.300.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "3.1kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3100
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa18a"
+  },
+  "assessmentID": "AI000014",
+  "requestID": "RQ000014",
+  "productInfo": {
+    "productName": "Máy tính bảng iPad Pro M4 13 inch WiFi 256GB",
+    "condition": "Vỏ máy trầy xước nhẹ viền theo thời gian, mọi chức năng hoạt động hoàn hảo"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "600.000đ",
+  "estimatedResalePrice": "2.400.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "3.0kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3000
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa18b"
+  },
+  "assessmentID": "AI000015",
+  "requestID": "RQ000015",
+  "productInfo": {
+    "productName": "Máy tính bảng iPad Pro M4 13 inch 5G 512GB",
+    "condition": "Mặt lưng xước dăm nhẹ do không dùng ốp, màn hình đẹp keng không trầy"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "200.000đ",
+  "estimatedResalePrice": "1.800.000đ",
+  "estimatedRecycleCost": "10.000đ",
+  "co2Reduced": "1.9kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1900
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa18c"
+  },
+  "assessmentID": "AI000016",
+  "requestID": "RQ000016",
+  "productInfo": {
+    "productName": "Máy tính bảng Xiaomi Redmi Pad SE 8.7 WiFi 6GB/128GB",
+    "condition": "Khung viền hơi sờn sơn nhẹ, chức năng nghe gọi và camera ổn định"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "600.000đ",
+  "estimatedResalePrice": "3.400.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "3.3kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3300
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa18d"
+  },
+  "assessmentID": "AI000017",
+  "requestID": "RQ000017",
+  "productInfo": {
+    "productName": "Máy tính bảng iPad 9 4G 256GB",
+    "condition": "Máy chính chủ sử dụng kỹ, pin còn 92%, màn hình dán cường lực từ đầu"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "300.000đ",
+  "estimatedResalePrice": "4.000.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "1.5kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1500
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa18e"
+  },
+  "assessmentID": "AI000018",
+  "requestID": "RQ000018",
+  "productInfo": {
+    "productName": "Máy tính bảng iPad Pro M4 13 inch 5G 256GB",
+    "condition": "Máy chính chủ sử dụng kỹ, pin còn 92%, màn hình dán cường lực từ đầu"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "200.000đ",
+  "estimatedResalePrice": "3.800.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "3.0kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3000
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa18f"
+  },
+  "assessmentID": "AI000019",
+  "requestID": "RQ000019",
+  "productInfo": {
+    "productName": "Máy tính bảng iPad Air M3 13 inch WiFi 128GB",
+    "condition": "Vỏ máy trầy xước nhẹ viền theo thời gian, mọi chức năng hoạt động hoàn hảo"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "400.000đ",
+  "estimatedResalePrice": "2.700.000đ",
+  "estimatedRecycleCost": "10.000đ",
+  "co2Reduced": "2.3kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2300
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa190"
+  },
+  "assessmentID": "AI000020",
+  "requestID": "RQ000020",
+  "productInfo": {
+    "productName": "Máy tính bảng Xiaomi Redmi Pad 2 WiFi 4GB/128GB",
+    "condition": "Máy likenew 99%, đầy đủ phụ kiện zin theo máy, bảo hành chính hãng"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "600.000đ",
+  "estimatedResalePrice": "2.000.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "1.2kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1200
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa191"
+  },
+  "assessmentID": "AI000021",
+  "requestID": "RQ000021",
+  "productInfo": {
+    "productName": "Điện thoại Mobell M239 4G",
+    "condition": "Ngoại hình 90%, trầy nhẹ 4 góc viền, hiệu năng hoạt động mượt mà"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "200.000đ",
+  "estimatedResalePrice": "4.300.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "2.1kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2100
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa192"
+  },
+  "assessmentID": "AI000022",
+  "requestID": "RQ000022",
+  "productInfo": {
+    "productName": "Điện thoại Mobell F209",
+    "condition": "Máy đã qua sử dụng 6 tháng, ngoại hình 95%, cảm ứng mượt mà"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "300.000đ",
+  "estimatedResalePrice": "4.300.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "3.4kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3400
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa193"
+  },
+  "assessmentID": "AI000023",
+  "requestID": "RQ000023",
+  "productInfo": {
+    "productName": "Điện thoại Mobell M539",
+    "condition": "Máy đã qua sử dụng 6 tháng, ngoại hình 95%, cảm ứng mượt mà"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "200.000đ",
+  "estimatedResalePrice": "1.600.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "2.3kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2300
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa194"
+  },
+  "assessmentID": "AI000024",
+  "requestID": "RQ000024",
+  "productInfo": {
+    "productName": "Điện thoại Mobell M331 4G",
+    "condition": "Máy đã qua sử dụng 6 tháng, ngoại hình 95%, cảm ứng mượt mà"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "200.000đ",
+  "estimatedResalePrice": "2.100.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "2.3kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2300
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa195"
+  },
+  "assessmentID": "AI000025",
+  "requestID": "RQ000025",
+  "productInfo": {
+    "productName": "Điện thoại Mobell F309 4G",
+    "condition": "Máy likenew 99%, đầy đủ phụ kiện zin theo máy, bảo hành chính hãng"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "500.000đ",
+  "estimatedResalePrice": "2.700.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "2.6kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2600
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa196"
+  },
+  "assessmentID": "AI000026",
+  "requestID": "RQ000026",
+  "productInfo": {
+    "productName": "Điện thoại Samsung Galaxy Z Flip6 5G 12GB/512GB",
+    "condition": "Máy đã qua sử dụng 6 tháng, ngoại hình 95%, cảm ứng mượt mà"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "200.000đ",
+  "estimatedResalePrice": "3.800.000đ",
+  "estimatedRecycleCost": "10.000đ",
+  "co2Reduced": "2.0kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2000
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa197"
+  },
+  "assessmentID": "AI000027",
+  "requestID": "RQ000027",
+  "productInfo": {
+    "productName": "Điện thoại Masstel Lux 10",
+    "condition": "Máy chính chủ sử dụng kỹ, pin còn 92%, màn hình dán cường lực từ đầu"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "600.000đ",
+  "estimatedResalePrice": "2.500.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "1.2kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1200
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa198"
+  },
+  "assessmentID": "AI000028",
+  "requestID": "RQ000028",
+  "productInfo": {
+    "productName": "Điện thoại Samsung Galaxy S24 5G 8GB/256GB",
+    "condition": "Máy đã qua sử dụng 6 tháng, ngoại hình 95%, cảm ứng mượt mà"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "300.000đ",
+  "estimatedResalePrice": "4.400.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "1.7kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1700
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa199"
+  },
+  "assessmentID": "AI000029",
+  "requestID": "RQ000029",
+  "productInfo": {
+    "productName": "Điện thoại Xiaomi 13 5G",
+    "condition": "Khung viền hơi sờn sơn nhẹ, chức năng nghe gọi và camera ổn định"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "200.000đ",
+  "estimatedResalePrice": "2.800.000đ",
+  "estimatedRecycleCost": "10.000đ",
+  "co2Reduced": "3.5kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3500
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa19a"
+  },
+  "assessmentID": "AI000030",
+  "requestID": "RQ000030",
+  "productInfo": {
+    "productName": "Điện thoại Samsung Galaxy S23 Ultra 5G 12GB/512GB",
+    "condition": "Máy đã qua sử dụng 6 tháng, ngoại hình 95%, cảm ứng mượt mà"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "500.000đ",
+  "estimatedResalePrice": "3.700.000đ",
+  "estimatedRecycleCost": "10.000đ",
+  "co2Reduced": "1.2kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1200
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa19b"
+  },
+  "assessmentID": "AI000031",
+  "requestID": "RQ000031",
+  "productInfo": {
+    "productName": "Điện thoại Xiaomi 12 5G",
+    "condition": "Máy chính chủ sử dụng kỹ, pin còn 92%, màn hình dán cường lực từ đầu"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "300.000đ",
+  "estimatedResalePrice": "4.300.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "3.1kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3100
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa19c"
+  },
+  "assessmentID": "AI000032",
+  "requestID": "RQ000032",
+  "productInfo": {
+    "productName": "Điện thoại Xiaomi 12T 5G 256GB",
+    "condition": "Máy likenew 99%, đầy đủ phụ kiện zin theo máy, bảo hành chính hãng"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "200.000đ",
+  "estimatedResalePrice": "1.700.000đ",
+  "estimatedRecycleCost": "10.000đ",
+  "co2Reduced": "1.1kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1100
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa19d"
+  },
+  "assessmentID": "AI000033",
+  "requestID": "RQ000033",
+  "productInfo": {
+    "productName": "Điện thoại Xiaomi 12T 5G 128GB",
+    "condition": "Ngoại hình mới 98%, máy nguyên bản chưa qua sửa chữa, pin trâu"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "200.000đ",
+  "estimatedResalePrice": "3.400.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "3.0kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3000
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa19e"
+  },
+  "assessmentID": "AI000034",
+  "requestID": "RQ000034",
+  "productInfo": {
+    "productName": "Điện thoại Masstel IZI 10",
+    "condition": "Khung viền hơi sờn sơn nhẹ, chức năng nghe gọi và camera ổn định"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "600.000đ",
+  "estimatedResalePrice": "1.800.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "3.0kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3000
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa19f"
+  },
+  "assessmentID": "AI000035",
+  "requestID": "RQ000035",
+  "productInfo": {
+    "productName": "Điện thoại Masstel Fami 60S 4G",
+    "condition": "Mặt lưng xước dăm nhẹ do không dùng ốp, màn hình đẹp keng không trầy"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "600.000đ",
+  "estimatedResalePrice": "3.200.000đ",
+  "estimatedRecycleCost": "10.000đ",
+  "co2Reduced": "3.2kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3200
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1a0"
+  },
+  "assessmentID": "AI000036",
+  "requestID": "RQ000036",
+  "productInfo": {
+    "productName": "Điện thoại Masstel IZI T6 4G",
+    "condition": "Máy chính chủ sử dụng kỹ, pin còn 92%, màn hình dán cường lực từ đầu"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "500.000đ",
+  "estimatedResalePrice": "4.100.000đ",
+  "estimatedRecycleCost": "10.000đ",
+  "co2Reduced": "1.5kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1500
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1a1"
+  },
+  "assessmentID": "AI000037",
+  "requestID": "RQ000037",
+  "productInfo": {
+    "productName": "Điện thoại Masstel Fami 50 4G",
+    "condition": "Vỏ máy trầy xước nhẹ viền theo thời gian, mọi chức năng hoạt động hoàn hảo"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "600.000đ",
+  "estimatedResalePrice": "3.000.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "3.5kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3500
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1a2"
+  },
+  "assessmentID": "AI000038",
+  "requestID": "RQ000038",
+  "productInfo": {
+    "productName": "Điện thoại OPPO Find N3 Flip 5G 12GB/256GB Hồng",
+    "condition": "Ngoại hình 90%, trầy nhẹ 4 góc viền, hiệu năng hoạt động mượt mà"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "500.000đ",
+  "estimatedResalePrice": "3.400.000đ",
+  "estimatedRecycleCost": "10.000đ",
+  "co2Reduced": "3.2kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3200
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1a3"
+  },
+  "assessmentID": "AI000039",
+  "requestID": "RQ000039",
+  "productInfo": {
+    "productName": "Điện thoại OPPO Find N3 Flip 5G 12GB/256GB Đen/Vàng đồng",
+    "condition": "Máy chính chủ sử dụng kỹ, pin còn 92%, màn hình dán cường lực từ đầu"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "500.000đ",
+  "estimatedResalePrice": "2.000.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "2.8kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2800
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1a4"
+  },
+  "assessmentID": "AI000040",
+  "requestID": "RQ000040",
+  "productInfo": {
+    "productName": "Điện thoại Xiaomi 13 Lite 5G",
+    "condition": "Máy likenew 99%, đầy đủ phụ kiện zin theo máy, bảo hành chính hãng"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "500.000đ",
+  "estimatedResalePrice": "3.400.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "2.0kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2000
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1a5"
+  },
+  "assessmentID": "AI000041",
+  "requestID": "RQ000041",
+  "productInfo": {
+    "productName": "fdsàđầ",
+    "condition": "Ngoại hình mới 98%, máy nguyên bản chưa qua sửa chữa, pin trâu"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "200.000đ",
+  "estimatedResalePrice": "3.400.000đ",
+  "estimatedRecycleCost": "10.000đ",
+  "co2Reduced": "3.3kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3300
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1a6"
+  },
+  "assessmentID": "AI000042",
+  "requestID": "RQ000042",
+  "productInfo": {
+    "productName": "sadfsadfádf",
+    "condition": "Máy đã qua sử dụng 6 tháng, ngoại hình 95%, cảm ứng mượt mà"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "600.000đ",
+  "estimatedResalePrice": "3.400.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "1.7kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1700
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1a7"
+  },
+  "assessmentID": "AI000043",
+  "requestID": "RQ000043",
+  "productInfo": {
+    "productName": "Laptop Samsung XE340XDA-KA1VN (N4500, 4GB, 32GB, HD, ChromeOS)",
+    "condition": "Máy likenew 99%, đầy đủ phụ kiện zin theo máy, bảo hành chính hãng"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "400.000đ",
+  "estimatedResalePrice": "3.600.000đ",
+  "estimatedRecycleCost": "10.000đ",
+  "co2Reduced": "2.4kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2400
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1a8"
+  },
+  "assessmentID": "AI000044",
+  "requestID": "RQ000044",
+  "productInfo": {
+    "productName": "Laptop Apple MacBook Air 15 inch M2 8GB/256GB Sạc 35W",
+    "condition": "Khung viền hơi sờn sơn nhẹ, chức năng nghe gọi và camera ổn định"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "300.000đ",
+  "estimatedResalePrice": "1.900.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "2.1kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2100
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1a9"
+  },
+  "assessmentID": "AI000045",
+  "requestID": "RQ000045",
+  "productInfo": {
+    "productName": "Laptop Samsung XE310XDA-KA1VN (N4500, 4GB, 32GB, HD, ChromeOS)",
+    "condition": "Máy đã qua sử dụng 6 tháng, ngoại hình 95%, cảm ứng mượt mà"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "500.000đ",
+  "estimatedResalePrice": "3.500.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "3.1kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3100
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1aa"
+  },
+  "assessmentID": "AI000046",
+  "requestID": "RQ000046",
+  "productInfo": {
+    "productName": "Laptop Acer Gaming Nitro 5 Tiger AN515 58 52SP - NH.QFHSV.001 (i5 12500H, 8GB, 512GB, RTX 3050 4GB, Full HD 144Hz, Win11)",
+    "condition": "Máy đã qua sử dụng 6 tháng, ngoại hình 95%, cảm ứng mượt mà"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "400.000đ",
+  "estimatedResalePrice": "4.500.000đ",
+  "estimatedRecycleCost": "10.000đ",
+  "co2Reduced": "1.2kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1200
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1ab"
+  },
+  "assessmentID": "AI000047",
+  "requestID": "RQ000047",
+  "productInfo": {
+    "productName": "Laptop Acer Gaming Nitro AN515 58 773Y i7 12700H/16GB/512GB/4GB RTX3050Ti/144Hz/Win11 (NH.QFKSV.001.16G)",
+    "condition": "Mặt lưng xước dăm nhẹ do không dùng ốp, màn hình đẹp keng không trầy"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "600.000đ",
+  "estimatedResalePrice": "1.800.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "1.9kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1900
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1ac"
+  },
+  "assessmentID": "AI000048",
+  "requestID": "RQ000048",
+  "productInfo": {
+    "productName": "Laptop MacBook Air 13 inch M1 8GB/256GB",
+    "condition": "Máy chính chủ sử dụng kỹ, pin còn 92%, màn hình dán cường lực từ đầu"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "300.000đ",
+  "estimatedResalePrice": "4.000.000đ",
+  "estimatedRecycleCost": "10.000đ",
+  "co2Reduced": "2.0kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2000
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1ad"
+  },
+  "assessmentID": "AI000049",
+  "requestID": "RQ000049",
+  "productInfo": {
+    "productName": "Laptop HP Pavilion 15 eg2088TU - 7C0R0PA (i7 1260P, 16GB, 512GB, Full HD, Win11)",
+    "condition": "Ngoại hình 90%, trầy nhẹ 4 góc viền, hiệu năng hoạt động mượt mà"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "400.000đ",
+  "estimatedResalePrice": "2.200.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "1.7kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1700
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1ae"
+  },
+  "assessmentID": "AI000050",
+  "requestID": "RQ000050",
+  "productInfo": {
+    "productName": "Laptop HP Pavilion 15 eg3091TU - 8C5L2PA (i7 1355U, 16GB, 512GB, Full HD, Win11)",
+    "condition": "Máy likenew 99%, đầy đủ phụ kiện zin theo máy, bảo hành chính hãng"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "500.000đ",
+  "estimatedResalePrice": "2.200.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "3.5kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3500
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1af"
+  },
+  "assessmentID": "AI000051",
+  "requestID": "RQ000051",
+  "productInfo": {
+    "productName": "Laptop Asus Vivobook S 16 OLED S5606MA - MX050W (Ultra 5 125H, 16GB, 512GB, 3.2K OLED 120Hz, Win11)",
+    "condition": "Máy đã qua sử dụng 6 tháng, ngoại hình 95%, cảm ứng mượt mà"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "500.000đ",
+  "estimatedResalePrice": "1.800.000đ",
+  "estimatedRecycleCost": "10.000đ",
+  "co2Reduced": "3.3kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3300
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1b0"
+  },
+  "assessmentID": "AI000052",
+  "requestID": "RQ000052",
+  "productInfo": {
+    "productName": "Laptop Apple MacBook Air 13 inch M2 8GB/256GB",
+    "condition": "Máy likenew 99%, đầy đủ phụ kiện zin theo máy, bảo hành chính hãng"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "200.000đ",
+  "estimatedResalePrice": "3.000.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "1.7kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1700
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1b1"
+  },
+  "assessmentID": "AI000053",
+  "requestID": "RQ000053",
+  "productInfo": {
+    "productName": "Laptop Apple MacBook Air 13 inch M3 8GB/256GB",
+    "condition": "Ngoại hình 90%, trầy nhẹ 4 góc viền, hiệu năng hoạt động mượt mà"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "400.000đ",
+  "estimatedResalePrice": "4.200.000đ",
+  "estimatedRecycleCost": "10.000đ",
+  "co2Reduced": "2.9kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2900
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1b2"
+  },
+  "assessmentID": "AI000054",
+  "requestID": "RQ000054",
+  "productInfo": {
+    "productName": "Laptop Acer Gaming Nitro 5 AN515 57 5669 i5 11400H/8GB/512GB/144Hz/4GB GTX1650/Win11 (NH.QEHSV.001)",
+    "condition": "Khung viền hơi sờn sơn nhẹ, chức năng nghe gọi và camera ổn định"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "300.000đ",
+  "estimatedResalePrice": "2.100.000đ",
+  "estimatedRecycleCost": "10.000đ",
+  "co2Reduced": "1.4kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1400
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1b3"
+  },
+  "assessmentID": "AI000055",
+  "requestID": "RQ000055",
+  "productInfo": {
+    "productName": "Laptop Asus Vivobook 15 OLED A1505VA - MA467W (i5 13500H, 16GB, 512GB, 2.8K OLED 120Hz, Win11)",
+    "condition": "Vỏ máy trầy xước nhẹ viền theo thời gian, mọi chức năng hoạt động hoàn hảo"
+  },
+  "recommendedAction": "Resale",
+  "estimatedRepairCost": "300.000đ",
+  "estimatedResalePrice": "1.500.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "3.0kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3000
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1b4"
+  },
+  "assessmentID": "AI000056",
+  "requestID": "RQ000056",
+  "productInfo": {
+    "productName": "Laptop Acer Aspire 3 A315 59 5283 - NX.K6TSV.00B (i5 1235U, 8GB, 512GB, Full HD, Win11)",
+    "condition": "Màn hình bị nứt kính mặt ngoài, cảm ứng và hiển thị bên trong vẫn bình thường"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "1.300.000đ",
+  "estimatedResalePrice": "700.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "2.9kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2900
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1b5"
+  },
+  "assessmentID": "AI000057",
+  "requestID": "RQ000057",
+  "productInfo": {
+    "productName": "Laptop HP Pavilion 15 eg3098TU i3 1315U/8GB/256GB/Win11 (8C5L9PA)",
+    "condition": "Chai pin nặng (dung lượng pin dưới 70%), cắm sạc pin tụt rất nhanh"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "400.000đ",
+  "estimatedResalePrice": "1.200.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "3.0kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3000
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1b6"
+  },
+  "assessmentID": "AI000058",
+  "requestID": "RQ000058",
+  "productInfo": {
+    "productName": "Laptop Apple MacBook Air 15 inch M3 8GB/256GB",
+    "condition": "Hỏng khay SIM không nhận sóng, Bluetooth và Wifi hoạt động bình thường"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "500.000đ",
+  "estimatedResalePrice": "500.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "2.3kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2300
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1b7"
+  },
+  "assessmentID": "AI000059",
+  "requestID": "RQ000059",
+  "productInfo": {
+    "productName": "Laptop HP Envy X360 14 fa0050AU - A29H8PA (R5 8640HS, 16GB, 512GB, 2.8K OLED, Cảm ứng, Win11)",
+    "condition": "Hỏng phím nguồn và phím âm lượng vật lý, nút bấm bị kẹt cứng"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "500.000đ",
+  "estimatedResalePrice": "1.100.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "1.6kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1600
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1b8"
+  },
+  "assessmentID": "AI000060",
+  "requestID": "RQ000060",
+  "productInfo": {
+    "productName": "Laptop Acer Swift Go 14 AI 73 53X7 - NX.KSLSV.001 (Ultra 5 125H, 16GB, 512GB, 2.8K 120Hz, Win11)",
+    "condition": "Hỏng cụm cảm biến tiệm cận, khi nghe gọi màn hình không tự tắt"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "1.200.000đ",
+  "estimatedResalePrice": "1.800.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "3.2kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3200
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1b9"
+  },
+  "assessmentID": "AI000061",
+  "requestID": "RQ000061",
+  "productInfo": {
+    "productName": "Laptop Lenovo V15 G5 IRL - 83HF0000VN (Core 5 120U, 16GGB, 512GB, Full HD, Win11)",
+    "condition": "Hỏng cụm rung, máy không phản hồi khi bật chế độ rung"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "1.100.000đ",
+  "estimatedResalePrice": "1.800.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "1.9kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1900
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1ba"
+  },
+  "assessmentID": "AI000062",
+  "requestID": "RQ000062",
+  "productInfo": {
+    "productName": "Laptop Apple MacBook Pro 14 inch M3 8GB/512GB",
+    "condition": "Pin bị phồng nhẹ làm hở nắp lưng, cần thay pin mới gấp"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "800.000đ",
+  "estimatedResalePrice": "600.000đ",
+  "estimatedRecycleCost": "40.000đ",
+  "co2Reduced": "2.7kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2700
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1bb"
+  },
+  "assessmentID": "AI000063",
+  "requestID": "RQ000063",
+  "productInfo": {
+    "productName": "iMac 24 inch 2021 4.5K M1/256GB/8GB/8-core GPU",
+    "condition": "Loa ngoài bị rè nặng khi mở âm lượng trên 70%, âm thanh nghẹt"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "400.000đ",
+  "estimatedResalePrice": "1.800.000đ",
+  "estimatedRecycleCost": "40.000đ",
+  "co2Reduced": "1.7kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1700
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1bc"
+  },
+  "assessmentID": "AI000064",
+  "requestID": "RQ000064",
+  "productInfo": {
+    "productName": "iMac 24 inch 4.5K M3 8GB/256GB",
+    "condition": "Hỏng IC Wifi, nút bật Wifi bị ẩn xám không kết nối được"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "1.300.000đ",
+  "estimatedResalePrice": "1.300.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "1.7kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1700
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1bd"
+  },
+  "assessmentID": "AI000065",
+  "requestID": "RQ000065",
+  "productInfo": {
+    "productName": "ASUS AIO A3402WBAK i5 1235U/8GB/512GB/23.8 inchFullHD/WLKB/WLMouse/Win11 (WPC049W)",
+    "condition": "Hỏng phím nguồn và phím âm lượng vật lý, nút bấm bị kẹt cứng"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "400.000đ",
+  "estimatedResalePrice": "1.100.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "4.0kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 4000
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1be"
+  },
+  "assessmentID": "AI000066",
+  "requestID": "RQ000066",
+  "productInfo": {
+    "productName": "SingPC R33B482SF-W R3 3200G/8GB/256GB/Bàn Phím/Chuột/Win11Pro",
+    "condition": "Màn hình bị đốm sáng nhỏ và có kẻ sọc đứng nhẹ góc phải"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "600.000đ",
+  "estimatedResalePrice": "1.600.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "3.0kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3000
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1bf"
+  },
+  "assessmentID": "AI000067",
+  "requestID": "RQ000067",
+  "productInfo": {
+    "productName": "SingPC R54M495SF-W R5 4650G/16GB/512GB/Bàn Phím/Chuột/Win11Pro",
+    "condition": "Cảm ứng bị liệt 1 hàng ngang ở giữa màn hình"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "900.000đ",
+  "estimatedResalePrice": "800.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "3.9kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3900
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1c0"
+  },
+  "assessmentID": "AI000068",
+  "requestID": "RQ000068",
+  "productInfo": {
+    "productName": "SingPC i512H682SF-W i5 12450H/8GB/256GB/Bàn phím/Chuột/Win11Pro",
+    "condition": "Hỏng chân sạc Type-C/Lightning, sạc lúc nhận lúc không hoặc chập chờn"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "1.200.000đ",
+  "estimatedResalePrice": "900.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "3.8kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3800
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1c1"
+  },
+  "assessmentID": "AI000069",
+  "requestID": "RQ000069",
+  "productInfo": {
+    "productName": "SingPC i713H695SF-W i7 13620H/16GB/512GB/Bàn phím/Chuột/Win11Pro",
+    "condition": "Hỏng cụm rung, máy không phản hồi khi bật chế độ rung"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "1.400.000đ",
+  "estimatedResalePrice": "1.300.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "3.1kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3100
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1c2"
+  },
+  "assessmentID": "AI000070",
+  "requestID": "RQ000070",
+  "productInfo": {
+    "productName": "ASUS AIO V440VAK i3 1315U/8GB/512GB/23.8 inchFull HD/Bàn phím/Chuột/Win11 (WPC066W)",
+    "condition": "Hỏng chân sạc Type-C/Lightning, sạc lúc nhận lúc không hoặc chập chờn"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "600.000đ",
+  "estimatedResalePrice": "500.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "3.1kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3100
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1c3"
+  },
+  "assessmentID": "AI000071",
+  "requestID": "RQ000071",
+  "productInfo": {
+    "productName": "SingPC AIO M24Ei5129M5-W i5 12400/16GB/512GB/23.8 inch FullHD/Bàn Phím/Chuột/Win11Pro",
+    "condition": "Camera sau bị mờ kính che, không lấy nét tự động được"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "1.100.000đ",
+  "estimatedResalePrice": "1.800.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "2.6kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2600
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1c4"
+  },
+  "assessmentID": "AI000072",
+  "requestID": "RQ000072",
+  "productInfo": {
+    "productName": "ROSA Crystal A10 Ryzen 3 3200G/8GB/256GB/Win11",
+    "condition": "Hỏng IC Wifi, nút bật Wifi bị ẩn xám không kết nối được"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "1.500.000đ",
+  "estimatedResalePrice": "700.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "1.9kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1900
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1c5"
+  },
+  "assessmentID": "AI000073",
+  "requestID": "RQ000073",
+  "productInfo": {
+    "productName": "MiniPC SingPC i12450H682-W i5 12450H/8GB/256GB/Win11Pro",
+    "condition": "Camera sau bị mờ kính che, không lấy nét tự động được"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "700.000đ",
+  "estimatedResalePrice": "1.400.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "2.5kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2500
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1c6"
+  },
+  "assessmentID": "AI000074",
+  "requestID": "RQ000074",
+  "productInfo": {
+    "productName": "SingPC AIO M24N18M2-W N100/8GB/256GB/23.8 inch Full HD/Bàn Phím/Chuột/Win11Pro",
+    "condition": "Màn hình bị ám màu sọc dọc nhẹ, cần thay cụm màn hình mới"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "1.400.000đ",
+  "estimatedResalePrice": "1.600.000đ",
+  "estimatedRecycleCost": "40.000đ",
+  "co2Reduced": "2.7kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2700
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1c7"
+  },
+  "assessmentID": "AI000075",
+  "requestID": "RQ000075",
+  "productInfo": {
+    "productName": "SingPC AIO M24N19M5-W N100/16GB/512GB/23.8 inch Full HD/Bàn Phím/Chuột/Win11Pro",
+    "condition": "Chai pin nặng (dung lượng pin dưới 70%), cắm sạc pin tụt rất nhanh"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "400.000đ",
+  "estimatedResalePrice": "1.100.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "2.5kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2500
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1c8"
+  },
+  "assessmentID": "AI000076",
+  "requestID": "RQ000076",
+  "productInfo": {
+    "productName": "ROSA Crystal I10 i3 13100/8GB/256GB/Win11 Pro",
+    "condition": "Cảm ứng bị liệt 1 hàng ngang ở giữa màn hình"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "900.000đ",
+  "estimatedResalePrice": "1.700.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "2.7kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2700
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1c9"
+  },
+  "assessmentID": "AI000077",
+  "requestID": "RQ000077",
+  "productInfo": {
+    "productName": "ROSA x ASUS Rezo I121 Core i5 12400F/16GB/500GB/RTX 5060 8GB/Win11Pro",
+    "condition": "Máy bị hỏng micro đàm thoại, nói bên kia nghe rất nhỏ hoặc bị nhiễu"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "1.200.000đ",
+  "estimatedResalePrice": "800.000đ",
+  "estimatedRecycleCost": "40.000đ",
+  "co2Reduced": "2.3kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2300
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1ca"
+  },
+  "assessmentID": "AI000078",
+  "requestID": "RQ000078",
+  "productInfo": {
+    "productName": "MiniPC SingPC NUC U512U695-W Ultra 5 125U/16GB/512GB/Win11Pro",
+    "condition": "Hỏng khay SIM không nhận sóng, Bluetooth và Wifi hoạt động bình thường"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "500.000đ",
+  "estimatedResalePrice": "1.500.000đ",
+  "estimatedRecycleCost": "40.000đ",
+  "co2Reduced": "3.3kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3300
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1cb"
+  },
+  "assessmentID": "AI000079",
+  "requestID": "RQ000079",
+  "productInfo": {
+    "productName": "ASUS V500MV i3 1315U/8GB/512GB/Bàn Phím/Chuột/Win11 (V500MV-31315U053W)",
+    "condition": "Chai pin nặng (dung lượng pin dưới 70%), cắm sạc pin tụt rất nhanh"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "600.000đ",
+  "estimatedResalePrice": "1.500.000đ",
+  "estimatedRecycleCost": "40.000đ",
+  "co2Reduced": "3.3kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3300
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1cc"
+  },
+  "assessmentID": "AI000080",
+  "requestID": "RQ000080",
+  "productInfo": {
+    "productName": "SingPC R53A595SF-W R5 3400G/16GB/512GB/Bàn phím/Chuột/Win11Pro",
+    "condition": "Chai pin nặng (dung lượng pin dưới 70%), cắm sạc pin tụt rất nhanh"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "1.100.000đ",
+  "estimatedResalePrice": "800.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "2.2kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2200
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1cd"
+  },
+  "assessmentID": "AI000081",
+  "requestID": "RQ000081",
+  "productInfo": {
+    "productName": "ROSA Rezo I30 i7 13700F/32GB/512GB/RTX4060 8GB/Win 11 Pro",
+    "condition": "Chai pin nặng (dung lượng pin dưới 70%), cắm sạc pin tụt rất nhanh"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "600.000đ",
+  "estimatedResalePrice": "1.100.000đ",
+  "estimatedRecycleCost": "40.000đ",
+  "co2Reduced": "1.6kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1600
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1ce"
+  },
+  "assessmentID": "AI000082",
+  "requestID": "RQ000082",
+  "productInfo": {
+    "productName": "iMac 24 inch M4 16GB/256GB",
+    "condition": "Hỏng IC Wifi, nút bật Wifi bị ẩn xám không kết nối được"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "1.200.000đ",
+  "estimatedResalePrice": "1.600.000đ",
+  "estimatedRecycleCost": "40.000đ",
+  "co2Reduced": "2.1kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2100
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1cf"
+  },
+  "assessmentID": "AI000083",
+  "requestID": "RQ000083",
+  "productInfo": {
+    "productName": "Loa Kéo Bluetooth Mozard L0629K Đen Xám",
+    "condition": "Hỏng chân sạc Type-C/Lightning, sạc lúc nhận lúc không hoặc chập chờn"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "900.000đ",
+  "estimatedResalePrice": "700.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "2.9kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2900
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1d0"
+  },
+  "assessmentID": "AI000084",
+  "requestID": "RQ000084",
+  "productInfo": {
+    "productName": "Loa Bluetooth AVA+ Led K09",
+    "condition": "Pin bị phồng nhẹ làm hở nắp lưng, cần thay pin mới gấp"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "600.000đ",
+  "estimatedResalePrice": "600.000đ",
+  "estimatedRecycleCost": "40.000đ",
+  "co2Reduced": "2.7kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2700
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1d1"
+  },
+  "assessmentID": "AI000085",
+  "requestID": "RQ000085",
+  "productInfo": {
+    "productName": "Loa Bluetooth AVA+ FreeGo F13",
+    "condition": "Hỏng khay SIM không nhận sóng, Bluetooth và Wifi hoạt động bình thường"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "900.000đ",
+  "estimatedResalePrice": "700.000đ",
+  "estimatedRecycleCost": "40.000đ",
+  "co2Reduced": "1.8kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 1800
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1d2"
+  },
+  "assessmentID": "AI000086",
+  "requestID": "RQ000086",
+  "productInfo": {
+    "productName": "Loa Bluetooth Rezo Home Series One",
+    "condition": "Hỏng cụm rung, máy không phản hồi khi bật chế độ rung"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "1.400.000đ",
+  "estimatedResalePrice": "1.800.000đ",
+  "estimatedRecycleCost": "40.000đ",
+  "co2Reduced": "2.8kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2800
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1d3"
+  },
+  "assessmentID": "AI000087",
+  "requestID": "RQ000087",
+  "productInfo": {
+    "productName": "Loa Bluetooth AVA+ Go Z09",
+    "condition": "Hỏng khay SIM không nhận sóng, Bluetooth và Wifi hoạt động bình thường"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "1.000.000đ",
+  "estimatedResalePrice": "1.400.000đ",
+  "estimatedRecycleCost": "40.000đ",
+  "co2Reduced": "2.6kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2600
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1d4"
+  },
+  "assessmentID": "AI000088",
+  "requestID": "RQ000088",
+  "productInfo": {
+    "productName": "Loa Bluetooth Rezo Light Motion K118",
+    "condition": "Màn hình bị nứt kính mặt ngoài, cảm ứng và hiển thị bên trong vẫn bình thường"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "700.000đ",
+  "estimatedResalePrice": "500.000đ",
+  "estimatedRecycleCost": "40.000đ",
+  "co2Reduced": "2.7kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2700
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1d5"
+  },
+  "assessmentID": "AI000089",
+  "requestID": "RQ000089",
+  "productInfo": {
+    "productName": "Loa Bluetooth Rezo Home Series Bag",
+    "condition": "Màn hình bị đốm sáng nhỏ và có kẻ sọc đứng nhẹ góc phải"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "1.500.000đ",
+  "estimatedResalePrice": "500.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "2.2kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2200
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1d6"
+  },
+  "assessmentID": "AI000090",
+  "requestID": "RQ000090",
+  "productInfo": {
+    "productName": "Loa Bluetooth Rezo Pulse E20",
+    "condition": "Hỏng cụm cảm biến tiệm cận, khi nghe gọi màn hình không tự tắt"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "700.000đ",
+  "estimatedResalePrice": "1.700.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "2.4kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2400
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1d7"
+  },
+  "assessmentID": "AI000091",
+  "requestID": "RQ000091",
+  "productInfo": {
+    "productName": "Loa Bluetooth AVA+ Go Z12",
+    "condition": "Màn hình bị nứt kính mặt ngoài, cảm ứng và hiển thị bên trong vẫn bình thường"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "1.100.000đ",
+  "estimatedResalePrice": "1.400.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "2.3kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2300
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1d8"
+  },
+  "assessmentID": "AI000092",
+  "requestID": "RQ000092",
+  "productInfo": {
+    "productName": "Loa vi tính 2.1 AVA+ Led Mini N171",
+    "condition": "Hỏng khay SIM không nhận sóng, Bluetooth và Wifi hoạt động bình thường"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "1.200.000đ",
+  "estimatedResalePrice": "1.800.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "3.8kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3800
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1d9"
+  },
+  "assessmentID": "AI000093",
+  "requestID": "RQ000093",
+  "productInfo": {
+    "productName": "Loa Bluetooth Mozard Y550 Plus",
+    "condition": "Hỏng cụm cảm biến tiệm cận, khi nghe gọi màn hình không tự tắt"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "400.000đ",
+  "estimatedResalePrice": "1.100.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "2.9kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2900
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1da"
+  },
+  "assessmentID": "AI000094",
+  "requestID": "RQ000094",
+  "productInfo": {
+    "productName": "Loa vi tính AVA+ Mini 10",
+    "condition": "Hỏng khay SIM không nhận sóng, Bluetooth và Wifi hoạt động bình thường"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "800.000đ",
+  "estimatedResalePrice": "1.700.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "3.2kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3200
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1db"
+  },
+  "assessmentID": "AI000095",
+  "requestID": "RQ000095",
+  "productInfo": {
+    "productName": "Loa Bluetooth Mozard X21",
+    "condition": "Chai pin nặng (dung lượng pin dưới 70%), cắm sạc pin tụt rất nhanh"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "700.000đ",
+  "estimatedResalePrice": "600.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "2.4kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2400
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1dc"
+  },
+  "assessmentID": "AI000096",
+  "requestID": "RQ000096",
+  "productInfo": {
+    "productName": "Loa vi tính Fenda V320",
+    "condition": "Hỏng khay SIM không nhận sóng, Bluetooth và Wifi hoạt động bình thường"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "1.500.000đ",
+  "estimatedResalePrice": "700.000đ",
+  "estimatedRecycleCost": "20.000đ",
+  "co2Reduced": "3.3kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3300
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1dd"
+  },
+  "assessmentID": "AI000097",
+  "requestID": "RQ000097",
+  "productInfo": {
+    "productName": "Loa Bluetooth Mozard E7",
+    "condition": "Hỏng phím nguồn và phím âm lượng vật lý, nút bấm bị kẹt cứng"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "1.300.000đ",
+  "estimatedResalePrice": "1.700.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "3.3kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3300
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1de"
+  },
+  "assessmentID": "AI000098",
+  "requestID": "RQ000098",
+  "productInfo": {
+    "productName": "Loa vi tính 2.1 Rezo Lab N179",
+    "condition": "Loa ngoài bị rè nặng khi mở âm lượng trên 70%, âm thanh nghẹt"
+  },
+  "recommendedAction": "Repair",
+  "estimatedRepairCost": "400.000đ",
+  "estimatedResalePrice": "900.000đ",
+  "estimatedRecycleCost": "40.000đ",
+  "co2Reduced": "3.4kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3400
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1df"
+  },
+  "assessmentID": "AI000099",
+  "requestID": "RQ000099",
+  "productInfo": {
+    "productName": "Loa Bluetooth Fenda W5 Plus",
+    "condition": "Máy bị chập điện cháy bo mạch chính, hôi mùi khét, vỏ sứt vỡ nặng"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "2.300.000đ",
+  "estimatedResalePrice": "500.000đ",
+  "estimatedRecycleCost": "50.000đ",
+  "co2Reduced": "4.4kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 4400
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1e0"
+  },
+  "assessmentID": "AI000100",
+  "requestID": "RQ000100",
+  "productInfo": {
+    "productName": "Bộ loa thanh LG SN5R 520W",
+    "condition": "Máy ngâm nước lâu ngày bị oxy hóa nặng các chân mạch trên mainboard"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "3.400.000đ",
+  "estimatedResalePrice": "100.000đ",
+  "estimatedRecycleCost": "40.000đ",
+  "co2Reduced": "4.9kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 4900
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1e1"
+  },
+  "assessmentID": "AI000101",
+  "requestID": "RQ000101",
+  "productInfo": {
+    "productName": "Loa điện karaoke LG Xboom RN5 300W",
+    "condition": "Màn hình vỡ nát biến dạng, chảy mực đen phủ kín và đứt cáp màn hình"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "2.200.000đ",
+  "estimatedResalePrice": "500.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "3.0kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3000
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1e2"
+  },
+  "assessmentID": "AI000102",
+  "requestID": "RQ000102",
+  "productInfo": {
+    "productName": "Tai nghe Có Dây Mozard DS509-WB",
+    "condition": "Máy bị chập điện cháy bo mạch chính, hôi mùi khét, vỏ sứt vỡ nặng"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "1.900.000đ",
+  "estimatedResalePrice": "300.000đ",
+  "estimatedRecycleCost": "40.000đ",
+  "co2Reduced": "2.7kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2700
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1e3"
+  },
+  "assessmentID": "AI000103",
+  "requestID": "RQ000103",
+  "productInfo": {
+    "productName": "Tai nghe Bluetooth True Wireless AVA+ Buds Life Rider GT07",
+    "condition": "Máy bị ngấm nước biển nặng, chết mainboard hoàn toàn không lên nguồn"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "2.100.000đ",
+  "estimatedResalePrice": "300.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "3.0kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3000
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1e4"
+  },
+  "assessmentID": "AI000104",
+  "requestID": "RQ000104",
+  "productInfo": {
+    "productName": "Tai nghe Bluetooth Chụp Tai Zadez GP-803B",
+    "condition": "Thiết bị bị chập cháy pin gây hỏng toàn bộ linh kiện bên trong"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "1.800.000đ",
+  "estimatedResalePrice": "300.000đ",
+  "estimatedRecycleCost": "60.000đ",
+  "co2Reduced": "4.7kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 4700
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1e5"
+  },
+  "assessmentID": "AI000105",
+  "requestID": "RQ000105",
+  "productInfo": {
+    "productName": "Tai nghe Có Dây Apple MMTN2",
+    "condition": "Máy bị chập điện cháy bo mạch chính, hôi mùi khét, vỏ sứt vỡ nặng"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "2.400.000đ",
+  "estimatedResalePrice": "200.000đ",
+  "estimatedRecycleCost": "50.000đ",
+  "co2Reduced": "4.9kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 4900
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1e6"
+  },
+  "assessmentID": "AI000106",
+  "requestID": "RQ000106",
+  "productInfo": {
+    "productName": "Tai nghe Bluetooth True Wireless AVA+ DS200A-WB",
+    "condition": "Thiết bị bị chập cháy pin gây hỏng toàn bộ linh kiện bên trong"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "2.700.000đ",
+  "estimatedResalePrice": "200.000đ",
+  "estimatedRecycleCost": "70.000đ",
+  "co2Reduced": "5.8kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 5800
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1e7"
+  },
+  "assessmentID": "AI000107",
+  "requestID": "RQ000107",
+  "productInfo": {
+    "productName": "Tai nghe Có dây AVA+ PC-25",
+    "condition": "Máy ngâm nước lâu ngày bị oxy hóa nặng các chân mạch trên mainboard"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "1.800.000đ",
+  "estimatedResalePrice": "300.000đ",
+  "estimatedRecycleCost": "30.000đ",
+  "co2Reduced": "5.8kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 5800
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1e8"
+  },
+  "assessmentID": "AI000108",
+  "requestID": "RQ000108",
+  "productInfo": {
+    "productName": "Tai nghe Có dây AVA+ LiveBass Y231",
+    "condition": "Máy hỏng main, hỏng màn hình và biến dạng vỏ, chỉ có thể thu hồi kim loại"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "2.700.000đ",
+  "estimatedResalePrice": "300.000đ",
+  "estimatedRecycleCost": "60.000đ",
+  "co2Reduced": "3.6kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3600
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1e9"
+  },
+  "assessmentID": "AI000109",
+  "requestID": "RQ000109",
+  "productInfo": {
+    "productName": "Tai nghe Có dây AVA+ LiveBass Y232",
+    "condition": "Máy bị ngấm nước biển nặng, chết mainboard hoàn toàn không lên nguồn"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "3.000.000đ",
+  "estimatedResalePrice": "500.000đ",
+  "estimatedRecycleCost": "40.000đ",
+  "co2Reduced": "3.5kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3500
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1ea"
+  },
+  "assessmentID": "AI000110",
+  "requestID": "RQ000110",
+  "productInfo": {
+    "productName": "Tai nghe Có dây AVA+ LiveBass S1018",
+    "condition": "Máy rơi từ tầng cao vỡ nát cong vênh khung vỏ, chết toàn bộ linh kiện"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "2.800.000đ",
+  "estimatedResalePrice": "100.000đ",
+  "estimatedRecycleCost": "50.000đ",
+  "co2Reduced": "2.6kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2600
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1eb"
+  },
+  "assessmentID": "AI000111",
+  "requestID": "RQ000111",
+  "productInfo": {
+    "productName": "Tai nghe Có dây AVA+ LiveBass S1019",
+    "condition": "Máy bị chập điện cháy bo mạch chính, hôi mùi khét, vỏ sứt vỡ nặng"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "3.400.000đ",
+  "estimatedResalePrice": "300.000đ",
+  "estimatedRecycleCost": "60.000đ",
+  "co2Reduced": "5.1kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 5100
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1ec"
+  },
+  "assessmentID": "AI000112",
+  "requestID": "RQ000112",
+  "productInfo": {
+    "productName": "Tai nghe Bluetooth True Wireless Xiaomi Redmi Buds 5 Pro",
+    "condition": "Màn hình vỡ nát biến dạng, chảy mực đen phủ kín và đứt cáp màn hình"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "3.000.000đ",
+  "estimatedResalePrice": "300.000đ",
+  "estimatedRecycleCost": "70.000đ",
+  "co2Reduced": "4.1kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 4100
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1ed"
+  },
+  "assessmentID": "AI000113",
+  "requestID": "RQ000113",
+  "productInfo": {
+    "productName": "Tai nghe Có Dây Type C AVA+ DS815-WB",
+    "condition": "Thiết bị bị chập cháy pin gây hỏng toàn bộ linh kiện bên trong"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "3.500.000đ",
+  "estimatedResalePrice": "100.000đ",
+  "estimatedRecycleCost": "60.000đ",
+  "co2Reduced": "2.4kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2400
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1ee"
+  },
+  "assessmentID": "AI000114",
+  "requestID": "RQ000114",
+  "productInfo": {
+    "productName": "Tai nghe Bluetooth TWS AVA+ FreeGo Y913",
+    "condition": "Máy ngâm nước lâu ngày bị oxy hóa nặng các chân mạch trên mainboard"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "3.400.000đ",
+  "estimatedResalePrice": "500.000đ",
+  "estimatedRecycleCost": "80.000đ",
+  "co2Reduced": "4.1kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 4100
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1ef"
+  },
+  "assessmentID": "AI000115",
+  "requestID": "RQ000115",
+  "productInfo": {
+    "productName": "Tai nghe Bluetooth True Wireless AVA+ FreeGo PT62",
+    "condition": "Máy bị chập điện cháy bo mạch chính, hôi mùi khét, vỏ sứt vỡ nặng"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "3.400.000đ",
+  "estimatedResalePrice": "400.000đ",
+  "estimatedRecycleCost": "70.000đ",
+  "co2Reduced": "3.3kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3300
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1f0"
+  },
+  "assessmentID": "AI000116",
+  "requestID": "RQ000116",
+  "productInfo": {
+    "productName": "Tai nghe Bluetooth True Wireless AVA+ FreeGo A20",
+    "condition": "Thiết bị bị chập cháy pin gây hỏng toàn bộ linh kiện bên trong"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "3.000.000đ",
+  "estimatedResalePrice": "300.000đ",
+  "estimatedRecycleCost": "60.000đ",
+  "co2Reduced": "3.9kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3900
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1f1"
+  },
+  "assessmentID": "AI000117",
+  "requestID": "RQ000117",
+  "productInfo": {
+    "productName": "Tai nghe Bluetooth True Wireless AVA+ Go F25",
+    "condition": "Máy rơi từ tầng cao vỡ nát cong vênh khung vỏ, chết toàn bộ linh kiện"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "2.800.000đ",
+  "estimatedResalePrice": "300.000đ",
+  "estimatedRecycleCost": "60.000đ",
+  "co2Reduced": "3.9kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 3900
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1f2"
+  },
+  "assessmentID": "AI000118",
+  "requestID": "RQ000118",
+  "productInfo": {
+    "productName": "Tai nghe Bluetooth Chụp Tai Havit H662BT",
+    "condition": "Máy rơi từ tầng cao vỡ nát cong vênh khung vỏ, chết toàn bộ linh kiện"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "2.400.000đ",
+  "estimatedResalePrice": "200.000đ",
+  "estimatedRecycleCost": "80.000đ",
+  "co2Reduced": "5.1kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 5100
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1f3"
+  },
+  "assessmentID": "AI000119",
+  "requestID": "RQ000119",
+  "productInfo": {
+    "productName": "Tai nghe Có dây Type C AVA+ LiveBass S870",
+    "condition": "Máy rơi từ tầng cao vỡ nát cong vênh khung vỏ, chết toàn bộ linh kiện"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "2.600.000đ",
+  "estimatedResalePrice": "100.000đ",
+  "estimatedRecycleCost": "80.000đ",
+  "co2Reduced": "2.8kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 2800
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1f4"
+  },
+  "assessmentID": "AI000120",
+  "requestID": "RQ000120",
+  "productInfo": {
+    "productName": "Tai nghe Bluetooth Chụp Tai Havit H667BT",
+    "condition": "Thiết bị đời quá cũ bị lỗi hỏng chip xử lý chính, không thể thay thế"
+  },
+  "recommendedAction": "Recycle",
+  "estimatedRepairCost": "2.400.000đ",
+  "estimatedResalePrice": "200.000đ",
+  "estimatedRecycleCost": "70.000đ",
+  "co2Reduced": "5.6kg",
+  "greenCoinOptions": {
+    "Resale": 20000,
+    "Repair": 5000,
+    "Recycle": 5600
+  }
+}]

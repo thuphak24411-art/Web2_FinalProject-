@@ -1,0 +1,325 @@
+[{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa23c"
+  },
+  "chatID": "CHAT000001",
+  "participants": [
+    "CM000001",
+    "SL000000"
+  ],
+  "lastMessage": "Dạ vâng, cảm ơn shop ạ.",
+  "lastMessageTime": "2026-08-03T01:12:00Z",
+  "unreadCount": 0
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa23d"
+  },
+  "chatID": "CHAT000002",
+  "participants": [
+    "CM000002",
+    "CM000008"
+  ],
+  "lastMessage": "Shop đã ghi nhận địa chỉ mới cho bạn rồi nhé, đơn sẽ được giao trong hôm nay.",
+  "lastMessageTime": "2026-08-05T05:09:00Z",
+  "unreadCount": 0
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa23e"
+  },
+  "chatID": "CHAT000003",
+  "participants": [
+    "CM000003",
+    "AD003"
+  ],
+  "lastMessage": "Ngoại hình máy chỉ trầy xước nhẹ viền thôi bạn nha, màn hình đẹp keng ạ.",
+  "lastMessageTime": "2026-08-07T03:09:00Z",
+  "unreadCount": 1
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa23f"
+  },
+  "chatID": "CHAT000004",
+  "participants": [
+    "CM000004",
+    "SL000003"
+  ],
+  "lastMessage": "Dạ để mình tạo yêu cầu thu cũ thử, cảm ơn shop.",
+  "lastMessageTime": "2026-08-09T04:06:00Z",
+  "unreadCount": 0
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa240"
+  },
+  "chatID": "CHAT000005",
+  "participants": [
+    "CM000005",
+    "CM000011"
+  ],
+  "lastMessage": "Cảm ơn shop đã hỗ trợ nhanh chóng.",
+  "lastMessageTime": "2026-08-11T03:06:00Z",
+  "unreadCount": 0
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa241"
+  },
+  "chatID": "CHAT000006",
+  "participants": [
+    "CM000006",
+    "AD006"
+  ],
+  "lastMessage": "Dạ vâng, cảm ơn shop ạ.",
+  "lastMessageTime": "2026-08-13T03:12:00Z",
+  "unreadCount": 0
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa242"
+  },
+  "chatID": "CHAT000007",
+  "participants": [
+    "CM000007",
+    "SL000006"
+  ],
+  "lastMessage": "Shop đã ghi nhận địa chỉ mới cho bạn rồi nhé, đơn sẽ được giao trong hôm nay.",
+  "lastMessageTime": "2026-08-15T05:09:00Z",
+  "unreadCount": 1
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa243"
+  },
+  "chatID": "CHAT000008",
+  "participants": [
+    "CM000008",
+    "CM000014"
+  ],
+  "lastMessage": "Ngoại hình máy chỉ trầy xước nhẹ viền thôi bạn nha, màn hình đẹp keng ạ.",
+  "lastMessageTime": "2026-08-17T02:09:00Z",
+  "unreadCount": 1
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa244"
+  },
+  "chatID": "CHAT000009",
+  "participants": [
+    "CM000009",
+    "AD009"
+  ],
+  "lastMessage": "Dạ để mình tạo yêu cầu thu cũ thử, cảm ơn shop.",
+  "lastMessageTime": "2026-08-19T03:06:00Z",
+  "unreadCount": 0
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa245"
+  },
+  "chatID": "CHAT000010",
+  "participants": [
+    "CM000010",
+    "SL000009"
+  ],
+  "lastMessage": "Cảm ơn shop đã hỗ trợ nhanh chóng.",
+  "lastMessageTime": "2026-08-21T05:06:00Z",
+  "unreadCount": 0
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa246"
+  },
+  "chatID": "CHAT000011",
+  "participants": [
+    "CM000011",
+    "CM000017"
+  ],
+  "lastMessage": "Dạ vâng, cảm ơn shop ạ.",
+  "lastMessageTime": "2026-08-23T01:12:00Z",
+  "unreadCount": 1
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa247"
+  },
+  "chatID": "CHAT000012",
+  "participants": [
+    "CM000012",
+    "AD012"
+  ],
+  "lastMessage": "Shop đã ghi nhận địa chỉ mới cho bạn rồi nhé, đơn sẽ được giao trong hôm nay.",
+  "lastMessageTime": "2026-08-25T03:09:00Z",
+  "unreadCount": 0
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa248"
+  },
+  "chatID": "CHAT000013",
+  "participants": [
+    "CM000013",
+    "SL000012"
+  ],
+  "lastMessage": "Ngoại hình máy chỉ trầy xước nhẹ viền thôi bạn nha, màn hình đẹp keng ạ.",
+  "lastMessageTime": "2026-08-27T04:09:00Z",
+  "unreadCount": 0
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa249"
+  },
+  "chatID": "CHAT000014",
+  "participants": [
+    "CM000014",
+    "CM000020"
+  ],
+  "lastMessage": "Dạ để mình tạo yêu cầu thu cũ thử, cảm ơn shop.",
+  "lastMessageTime": "2026-08-29T04:06:00Z",
+  "unreadCount": 0
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa24a"
+  },
+  "chatID": "CHAT000015",
+  "participants": [
+    "CM000015",
+    "AD015"
+  ],
+  "lastMessage": "Cảm ơn shop đã hỗ trợ nhanh chóng.",
+  "lastMessageTime": "2026-08-31T02:06:00Z",
+  "unreadCount": 0
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa24b"
+  },
+  "chatID": "CHAT000016",
+  "participants": [
+    "CM000016",
+    "SL000015"
+  ],
+  "lastMessage": "Dạ vâng, cảm ơn shop ạ.",
+  "lastMessageTime": "2026-09-02T02:12:00Z",
+  "unreadCount": 0
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa24c"
+  },
+  "chatID": "CHAT000017",
+  "participants": [
+    "CM000017",
+    "CM000023"
+  ],
+  "lastMessage": "Shop đã ghi nhận địa chỉ mới cho bạn rồi nhé, đơn sẽ được giao trong hôm nay.",
+  "lastMessageTime": "2026-09-04T03:09:00Z",
+  "unreadCount": 0
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa24d"
+  },
+  "chatID": "CHAT000018",
+  "participants": [
+    "CM000018",
+    "AD018"
+  ],
+  "lastMessage": "Ngoại hình máy chỉ trầy xước nhẹ viền thôi bạn nha, màn hình đẹp keng ạ.",
+  "lastMessageTime": "2026-09-06T04:09:00Z",
+  "unreadCount": 0
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa24e"
+  },
+  "chatID": "CHAT000019",
+  "participants": [
+    "CM000019",
+    "SL000018"
+  ],
+  "lastMessage": "Dạ để mình tạo yêu cầu thu cũ thử, cảm ơn shop.",
+  "lastMessageTime": "2026-09-08T02:06:00Z",
+  "unreadCount": 1
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa24f"
+  },
+  "chatID": "CHAT000020",
+  "participants": [
+    "CM000020",
+    "CM000026"
+  ],
+  "lastMessage": "Cảm ơn shop đã hỗ trợ nhanh chóng.",
+  "lastMessageTime": "2026-09-10T02:06:00Z",
+  "unreadCount": 0
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa250"
+  },
+  "chatID": "CHAT000021",
+  "participants": [
+    "CM000021",
+    "AD021"
+  ],
+  "lastMessage": "Dạ vâng, cảm ơn shop ạ.",
+  "lastMessageTime": "2026-09-12T01:12:00Z",
+  "unreadCount": 1
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa251"
+  },
+  "chatID": "CHAT000022",
+  "participants": [
+    "CM000022",
+    "SL000021"
+  ],
+  "lastMessage": "Shop đã ghi nhận địa chỉ mới cho bạn rồi nhé, đơn sẽ được giao trong hôm nay.",
+  "lastMessageTime": "2026-09-14T05:09:00Z",
+  "unreadCount": 0
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa252"
+  },
+  "chatID": "CHAT000023",
+  "participants": [
+    "CM000023",
+    "CM000029"
+  ],
+  "lastMessage": "Ngoại hình máy chỉ trầy xước nhẹ viền thôi bạn nha, màn hình đẹp keng ạ.",
+  "lastMessageTime": "2026-09-16T04:09:00Z",
+  "unreadCount": 0
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa253"
+  },
+  "chatID": "CHAT000024",
+  "participants": [
+    "CM000024",
+    "AD024"
+  ],
+  "lastMessage": "Dạ để mình tạo yêu cầu thu cũ thử, cảm ơn shop.",
+  "lastMessageTime": "2026-09-18T02:06:00Z",
+  "unreadCount": 1
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa254"
+  },
+  "chatID": "CHAT000025",
+  "participants": [
+    "CM000025",
+    "SL000024"
+  ],
+  "lastMessage": "Cảm ơn shop đã hỗ trợ nhanh chóng.",
+  "lastMessageTime": "2026-09-20T03:06:00Z",
+  "unreadCount": 1
+}]

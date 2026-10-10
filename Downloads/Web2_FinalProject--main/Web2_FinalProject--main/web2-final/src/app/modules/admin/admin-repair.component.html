@@ -1,0 +1,195 @@
+<main class="admin-page">
+  <header class="admin-heading">
+    <div>
+      <p class="eyebrow"><i class="bi bi-tools"></i> QUẢN TRỊ SỬA CHỮA</p>
+      <h1>Quản lý sửa chữa</h1>
+      <p class="muted">Theo dõi báo cáo và xử lý yêu cầu sửa chữa của người dùng.</p>
+    </div>
+    <div class="admin-heading-mark" aria-hidden="true"><i class="bi bi-wrench-adjustable-circle"></i></div>
+  </header>
+
+  @if (errorMessage) { <p class="message error">{{ errorMessage }}</p> }
+  @if (successMessage) { <p class="message success" role="status">{{ successMessage }}</p> }
+  <section class="report-grid" aria-label="Báo cáo sửa chữa">
+    <article class="metric metric-total"><span><i class="bi bi-clipboard-data"></i> Tổng yêu cầu</span><strong>{{ report.total }}</strong><small>Tất cả yêu cầu hợp lệ</small></article>
+    <article class="metric metric-pending"><span><i class="bi bi-hourglass-split"></i> Chờ xử lý</span><strong>{{ report.pending }}</strong><small>Cần tiếp nhận</small></article>
+    <article class="metric metric-expert"><span><i class="bi bi-person-workspace"></i> Chờ chuyên gia</span><strong>{{ report.waitingExpert }}</strong><small>Chờ đánh giá kỹ thuật</small></article>
+    <article class="metric metric-progress"><span><i class="bi bi-gear"></i> Đang sửa</span><strong>{{ report.inProgress }}</strong><small>Đang được xử lý</small></article>
+    <article class="metric metric-complete"><span><i class="bi bi-check2-circle"></i> Đã hoàn tất</span><strong>{{ report.completed }}</strong><small>Đã hoàn thành</small></article>
+    <article class="metric metric-ai"><span><i class="bi bi-stars"></i> Đã đánh giá Gemini</span><strong>{{ report.assessed }}</strong><small>Có kết quả AI lưu lại</small></article>
+  </section>
+  @if (excludedInvalidRequests) {
+    <p class="data-warning" role="status">
+      <i class="bi bi-exclamation-triangle"></i>
+      Đã ẩn {{ excludedInvalidRequests }} yêu cầu có dữ liệu không đầy đủ (thiếu mã yêu cầu, mã người dùng hoặc ngày tạo hợp lệ). Dữ liệu gốc không bị xóa.
+    </p>
+  }
+  <section class="requests-section" aria-labelledby="requests-title">
+    <div class="section-heading">
+      <div>
+        <h2 id="requests-title">Danh sách yêu cầu</h2>
+        <p>{{ report.total }} yêu cầu cần theo dõi</p>
+      </div>
+      <span class="list-count"><i class="bi bi-list-check"></i> {{ report.total }} đơn</span>
+    </div>
+  @if (loading) { <div class="loading-state"><i class="bi bi-arrow-repeat"></i><span>Đang tải dữ liệu sửa chữa...</span></div> }
+  @else if (!requests.length) { <div class="empty"><i class="bi bi-inbox"></i><strong>Chưa có yêu cầu sửa chữa</strong><span>Các yêu cầu hợp lệ sẽ xuất hiện tại đây.</span></div> }
+  @else {
+    <section class="request-list">
+      @for (request of requests; track request.repairOrderID) {
+        <article class="request-card">
+          <div class="request-main">
+            <div class="request-title">
+              <div class="device-heading">
+                <span class="device-icon"><i class="bi bi-laptop"></i></span>
+                <div>
+                  <h3>{{ request.deviceName || 'Thiết bị chưa khai báo' }}</h3>
+                  <span class="device-type">{{ request.deviceType || 'Chưa phân loại' }}</span>
+                </div>
+              </div>
+              <span class="order-date">{{ request.repairOrderID }} · {{ (request.createdAt || request.orderDate) | date:'dd/MM/yyyy HH:mm' }}</span>
+            </div>
+            <p class="issue-description">{{ request.issueDescription || 'Chưa có mô tả lỗi.' }}</p>
+            <div class="customer">
+              <span><i class="bi bi-person"></i>{{ request.customer?.fullName || request.customerID }}</span>
+              @if (request.customer?.phoneNumber || request.contactPhone) {
+                <span><i class="bi bi-telephone"></i>{{ request.customer?.phoneNumber || request.contactPhone }}</span>
+              }
+              @if (request.customer?.email) {
+                <span><i class="bi bi-envelope"></i>{{ request.customer?.email }}</span>
+              }
+            </div>
+            <div class="request-meta">
+              <span class="ai-info" [class.ai-done]="request.aiAssessmentHistory?.length">
+                <i class="bi bi-stars"></i>
+                {{ request.aiAssessmentStatus || (request.aiAssessmentHistory?.length ? 'Đã đánh giá Gemini' : 'Chưa đánh giá Gemini') }}
+              </span>
+            @if (request.aiAssessmentHistory?.length) {
+              <span class="ai-info">Lưu {{ request.aiAssessmentHistory?.length }} kết quả · {{ request.aiAssessmentHistory?.[0]?.estimatedPrice || 'Chưa có giá' }}</span>
+            }
+            </div>
+            @if (request.assessment?.images?.length) {
+              <div class="request-photos">@for (photo of request.assessment?.images; track photo.preview) { <img [src]="photo.preview" [alt]="photo.area" loading="lazy"> }</div>
+            }
+          </div>
+          <aside class="request-actions">
+            <span class="status-label">TRẠNG THÁI</span>
+            <select class="status-control" [value]="displayStatus(request.status)" (change)="updateStatus(request, $any($event.target).value, $any($event.target))" [disabled]="!!updatingStatusID" [attr.aria-label]="'Cập nhật trạng thái ' + request.repairOrderID">
+              @for (status of statuses; track status) { <option [value]="status" [disabled]="status === 'Chờ chuyên gia đánh giá' && !request.aiAssessmentHistory?.length">{{ status }}</option> }
+            </select>
+            <button type="button" class="details-button" (click)="openRequest(request)">
+              <i class="bi bi-eye"></i> Xem chi tiết
+            </button>
+            @if (!request.specialistAssessment && request.aiAssessmentHistory?.length) {
+              <button type="button" class="expert-route-button" (click)="sendToSpecialist(request)" [disabled]="updatingStatusID === request.repairOrderID">
+                <i class="bi bi-person-workspace"></i>
+                {{ displayStatus(request.status) === 'Chờ chuyên gia đánh giá' ? 'Điền đánh giá chuyên gia' : 'Chuyển chuyên gia' }}
+              </button>
+            }
+            <button type="button" class="delete-button" (click)="confirmDelete(request)" [disabled]="deletingRequestID === request.repairOrderID">
+              <i class="bi bi-trash3"></i> Xóa yêu cầu
+            </button>
+          </aside>
+        </article>
+      }
+    </section>
+  }
+  </section>
+  @if (selectedRequest) {
+    <div class="modal-backdrop" role="presentation" (click)="closeRequest()">
+      <section class="details-modal" role="dialog" aria-modal="true" aria-labelledby="request-detail-title" (click)="$event.stopPropagation()">
+        <header class="modal-header">
+          <div><p class="eyebrow">CHI TIẾT YÊU CẦU</p><h2 id="request-detail-title">{{ selectedRequest.deviceName }}</h2></div>
+          <button type="button" class="modal-close" (click)="closeRequest()" aria-label="Đóng"><i class="bi bi-x-lg"></i></button>
+        </header>
+        <div class="modal-body">
+          <p>{{ selectedRequest.issueDescription }}</p>
+          <dl class="detail-list">
+            <div><dt>Mã yêu cầu</dt><dd>{{ selectedRequest.repairOrderID }}</dd></div>
+            <div><dt>Khách hàng</dt><dd>{{ selectedRequest.customer?.fullName || selectedRequest.customerID }}</dd></div>
+            <div><dt>Liên hệ</dt><dd>{{ selectedRequest.customer?.phoneNumber || selectedRequest.contactPhone }}</dd></div>
+            <div><dt>Giá người dùng nhập</dt><dd>{{ selectedRequest.userEstimatedPriceVnd ? (selectedRequest.userEstimatedPriceVnd | number:'1.0-0') + ' VNĐ' : 'Chưa nhập' }}</dd></div>
+          </dl>
+          @if (selectedRequest.assessment?.images?.length) {
+            <div class="request-photos large">@for (photo of selectedRequest.assessment?.images; track photo.preview) { <img [src]="photo.preview" [alt]="photo.area"> }</div>
+          }
+          @if (selectedRequest.aiAssessmentHistory?.length) {
+            <h3>Lịch sử Gemini</h3>
+            @for (assessment of selectedRequest.aiAssessmentHistory; track assessment.assessmentID) {
+              <div class="assessment-history">
+                <strong>{{ assessment.createdAt | date:'dd/MM/yyyy HH:mm' }} · {{ assessment.source }}</strong>
+                <span>{{ assessment.summary }}</span>
+                <small>{{ assessment.estimatedPrice }}</small>
+                @if (assessment.error) { <small class="message error">{{ assessment.error }}</small> }
+                <div class="price-history">
+                  <span>Sửa chữa: {{ assessment.estimatedPrices?.repair?.display || 'Chưa có giá' }}</span>
+                  <span>Bán lại: {{ assessment.estimatedPrices?.resell?.display || 'Chưa có giá' }}</span>
+                </div>
+              </div>
+            }
+          }
+          @if (loadingSpecialistAssessmentID === selectedRequest.repairOrderID) {
+            <p class="message" role="status"><i class="bi bi-arrow-repeat"></i> Đang tải đánh giá chuyên gia...</p>
+          } @else if (selectedRequest.specialistAssessment) {
+            <section class="expert-review">
+              <h3><i class="bi bi-person-check"></i> Đánh giá của chuyên gia</h3>
+              <p>{{ selectedRequest.specialistAssessment.summary }}</p>
+              <div class="expert-options">
+                <article><strong>Sửa chữa · {{ selectedRequest.specialistAssessment.estimatedPrices.repair.display }}</strong><span>{{ selectedRequest.specialistAssessment.recommendations.repair }}</span></article>
+                <article><strong>Bán lại · {{ selectedRequest.specialistAssessment.estimatedPrices.resell.display }}</strong><span>{{ selectedRequest.specialistAssessment.recommendations.resell }}</span></article>
+              </div>
+              <small>Chuyên gia {{ selectedRequest.specialistAssessment.specialistName }} · {{ selectedRequest.specialistAssessment.createdAt | date:'dd/MM/yyyy HH:mm' }}</small>
+            </section>
+          } @else if (displayStatus(selectedRequest.status) === 'Chờ chuyên gia đánh giá') {
+            <app-specialist-assessment-form
+              [submitting]="submittingSpecialistAssessment"
+              [errorMessage]="errorMessage"
+              (assessmentSubmit)="submitSpecialistAssessment(selectedRequest, $event)">
+            </app-specialist-assessment-form>
+          }
+          @if (selectedRequest.userChoice) {
+            <p class="user-choice-info"><i class="bi bi-check-circle"></i> Người dùng đã chọn: {{ displayUserChoice(selectedRequest.userChoice.option) }} · {{ selectedRequest.userChoice.chosenAt | date:'dd/MM/yyyy HH:mm' }}</p>
+          }
+        </div>
+      </section>
+    </div>
+  }
+  @if (pendingStatusChange) {
+    <div class="modal-backdrop confirm-backdrop" role="presentation" (click)="cancelStatusChange()">
+      <section class="status-confirm-modal" role="alertdialog" aria-modal="true" aria-labelledby="status-confirm-title" (click)="$event.stopPropagation()">
+        <div class="status-confirm-icon"><i class="bi bi-arrow-left-right"></i></div>
+        <p class="eyebrow">XÁC NHẬN CẬP NHẬT</p>
+        <h2 id="status-confirm-title">Chuyển trạng thái yêu cầu?</h2>
+        <p>Yêu cầu <strong>{{ pendingStatusChange.request.repairOrderID }}</strong> sẽ chuyển sang:</p>
+        <span class="status-confirm-value">{{ pendingStatusChange.status }}</span>
+        @if (pendingStatusChange.status === 'Chờ chuyên gia đánh giá') {
+          <p class="status-confirm-note">Sau khi xác nhận, yêu cầu sẽ được chuyển vào danh sách chờ chuyên gia đánh giá.</p>
+        }
+        <div class="status-confirm-actions">
+          <button type="button" class="status-cancel-button" (click)="cancelStatusChange()" [disabled]="!!updatingStatusID">Hủy</button>
+          <button type="button" class="status-accept-button" (click)="confirmStatusChange()" [disabled]="!!updatingStatusID">
+            <i class="bi bi-check2"></i> {{ updatingStatusID ? 'Đang chuyển...' : 'Xác nhận chuyển' }}
+          </button>
+        </div>
+      </section>
+    </div>
+  }
+  @if (requestToDelete) {
+    <div class="modal-backdrop confirm-backdrop" role="presentation" (click)="cancelDelete()">
+      <section class="delete-modal" role="alertdialog" aria-modal="true" aria-labelledby="delete-repair-title" (click)="$event.stopPropagation()">
+        <span class="delete-modal-icon"><i class="bi bi-trash3"></i></span>
+        <h2 id="delete-repair-title">Xóa yêu cầu sửa chữa?</h2>
+        <p>Bạn sắp xóa yêu cầu <strong>{{ requestToDelete.repairOrderID }}</strong> của <strong>{{ requestToDelete.customer?.fullName || requestToDelete.customerID }}</strong>.</p>
+        <p class="delete-warning">Lý do xóa sẽ được lưu vào nhật ký quản trị. Yêu cầu, lịch sử đánh giá Gemini và thông báo liên quan sẽ bị xóa vĩnh viễn.</p>
+        <label class="delete-reason-label" for="delete-reason">Lý do xóa (bắt buộc)</label>
+        <textarea id="delete-reason" class="delete-reason-input" [(ngModel)]="deleteReason" name="deleteReason" minlength="5" maxlength="500" rows="3" placeholder="Ví dụ: Yêu cầu đã quá hạn xử lý..."></textarea>
+        <div class="delete-modal-actions">
+          <button type="button" class="cancel-button" (click)="cancelDelete()" [disabled]="!!deletingRequestID">Hủy</button>
+          <button type="button" class="confirm-delete-button" (click)="deleteRequest()" [disabled]="!!deletingRequestID || deleteReason.trim().length < 5">
+            @if (deletingRequestID) { <i class="bi bi-arrow-repeat spin"></i> Đang xóa... } @else { <i class="bi bi-trash3"></i> Xóa yêu cầu }
+          </button>
+        </div>
+      </section>
+    </div>
+  }
+</main>

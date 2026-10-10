@@ -1,0 +1,129 @@
+<div class="max-w-[1000px] mx-auto px-4 pb-12">
+
+  <div class="mb-6 flex items-center justify-between">
+    <div>
+      <h1 class="text-xl md:text-2xl font-bold text-gray-900 flex items-center gap-2">
+        <i class="bi bi-file-earmark-text text-emerald-600"></i> Chi Tiết Đơn Hàng
+      </h1>
+      <p class="text-xs text-gray-500 mt-1">Mã đơn hàng: <b class="text-emerald-700 font-mono text-sm">{{ orderId }}</b></p>
+    </div>
+    <button 
+      (click)="goBack()" 
+      class="text-xs font-bold text-gray-700 hover:text-emerald-700 bg-white px-4 py-2 rounded-xl border border-gray-200 shadow-sm flex items-center gap-1.5 transition-all"
+    >
+      <i class="bi bi-arrow-left"></i> Quay lại Đơn hàng của tôi
+    </button>
+  </div>
+
+  @if (isLoading) {
+    <div class="flex flex-col items-center justify-center py-20 bg-white rounded-3xl shadow-sm border border-gray-100">
+      <div class="w-10 h-10 border-4 border-emerald-600 border-t-transparent rounded-full animate-spin"></div>
+      <p class="mt-4 text-xs text-gray-500 font-semibold">Đang nạp chi tiết đơn hàng...</p>
+    </div>
+  }
+
+  @if (errorMessage) {
+    <div class="p-4 bg-red-50 text-red-700 rounded-2xl border border-red-200 flex items-center gap-2 text-xs font-semibold mb-6">
+      <i class="bi bi-exclamation-circle-fill text-red-500"></i> {{ errorMessage }}
+    </div>
+  }
+
+  @if (!isLoading && !errorMessage && order) {
+    <div class="flex flex-col gap-6">
+
+      <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <img 
+            [src]="order.sellerInfo?.avatar || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150'" 
+            [alt]="order.sellerInfo?.name" 
+            class="w-12 h-12 rounded-full object-cover border-2 border-emerald-400" 
+          />
+          <div>
+            <h3 class="text-sm font-bold text-gray-900">Người bán: {{ order.sellerInfo?.name || 'Cửa hàng ECO' }}</h3>
+            <p class="text-xs text-gray-500 mt-0.5">Ngày đặt hàng: <b class="text-gray-800">{{ formatDate(order.orderDate || order.createdAt) }}</b></p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span 
+            [class]="order.status === 'Đã hủy' 
+              ? 'bg-red-50 text-red-700 border-red-200' 
+              : order.status === 'Đã giao hàng' || order.status === 'Đã giao'
+              ? 'bg-emerald-50 text-emerald-800 border-emerald-200'
+              : 'bg-amber-50 text-amber-800 border-amber-200'"
+            class="border text-xs font-bold px-4 py-1.5 rounded-xl flex items-center gap-2"
+          >
+            <span class="w-2.5 h-2.5 rounded-full bg-current animate-pulse"></span>
+            Trạng thái: {{ order.status || 'Chờ xác nhận' }}
+          </span>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100">
+        <h2 class="text-xs font-extrabold text-gray-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+          <i class="bi bi-geo-alt-fill text-emerald-600 text-sm"></i> Thông tin nhận hàng
+        </h2>
+        
+        <div class="text-xs text-gray-700 leading-relaxed space-y-1">
+          <p><span class="text-gray-500">Người nhận:</span> <b class="text-gray-900">{{ order.shippingInfo?.fullName || 'Lê Quốc Khoa' }}</b></p>
+          <p><span class="text-gray-500">Số điện thoại:</span> <b class="text-gray-900">{{ order.shippingInfo?.phoneNumber || '0912384756' }}</b></p>
+          <p><span class="text-gray-500">Địa chỉ giao:</span> <b class="text-gray-900">{{ order.shippingAddress || (order.shippingInfo?.addressDetail + ', ' + order.shippingInfo?.district + ', ' + order.shippingInfo?.province) }}</b></p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100">
+        <h2 class="text-xs font-extrabold text-gray-400 uppercase tracking-wider mb-4 flex items-center gap-1.5">
+          <i class="bi bi-box-seam text-emerald-600 text-sm"></i> Danh sách sản phẩm đơn hàng
+        </h2>
+
+        <div class="flex flex-col gap-3">
+          @for (item of (order.products || order.items); track item.productID || item.productId) {
+            <div class="flex items-center justify-between gap-4 p-3.5 bg-gray-50/80 rounded-2xl border border-gray-100">
+              <img [src]="item.img || 'https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=150'" [alt]="item.title" class="w-16 h-16 object-contain rounded-xl bg-white p-1.5 border border-gray-100 flex-shrink-0" />
+              
+              <div class="flex-1 min-w-0">
+                <h4 class="text-xs font-bold text-gray-900 truncate" [title]="item.title">{{ item.title || 'Sản phẩm ' + item.productID }}</h4>
+                <div class="flex items-center gap-4 text-xs text-gray-500 mt-1">
+                  <span>Số lượng: <b class="text-gray-800">{{ item.quantity }}</b></span>
+                  <span>Đơn giá: <b class="text-gray-800">{{ item.price }}</b></span>
+                </div>
+              </div>
+
+              <div class="text-xs font-extrabold text-gray-900 flex-shrink-0">
+                {{ item.price }}
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="bg-white rounded-3xl p-6 shadow-sm border border-gray-100 flex flex-col gap-3 text-xs">
+        <div class="flex items-center justify-between text-gray-600">
+          <span>Tiền hàng:</span>
+          <span class="font-bold text-gray-900">{{ order.subtotal || formatPrice(order.subTotal) }}</span>
+        </div>
+
+        <div class="flex items-center justify-between text-gray-600">
+          <span>Phí vận chuyển:</span>
+          <span class="font-bold text-gray-900">{{ order.shippingFee || '20.000đ' }}</span>
+        </div>
+
+        <div class="flex items-center justify-between text-gray-600">
+          <span class="flex items-center gap-1.5 text-amber-800 bg-amber-50 border border-amber-200/60 px-2.5 py-1 rounded-lg font-extrabold">
+            <i class="bi bi-coin text-amber-500 text-sm"></i> GreenCoins:
+          </span>
+          <span class="font-extrabold text-amber-600 text-xs">+10.000 GreenCoins</span>
+        </div>
+
+        <div class="flex items-center justify-between pt-3 border-t border-gray-100 text-sm">
+          <span class="font-bold text-gray-900">Tổng cộng thanh toán:</span>
+          <span class="text-xl font-extrabold text-emerald-700 tracking-tight">
+            {{ order.totalPrice || formatPrice(order.totalAmount) }}
+          </span>
+        </div>
+      </div>
+
+    </div>
+  }
+
+</div>
