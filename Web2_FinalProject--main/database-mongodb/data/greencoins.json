@@ -1,0 +1,3094 @@
+[{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9efa"
+  },
+  "transactionID": "TS000001",
+  "orderID": "OD000001",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000001",
+    "fullName": "Lê Quốc Khoa",
+    "userRole": "Buyer"
+  },
+  "productName": "Máy tính bảng TCL Tab 10L Gen 2 WiFi 3GB/32GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-01-08 12:21:50"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9efb"
+  },
+  "transactionID": "TS000002",
+  "orderID": "OD000002",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000002",
+    "fullName": "Phan Thanh Hà",
+    "userRole": "Buyer"
+  },
+  "productName": "Máy tính bảng Samsung Galaxy Tab A9+ 5G 4GB/64GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-01-14 20:04:15"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9efc"
+  },
+  "transactionID": "TS000003",
+  "orderID": "OD000003",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000003",
+    "fullName": "Nguyễn Văn Hùng",
+    "userRole": "Buyer"
+  },
+  "productName": "ROSA Crystal I10 i3 13100/8GB/256GB/Win11 Pro",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-01-13 09:21:59"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9efd"
+  },
+  "transactionID": "TS000004",
+  "orderID": "OD000004",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000004",
+    "fullName": "Trần Thị Thảo",
+    "userRole": "Buyer"
+  },
+  "productName": "MiniPC SingPC NUC U512U695-W Ultra 5 125U/16GB/512GB/Win11Pro",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-05-30 11:48:37"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9efe"
+  },
+  "transactionID": "TS000005",
+  "orderID": "OD000005",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000005",
+    "fullName": "Hoàng Minh Dũng",
+    "userRole": "Buyer"
+  },
+  "productName": "SingPC R53A595SF-W R5 3400G/16GB/512GB/Bàn phím/Chuột/Win11Pro",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-06-30 12:29:12"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9eff"
+  },
+  "transactionID": "TS000006",
+  "orderID": "OD000006",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000006",
+    "fullName": "Phạm Hữu Nam",
+    "userRole": "Buyer"
+  },
+  "productName": "Loa Bluetooth AVA+ Led K09",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-08-26 16:37:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f00"
+  },
+  "transactionID": "TS000007",
+  "orderID": "OD000007",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000007",
+    "fullName": "Vũ Ngọc Trang",
+    "userRole": "Buyer"
+  },
+  "productName": "Loa Bluetooth AVA+ FreeGo F13",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-03-04 13:00:23"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f01"
+  },
+  "transactionID": "TS000008",
+  "orderID": "OD000008",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000008",
+    "fullName": "Đặng Quốc Long",
+    "userRole": "Buyer"
+  },
+  "productName": "Loa Bluetooth Rezo Pulse E20",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-08-18 14:04:31"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f02"
+  },
+  "transactionID": "TS000009",
+  "orderID": "OD000009",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000009",
+    "fullName": "Bùi Thúy Vy",
+    "userRole": "Buyer"
+  },
+  "productName": "Loa Bluetooth Mozard E7",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-01-12 13:02:07"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f03"
+  },
+  "transactionID": "TS000010",
+  "orderID": "OD000011",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000011",
+    "fullName": "Hồ Xuân Thịnh",
+    "userRole": "Buyer"
+  },
+  "productName": "Ổ cứng SSD 1TB Kioxia Exceria Plus G2 Portable LXD20K001TG8",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-04-27 15:13:54"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f04"
+  },
+  "transactionID": "TS000011",
+  "orderID": "OD000012",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000012",
+    "fullName": "Dương Gia Bảo",
+    "userRole": "Buyer"
+  },
+  "productName": "Thẻ nhớ Kioxia MicroSD 64GB Class 10_U3",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-06-29 08:24:34"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f05"
+  },
+  "transactionID": "TS000012",
+  "orderID": "OD000013",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000013",
+    "fullName": "Lý Đức Bình",
+    "userRole": "Buyer"
+  },
+  "productName": "USB 3.2 64GB ADATA UC310",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-04-04 15:51:47"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f06"
+  },
+  "transactionID": "TS000013",
+  "orderID": "OD000014",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000014",
+    "fullName": "Trần Thị Hương",
+    "userRole": "Buyer"
+  },
+  "productName": "Cáp sạc nhanh Type-C - Type-C 60W 1m AVA+ DS106",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-07-08 15:10:02"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f07"
+  },
+  "transactionID": "TS000014",
+  "orderID": "OD000015",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000015",
+    "fullName": "Lê Minh Hải",
+    "userRole": "Buyer"
+  },
+  "productName": "Máy tính bảng TCL Tab 10L Gen 2 WiFi 3GB/32GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-01-04 16:51:05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f08"
+  },
+  "transactionID": "TS000015",
+  "orderID": "OD000016",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000016",
+    "fullName": "Phạm Hữu Trí",
+    "userRole": "Buyer"
+  },
+  "productName": "Máy tính bảng Samsung Galaxy Tab A9+ 5G 4GB/64GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-07-21 12:54:24"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f09"
+  },
+  "transactionID": "TS000016",
+  "orderID": "OD000017",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000017",
+    "fullName": "Hoàng Thanh Linh",
+    "userRole": "Buyer"
+  },
+  "productName": "ROSA Crystal I10 i3 13100/8GB/256GB/Win11 Pro",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-03-14 07:02:06"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f0a"
+  },
+  "transactionID": "TS000017",
+  "orderID": "OD000018",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000018",
+    "fullName": "Phan Đình Thành",
+    "userRole": "Buyer"
+  },
+  "productName": "MiniPC SingPC NUC U512U695-W Ultra 5 125U/16GB/512GB/Win11Pro",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-01-27 07:30:21"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f0b"
+  },
+  "transactionID": "TS000018",
+  "orderID": "OD000019",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000019",
+    "fullName": "Võ Đức Tuấn",
+    "userRole": "Buyer"
+  },
+  "productName": "SingPC R53A595SF-W R5 3400G/16GB/512GB/Bàn phím/Chuột/Win11Pro",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-05-03 11:15:28"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f0c"
+  },
+  "transactionID": "TS000019",
+  "orderID": "OD000020",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000020",
+    "fullName": "Đặng Quốc Nam",
+    "userRole": "Buyer"
+  },
+  "productName": "Loa Bluetooth AVA+ Led K09",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-05-21 11:17:29"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f0d"
+  },
+  "transactionID": "TS000020",
+  "orderID": "OD000023",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000023",
+    "fullName": "Hồ Minh Thảo",
+    "userRole": "Buyer"
+  },
+  "productName": "Loa Bluetooth Mozard E7",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-09-09 21:21:41"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f0e"
+  },
+  "transactionID": "TS000021",
+  "orderID": "OD000024",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000024",
+    "fullName": "Ngô Xuân Vy",
+    "userRole": "Buyer"
+  },
+  "productName": "Ổ cứng SSD 1TB Adata Portable SD810",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-08-14 12:49:28"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f0f"
+  },
+  "transactionID": "TS000022",
+  "orderID": "OD000026",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000026",
+    "fullName": "Lý Thanh Trang",
+    "userRole": "Buyer"
+  },
+  "productName": "Thẻ nhớ Kioxia MicroSD 64GB Class 10_U3",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-05-08 20:09:01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f10"
+  },
+  "transactionID": "TS000023",
+  "orderID": "OD000027",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000027",
+    "fullName": "Nguyễn Văn Thịnh",
+    "userRole": "Buyer"
+  },
+  "productName": "USB 3.2 64GB ADATA UC310",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-10-04 20:50:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f11"
+  },
+  "transactionID": "TS000024",
+  "orderID": "OD000028",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000028",
+    "fullName": "Trần Thị Bình",
+    "userRole": "Buyer"
+  },
+  "productName": "Cáp sạc nhanh Type-C - Type-C 60W 1m AVA+ DS106",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-08-30 18:41:27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f12"
+  },
+  "transactionID": "TS000025",
+  "orderID": "OD000029",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000029",
+    "fullName": "Lê Quốc Phúc",
+    "userRole": "Buyer"
+  },
+  "productName": "Máy tính bảng TCL Tab 10L Gen 2 WiFi 3GB/32GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-04-27 19:55:52"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f13"
+  },
+  "transactionID": "TS000026",
+  "orderID": "OD000030",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000030",
+    "fullName": "Phạm Đình Long",
+    "userRole": "Buyer"
+  },
+  "productName": "Máy tính bảng Samsung Galaxy Tab A9+ 5G 4GB/64GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-08-21 20:21:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f14"
+  },
+  "transactionID": "TS000027",
+  "orderID": "OD000031",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000031",
+    "fullName": "Hoàng Gia An",
+    "userRole": "Buyer"
+  },
+  "productName": "ROSA Crystal I10 i3 13100/8GB/256GB/Win11 Pro",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-10-04 15:08:56"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f15"
+  },
+  "transactionID": "TS000028",
+  "orderID": "OD000032",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000032",
+    "fullName": "Phan Thị Khoa",
+    "userRole": "Buyer"
+  },
+  "productName": "MiniPC SingPC NUC U512U695-W Ultra 5 125U/16GB/512GB/Win11Pro",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-05-21 17:45:26"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f16"
+  },
+  "transactionID": "TS000029",
+  "orderID": "OD000033",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000033",
+    "fullName": "Võ Minh Hùng",
+    "userRole": "Buyer"
+  },
+  "productName": "SingPC R53A595SF-W R5 3400G/16GB/512GB/Bàn phím/Chuột/Win11Pro",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-06-21 15:07:06"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f17"
+  },
+  "transactionID": "TS000030",
+  "orderID": "OD000034",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000034",
+    "fullName": "Đặng Xuân Phương",
+    "userRole": "Buyer"
+  },
+  "productName": "Loa Bluetooth AVA+ Led K09",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-04-30 11:15:51"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f18"
+  },
+  "transactionID": "TS000031",
+  "orderID": "OD000035",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000035",
+    "fullName": "Bùi Đức Trí",
+    "userRole": "Buyer"
+  },
+  "productName": "Loa Bluetooth AVA+ FreeGo F13",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-08-27 18:52:13"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f19"
+  },
+  "transactionID": "TS000032",
+  "orderID": "OD000036",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000036",
+    "fullName": "Đỗ Ngọc Thảo",
+    "userRole": "Buyer"
+  },
+  "productName": "Loa Bluetooth Rezo Pulse E20",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-05-30 13:43:34"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f1a"
+  },
+  "transactionID": "TS000033",
+  "orderID": "OD000037",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000037",
+    "fullName": "Hồ Hữu Thịnh",
+    "userRole": "Buyer"
+  },
+  "productName": "Loa Bluetooth Mozard E7",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-02-08 17:36:51"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f1b"
+  },
+  "transactionID": "TS000034",
+  "orderID": "OD000038",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000038",
+    "fullName": "Ngô Hoàng Nam",
+    "userRole": "Buyer"
+  },
+  "productName": "Ổ cứng SSD 1TB Adata Portable SD810",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-01-13 09:29:05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f1c"
+  },
+  "transactionID": "TS000035",
+  "orderID": "OD000039",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000039",
+    "fullName": "Dương Thanh Hải",
+    "userRole": "Buyer"
+  },
+  "productName": "Ổ cứng SSD 1TB Kioxia Exceria Plus G2 Portable LXD20K001TG8",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-05-15 17:34:16"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f1d"
+  },
+  "transactionID": "TS000036",
+  "orderID": "OD000043",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000043",
+    "fullName": "Lê Quốc Dũng",
+    "userRole": "Buyer"
+  },
+  "productName": "Máy tính bảng TCL Tab 10L Gen 2 WiFi 3GB/32GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-03-14 17:38:12"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f1e"
+  },
+  "transactionID": "TS000037",
+  "orderID": "OD000044",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000044",
+    "fullName": "Phạm Đình Vy",
+    "userRole": "Buyer"
+  },
+  "productName": "Máy tính bảng Samsung Galaxy Tab A9+ 5G 4GB/64GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-01-04 13:37:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f1f"
+  },
+  "transactionID": "TS000038",
+  "orderID": "OD000045",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000045",
+    "fullName": "Hoàng Gia Thành",
+    "userRole": "Buyer"
+  },
+  "productName": "ROSA Crystal I10 i3 13100/8GB/256GB/Win11 Pro",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-10-04 12:37:43"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f20"
+  },
+  "transactionID": "TS000039",
+  "orderID": "OD000047",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000047",
+    "fullName": "Võ Đức Tuấn",
+    "userRole": "Buyer"
+  },
+  "productName": "SingPC R53A595SF-W R5 3400G/16GB/512GB/Bàn phím/Chuột/Win11Pro",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-09-01 20:51:27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f21"
+  },
+  "transactionID": "TS000040",
+  "orderID": "OD000048",
+  "orderType": "brandnew",
+  "userInfo": {
+    "userID": "CM000048",
+    "fullName": "Đặng Xuân An",
+    "userRole": "Buyer"
+  },
+  "productName": "Loa Bluetooth AVA+ Led K09",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-07-16 09:41:44"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f22"
+  },
+  "transactionID": "TS000041",
+  "orderID": "OD000051",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000001",
+    "fullName": "Lê Quốc Khoa",
+    "userRole": "Buyer"
+  },
+  "productName": "Máy tính bảng Samsung Galaxy Tab S9 WiFi 8GB/128GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-09-28 19:02:27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f23"
+  },
+  "transactionID": "TS000042",
+  "orderID": "OD000051",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000050",
+    "fullName": "Thế Giới Phụ Kiện Cũ (TP.HCM)",
+    "userRole": "Seller"
+  },
+  "productName": "Máy tính bảng Samsung Galaxy Tab S9 WiFi 8GB/128GB",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-09-28 19:02:27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f24"
+  },
+  "transactionID": "TS000043",
+  "orderID": "OD000053",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000003",
+    "fullName": "Nguyễn Văn Hùng",
+    "userRole": "Buyer"
+  },
+  "productName": "Máy tính bảng Lenovo Tab M11 WiFi 4GB/128GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-06-01 14:59:19"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f25"
+  },
+  "transactionID": "TS000044",
+  "orderID": "OD000053",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000001",
+    "fullName": "Hoàng Minh Dũng",
+    "userRole": "Seller"
+  },
+  "productName": "Máy tính bảng Lenovo Tab M11 WiFi 4GB/128GB",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-06-01 14:59:19"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f26"
+  },
+  "transactionID": "TS000045",
+  "orderID": "OD000054",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000004",
+    "fullName": "Trần Thị Thảo",
+    "userRole": "Buyer"
+  },
+  "productName": "Máy tính bảng Samsung Galaxy Tab S6 Lite 2024 4G 4GB/64GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-01-02 21:54:57"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f27"
+  },
+  "transactionID": "TS000046",
+  "orderID": "OD000054",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000002",
+    "fullName": "Vi tính Phát Đạt (TP.HCM)",
+    "userRole": "Seller"
+  },
+  "productName": "Máy tính bảng Samsung Galaxy Tab S6 Lite 2024 4G 4GB/64GB",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-01-02 21:54:57"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f28"
+  },
+  "transactionID": "TS000047",
+  "orderID": "OD000055",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000005",
+    "fullName": "Hoàng Minh Dũng",
+    "userRole": "Buyer"
+  },
+  "productName": "Máy tính bảng Xiaomi Redmi Pad SE 8.7 WiFi 4GB/64GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-05-20 09:42:42"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f29"
+  },
+  "transactionID": "TS000048",
+  "orderID": "OD000055",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000003",
+    "fullName": "Lê Thanh Phương",
+    "userRole": "Seller"
+  },
+  "productName": "Máy tính bảng Xiaomi Redmi Pad SE 8.7 WiFi 4GB/64GB",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-05-20 09:42:42"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f2a"
+  },
+  "transactionID": "TS000049",
+  "orderID": "OD000056",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000006",
+    "fullName": "Phạm Hữu Nam",
+    "userRole": "Buyer"
+  },
+  "productName": "Máy tính bảng OPPO Pad 2 WiFi 8GB/256GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-04-28 21:18:37"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f2b"
+  },
+  "transactionID": "TS000050",
+  "orderID": "OD000056",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000004",
+    "fullName": "Linh kiện Cũ Sài Gòn (TP.HCM)",
+    "userRole": "Seller"
+  },
+  "productName": "Máy tính bảng OPPO Pad 2 WiFi 8GB/256GB",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-04-28 21:18:37"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f2c"
+  },
+  "transactionID": "TS000051",
+  "orderID": "OD000057",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000007",
+    "fullName": "Vũ Ngọc Trang",
+    "userRole": "Buyer"
+  },
+  "productName": "Máy tính bảng OPPO Pad Air WiFi 4GB/64GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-03-02 12:41:03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f2d"
+  },
+  "transactionID": "TS000052",
+  "orderID": "OD000057",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000005",
+    "fullName": "Phan Đình Khoa",
+    "userRole": "Seller"
+  },
+  "productName": "Máy tính bảng OPPO Pad Air WiFi 4GB/64GB",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-03-02 12:41:03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f2e"
+  },
+  "transactionID": "TS000053",
+  "orderID": "OD000060",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000010",
+    "fullName": "Đỗ Hoàng Phúc",
+    "userRole": "Buyer"
+  },
+  "productName": "Máy tính bảng OPPO Pad Neo 4G 8GB/128GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-04-27 08:07:40"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f2f"
+  },
+  "transactionID": "TS000054",
+  "orderID": "OD000060",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000008",
+    "fullName": "Kho Máy Tính Miền Nam (TP.HCM)",
+    "userRole": "Seller"
+  },
+  "productName": "Máy tính bảng OPPO Pad Neo 4G 8GB/128GB",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-04-27 08:07:40"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f30"
+  },
+  "transactionID": "TS000055",
+  "orderID": "OD000061",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000011",
+    "fullName": "Hồ Xuân Thịnh",
+    "userRole": "Buyer"
+  },
+  "productName": "Máy tính bảng iPad Air 6 M2 13 inch WiFi 128GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-06-28 14:41:20"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f31"
+  },
+  "transactionID": "TS000056",
+  "orderID": "OD000061",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000009",
+    "fullName": "Hồ Xuân Thịnh",
+    "userRole": "Seller"
+  },
+  "productName": "Máy tính bảng iPad Air 6 M2 13 inch WiFi 128GB",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-06-28 14:41:20"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f32"
+  },
+  "transactionID": "TS000057",
+  "orderID": "OD000062",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000012",
+    "fullName": "Dương Gia Bảo",
+    "userRole": "Buyer"
+  },
+  "productName": "Máy tính bảng iPad Pro M4 13 inch WiFi 256GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-09-09 17:40:13"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f33"
+  },
+  "transactionID": "TS000058",
+  "orderID": "OD000062",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000010",
+    "fullName": "Điện Tử Nhật Minh (Đà Nẵng)",
+    "userRole": "Seller"
+  },
+  "productName": "Máy tính bảng iPad Pro M4 13 inch WiFi 256GB",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-09-09 17:40:13"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f34"
+  },
+  "transactionID": "TS000059",
+  "orderID": "OD000063",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000013",
+    "fullName": "Lý Đức Bình",
+    "userRole": "Buyer"
+  },
+  "productName": "Máy tính bảng iPad Pro M4 13 inch 5G 512GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-02-11 07:48:20"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f35"
+  },
+  "transactionID": "TS000060",
+  "orderID": "OD000063",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000011",
+    "fullName": "Lý Đức Bình",
+    "userRole": "Seller"
+  },
+  "productName": "Máy tính bảng iPad Pro M4 13 inch 5G 512GB",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-02-11 07:48:20"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f36"
+  },
+  "transactionID": "TS000061",
+  "orderID": "OD000064",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000014",
+    "fullName": "Trần Thị Hương",
+    "userRole": "Buyer"
+  },
+  "productName": "Máy tính bảng Xiaomi Redmi Pad SE 8.7 WiFi 6GB/128GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-03-22 08:22:43"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f37"
+  },
+  "transactionID": "TS000062",
+  "orderID": "OD000064",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000012",
+    "fullName": "Hoàng Phát Mobile (TP.HCM)",
+    "userRole": "Seller"
+  },
+  "productName": "Máy tính bảng Xiaomi Redmi Pad SE 8.7 WiFi 6GB/128GB",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-03-22 08:22:43"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f38"
+  },
+  "transactionID": "TS000063",
+  "orderID": "OD000065",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000015",
+    "fullName": "Lê Minh Hải",
+    "userRole": "Buyer"
+  },
+  "productName": "Máy tính bảng iPad 9 4G 256GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-04-02 08:58:58"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f39"
+  },
+  "transactionID": "TS000064",
+  "orderID": "OD000065",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000013",
+    "fullName": "Lê Minh Hải",
+    "userRole": "Seller"
+  },
+  "productName": "Máy tính bảng iPad 9 4G 256GB",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-04-02 08:58:58"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f3a"
+  },
+  "transactionID": "TS000065",
+  "orderID": "OD000071",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000021",
+    "fullName": "Bùi Ngọc Phương",
+    "userRole": "Buyer"
+  },
+  "productName": "Điện thoại Mobell M539",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-06-24 09:18:25"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f3b"
+  },
+  "transactionID": "TS000066",
+  "orderID": "OD000071",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000019",
+    "fullName": "Dương Hữu Khoa",
+    "userRole": "Seller"
+  },
+  "productName": "Điện thoại Mobell M539",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-06-24 09:18:25"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f3c"
+  },
+  "transactionID": "TS000067",
+  "orderID": "OD000075",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000025",
+    "fullName": "Dương Hữu Khoa",
+    "userRole": "Buyer"
+  },
+  "productName": "Điện thoại Masstel Lux 10",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-06-10 16:26:30"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f3d"
+  },
+  "transactionID": "TS000068",
+  "orderID": "OD000075",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000023",
+    "fullName": "Võ Minh Hùng",
+    "userRole": "Seller"
+  },
+  "productName": "Điện thoại Masstel Lux 10",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-06-10 16:26:30"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f3e"
+  },
+  "transactionID": "TS000069",
+  "orderID": "OD000077",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000027",
+    "fullName": "Nguyễn Văn Thịnh",
+    "userRole": "Buyer"
+  },
+  "productName": "Điện thoại Xiaomi 13 5G",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-04-15 21:40:05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f3f"
+  },
+  "transactionID": "TS000070",
+  "orderID": "OD000077",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000025",
+    "fullName": "Hồ Hữu Thịnh",
+    "userRole": "Seller"
+  },
+  "productName": "Điện thoại Xiaomi 13 5G",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-04-15 21:40:05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f40"
+  },
+  "transactionID": "TS000071",
+  "orderID": "OD000078",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000028",
+    "fullName": "Trần Thị Bình",
+    "userRole": "Buyer"
+  },
+  "productName": "Điện thoại Samsung Galaxy S23 Ultra 5G 12GB/512GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-01-15 20:59:11"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f41"
+  },
+  "transactionID": "TS000072",
+  "orderID": "OD000078",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000026",
+    "fullName": "Trần Anh Linh Kiện (Hà Nội)",
+    "userRole": "Seller"
+  },
+  "productName": "Điện thoại Samsung Galaxy S23 Ultra 5G 12GB/512GB",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-01-15 20:59:11"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f42"
+  },
+  "transactionID": "TS000073",
+  "orderID": "OD000079",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000029",
+    "fullName": "Lê Quốc Phúc",
+    "userRole": "Buyer"
+  },
+  "productName": "Điện thoại Xiaomi 12 5G",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-09-29 12:55:03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f43"
+  },
+  "transactionID": "TS000074",
+  "orderID": "OD000079",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000027",
+    "fullName": "Nguyễn Thị Trang",
+    "userRole": "Seller"
+  },
+  "productName": "Điện thoại Xiaomi 12 5G",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-09-29 12:55:03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f44"
+  },
+  "transactionID": "TS000075",
+  "orderID": "OD000080",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000030",
+    "fullName": "Phạm Đình Long",
+    "userRole": "Buyer"
+  },
+  "productName": "Điện thoại Xiaomi 12T 5G 256GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-05-01 21:09:59"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f45"
+  },
+  "transactionID": "TS000076",
+  "orderID": "OD000080",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000028",
+    "fullName": "Kho Đồ Cũ EcoTech (TP.HCM)",
+    "userRole": "Seller"
+  },
+  "productName": "Điện thoại Xiaomi 12T 5G 256GB",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-05-01 21:09:59"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f46"
+  },
+  "transactionID": "TS000077",
+  "orderID": "OD000081",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000031",
+    "fullName": "Hoàng Gia An",
+    "userRole": "Buyer"
+  },
+  "productName": "Điện thoại Xiaomi 12T 5G 128GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-05-30 09:14:26"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f47"
+  },
+  "transactionID": "TS000078",
+  "orderID": "OD000081",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000029",
+    "fullName": "Hoàng Gia Thành",
+    "userRole": "Seller"
+  },
+  "productName": "Điện thoại Xiaomi 12T 5G 128GB",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-05-30 09:14:26"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f48"
+  },
+  "transactionID": "TS000079",
+  "orderID": "OD000082",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000032",
+    "fullName": "Phan Thị Khoa",
+    "userRole": "Buyer"
+  },
+  "productName": "Điện thoại Masstel IZI 10",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-06-22 17:17:49"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f49"
+  },
+  "transactionID": "TS000080",
+  "orderID": "OD000082",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000030",
+    "fullName": "Thành Đạt Secondhand (Cần Thơ)",
+    "userRole": "Seller"
+  },
+  "productName": "Điện thoại Masstel IZI 10",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-06-22 17:17:49"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f4a"
+  },
+  "transactionID": "TS000081",
+  "orderID": "OD000083",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000033",
+    "fullName": "Võ Minh Hùng",
+    "userRole": "Buyer"
+  },
+  "productName": "Điện thoại Masstel Fami 60S 4G",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-08-20 09:35:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f4b"
+  },
+  "transactionID": "TS000082",
+  "orderID": "OD000083",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000031",
+    "fullName": "Nguyễn Văn Hùng",
+    "userRole": "Seller"
+  },
+  "productName": "Điện thoại Masstel Fami 60S 4G",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-08-20 09:35:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f4c"
+  },
+  "transactionID": "TS000083",
+  "orderID": "OD000086",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000036",
+    "fullName": "Đỗ Ngọc Thảo",
+    "userRole": "Buyer"
+  },
+  "productName": "Điện thoại OPPO Find N3 Flip 5G 12GB/256GB Hồng",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-04-01 12:54:30"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f4d"
+  },
+  "transactionID": "TS000084",
+  "orderID": "OD000086",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000034",
+    "fullName": "Vi tính Phát Đạt (Hà Nội)",
+    "userRole": "Seller"
+  },
+  "productName": "Điện thoại OPPO Find N3 Flip 5G 12GB/256GB Hồng",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-04-01 12:54:30"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f4e"
+  },
+  "transactionID": "TS000085",
+  "orderID": "OD000087",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000037",
+    "fullName": "Hồ Hữu Thịnh",
+    "userRole": "Buyer"
+  },
+  "productName": "Điện thoại OPPO Find N3 Flip 5G 12GB/256GB Đen/Vàng đồng",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-05-11 14:22:14"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f4f"
+  },
+  "transactionID": "TS000086",
+  "orderID": "OD000087",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000035",
+    "fullName": "Đặng Quốc Long",
+    "userRole": "Seller"
+  },
+  "productName": "Điện thoại OPPO Find N3 Flip 5G 12GB/256GB Đen/Vàng đồng",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-05-11 14:22:14"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f50"
+  },
+  "transactionID": "TS000087",
+  "orderID": "OD000088",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000038",
+    "fullName": "Ngô Hoàng Nam",
+    "userRole": "Buyer"
+  },
+  "productName": "Điện thoại Xiaomi 13 Lite 5G",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-05-02 11:19:21"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f51"
+  },
+  "transactionID": "TS000088",
+  "orderID": "OD000088",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000036",
+    "fullName": "Linh kiện Cũ Sài Gòn (Đà Nẵng)",
+    "userRole": "Seller"
+  },
+  "productName": "Điện thoại Xiaomi 13 Lite 5G",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-05-02 11:19:21"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f52"
+  },
+  "transactionID": "TS000089",
+  "orderID": "OD000091",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000041",
+    "fullName": "Nguyễn Thị Trang",
+    "userRole": "Buyer"
+  },
+  "productName": "Laptop Samsung XE340XDA-KA1VN (N4500, 4GB, 32GB, HD, ChromeOS)",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-04-20 17:10:34"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f53"
+  },
+  "transactionID": "TS000090",
+  "orderID": "OD000091",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000039",
+    "fullName": "Nguyễn Văn An",
+    "userRole": "Seller"
+  },
+  "productName": "Laptop Samsung XE340XDA-KA1VN (N4500, 4GB, 32GB, HD, ChromeOS)",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-04-20 17:10:34"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f54"
+  },
+  "transactionID": "TS000091",
+  "orderID": "OD000092",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000042",
+    "fullName": "Trần Minh Linh",
+    "userRole": "Buyer"
+  },
+  "productName": "Laptop Apple MacBook Air 15 inch M2 8GB/256GB Sạc 35W",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-02-21 12:30:50"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f55"
+  },
+  "transactionID": "TS000092",
+  "orderID": "OD000092",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000040",
+    "fullName": "Kho Máy Tính Miền Nam (Cần Thơ)",
+    "userRole": "Seller"
+  },
+  "productName": "Laptop Apple MacBook Air 15 inch M2 8GB/256GB Sạc 35W",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-02-21 12:30:50"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f56"
+  },
+  "transactionID": "TS000093",
+  "orderID": "OD000094",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000044",
+    "fullName": "Phạm Đình Vy",
+    "userRole": "Buyer"
+  },
+  "productName": "Laptop Acer Gaming Nitro 5 Tiger AN515 58 52SP - NH.QFHSV.001 (i5 12500H, 8GB, 512GB, RTX 3050 4GB, Full HD 144Hz, Win11)",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-02-13 07:07:56"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f57"
+  },
+  "transactionID": "TS000094",
+  "orderID": "OD000094",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000042",
+    "fullName": "Điện Tử Nhật Minh (Hà Nội)",
+    "userRole": "Seller"
+  },
+  "productName": "Laptop Acer Gaming Nitro 5 Tiger AN515 58 52SP - NH.QFHSV.001 (i5 12500H, 8GB, 512GB, RTX 3050 4GB, Full HD 144Hz, Win11)",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-02-13 07:07:56"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f58"
+  },
+  "transactionID": "TS000095",
+  "orderID": "OD000095",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000045",
+    "fullName": "Hoàng Gia Thành",
+    "userRole": "Buyer"
+  },
+  "productName": "Laptop Acer Gaming Nitro AN515 58 773Y i7 12700H/16GB/512GB/4GB RTX3050Ti/144Hz/Win11 (NH.QFKSV.001.16G)",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-06-08 20:53:03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f59"
+  },
+  "transactionID": "TS000096",
+  "orderID": "OD000095",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000043",
+    "fullName": "Đặng Quốc Nam",
+    "userRole": "Seller"
+  },
+  "productName": "Laptop Acer Gaming Nitro AN515 58 773Y i7 12700H/16GB/512GB/4GB RTX3050Ti/144Hz/Win11 (NH.QFKSV.001.16G)",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-06-08 20:53:03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f5a"
+  },
+  "transactionID": "TS000097",
+  "orderID": "OD000097",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000047",
+    "fullName": "Võ Đức Tuấn",
+    "userRole": "Buyer"
+  },
+  "productName": "Laptop HP Pavilion 15 eg2088TU - 7C0R0PA (i7 1260P, 16GB, 512GB, Full HD, Win11)",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-03-29 13:33:42"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f5b"
+  },
+  "transactionID": "TS000098",
+  "orderID": "OD000097",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000045",
+    "fullName": "Hồ Minh Thảo",
+    "userRole": "Seller"
+  },
+  "productName": "Laptop HP Pavilion 15 eg2088TU - 7C0R0PA (i7 1260P, 16GB, 512GB, Full HD, Win11)",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-03-29 13:33:42"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f5c"
+  },
+  "transactionID": "TS000099",
+  "orderID": "OD000099",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000049",
+    "fullName": "Nguyễn Văn Hùng",
+    "userRole": "Buyer"
+  },
+  "productName": "Laptop Asus Vivobook S 16 OLED S5606MA - MX050W (Ultra 5 125H, 16GB, 512GB, 3.2K OLED 120Hz, Win11)",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-04-30 17:05:35"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f5d"
+  },
+  "transactionID": "TS000100",
+  "orderID": "OD000099",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000047",
+    "fullName": "Nguyễn Văn Thịnh",
+    "userRole": "Seller"
+  },
+  "productName": "Laptop Asus Vivobook S 16 OLED S5606MA - MX050W (Ultra 5 125H, 16GB, 512GB, 3.2K OLED 120Hz, Win11)",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-04-30 17:05:35"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f5e"
+  },
+  "transactionID": "TS000101",
+  "orderID": "OD000100",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "CM000050",
+    "fullName": "Trần Thị Thảo",
+    "userRole": "Buyer"
+  },
+  "productName": "Laptop Apple MacBook Air 13 inch M2 8GB/256GB",
+  "action": "Mua hàng",
+  "greenCoins": 10000,
+  "transactionDate": "2026-06-20 10:21:47"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f5f"
+  },
+  "transactionID": "TS000102",
+  "orderID": "OD000100",
+  "orderType": "resell",
+  "userInfo": {
+    "userID": "SL000048",
+    "fullName": "Gia Hưng Computer (Hà Nội)",
+    "userRole": "Seller"
+  },
+  "productName": "Laptop Apple MacBook Air 13 inch M2 8GB/256GB",
+  "action": "Đăng bán",
+  "greenCoins": 20000,
+  "transactionDate": "2026-06-20 10:21:47"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f60"
+  },
+  "transactionID": "TS000103",
+  "orderID": "RP000001",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000001",
+    "fullName": "Lê Quốc Khoa",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-09-03 16:29:08"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f61"
+  },
+  "transactionID": "TS000104",
+  "orderID": "RP000003",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000003",
+    "fullName": "Nguyễn Văn Hùng",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-04-15 11:31:18"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f62"
+  },
+  "transactionID": "TS000105",
+  "orderID": "RP000004",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000004",
+    "fullName": "Trần Thị Thảo",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-09-08 17:20:12"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f63"
+  },
+  "transactionID": "TS000106",
+  "orderID": "RP000005",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000005",
+    "fullName": "Hoàng Minh Dũng",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-03-29 15:26:19"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f64"
+  },
+  "transactionID": "TS000107",
+  "orderID": "RP000006",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000006",
+    "fullName": "Phạm Hữu Nam",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-01-29 16:54:39"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f65"
+  },
+  "transactionID": "TS000108",
+  "orderID": "RP000007",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000007",
+    "fullName": "Vũ Ngọc Trang",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-06-25 18:34:03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f66"
+  },
+  "transactionID": "TS000109",
+  "orderID": "RP000008",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000008",
+    "fullName": "Đặng Quốc Long",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-04-08 07:01:33"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f67"
+  },
+  "transactionID": "TS000110",
+  "orderID": "RP000009",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000009",
+    "fullName": "Bùi Thúy Vy",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-05-10 07:38:19"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f68"
+  },
+  "transactionID": "TS000111",
+  "orderID": "RP000010",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000010",
+    "fullName": "Đỗ Hoàng Phúc",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-08-31 14:03:05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f69"
+  },
+  "transactionID": "TS000112",
+  "orderID": "RP000011",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000011",
+    "fullName": "Hồ Xuân Thịnh",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-06-30 15:54:53"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f6a"
+  },
+  "transactionID": "TS000113",
+  "orderID": "RP000012",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000012",
+    "fullName": "Dương Gia Bảo",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-08-28 07:19:53"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f6b"
+  },
+  "transactionID": "TS000114",
+  "orderID": "RP000013",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000013",
+    "fullName": "Lý Đức Bình",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-02-22 15:13:02"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f6c"
+  },
+  "transactionID": "TS000115",
+  "orderID": "RP000014",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000014",
+    "fullName": "Trần Thị Hương",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-07-08 12:09:14"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f6d"
+  },
+  "transactionID": "TS000116",
+  "orderID": "RP000016",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000016",
+    "fullName": "Phạm Hữu Trí",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-07-17 07:04:06"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f6e"
+  },
+  "transactionID": "TS000117",
+  "orderID": "RP000017",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000017",
+    "fullName": "Hoàng Thanh Linh",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-04-29 15:26:13"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f6f"
+  },
+  "transactionID": "TS000118",
+  "orderID": "RP000018",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000018",
+    "fullName": "Phan Đình Thành",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-02-02 07:05:53"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f70"
+  },
+  "transactionID": "TS000119",
+  "orderID": "RP000019",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000019",
+    "fullName": "Võ Đức Tuấn",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-07-29 21:01:41"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f71"
+  },
+  "transactionID": "TS000120",
+  "orderID": "RP000021",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000021",
+    "fullName": "Bùi Ngọc Phương",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-07-24 20:47:47"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f72"
+  },
+  "transactionID": "TS000121",
+  "orderID": "RP000022",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000022",
+    "fullName": "Đỗ Hoàng Dũng",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-05-31 12:38:29"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f73"
+  },
+  "transactionID": "TS000122",
+  "orderID": "RP000023",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000023",
+    "fullName": "Hồ Minh Thảo",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-07-10 10:46:04"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f74"
+  },
+  "transactionID": "TS000123",
+  "orderID": "RP000024",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000024",
+    "fullName": "Ngô Xuân Vy",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-01-28 15:05:09"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f75"
+  },
+  "transactionID": "TS000124",
+  "orderID": "RP000025",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000025",
+    "fullName": "Dương Hữu Khoa",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-06-19 11:50:58"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f76"
+  },
+  "transactionID": "TS000125",
+  "orderID": "RP000026",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000026",
+    "fullName": "Lý Thanh Trang",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-07-11 19:30:16"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f77"
+  },
+  "transactionID": "TS000126",
+  "orderID": "RP000028",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000028",
+    "fullName": "Trần Thị Bình",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-08-15 15:45:42"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f78"
+  },
+  "transactionID": "TS000127",
+  "orderID": "RP000029",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000029",
+    "fullName": "Lê Quốc Phúc",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-06-17 13:57:48"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f79"
+  },
+  "transactionID": "TS000128",
+  "orderID": "RP000030",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000030",
+    "fullName": "Phạm Đình Long",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-02-27 21:00:53"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f7a"
+  },
+  "transactionID": "TS000129",
+  "orderID": "RP000031",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000031",
+    "fullName": "Hoàng Gia An",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-09-01 10:05:49"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f7b"
+  },
+  "transactionID": "TS000130",
+  "orderID": "RP000033",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000033",
+    "fullName": "Võ Minh Hùng",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-08-25 19:05:04"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f7c"
+  },
+  "transactionID": "TS000131",
+  "orderID": "RP000034",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000034",
+    "fullName": "Đặng Xuân Phương",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-06-24 14:18:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f7d"
+  },
+  "transactionID": "TS000132",
+  "orderID": "RP000035",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000035",
+    "fullName": "Bùi Đức Trí",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-06-25 12:15:54"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f7e"
+  },
+  "transactionID": "TS000133",
+  "orderID": "RP000036",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000036",
+    "fullName": "Đỗ Ngọc Thảo",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-04-14 10:26:53"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f7f"
+  },
+  "transactionID": "TS000134",
+  "orderID": "RP000037",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000037",
+    "fullName": "Hồ Hữu Thịnh",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-02-25 11:16:01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f80"
+  },
+  "transactionID": "TS000135",
+  "orderID": "RP000038",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000038",
+    "fullName": "Ngô Hoàng Nam",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-06-20 13:54:17"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f81"
+  },
+  "transactionID": "TS000136",
+  "orderID": "RP000039",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000039",
+    "fullName": "Dương Thanh Hải",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-09-01 18:44:29"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f82"
+  },
+  "transactionID": "TS000137",
+  "orderID": "RP000040",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000040",
+    "fullName": "Lý Văn Bình",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-04-14 17:48:43"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f83"
+  },
+  "transactionID": "TS000138",
+  "orderID": "RP000041",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000041",
+    "fullName": "Nguyễn Thị Trang",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-08-31 07:39:41"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f84"
+  },
+  "transactionID": "TS000139",
+  "orderID": "RP000042",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000042",
+    "fullName": "Trần Minh Linh",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-04-11 09:23:56"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f85"
+  },
+  "transactionID": "TS000140",
+  "orderID": "RP000043",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000043",
+    "fullName": "Lê Quốc Dũng",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-08-01 14:06:40"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f86"
+  },
+  "transactionID": "TS000141",
+  "orderID": "RP000044",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000044",
+    "fullName": "Phạm Đình Vy",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-01-16 12:31:54"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f87"
+  },
+  "transactionID": "TS000142",
+  "orderID": "RP000045",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000045",
+    "fullName": "Hoàng Gia Thành",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-06-24 20:22:55"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f88"
+  },
+  "transactionID": "TS000143",
+  "orderID": "RP000046",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000046",
+    "fullName": "Phan Hữu Hà",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-04-21 11:06:52"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f89"
+  },
+  "transactionID": "TS000144",
+  "orderID": "RP000048",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000048",
+    "fullName": "Đặng Xuân An",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-03-19 20:50:56"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f8a"
+  },
+  "transactionID": "TS000145",
+  "orderID": "RP000049",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000049",
+    "fullName": "Nguyễn Văn Hùng",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-08-19 17:36:57"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f8b"
+  },
+  "transactionID": "TS000146",
+  "orderID": "RP000050",
+  "orderType": "repair",
+  "userInfo": {
+    "userID": "CM000050",
+    "fullName": "Trần Thị Thảo",
+    "userRole": "Customer"
+  },
+  "productName": "Dịch vụ sửa chữa thiết bị",
+  "action": "Sửa chữa",
+  "greenCoins": 5000,
+  "transactionDate": "2026-02-15 15:39:53"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f8c"
+  },
+  "transactionID": "TS000147",
+  "orderID": "RC000002",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000002",
+    "fullName": "Phan Thanh Hà",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (3.5kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 3500,
+  "transactionDate": "2026-09-06 08:28:36"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f8d"
+  },
+  "transactionID": "TS000148",
+  "orderID": "RC000003",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000003",
+    "fullName": "Nguyễn Văn Hùng",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (3.2kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 3200,
+  "transactionDate": "2026-09-04 18:29:01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f8e"
+  },
+  "transactionID": "TS000149",
+  "orderID": "RC000005",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000005",
+    "fullName": "Hoàng Minh Dũng",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (1.6kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 1600,
+  "transactionDate": "2026-08-14 20:10:11"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f8f"
+  },
+  "transactionID": "TS000150",
+  "orderID": "RC000006",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000006",
+    "fullName": "Phạm Hữu Nam",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (4kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 4000,
+  "transactionDate": "2026-06-11 21:15:36"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f90"
+  },
+  "transactionID": "TS000151",
+  "orderID": "RC000007",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000007",
+    "fullName": "Vũ Ngọc Trang",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (4.4kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 4400,
+  "transactionDate": "2026-04-21 16:59:58"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f91"
+  },
+  "transactionID": "TS000152",
+  "orderID": "RC000008",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000008",
+    "fullName": "Đặng Quốc Long",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (0.7kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 700,
+  "transactionDate": "2026-06-26 14:39:29"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f92"
+  },
+  "transactionID": "TS000153",
+  "orderID": "RC000010",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000010",
+    "fullName": "Đỗ Hoàng Phúc",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (3.3kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 3300,
+  "transactionDate": "2026-02-11 13:04:10"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f93"
+  },
+  "transactionID": "TS000154",
+  "orderID": "RC000013",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000013",
+    "fullName": "Lý Đức Bình",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (2.4kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 2400,
+  "transactionDate": "2026-03-31 16:20:05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f94"
+  },
+  "transactionID": "TS000155",
+  "orderID": "RC000014",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000014",
+    "fullName": "Trần Thị Hương",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (0.6kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 600,
+  "transactionDate": "2026-06-30 19:35:23"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f95"
+  },
+  "transactionID": "TS000156",
+  "orderID": "RC000016",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000016",
+    "fullName": "Phạm Hữu Trí",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (2.6kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 2600,
+  "transactionDate": "2026-07-23 08:21:25"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f96"
+  },
+  "transactionID": "TS000157",
+  "orderID": "RC000019",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000019",
+    "fullName": "Võ Đức Tuấn",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (3.8kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 3800,
+  "transactionDate": "2026-07-29 14:36:41"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f97"
+  },
+  "transactionID": "TS000158",
+  "orderID": "RC000020",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000020",
+    "fullName": "Đặng Quốc Nam",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (2.7kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 2700,
+  "transactionDate": "2026-04-18 11:55:52"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f98"
+  },
+  "transactionID": "TS000159",
+  "orderID": "RC000021",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000021",
+    "fullName": "Bùi Ngọc Phương",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (1.5kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 1500,
+  "transactionDate": "2026-05-09 12:02:15"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f99"
+  },
+  "transactionID": "TS000160",
+  "orderID": "RC000022",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000022",
+    "fullName": "Đỗ Hoàng Dũng",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (4.2kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 4200,
+  "transactionDate": "2026-07-04 11:40:14"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f9a"
+  },
+  "transactionID": "TS000161",
+  "orderID": "RC000023",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000023",
+    "fullName": "Hồ Minh Thảo",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (3.4kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 3400,
+  "transactionDate": "2026-07-07 13:55:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f9b"
+  },
+  "transactionID": "TS000162",
+  "orderID": "RC000024",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000024",
+    "fullName": "Ngô Xuân Vy",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (1.3kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 1300,
+  "transactionDate": "2026-06-04 16:55:01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f9c"
+  },
+  "transactionID": "TS000163",
+  "orderID": "RC000025",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000025",
+    "fullName": "Dương Hữu Khoa",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (3.8kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 3800,
+  "transactionDate": "2026-01-13 09:23:04"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f9d"
+  },
+  "transactionID": "TS000164",
+  "orderID": "RC000026",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000026",
+    "fullName": "Lý Thanh Trang",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (4kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 4000,
+  "transactionDate": "2026-03-09 17:26:18"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f9e"
+  },
+  "transactionID": "TS000165",
+  "orderID": "RC000027",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000027",
+    "fullName": "Nguyễn Văn Thịnh",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (5kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 5000,
+  "transactionDate": "2026-04-06 18:24:02"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9f9f"
+  },
+  "transactionID": "TS000166",
+  "orderID": "RC000028",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000028",
+    "fullName": "Trần Thị Bình",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (1kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 1000,
+  "transactionDate": "2026-02-23 21:15:05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9fa0"
+  },
+  "transactionID": "TS000167",
+  "orderID": "RC000029",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000029",
+    "fullName": "Lê Quốc Phúc",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (4.8kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 4800,
+  "transactionDate": "2026-07-17 07:13:16"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9fa1"
+  },
+  "transactionID": "TS000168",
+  "orderID": "RC000031",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000031",
+    "fullName": "Hoàng Gia An",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (2.3kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 2300,
+  "transactionDate": "2026-07-05 19:41:14"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9fa2"
+  },
+  "transactionID": "TS000169",
+  "orderID": "RC000032",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000032",
+    "fullName": "Phan Thị Khoa",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (1.3kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 1300,
+  "transactionDate": "2026-01-04 14:07:54"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9fa3"
+  },
+  "transactionID": "TS000170",
+  "orderID": "RC000033",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000033",
+    "fullName": "Võ Minh Hùng",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (2kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 2000,
+  "transactionDate": "2026-06-12 15:59:49"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9fa4"
+  },
+  "transactionID": "TS000171",
+  "orderID": "RC000034",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000034",
+    "fullName": "Đặng Xuân Phương",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (3.7kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 3700,
+  "transactionDate": "2026-07-04 16:51:01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9fa5"
+  },
+  "transactionID": "TS000172",
+  "orderID": "RC000035",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000035",
+    "fullName": "Bùi Đức Trí",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (0.6kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 600,
+  "transactionDate": "2026-05-10 11:27:10"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9fa6"
+  },
+  "transactionID": "TS000173",
+  "orderID": "RC000036",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000036",
+    "fullName": "Đỗ Ngọc Thảo",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (0.7kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 700,
+  "transactionDate": "2026-08-16 07:42:00"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9fa7"
+  },
+  "transactionID": "TS000174",
+  "orderID": "RC000037",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000037",
+    "fullName": "Hồ Hữu Thịnh",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (0.7kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 700,
+  "transactionDate": "2026-05-27 19:13:45"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9fa8"
+  },
+  "transactionID": "TS000175",
+  "orderID": "RC000038",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000038",
+    "fullName": "Ngô Hoàng Nam",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (1kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 1000,
+  "transactionDate": "2026-01-03 10:15:48"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9fa9"
+  },
+  "transactionID": "TS000176",
+  "orderID": "RC000042",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000042",
+    "fullName": "Trần Minh Linh",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (4kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 4000,
+  "transactionDate": "2026-05-24 19:35:40"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9faa"
+  },
+  "transactionID": "TS000177",
+  "orderID": "RC000043",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000043",
+    "fullName": "Lê Quốc Dũng",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (2.8kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 2800,
+  "transactionDate": "2026-08-25 10:17:23"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9fab"
+  },
+  "transactionID": "TS000178",
+  "orderID": "RC000045",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000045",
+    "fullName": "Hoàng Gia Thành",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (1.1kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 1100,
+  "transactionDate": "2026-02-18 18:40:58"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9fac"
+  },
+  "transactionID": "TS000179",
+  "orderID": "RC000046",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000046",
+    "fullName": "Phan Hữu Hà",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (5kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 5000,
+  "transactionDate": "2026-06-19 13:22:54"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9fad"
+  },
+  "transactionID": "TS000180",
+  "orderID": "RC000048",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000048",
+    "fullName": "Đặng Xuân An",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (1kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 1000,
+  "transactionDate": "2026-03-22 17:01:34"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9fae"
+  },
+  "transactionID": "TS000181",
+  "orderID": "RC000049",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000049",
+    "fullName": "Nguyễn Văn Hùng",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (1.2kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 1200,
+  "transactionDate": "2026-05-02 14:16:23"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9faf"
+  },
+  "transactionID": "TS000182",
+  "orderID": "RC000050",
+  "orderType": "recycle",
+  "userInfo": {
+    "userID": "CM000050",
+    "fullName": "Trần Thị Thảo",
+    "userRole": "Customer"
+  },
+  "productName": "Tái chế rác thải điện tử (4.3kg)",
+  "action": "Xử lý rác",
+  "greenCoins": 4300,
+  "transactionDate": "2026-05-17 09:04:30"
+}]

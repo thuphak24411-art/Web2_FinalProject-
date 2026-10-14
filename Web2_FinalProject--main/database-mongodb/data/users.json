@@ -1,0 +1,3275 @@
+[{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d2c"
+  },
+  "userID": "AD001",
+  "userName": "vanhung42",
+  "fullName": "Nguyễn Văn Hùng",
+  "email": "vanhung42@ecocycle.vn",
+  "phoneNumber": "0913829102",
+  "password": "vanhung123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-01-10"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d2d"
+  },
+  "userID": "AD002",
+  "userName": "thithao19",
+  "fullName": "Trần Thị Thảo",
+  "email": "thithao19@ecocycle.vn",
+  "phoneNumber": "0981928374",
+  "password": "thithao123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-01-12"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d2e"
+  },
+  "userID": "AD003",
+  "userName": "minhdung73",
+  "fullName": "Hoàng Minh Dũng",
+  "email": "minhdung73@ecocycle.vn",
+  "phoneNumber": "0945829103",
+  "password": "minhdung123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-01-15"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d2f"
+  },
+  "userID": "AD004",
+  "userName": "thanhphuong81",
+  "fullName": "Lê Thanh Phương",
+  "email": "thanhphuong81@ecocycle.vn",
+  "phoneNumber": "0972348192",
+  "password": "thanhphuong123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-01-18"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d30"
+  },
+  "userID": "AD005",
+  "userName": "huunamp2",
+  "fullName": "Phạm Hữu Nam",
+  "email": "huunam92@ecocycle.vn",
+  "phoneNumber": "0934819203",
+  "password": "huunam123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-01-20"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d31"
+  },
+  "userID": "AD006",
+  "userName": "dinhkhoa55",
+  "fullName": "Phan Đình Khoa",
+  "email": "dinhkhoa55@ecocycle.vn",
+  "phoneNumber": "0908192834",
+  "password": "dinhkhoa123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-01-22"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d32"
+  },
+  "userID": "AD007",
+  "userName": "ngoctrang14",
+  "fullName": "Vũ Ngọc Trang",
+  "email": "ngoctrang14@ecocycle.vn",
+  "phoneNumber": "0967182930",
+  "password": "ngoctrang123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-01-25"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d33"
+  },
+  "userID": "AD008",
+  "userName": "quoclong38",
+  "fullName": "Đặng Quốc Long",
+  "email": "quoclong38@ecocycle.vn",
+  "phoneNumber": "0982391029",
+  "password": "quoclong123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-01-27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d34"
+  },
+  "userID": "AD009",
+  "userName": "thuyvy62",
+  "fullName": "Bùi Thúy Vy",
+  "email": "thuyvy62@ecocycle.vn",
+  "phoneNumber": "0912384910",
+  "password": "thuyvy123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-02-01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d35"
+  },
+  "userID": "AD010",
+  "userName": "hoangphuc77",
+  "fullName": "Đỗ Hoàng Phúc",
+  "email": "hoangphuc77@ecocycle.vn",
+  "phoneNumber": "0938192830",
+  "password": "hoangphuc123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-02-03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d36"
+  },
+  "userID": "AD011",
+  "userName": "xuanthinh25",
+  "fullName": "Hồ Xuân Thịnh",
+  "email": "xuanthinh25@ecocycle.vn",
+  "phoneNumber": "0947182934",
+  "password": "xuanthinh123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-02-05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d37"
+  },
+  "userID": "AD012",
+  "userName": "thanhha49",
+  "fullName": "Ngô Thanh Hà",
+  "email": "thanhha49@ecocycle.vn",
+  "phoneNumber": "0978192039",
+  "password": "thanhha123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-02-08"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d38"
+  },
+  "userID": "AD013",
+  "userName": "giabao33",
+  "fullName": "Dương Gia Bảo",
+  "email": "giabao33@ecocycle.vn",
+  "phoneNumber": "0903819284",
+  "password": "giabao123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-02-10"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d39"
+  },
+  "userID": "AD014",
+  "userName": "ducbinh86",
+  "fullName": "Lý Đức Bình",
+  "email": "ducbinh86@ecocycle.vn",
+  "phoneNumber": "0968192039",
+  "password": "ducbinh123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-02-12"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d3a"
+  },
+  "userID": "AD015",
+  "userName": "vanan11",
+  "fullName": "Nguyễn Văn An",
+  "email": "vanan11@ecocycle.vn",
+  "phoneNumber": "0918293019",
+  "password": "vanan123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-02-14"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d3b"
+  },
+  "userID": "AD016",
+  "userName": "thihuong95",
+  "fullName": "Trần Thị Hương",
+  "email": "thihuong95@ecocycle.vn",
+  "phoneNumber": "0987182930",
+  "password": "thihuong123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-02-16"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d3c"
+  },
+  "userID": "AD017",
+  "userName": "minhhai52",
+  "fullName": "Lê Minh Hải",
+  "email": "minhhai52@ecocycle.vn",
+  "phoneNumber": "0938192039",
+  "password": "minhhai123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-02-18"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d3d"
+  },
+  "userID": "AD018",
+  "userName": "huutri44",
+  "fullName": "Phạm Hữu Trí",
+  "email": "huutri44@ecocycle.vn",
+  "phoneNumber": "0948192039",
+  "password": "huutri123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-02-20"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d3e"
+  },
+  "userID": "AD019",
+  "userName": "thanhlinh67",
+  "fullName": "Hoàng Thanh Linh",
+  "email": "thanhlinh67@ecocycle.vn",
+  "phoneNumber": "0902381920",
+  "password": "thanhlinh123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-02-22"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d3f"
+  },
+  "userID": "AD020",
+  "userName": "dinhthanh28",
+  "fullName": "Phan Đình Thành",
+  "email": "dinhthanh28@ecocycle.vn",
+  "phoneNumber": "0971829304",
+  "password": "dinhthanh123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-02-24"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d40"
+  },
+  "userID": "AD021",
+  "userName": "ductuan83",
+  "fullName": "Võ Đức Tuấn",
+  "email": "ductuan83@ecocycle.vn",
+  "phoneNumber": "0981928301",
+  "password": "ductuan123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-02-26"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d41"
+  },
+  "userID": "AD022",
+  "userName": "quocnam15",
+  "fullName": "Đặng Quốc Nam",
+  "email": "quocnam15@ecocycle.vn",
+  "phoneNumber": "0919283019",
+  "password": "quocnam123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-03-01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d42"
+  },
+  "userID": "AD023",
+  "userName": "ngocphuong76",
+  "fullName": "Bùi Ngọc Phương",
+  "email": "ngocphuong76@ecocycle.vn",
+  "phoneNumber": "0934182930",
+  "password": "ngocphuong123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-03-03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d43"
+  },
+  "userID": "AD024",
+  "userName": "hoangdung39",
+  "fullName": "Đỗ Hoàng Dũng",
+  "email": "hoangdung39@ecocycle.vn",
+  "phoneNumber": "0948192830",
+  "password": "hoangdung123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-03-05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d44"
+  },
+  "userID": "AD025",
+  "userName": "minhthao91",
+  "fullName": "Hồ Minh Thảo",
+  "email": "minhthao91@ecocycle.vn",
+  "phoneNumber": "0968192830",
+  "password": "minhthao123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-03-08"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d45"
+  },
+  "userID": "AD026",
+  "userName": "xuanvy48",
+  "fullName": "Ngô Xuân Vy",
+  "email": "xuanvy48@ecocycle.vn",
+  "phoneNumber": "0901829301",
+  "password": "xuanvy123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-03-10"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d46"
+  },
+  "userID": "AD027",
+  "userName": "huukhoa21",
+  "fullName": "Dương Hữu Khoa",
+  "email": "huukhoa21@ecocycle.vn",
+  "phoneNumber": "0978192830",
+  "password": "huukhoa123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-03-12"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d47"
+  },
+  "userID": "AD028",
+  "userName": "thanhtrang87",
+  "fullName": "Lý Thanh Trang",
+  "email": "thanhtrang87@ecocycle.vn",
+  "phoneNumber": "0981928304",
+  "password": "thanhtrang123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-03-15"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d48"
+  },
+  "userID": "AD029",
+  "userName": "vanthinh59",
+  "fullName": "Nguyễn Văn Thịnh",
+  "email": "vanthinh59@ecocycle.vn",
+  "phoneNumber": "0918293049",
+  "password": "vanthinh123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-03-18"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d49"
+  },
+  "userID": "AD030",
+  "userName": "thibinh34",
+  "fullName": "Trần Thị Bình",
+  "email": "thibinh34@ecocycle.vn",
+  "phoneNumber": "0934182938",
+  "password": "thibinh123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-03-20"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d4a"
+  },
+  "userID": "AD031",
+  "userName": "quocphuc68",
+  "fullName": "Lê Quốc Phúc",
+  "email": "quocphuc68@ecocycle.vn",
+  "phoneNumber": "0948192038",
+  "password": "quocphuc123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-03-22"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d4b"
+  },
+  "userID": "AD032",
+  "userName": "dinhlong16",
+  "fullName": "Phạm Đình Long",
+  "email": "dinhlong16@ecocycle.vn",
+  "phoneNumber": "0968192038",
+  "password": "dinhlong123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-03-25"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d4c"
+  },
+  "userID": "AD033",
+  "userName": "giaan72",
+  "fullName": "Hoàng Gia An",
+  "email": "giaan72@ecocycle.vn",
+  "phoneNumber": "0901829384",
+  "password": "giaan123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-03-27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d4d"
+  },
+  "userID": "AD034",
+  "userName": "thikhoa45",
+  "fullName": "Phan Thị Khoa",
+  "email": "thikhoa45@ecocycle.vn",
+  "phoneNumber": "0971829384",
+  "password": "thikhoa123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-03-29"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d4e"
+  },
+  "userID": "AD035",
+  "userName": "minhhung82",
+  "fullName": "Võ Minh Hùng",
+  "email": "minhhung82@ecocycle.vn",
+  "phoneNumber": "0981928384",
+  "password": "minhhung123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-04-01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d4f"
+  },
+  "userID": "AD036",
+  "userName": "xuanphuong27",
+  "fullName": "Đặng Xuân Phương",
+  "email": "xuanphuong27@ecocycle.vn",
+  "phoneNumber": "0918293847",
+  "password": "xuanphuong123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-04-03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d50"
+  },
+  "userID": "AD037",
+  "userName": "ductri93",
+  "fullName": "Bùi Đức Trí",
+  "email": "ductri93@ecocycle.vn",
+  "phoneNumber": "0934182948",
+  "password": "ductri123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-04-05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d51"
+  },
+  "userID": "AD038",
+  "userName": "ngocthao54",
+  "fullName": "Đỗ Ngọc Thảo",
+  "email": "ngocthao54@ecocycle.vn",
+  "phoneNumber": "0948192847",
+  "password": "ngocthao123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-04-08"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d52"
+  },
+  "userID": "AD039",
+  "userName": "huuthinh18",
+  "fullName": "Hồ Hữu Thịnh",
+  "email": "huuthinh18@ecocycle.vn",
+  "phoneNumber": "0968192847",
+  "password": "huuthinh123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-04-10"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d53"
+  },
+  "userID": "AD040",
+  "userName": "hoangnam63",
+  "fullName": "Ngô Hoàng Nam",
+  "email": "hoangnam63@ecocycle.vn",
+  "phoneNumber": "0901829485",
+  "password": "hoangnam123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-04-12"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d54"
+  },
+  "userID": "AD041",
+  "userName": "thanhhai31",
+  "fullName": "Dương Thanh Hải",
+  "email": "thanhhai31@ecocycle.vn",
+  "phoneNumber": "0971829485",
+  "password": "thanhhai123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-04-15"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d55"
+  },
+  "userID": "AD042",
+  "userName": "vanbinh79",
+  "fullName": "Lý Văn Bình",
+  "email": "vanbinh79@ecocycle.vn",
+  "phoneNumber": "0981928485",
+  "password": "vanbinh123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-04-18"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d56"
+  },
+  "userID": "AD043",
+  "userName": "thitrang46",
+  "fullName": "Nguyễn Thị Trang",
+  "email": "thitrang46@ecocycle.vn",
+  "phoneNumber": "0918294857",
+  "password": "thitrang123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-04-20"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d57"
+  },
+  "userID": "AD044",
+  "userName": "minhlinh88",
+  "fullName": "Trần Minh Linh",
+  "email": "minhlinh88@ecocycle.vn",
+  "phoneNumber": "0934182957",
+  "password": "minhlinh123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-04-22"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d58"
+  },
+  "userID": "AD045",
+  "userName": "quocdung23",
+  "fullName": "Lê Quốc Dũng",
+  "email": "quocdung23@ecocycle.vn",
+  "phoneNumber": "0948192857",
+  "password": "quocdung123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-04-25"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d59"
+  },
+  "userID": "AD046",
+  "userName": "dinhvy65",
+  "fullName": "Phạm Đình Vy",
+  "email": "dinhvy65@ecocycle.vn",
+  "phoneNumber": "0968192857",
+  "password": "dinhvy123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-04-27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d5a"
+  },
+  "userID": "AD047",
+  "userName": "giathanh12",
+  "fullName": "Hoàng Gia Thành",
+  "email": "giathanh12@ecocycle.vn",
+  "phoneNumber": "0901829586",
+  "password": "giathanh123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-05-01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d5b"
+  },
+  "userID": "AD048",
+  "userName": "huuha58",
+  "fullName": "Phan Hữu Hà",
+  "email": "huuha58@ecocycle.vn",
+  "phoneNumber": "0971829586",
+  "password": "huuha123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-05-03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d5c"
+  },
+  "userID": "AD049",
+  "userName": "ductuan94",
+  "fullName": "Võ Đức Tuấn",
+  "email": "ductuan94@ecocycle.vn",
+  "phoneNumber": "0981928586",
+  "password": "ductuan123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-05-05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d5d"
+  },
+  "userID": "AD050",
+  "userName": "xuanan37",
+  "fullName": "Đặng Xuân An",
+  "email": "xuanan37@ecocycle.vn",
+  "phoneNumber": "0918295867",
+  "password": "xuanan123",
+  "role": "ADMIN",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 0,
+  "joinDate": "2026-05-08"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d5e"
+  },
+  "userID": "CM000001",
+  "userName": "quockhoa88",
+  "fullName": "Lê Quốc Khoa",
+  "email": "quockhoa88@gmail.com",
+  "phoneNumber": "0912384756",
+  "password": "quockhoa123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 3420,
+  "eWasteRecycledKg": 4.2,
+  "joinDate": "2026-02-18",
+  "customerDetails": {
+    "address": "Số 142 Đường 12, Quận Bình Thạnh, TP.HCM",
+    "bankInfo": {
+      "bankName": "Techcombank",
+      "accountNumber": "190384729182",
+      "accountHolder": "LE QUOC KHOA"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d5f"
+  },
+  "userID": "CM000002",
+  "userName": "thanhha55",
+  "fullName": "Phan Thanh Hà",
+  "email": "thanhha55@gmail.com",
+  "phoneNumber": "0978392102",
+  "password": "thanhha123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 120,
+  "eWasteRecycledKg": 1.1,
+  "joinDate": "2026-02-20",
+  "customerDetails": {
+    "address": "Số 89 Đường 5, Quận Cầu Giấy, Hà Nội",
+    "bankInfo": {
+      "bankName": "MBBank",
+      "accountNumber": "038192849201",
+      "accountHolder": "PHAN THANH HA"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d60"
+  },
+  "userID": "CM000003",
+  "userName": "vanhung14",
+  "fullName": "Nguyễn Văn Hùng",
+  "email": "vanhung14@gmail.com",
+  "phoneNumber": "0934182910",
+  "password": "vanhung123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 1500,
+  "eWasteRecycledKg": 8,
+  "joinDate": "2026-02-23",
+  "customerDetails": {
+    "address": "Số 45 Đường 3, Quận Hải Châu, Đà Nẵng",
+    "bankInfo": {
+      "bankName": "Vietcombank",
+      "accountNumber": "102938475612",
+      "accountHolder": "NGUYEN VAN HUNG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d61"
+  },
+  "userID": "CM000004",
+  "userName": "thithao72",
+  "fullName": "Trần Thị Thảo",
+  "email": "thithao72@gmail.com",
+  "phoneNumber": "0981928374",
+  "password": "thithao123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 450,
+  "eWasteRecycledKg": 2.3,
+  "joinDate": "2026-02-25",
+  "customerDetails": {
+    "address": "Số 234 Đường 7, Quận Ninh Kiều, Cần Thơ",
+    "bankInfo": {
+      "bankName": "BIDV",
+      "accountNumber": "103829102938",
+      "accountHolder": "TRAN THI THAO"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d62"
+  },
+  "userID": "CM000005",
+  "userName": "minhdung39",
+  "fullName": "Hoàng Minh Dũng",
+  "email": "minhdung39@gmail.com",
+  "phoneNumber": "0945829103",
+  "password": "minhdung123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 820,
+  "eWasteRecycledKg": 3.5,
+  "joinDate": "2026-03-01",
+  "customerDetails": {
+    "address": "Số 12 Đường 8, TP. Thủ Dầu Một, Bình Dương",
+    "bankInfo": {
+      "bankName": "ACB",
+      "accountNumber": "2193847291",
+      "accountHolder": "HOANG MINH DUNG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d63"
+  },
+  "userID": "CM000006",
+  "userName": "huunam68",
+  "fullName": "Phạm Hữu Nam",
+  "email": "huunam68@gmail.com",
+  "phoneNumber": "0934819203",
+  "password": "huunam123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 2100,
+  "eWasteRecycledKg": 12.4,
+  "joinDate": "2026-03-03",
+  "customerDetails": {
+    "address": "Số 78 Đường 15, TP. Biên Hòa, Đồng Nai",
+    "bankInfo": {
+      "bankName": "VPBank",
+      "accountNumber": "1582910293",
+      "accountHolder": "PHAM HUU NAM"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d64"
+  },
+  "userID": "CM000007",
+  "userName": "ngoctrang21",
+  "fullName": "Vũ Ngọc Trang",
+  "email": "ngoctrang21@gmail.com",
+  "phoneNumber": "0967182930",
+  "password": "ngoctrang123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 310,
+  "eWasteRecycledKg": 0.8,
+  "joinDate": "2026-03-06",
+  "customerDetails": {
+    "address": "Số 56 Đường 4, Quận Ngô Quyền, Hải Phòng",
+    "bankInfo": {
+      "bankName": "TPBank",
+      "accountNumber": "04829102938",
+      "accountHolder": "VU NGOC TRANG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d65"
+  },
+  "userID": "CM000008",
+  "userName": "quoclong84",
+  "fullName": "Đặng Quốc Long",
+  "email": "quoclong84@gmail.com",
+  "phoneNumber": "0982391029",
+  "password": "quoclong123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 950,
+  "eWasteRecycledKg": 5,
+  "joinDate": "2026-03-09",
+  "customerDetails": {
+    "address": "Số 90 Đường 1, Quận 1, TP.HCM",
+    "bankInfo": {
+      "bankName": "VietinBank",
+      "accountNumber": "108291029384",
+      "accountHolder": "DANG QUOC LONG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d66"
+  },
+  "userID": "CM000009",
+  "userName": "thuyvy37",
+  "fullName": "Bùi Thúy Vy",
+  "email": "thuyvy37@gmail.com",
+  "phoneNumber": "0912384910",
+  "password": "thuyvy123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 50,
+  "eWasteRecycledKg": 0.5,
+  "joinDate": "2026-03-12",
+  "customerDetails": {
+    "address": "Số 112 Đường 9, Quận Đống Đa, Hà Nội",
+    "bankInfo": {
+      "bankName": "Techcombank",
+      "accountNumber": "190283746192",
+      "accountHolder": "BUI THUY VY"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d67"
+  },
+  "userID": "CM000010",
+  "userName": "hoangphuc93",
+  "fullName": "Đỗ Hoàng Phúc",
+  "email": "hoangphuc93@gmail.com",
+  "phoneNumber": "0938192830",
+  "password": "hoangphuc123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 1820,
+  "eWasteRecycledKg": 7.2,
+  "joinDate": "2026-03-15",
+  "customerDetails": {
+    "address": "Số 34 Đường 6, TP. Thủ Đức, TP.HCM",
+    "bankInfo": {
+      "bankName": "MBBank",
+      "accountNumber": "039281746281",
+      "accountHolder": "DO HOANG PHUC"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d68"
+  },
+  "userID": "CM000011",
+  "userName": "xuanthinh46",
+  "fullName": "Hồ Xuân Thịnh",
+  "email": "xuanthinh46@gmail.com",
+  "phoneNumber": "0947182934",
+  "password": "xuanthinh123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 640,
+  "eWasteRecycledKg": 1.9,
+  "joinDate": "2026-03-18",
+  "customerDetails": {
+    "address": "Số 67 Đường 11, Quận 3, TP.HCM",
+    "bankInfo": {
+      "bankName": "Vietcombank",
+      "accountNumber": "101928374652",
+      "accountHolder": "HO XUAN THINH"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d69"
+  },
+  "userID": "CM000012",
+  "userName": "giabao81",
+  "fullName": "Dương Gia Bảo",
+  "email": "giabao81@gmail.com",
+  "phoneNumber": "0903819284",
+  "password": "giabao123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 3200,
+  "eWasteRecycledKg": 15,
+  "joinDate": "2026-03-21",
+  "customerDetails": {
+    "address": "Số 156 Đường 2, Quận 7, TP.HCM",
+    "bankInfo": {
+      "bankName": "BIDV",
+      "accountNumber": "104829102938",
+      "accountHolder": "DUONG GIA BAO"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d6a"
+  },
+  "userID": "CM000013",
+  "userName": "ducbinh25",
+  "fullName": "Lý Đức Bình",
+  "email": "ducbinh25@gmail.com",
+  "phoneNumber": "0968192039",
+  "password": "ducbinh123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 410,
+  "eWasteRecycledKg": 2.1,
+  "joinDate": "2026-03-24",
+  "customerDetails": {
+    "address": "Số 88 Đường 14, Quận Thanh Xuân, Hà Nội",
+    "bankInfo": {
+      "bankName": "ACB",
+      "accountNumber": "2182910293",
+      "accountHolder": "LY DUC BINH"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d6b"
+  },
+  "userID": "CM000014",
+  "userName": "thihuong69",
+  "fullName": "Trần Thị Hương",
+  "email": "thihuong69@gmail.com",
+  "phoneNumber": "0987182930",
+  "password": "thihuong123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 890,
+  "eWasteRecycledKg": 4.6,
+  "joinDate": "2026-03-27",
+  "customerDetails": {
+    "address": "Số 19 Đường 16, TP. Biên Hòa, Đồng Nai",
+    "bankInfo": {
+      "bankName": "VPBank",
+      "accountNumber": "1592810293",
+      "accountHolder": "TRAN THI HUONG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d6c"
+  },
+  "userID": "CM000015",
+  "userName": "minhhai12",
+  "fullName": "Lê Minh Hải",
+  "email": "minhhai12@gmail.com",
+  "phoneNumber": "0938192039",
+  "password": "minhhai123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 1200,
+  "eWasteRecycledKg": 6.8,
+  "joinDate": "2026-03-30",
+  "customerDetails": {
+    "address": "Số 203 Đường 20, Quận Sơn Trà, Đà Nẵng",
+    "bankInfo": {
+      "bankName": "TPBank",
+      "accountNumber": "04928102938",
+      "accountHolder": "LE MINH HAI"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d6d"
+  },
+  "userID": "CM000016",
+  "userName": "huutri78",
+  "fullName": "Phạm Hữu Trí",
+  "email": "huutri78@gmail.com",
+  "phoneNumber": "0948192039",
+  "password": "huutri123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 230,
+  "eWasteRecycledKg": 1.5,
+  "joinDate": "2026-04-02",
+  "customerDetails": {
+    "address": "Số 39 Đường 8, TP. Thuận An, Bình Dương",
+    "bankInfo": {
+      "bankName": "VietinBank",
+      "accountNumber": "109281029384",
+      "accountHolder": "PHAM HUU TRI"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d6e"
+  },
+  "userID": "CM000017",
+  "userName": "thanhlinh33",
+  "fullName": "Hoàng Thanh Linh",
+  "email": "thanhlinh33@gmail.com",
+  "phoneNumber": "0902381920",
+  "password": "thanhlinh123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 2800,
+  "eWasteRecycledKg": 11.2,
+  "joinDate": "2026-04-05",
+  "customerDetails": {
+    "address": "Số 120 Đường 13, Quận Tân Bình, TP.HCM",
+    "bankInfo": {
+      "bankName": "Techcombank",
+      "accountNumber": "190182938475",
+      "accountHolder": "HOANG THANH LINH"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d6f"
+  },
+  "userID": "CM000018",
+  "userName": "dinhthanh94",
+  "fullName": "Phan Đình Thành",
+  "email": "dinhthanh94@gmail.com",
+  "phoneNumber": "0971829304",
+  "password": "dinhthanh123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 750,
+  "eWasteRecycledKg": 3.8,
+  "joinDate": "2026-04-08",
+  "customerDetails": {
+    "address": "Số 64 Đường 7, Quận Ba Đình, Hà Nội",
+    "bankInfo": {
+      "bankName": "MBBank",
+      "accountNumber": "037192837461",
+      "accountHolder": "PHAN DINH THANH"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d70"
+  },
+  "userID": "CM000019",
+  "userName": "ductuan51",
+  "fullName": "Võ Đức Tuấn",
+  "email": "ductuan51@gmail.com",
+  "phoneNumber": "0981928301",
+  "password": "ductuan123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 1600,
+  "eWasteRecycledKg": 9.3,
+  "joinDate": "2026-04-11",
+  "customerDetails": {
+    "address": "Số 25 Đường 18, Quận Lê Chân, Hải Phòng",
+    "bankInfo": {
+      "bankName": "Vietcombank",
+      "accountNumber": "103829102948",
+      "accountHolder": "VO DUC TUAN"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d71"
+  },
+  "userID": "CM000020",
+  "userName": "quocnam17",
+  "fullName": "Đặng Quốc Nam",
+  "email": "quocnam17@gmail.com",
+  "phoneNumber": "0919283019",
+  "password": "quocnam123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 520,
+  "eWasteRecycledKg": 2.4,
+  "joinDate": "2026-04-14",
+  "customerDetails": {
+    "address": "Số 81 Đường 22, Quận Bình Thạnh, TP.HCM",
+    "bankInfo": {
+      "bankName": "BIDV",
+      "accountNumber": "105829102938",
+      "accountHolder": "DANG QUOC NAM"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d72"
+  },
+  "userID": "CM000021",
+  "userName": "ngocphuong63",
+  "fullName": "Bùi Ngọc Phương",
+  "email": "ngocphuong63@gmail.com",
+  "phoneNumber": "0934182930",
+  "password": "ngocphuong123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 380,
+  "eWasteRecycledKg": 1.7,
+  "joinDate": "2026-04-17",
+  "customerDetails": {
+    "address": "Số 14 Đường 17, TP. Dĩ An, Bình Dương",
+    "bankInfo": {
+      "bankName": "ACB",
+      "accountNumber": "2172819203",
+      "accountHolder": "BUI NGOC PHUONG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d73"
+  },
+  "userID": "CM000022",
+  "userName": "hoangdung28",
+  "fullName": "Đỗ Hoàng Dũng",
+  "email": "hoangdung28@gmail.com",
+  "phoneNumber": "0948192830",
+  "password": "hoangdung123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 1940,
+  "eWasteRecycledKg": 8.7,
+  "joinDate": "2026-04-20",
+  "customerDetails": {
+    "address": "Số 98 Đường 6, Quận Cái Răng, Cần Thơ",
+    "bankInfo": {
+      "bankName": "VPBank",
+      "accountNumber": "1571829304",
+      "accountHolder": "DO HOANG DUNG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d74"
+  },
+  "userID": "CM000023",
+  "userName": "minhthao85",
+  "fullName": "Hồ Minh Thảo",
+  "email": "minhthao85@gmail.com",
+  "phoneNumber": "0968192830",
+  "password": "minhthao123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 110,
+  "eWasteRecycledKg": 0.6,
+  "joinDate": "2026-04-23",
+  "customerDetails": {
+    "address": "Số 172 Đường 10, Quận Cầu Giấy, Hà Nội",
+    "bankInfo": {
+      "bankName": "TPBank",
+      "accountNumber": "04718293049",
+      "accountHolder": "HO MINH THAO"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d75"
+  },
+  "userID": "CM000024",
+  "userName": "xuanvy42",
+  "fullName": "Ngô Xuân Vy",
+  "email": "xuanvy42@gmail.com",
+  "phoneNumber": "0901829301",
+  "password": "xuanvy123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 2600,
+  "eWasteRecycledKg": 13.5,
+  "joinDate": "2026-04-26",
+  "customerDetails": {
+    "address": "Số 48 Đường 19, Quận Gò Vấp, TP.HCM",
+    "bankInfo": {
+      "bankName": "VietinBank",
+      "accountNumber": "107182930495",
+      "accountHolder": "NGO XUAN VY"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d76"
+  },
+  "userID": "CM000025",
+  "userName": "huukhoa96",
+  "fullName": "Dương Hữu Khoa",
+  "email": "huukhoa96@gmail.com",
+  "phoneNumber": "0978192830",
+  "password": "huukhoa123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 680,
+  "eWasteRecycledKg": 3.1,
+  "joinDate": "2026-04-29",
+  "customerDetails": {
+    "address": "Số 130 Đường 25, Quận Hải Châu, Đà Nẵng",
+    "bankInfo": {
+      "bankName": "Techcombank",
+      "accountNumber": "190471829304",
+      "accountHolder": "DUONG HUU KHOA"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d77"
+  },
+  "userID": "CM000026",
+  "userName": "thanhtrang31",
+  "fullName": "Lý Thanh Trang",
+  "email": "thanhtrang31@gmail.com",
+  "phoneNumber": "0981928304",
+  "password": "thanhtrang123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 840,
+  "eWasteRecycledKg": 4,
+  "joinDate": "2026-05-02",
+  "customerDetails": {
+    "address": "Số 27 Đường 3, TP. Long Khánh, Đồng Nai",
+    "bankInfo": {
+      "bankName": "MBBank",
+      "accountNumber": "036182930495",
+      "accountHolder": "LY THANH TRANG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d78"
+  },
+  "userID": "CM000027",
+  "userName": "vanthinh74",
+  "fullName": "Nguyễn Văn Thịnh",
+  "email": "vanthinh74@gmail.com",
+  "phoneNumber": "0918293049",
+  "password": "vanthinh123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 4200,
+  "eWasteRecycledKg": 18.2,
+  "joinDate": "2026-05-05",
+  "customerDetails": {
+    "address": "Số 165 Đường 8, Quận 10, TP.HCM",
+    "bankInfo": {
+      "bankName": "Vietcombank",
+      "accountNumber": "104718293049",
+      "accountHolder": "NGUYEN VAN THINH"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d79"
+  },
+  "userID": "CM000028",
+  "userName": "thibinh19",
+  "fullName": "Trần Thị Bình",
+  "email": "thibinh19@gmail.com",
+  "phoneNumber": "0934182938",
+  "password": "thibinh123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 290,
+  "eWasteRecycledKg": 1.2,
+  "joinDate": "2026-05-08",
+  "customerDetails": {
+    "address": "Số 52 Đường 21, Quận Hoàng Mai, Hà Nội",
+    "bankInfo": {
+      "bankName": "BIDV",
+      "accountNumber": "106182930495",
+      "accountHolder": "TRAN THI BINH"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d7a"
+  },
+  "userID": "CM000029",
+  "userName": "quocphuc58",
+  "fullName": "Lê Quốc Phúc",
+  "email": "quocphuc58@gmail.com",
+  "phoneNumber": "0948192038",
+  "password": "quocphuc123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 1450,
+  "eWasteRecycledKg": 7.5,
+  "joinDate": "2026-05-11",
+  "customerDetails": {
+    "address": "Số 73 Đường 28, TP. Thủ Đức, TP.HCM",
+    "bankInfo": {
+      "bankName": "ACB",
+      "accountNumber": "2161829304",
+      "accountHolder": "LE QUOC PHUC"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d7b"
+  },
+  "userID": "CM000030",
+  "userName": "dinhlong82",
+  "fullName": "Phạm Đình Long",
+  "email": "dinhlong82@gmail.com",
+  "phoneNumber": "0968192038",
+  "password": "dinhlong123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 910,
+  "eWasteRecycledKg": 4.9,
+  "joinDate": "2026-05-14",
+  "customerDetails": {
+    "address": "Số 115 Đường 5, Quận Kiến An, Hải Phòng",
+    "bankInfo": {
+      "bankName": "VPBank",
+      "accountNumber": "1561829304",
+      "accountHolder": "PHAM DINH LONG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d7c"
+  },
+  "userID": "CM000031",
+  "userName": "giaan47",
+  "fullName": "Hoàng Gia An",
+  "email": "giaan47@gmail.com",
+  "phoneNumber": "0901829384",
+  "password": "giaan123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 180,
+  "eWasteRecycledKg": 0.9,
+  "joinDate": "2026-05-17",
+  "customerDetails": {
+    "address": "Số 36 Đường 12, Quận Ninh Kiều, Cần Thơ",
+    "bankInfo": {
+      "bankName": "TPBank",
+      "accountNumber": "04618293049",
+      "accountHolder": "HOANG GIA AN"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d7d"
+  },
+  "userID": "CM000032",
+  "userName": "thikhoa91",
+  "fullName": "Phan Thị Khoa",
+  "email": "thikhoa91@gmail.com",
+  "phoneNumber": "0971829384",
+  "password": "thikhoa123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 2350,
+  "eWasteRecycledKg": 10.8,
+  "joinDate": "2026-05-20",
+  "customerDetails": {
+    "address": "Số 148 Đường 9, TP. Dĩ An, Bình Dương",
+    "bankInfo": {
+      "bankName": "VietinBank",
+      "accountNumber": "106182930485",
+      "accountHolder": "PHAN THI KHOA"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d7e"
+  },
+  "userID": "CM000033",
+  "userName": "minhhung26",
+  "fullName": "Võ Minh Hùng",
+  "email": "minhhung26@gmail.com",
+  "phoneNumber": "0981928384",
+  "password": "minhhung123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 770,
+  "eWasteRecycledKg": 3.6,
+  "joinDate": "2026-05-23",
+  "customerDetails": {
+    "address": "Số 62 Đường 14, Quận 3, TP.HCM",
+    "bankInfo": {
+      "bankName": "Techcombank",
+      "accountNumber": "190581920394",
+      "accountHolder": "VO MINH HUNG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d7f"
+  },
+  "userID": "CM000034",
+  "userName": "xuanphuong71",
+  "fullName": "Đặng Xuân Phương",
+  "email": "xuanphuong71@gmail.com",
+  "phoneNumber": "0918293847",
+  "password": "xuanphuong123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 1280,
+  "eWasteRecycledKg": 6.1,
+  "joinDate": "2026-05-26",
+  "customerDetails": {
+    "address": "Số 104 Đường 2, Quận Đống Đa, Hà Nội",
+    "bankInfo": {
+      "bankName": "MBBank",
+      "accountNumber": "035182930495",
+      "accountHolder": "DANG XUAN PHUONG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d80"
+  },
+  "userID": "CM000035",
+  "userName": "ductri35",
+  "fullName": "Bùi Đức Trí",
+  "email": "ductri35@gmail.com",
+  "phoneNumber": "0934182948",
+  "password": "ductri123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 340,
+  "eWasteRecycledKg": 1.4,
+  "joinDate": "2026-05-29",
+  "customerDetails": {
+    "address": "Số 219 Đường 11, Quận Hải Châu, Đà Nẵng",
+    "bankInfo": {
+      "bankName": "Vietcombank",
+      "accountNumber": "105718293049",
+      "accountHolder": "BUI DUC TRI"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d81"
+  },
+  "userID": "CM000036",
+  "userName": "ngocthao89",
+  "fullName": "Đỗ Ngọc Thảo",
+  "email": "ngocthao89@gmail.com",
+  "phoneNumber": "0948192847",
+  "password": "ngocthao123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 1890,
+  "eWasteRecycledKg": 8.3,
+  "joinDate": "2026-06-01",
+  "customerDetails": {
+    "address": "Số 85 Đường 24, TP. Biên Hòa, Đồng Nai",
+    "bankInfo": {
+      "bankName": "BIDV",
+      "accountNumber": "107182930495",
+      "accountHolder": "DO NGOC THAO"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d82"
+  },
+  "userID": "CM000037",
+  "userName": "huuthinh43",
+  "fullName": "Hồ Hữu Thịnh",
+  "email": "huuthinh43@gmail.com",
+  "phoneNumber": "0968192847",
+  "password": "huuthinh123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 590,
+  "eWasteRecycledKg": 2.7,
+  "joinDate": "2026-06-04",
+  "customerDetails": {
+    "address": "Số 41 Đường 7, Quận 1, TP.HCM",
+    "bankInfo": {
+      "bankName": "ACB",
+      "accountNumber": "2151829304",
+      "accountHolder": "HO HUU THINH"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d83"
+  },
+  "userID": "CM000038",
+  "userName": "hoangnam98",
+  "fullName": "Ngô Hoàng Nam",
+  "email": "hoangnam98@gmail.com",
+  "phoneNumber": "0901829485",
+  "password": "hoangnam123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 3100,
+  "eWasteRecycledKg": 14.1,
+  "joinDate": "2026-06-07",
+  "customerDetails": {
+    "address": "Số 16 Đường 15, Quận Thanh Xuân, Hà Nội",
+    "bankInfo": {
+      "bankName": "VPBank",
+      "accountNumber": "1551829304",
+      "accountHolder": "NGO HOANG NAM"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d84"
+  },
+  "userID": "CM000039",
+  "userName": "thanhhai53",
+  "fullName": "Dương Thanh Hải",
+  "email": "thanhhai53@gmail.com",
+  "phoneNumber": "0971829485",
+  "password": "thanhhai123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 470,
+  "eWasteRecycledKg": 2.2,
+  "joinDate": "2026-06-10",
+  "customerDetails": {
+    "address": "Số 137 Đường 23, Quận 7, TP.HCM",
+    "bankInfo": {
+      "bankName": "TPBank",
+      "accountNumber": "04518293049",
+      "accountHolder": "DUONG THANH HAI"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d85"
+  },
+  "userID": "CM000040",
+  "userName": "vanbinh15",
+  "fullName": "Lý Văn Bình",
+  "email": "vanbinh15@gmail.com",
+  "phoneNumber": "0981928485",
+  "password": "vanbinh123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 2200,
+  "eWasteRecycledKg": 9.8,
+  "joinDate": "2026-06-13",
+  "customerDetails": {
+    "address": "Số 92 Đường 16, TP. Thủ Dầu Một, Bình Dương",
+    "bankInfo": {
+      "bankName": "VietinBank",
+      "accountNumber": "105182930485",
+      "accountHolder": "LY VAN BINH"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d86"
+  },
+  "userID": "CM000041",
+  "userName": "thitrang67",
+  "fullName": "Nguyễn Thị Trang",
+  "email": "thitrang67@gmail.com",
+  "phoneNumber": "0918294857",
+  "password": "thitrang123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 150,
+  "eWasteRecycledKg": 0.7,
+  "joinDate": "2026-06-16",
+  "customerDetails": {
+    "address": "Số 68 Đường 27, TP. Thủ Đức, TP.HCM",
+    "bankInfo": {
+      "bankName": "Techcombank",
+      "accountNumber": "190681920394",
+      "accountHolder": "NGUYEN THI TRANG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d87"
+  },
+  "userID": "CM000042",
+  "userName": "minhlinh22",
+  "fullName": "Trần Minh Linh",
+  "email": "minhlinh22@gmail.com",
+  "phoneNumber": "0934182957",
+  "password": "minhlinh123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 1650,
+  "eWasteRecycledKg": 7.9,
+  "joinDate": "2026-06-19",
+  "customerDetails": {
+    "address": "Số 149 Đường 1, Quận Ba Đình, Hà Nội",
+    "bankInfo": {
+      "bankName": "MBBank",
+      "accountNumber": "034182930495",
+      "accountHolder": "TRAN MINH LINH"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d88"
+  },
+  "userID": "CM000043",
+  "userName": "quocdung76",
+  "fullName": "Lê Quốc Dũng",
+  "email": "quocdung76@gmail.com",
+  "phoneNumber": "0948192857",
+  "password": "quocdung123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 830,
+  "eWasteRecycledKg": 3.9,
+  "joinDate": "2026-06-22",
+  "customerDetails": {
+    "address": "Số 23 Đường 8, Quận Ninh Kiều, Cần Thơ",
+    "bankInfo": {
+      "bankName": "Vietcombank",
+      "accountNumber": "106718293049",
+      "accountHolder": "LE QUOC DUNG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d89"
+  },
+  "userID": "CM000044",
+  "userName": "dinhvy39",
+  "fullName": "Phạm Đình Vy",
+  "email": "dinhvy39@gmail.com",
+  "phoneNumber": "0968192857",
+  "password": "dinhvy123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 2750,
+  "eWasteRecycledKg": 12,
+  "joinDate": "2026-06-25",
+  "customerDetails": {
+    "address": "Số 182 Đường 13, Quận Ngô Quyền, Hải Phòng",
+    "bankInfo": {
+      "bankName": "BIDV",
+      "accountNumber": "108182930495",
+      "accountHolder": "PHAM DINH VY"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d8a"
+  },
+  "userID": "CM000045",
+  "userName": "giathanh84",
+  "fullName": "Hoàng Gia Thành",
+  "email": "giathanh84@gmail.com",
+  "phoneNumber": "0901829586",
+  "password": "giathanh123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 490,
+  "eWasteRecycledKg": 2.5,
+  "joinDate": "2026-06-28",
+  "customerDetails": {
+    "address": "Số 57 Đường 4, Quận Bình Thạnh, TP.HCM",
+    "bankInfo": {
+      "bankName": "ACB",
+      "accountNumber": "2141829304",
+      "accountHolder": "HOANG GIA THANH"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d8b"
+  },
+  "userID": "CM000046",
+  "userName": "huuha38",
+  "fullName": "Phan Hữu Hà",
+  "email": "huuha38@gmail.com",
+  "phoneNumber": "0971829586",
+  "password": "huuha123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 1920,
+  "eWasteRecycledKg": 8.6,
+  "joinDate": "2026-07-01",
+  "customerDetails": {
+    "address": "Số 118 Đường 17, Quận Hải Châu, Đà Nẵng",
+    "bankInfo": {
+      "bankName": "VPBank",
+      "accountNumber": "1541829304",
+      "accountHolder": "PHAN HUU HA"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d8c"
+  },
+  "userID": "CM000047",
+  "userName": "ductuan83",
+  "fullName": "Võ Đức Tuấn",
+  "email": "ductuan83@gmail.com",
+  "phoneNumber": "0981928586",
+  "password": "ductuan123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 360,
+  "eWasteRecycledKg": 1.6,
+  "joinDate": "2026-07-04",
+  "customerDetails": {
+    "address": "Số 79 Đường 29, TP. Biên Hòa, Đồng Nai",
+    "bankInfo": {
+      "bankName": "TPBank",
+      "accountNumber": "04418293049",
+      "accountHolder": "VO DUC TUAN"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d8d"
+  },
+  "userID": "CM000048",
+  "userName": "xuanan49",
+  "fullName": "Đặng Xuân An",
+  "email": "xuanan49@gmail.com",
+  "phoneNumber": "0918295867",
+  "password": "xuanan123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 3350,
+  "eWasteRecycledKg": 16.5,
+  "joinDate": "2026-07-07",
+  "customerDetails": {
+    "address": "Số 35 Đường 5, Quận 10, TP.HCM",
+    "bankInfo": {
+      "bankName": "VietinBank",
+      "accountNumber": "104182930485",
+      "accountHolder": "DANG XUAN AN"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d8e"
+  },
+  "userID": "CM000049",
+  "userName": "vanhung92",
+  "fullName": "Nguyễn Văn Hùng",
+  "email": "vanhung92@gmail.com",
+  "phoneNumber": "0934182968",
+  "password": "vanhung123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 710,
+  "eWasteRecycledKg": 3.4,
+  "joinDate": "2026-07-10",
+  "customerDetails": {
+    "address": "Số 164 Đường 22, Quận Cầu Giấy, Hà Nội",
+    "bankInfo": {
+      "bankName": "Techcombank",
+      "accountNumber": "190781920394",
+      "accountHolder": "NGUYEN VAN HUNG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d8f"
+  },
+  "userID": "CM000050",
+  "userName": "thithao35",
+  "fullName": "Trần Thị Thảo",
+  "email": "thithao35@gmail.com",
+  "phoneNumber": "0981928495",
+  "password": "thithao123",
+  "role": "CUSTOMER",
+  "status": "ACTIVE",
+  "greenCoins": 1420,
+  "eWasteRecycledKg": 6.7,
+  "joinDate": "2026-07-13",
+  "customerDetails": {
+    "address": "Số 88 Đường 14, Quận 3, TP.HCM",
+    "bankInfo": {
+      "bankName": "MBBank",
+      "accountNumber": "033182930495",
+      "accountHolder": "TRAN THI THAO"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d90"
+  },
+  "userID": "SL000000",
+  "userName": "ecocycle_store",
+  "fullName": "Gian Hàng Tái Chế EcoCycle Official",
+  "email": "store@ecocycle.vn",
+  "phoneNumber": "0901234567",
+  "password": "ecocycle123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 0,
+  "eWasteRecycledKg": 120.5,
+  "joinDate": "2026-01-01",
+  "sellerDetails": {
+    "address": "Kho EcoCycle, Khu Công Nghệ Cao, TP. Thủ Đức, TP.HCM",
+    "taxCode": "0312345678",
+    "bankInfo": {
+      "bankName": "BIDV",
+      "accountNumber": "10192011221",
+      "accountHolder": "ECOCYCLE OFFICIAL"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d91"
+  },
+  "userID": "SL000001",
+  "userName": "minhdung73",
+  "fullName": "Hoàng Minh Dũng",
+  "email": "minhdung73@gmail.com",
+  "phoneNumber": "0945829103",
+  "password": "minhdung123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 850,
+  "eWasteRecycledKg": 18.2,
+  "joinDate": "2026-03-12",
+  "sellerDetails": {
+    "address": "Số 234 Đường 7, Quận Hải Châu, Đà Nẵng",
+    "taxCode": "8472910293",
+    "bankInfo": {
+      "bankName": "ACB",
+      "accountNumber": "2193847291",
+      "accountHolder": "HOANG MINH DUNG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d92"
+  },
+  "userID": "SL000002",
+  "userName": "phatdat64",
+  "fullName": "Vi tính Phát Đạt (TP.HCM)",
+  "email": "phatdat64@seller.vn",
+  "phoneNumber": "0908129482",
+  "password": "phatdat123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 1420,
+  "eWasteRecycledKg": 45,
+  "joinDate": "2026-02-28",
+  "sellerDetails": {
+    "address": "Số 45 Đường 3, Quận 10, TP.HCM",
+    "taxCode": "0391827461",
+    "bankInfo": {
+      "bankName": "Vietcombank",
+      "accountNumber": "102938475612",
+      "accountHolder": "VI TINH PHAT DAT (TP.HCM)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d93"
+  },
+  "userID": "SL000003",
+  "userName": "thanhphuong29",
+  "fullName": "Lê Thanh Phương",
+  "email": "thanhphuong29@gmail.com",
+  "phoneNumber": "0972348192",
+  "password": "thanhphuong123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 520,
+  "eWasteRecycledKg": 12,
+  "joinDate": "2026-03-05",
+  "sellerDetails": {
+    "address": "Số 112 Đường 8, Quận Đống Đa, Hà Nội",
+    "taxCode": "0182938475",
+    "bankInfo": {
+      "bankName": "Techcombank",
+      "accountNumber": "190283746192",
+      "accountHolder": "LE THANH PHUONG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d94"
+  },
+  "userID": "SL000004",
+  "userName": "cuusaigon81",
+  "fullName": "Linh kiện Cũ Sài Gòn (TP.HCM)",
+  "email": "cuusaigon81@seller.vn",
+  "phoneNumber": "0934819203",
+  "password": "cuusaigon123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 2300,
+  "eWasteRecycledKg": 62.5,
+  "joinDate": "2026-03-08",
+  "sellerDetails": {
+    "address": "Số 88 Đường 14, Quận Tân Bình, TP.HCM",
+    "taxCode": "0382910293",
+    "bankInfo": {
+      "bankName": "MBBank",
+      "accountNumber": "039281746281",
+      "accountHolder": "LINH KIEN CU SAI GON (TP.HCM)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d95"
+  },
+  "userID": "SL000005",
+  "userName": "dinhkhoa43",
+  "fullName": "Phan Đình Khoa",
+  "email": "dinhkhoa43@gmail.com",
+  "phoneNumber": "0908192834",
+  "password": "dinhkhoa123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 780,
+  "eWasteRecycledKg": 16.4,
+  "joinDate": "2026-03-15",
+  "sellerDetails": {
+    "address": "Số 56 Đường 4, TP. Dĩ An, Bình Dương",
+    "taxCode": "3718293847",
+    "bankInfo": {
+      "bankName": "VPBank",
+      "accountNumber": "1582910293",
+      "accountHolder": "PHAN DINH KHOA"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d96"
+  },
+  "userID": "SL000006",
+  "userName": "nghexanh19",
+  "fullName": "Shop Công Nghệ Xanh (Hà Nội)",
+  "email": "nghexanh19@seller.vn",
+  "phoneNumber": "0967182930",
+  "password": "nghexanh123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 1890,
+  "eWasteRecycledKg": 54,
+  "joinDate": "2026-03-18",
+  "sellerDetails": {
+    "address": "Số 140 Đường 2, Quận Cầu Giấy, Hà Nội",
+    "taxCode": "0192837465",
+    "bankInfo": {
+      "bankName": "TPBank",
+      "accountNumber": "04829102938",
+      "accountHolder": "SHOP CONG NGHE XANH (HA NOI)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d97"
+  },
+  "userID": "SL000007",
+  "userName": "thuyvy95",
+  "fullName": "Bùi Thúy Vy",
+  "email": "thuyvy95@gmail.com",
+  "phoneNumber": "0912384910",
+  "password": "thuyvy123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 340,
+  "eWasteRecycledKg": 8.5,
+  "joinDate": "2026-03-22",
+  "sellerDetails": {
+    "address": "Số 73 Đường 12, Quận Ninh Kiều, Cần Thơ",
+    "taxCode": "1829304958",
+    "bankInfo": {
+      "bankName": "VietinBank",
+      "accountNumber": "108291029384",
+      "accountHolder": "BUI THUY VY"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d98"
+  },
+  "userID": "SL000008",
+  "userName": "tinhnam37",
+  "fullName": "Kho Máy Tính Miền Nam (TP.HCM)",
+  "email": "tinhnam37@seller.vn",
+  "phoneNumber": "0938192830",
+  "password": "tinhnam123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 3100,
+  "eWasteRecycledKg": 88,
+  "joinDate": "2026-03-25",
+  "sellerDetails": {
+    "address": "Số 210 Đường 15, Quận 7, TP.HCM",
+    "taxCode": "0371928374",
+    "bankInfo": {
+      "bankName": "Techcombank",
+      "accountNumber": "190384729182",
+      "accountHolder": "KHO MAY TINH MIEN NAM (TP.HCM)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d99"
+  },
+  "userID": "SL000009",
+  "userName": "xuanthinh62",
+  "fullName": "Hồ Xuân Thịnh",
+  "email": "xuanthinh62@gmail.com",
+  "phoneNumber": "0947182934",
+  "password": "xuanthinh123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 920,
+  "eWasteRecycledKg": 21.3,
+  "joinDate": "2026-03-28",
+  "sellerDetails": {
+    "address": "Số 19 Đường 16, TP. Biên Hòa, Đồng Nai",
+    "taxCode": "3618293847",
+    "bankInfo": {
+      "bankName": "MBBank",
+      "accountNumber": "038192849201",
+      "accountHolder": "HO XUAN THINH"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d9a"
+  },
+  "userID": "SL000010",
+  "userName": "nhatminh84",
+  "fullName": "Điện Tử Nhật Minh (Đà Nẵng)",
+  "email": "nhatminh84@seller.vn",
+  "phoneNumber": "0978192039",
+  "password": "nhatminh123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 1650,
+  "eWasteRecycledKg": 42,
+  "joinDate": "2026-04-01",
+  "sellerDetails": {
+    "address": "Số 95 Đường 5, Quận Hải Châu, Đà Nẵng",
+    "taxCode": "0481928374",
+    "bankInfo": {
+      "bankName": "Vietcombank",
+      "accountNumber": "101928374652",
+      "accountHolder": "DIEN TU NHAT MINH (DA NANG)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d9b"
+  },
+  "userID": "SL000011",
+  "userName": "ducbinh17",
+  "fullName": "Lý Đức Bình",
+  "email": "ducbinh17@gmail.com",
+  "phoneNumber": "0968192039",
+  "password": "ducbinh123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 410,
+  "eWasteRecycledKg": 9.2,
+  "joinDate": "2026-04-04",
+  "sellerDetails": {
+    "address": "Số 62 Đường 11, Quận Ngô Quyền, Hải Phòng",
+    "taxCode": "0281928374",
+    "bankInfo": {
+      "bankName": "BIDV",
+      "accountNumber": "104829102938",
+      "accountHolder": "LY DUC BINH"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d9c"
+  },
+  "userID": "SL000012",
+  "userName": "phatmobile58",
+  "fullName": "Hoàng Phát Mobile (TP.HCM)",
+  "email": "phatmobile58@seller.vn",
+  "phoneNumber": "0918293019",
+  "password": "phatmobile123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 2850,
+  "eWasteRecycledKg": 75,
+  "joinDate": "2026-04-07",
+  "sellerDetails": {
+    "address": "Số 130 Đường 20, Quận 3, TP.HCM",
+    "taxCode": "0361829384",
+    "bankInfo": {
+      "bankName": "ACB",
+      "accountNumber": "2182910293",
+      "accountHolder": "HOANG PHAT MOBILE (TP.HCM)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d9d"
+  },
+  "userID": "SL000013",
+  "userName": "minhhai71",
+  "fullName": "Lê Minh Hải",
+  "email": "minhhai71@gmail.com",
+  "phoneNumber": "0938192039",
+  "password": "minhhai123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 670,
+  "eWasteRecycledKg": 14.8,
+  "joinDate": "2026-04-10",
+  "sellerDetails": {
+    "address": "Số 48 Đường 9, TP. Thủ Dầu Một, Bình Dương",
+    "taxCode": "3791827364",
+    "bankInfo": {
+      "bankName": "VPBank",
+      "accountNumber": "1592810293",
+      "accountHolder": "LE MINH HAI"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d9e"
+  },
+  "userID": "SL000014",
+  "userName": "laptopzin26",
+  "fullName": "Trung Tâm Laptop Zin (Hà Nội)",
+  "email": "laptopzin26@seller.vn",
+  "phoneNumber": "0948192039",
+  "password": "laptopzin123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 2100,
+  "eWasteRecycledKg": 58,
+  "joinDate": "2026-04-13",
+  "sellerDetails": {
+    "address": "Số 182 Đường 6, Quận Đống Đa, Hà Nội",
+    "taxCode": "0172819283",
+    "bankInfo": {
+      "bankName": "TPBank",
+      "accountNumber": "04928102938",
+      "accountHolder": "TRUNG TAM LAPTOP ZIN (HA NOI)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9d9f"
+  },
+  "userID": "SL000015",
+  "userName": "dinhthanh83",
+  "fullName": "Phan Đình Thành",
+  "email": "dinhthanh83@gmail.com",
+  "phoneNumber": "0971829304",
+  "password": "dinhthanh123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 890,
+  "eWasteRecycledKg": 19.5,
+  "joinDate": "2026-04-16",
+  "sellerDetails": {
+    "address": "Số 29 Đường 14, Quận Sơn Trà, Đà Nẵng",
+    "taxCode": "0491827364",
+    "bankInfo": {
+      "bankName": "VietinBank",
+      "accountNumber": "109281029384",
+      "accountHolder": "PHAN DINH THANH"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9da0"
+  },
+  "userID": "SL000016",
+  "userName": "hungcomputer49",
+  "fullName": "Gia Hưng Computer (TP.HCM)",
+  "email": "hungcomputer49@seller.vn",
+  "phoneNumber": "0981928301",
+  "password": "hungcomputer123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 3400,
+  "eWasteRecycledKg": 94,
+  "joinDate": "2026-04-19",
+  "sellerDetails": {
+    "address": "Số 175 Đường 18, TP. Thủ Đức, TP.HCM",
+    "taxCode": "0351829384",
+    "bankInfo": {
+      "bankName": "Techcombank",
+      "accountNumber": "190182938475",
+      "accountHolder": "GIA HUNG COMPUTER (TP.HCM)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9da1"
+  },
+  "userID": "SL000017",
+  "userName": "ngocphuong32",
+  "fullName": "Bùi Ngọc Phương",
+  "email": "ngocphuong32@gmail.com",
+  "phoneNumber": "0934182930",
+  "password": "ngocphuong123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 450,
+  "eWasteRecycledKg": 10.4,
+  "joinDate": "2026-04-22",
+  "sellerDetails": {
+    "address": "Số 36 Đường 7, Quận 10, TP.HCM",
+    "taxCode": "0381927364",
+    "bankInfo": {
+      "bankName": "MBBank",
+      "accountNumber": "037192837461",
+      "accountHolder": "BUI NGOC PHUONG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9da2"
+  },
+  "userID": "SL000018",
+  "userName": "kiencu91",
+  "fullName": "Thế Giới Phụ Kiện Cũ (Hà Nội)",
+  "email": "kiencu91@seller.vn",
+  "phoneNumber": "0968192830",
+  "password": "kiencu123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 1780,
+  "eWasteRecycledKg": 48,
+  "joinDate": "2026-04-25",
+  "sellerDetails": {
+    "address": "Số 84 Đường 12, Quận Cầu Giấy, Hà Nội",
+    "taxCode": "0161829384",
+    "bankInfo": {
+      "bankName": "Vietcombank",
+      "accountNumber": "103829102948",
+      "accountHolder": "THE GIOI PHU KIEN CU (HA NOI)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9da3"
+  },
+  "userID": "SL000019",
+  "userName": "huukhoa55",
+  "fullName": "Dương Hữu Khoa",
+  "email": "huukhoa55@gmail.com",
+  "phoneNumber": "0978192830",
+  "password": "huukhoa123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 610,
+  "eWasteRecycledKg": 13,
+  "joinDate": "2026-04-28",
+  "sellerDetails": {
+    "address": "Số 91 Đường 25, Quận Bình Thạnh, TP.HCM",
+    "taxCode": "0341829384",
+    "bankInfo": {
+      "bankName": "BIDV",
+      "accountNumber": "105829102938",
+      "accountHolder": "DUONG HUU KHOA"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9da4"
+  },
+  "userID": "SL000020",
+  "userName": "tudien24778",
+  "fullName": "Thanh Lý Điện Tử 247 (TP.HCM)",
+  "email": "tudien24778@seller.vn",
+  "phoneNumber": "0918293049",
+  "password": "tudien247123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 2900,
+  "eWasteRecycledKg": 82,
+  "joinDate": "2026-05-01",
+  "sellerDetails": {
+    "address": "Số 150 Đường 1, Quận Gò Vấp, TP.HCM",
+    "taxCode": "0331829384",
+    "bankInfo": {
+      "bankName": "ACB",
+      "accountNumber": "2172819203",
+      "accountHolder": "THANH LY DIEN TU 247 (TP.HCM)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9da5"
+  },
+  "userID": "SL000021",
+  "userName": "quocphuc14",
+  "fullName": "Lê Quốc Phúc",
+  "email": "quocphuc14@gmail.com",
+  "phoneNumber": "0948192038",
+  "password": "quocphuc123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 840,
+  "eWasteRecycledKg": 17.6,
+  "joinDate": "2026-05-04",
+  "sellerDetails": {
+    "address": "Số 42 Đường 13, TP. Biên Hòa, Đồng Nai",
+    "taxCode": "3691827364",
+    "bankInfo": {
+      "bankName": "VPBank",
+      "accountNumber": "1571829304",
+      "accountHolder": "LE QUOC PHUC"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9da6"
+  },
+  "userID": "SL000022",
+  "userName": "vupc63",
+  "fullName": "Minh Vũ PC (Đà Nẵng)",
+  "email": "vupc63@seller.vn",
+  "phoneNumber": "0901829384",
+  "password": "vupc123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 1540,
+  "eWasteRecycledKg": 39.5,
+  "joinDate": "2026-05-07",
+  "sellerDetails": {
+    "address": "Số 68 Đường 8, Quận Hải Châu, Đà Nẵng",
+    "taxCode": "0471829384",
+    "bankInfo": {
+      "bankName": "TPBank",
+      "accountNumber": "04718293049",
+      "accountHolder": "MINH VU PC (DA NANG)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9da7"
+  },
+  "userID": "SL000023",
+  "userName": "minhhung48",
+  "fullName": "Võ Minh Hùng",
+  "email": "minhhung48@gmail.com",
+  "phoneNumber": "0981928384",
+  "password": "minhhung123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 590,
+  "eWasteRecycledKg": 11.8,
+  "joinDate": "2026-05-10",
+  "sellerDetails": {
+    "address": "Số 114 Đường 23, Quận Ba Đình, Hà Nội",
+    "taxCode": "0151829384",
+    "bankInfo": {
+      "bankName": "VietinBank",
+      "accountNumber": "107182930495",
+      "accountHolder": "VO MINH HUNG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9da8"
+  },
+  "userID": "SL000024",
+  "userName": "techstore97",
+  "fullName": "Bách Khoa Tech Store (TP.HCM)",
+  "email": "techstore97@seller.vn",
+  "phoneNumber": "0934182948",
+  "password": "techstore123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 3800,
+  "eWasteRecycledKg": 105,
+  "joinDate": "2026-05-13",
+  "sellerDetails": {
+    "address": "Số 268 Đường 10, Quận 10, TP.HCM",
+    "taxCode": "0321829384",
+    "bankInfo": {
+      "bankName": "Techcombank",
+      "accountNumber": "190471829304",
+      "accountHolder": "BACH KHOA TECH STORE (TP.HCM)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9da9"
+  },
+  "userID": "SL000025",
+  "userName": "huuthinh21",
+  "fullName": "Hồ Hữu Thịnh",
+  "email": "huuthinh21@gmail.com",
+  "phoneNumber": "0968192847",
+  "password": "huuthinh123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 720,
+  "eWasteRecycledKg": 15.2,
+  "joinDate": "2026-05-16",
+  "sellerDetails": {
+    "address": "Số 53 Đường 17, TP. Dĩ An, Bình Dương",
+    "taxCode": "3781927364",
+    "bankInfo": {
+      "bankName": "MBBank",
+      "accountNumber": "036182930495",
+      "accountHolder": "HO HUU THINH"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9daa"
+  },
+  "userID": "SL000026",
+  "userName": "linhkien85",
+  "fullName": "Trần Anh Linh Kiện (Hà Nội)",
+  "email": "linhkien85@seller.vn",
+  "phoneNumber": "0971829485",
+  "password": "linhkien123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 2250,
+  "eWasteRecycledKg": 60,
+  "joinDate": "2026-05-19",
+  "sellerDetails": {
+    "address": "Số 195 Đường 4, Quận Thanh Xuân, Hà Nội",
+    "taxCode": "0141829384",
+    "bankInfo": {
+      "bankName": "Vietcombank",
+      "accountNumber": "104718293049",
+      "accountHolder": "TRAN ANH LINH KIEN (HA NOI)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9dab"
+  },
+  "userID": "SL000027",
+  "userName": "thitrang39",
+  "fullName": "Nguyễn Thị Trang",
+  "email": "thitrang39@gmail.com",
+  "phoneNumber": "0918294857",
+  "password": "thitrang123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 430,
+  "eWasteRecycledKg": 9.8,
+  "joinDate": "2026-05-22",
+  "sellerDetails": {
+    "address": "Số 77 Đường 22, Quận Ninh Kiều, Cần Thơ",
+    "taxCode": "1891827364",
+    "bankInfo": {
+      "bankName": "BIDV",
+      "accountNumber": "106182930495",
+      "accountHolder": "NGUYEN THI TRANG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9dac"
+  },
+  "userID": "SL000028",
+  "userName": "ecotech72",
+  "fullName": "Kho Đồ Cũ EcoTech (TP.HCM)",
+  "email": "ecotech72@seller.vn",
+  "phoneNumber": "0948192857",
+  "password": "ecotech123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 4100,
+  "eWasteRecycledKg": 115,
+  "joinDate": "2026-05-25",
+  "sellerDetails": {
+    "address": "Số 310 Đường 12, Quận Bình Thạnh, TP.HCM",
+    "taxCode": "0311829384",
+    "bankInfo": {
+      "bankName": "ACB",
+      "accountNumber": "2161829304",
+      "accountHolder": "KHO DO CU ECOTECH (TP.HCM)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9dad"
+  },
+  "userID": "SL000029",
+  "userName": "giathanh56",
+  "fullName": "Hoàng Gia Thành",
+  "email": "giathanh56@gmail.com",
+  "phoneNumber": "0901829586",
+  "password": "giathanh123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 810,
+  "eWasteRecycledKg": 18,
+  "joinDate": "2026-05-28",
+  "sellerDetails": {
+    "address": "Số 64 Đường 19, Quận Ngô Quyền, Hải Phòng",
+    "taxCode": "0291827364",
+    "bankInfo": {
+      "bankName": "VPBank",
+      "accountNumber": "1561829304",
+      "accountHolder": "HOANG GIA THANH"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9dae"
+  },
+  "userID": "SL000030",
+  "userName": "secondhand18",
+  "fullName": "Thành Đạt Secondhand (Cần Thơ)",
+  "email": "secondhand18@seller.vn",
+  "phoneNumber": "0981928586",
+  "password": "secondhand123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 1950,
+  "eWasteRecycledKg": 52,
+  "joinDate": "2026-05-31",
+  "sellerDetails": {
+    "address": "Số 122 Đường 5, Quận Ninh Kiều, Cần Thơ",
+    "taxCode": "1881928374",
+    "bankInfo": {
+      "bankName": "TPBank",
+      "accountNumber": "04618293049",
+      "accountHolder": "THANH DAT SECONDHAND (CAN THO)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9daf"
+  },
+  "userID": "SL000031",
+  "userName": "vanhung64",
+  "fullName": "Nguyễn Văn Hùng",
+  "email": "vanhung64@gmail.com",
+  "phoneNumber": "0934182968",
+  "password": "vanhung123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 630,
+  "eWasteRecycledKg": 13.7,
+  "joinDate": "2026-06-03",
+  "sellerDetails": {
+    "address": "Số 89 Đường 3, TP. Biên Hòa, Đồng Nai",
+    "taxCode": "3681927364",
+    "bankInfo": {
+      "bankName": "VietinBank",
+      "accountNumber": "106182930485",
+      "accountHolder": "NGUYEN VAN HUNG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9db0"
+  },
+  "userID": "SL000032",
+  "userName": "danglaptop93",
+  "fullName": "Hải Đăng Laptop (Đà Nẵng)",
+  "email": "danglaptop93@seller.vn",
+  "phoneNumber": "0945829103",
+  "password": "danglaptop123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 2700,
+  "eWasteRecycledKg": 68,
+  "joinDate": "2026-06-06",
+  "sellerDetails": {
+    "address": "Số 41 Đường 11, Quận Hải Châu, Đà Nẵng",
+    "taxCode": "0461829384",
+    "bankInfo": {
+      "bankName": "Techcombank",
+      "accountNumber": "190581920394",
+      "accountHolder": "HAI DANG LAPTOP (DA NANG)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9db1"
+  },
+  "userID": "SL000033",
+  "userName": "huunam47",
+  "fullName": "Phạm Hữu Nam",
+  "email": "huunam47@gmail.com",
+  "phoneNumber": "0934819203",
+  "password": "huunam123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 510,
+  "eWasteRecycledKg": 11.2,
+  "joinDate": "2026-06-09",
+  "sellerDetails": {
+    "address": "Số 135 Đường 8, TP. Thủ Đức, TP.HCM",
+    "taxCode": "0399182736",
+    "bankInfo": {
+      "bankName": "MBBank",
+      "accountNumber": "035182930495",
+      "accountHolder": "PHAM HUU NAM"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9db2"
+  },
+  "userID": "SL000034",
+  "userName": "phatdat38",
+  "fullName": "Vi tính Phát Đạt (Hà Nội)",
+  "email": "phatdat38@seller.vn",
+  "phoneNumber": "0967182930",
+  "password": "phatdat123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 3200,
+  "eWasteRecycledKg": 89,
+  "joinDate": "2026-06-12",
+  "sellerDetails": {
+    "address": "Số 74 Đường 14, Quận Đống Đa, Hà Nội",
+    "taxCode": "0131829384",
+    "bankInfo": {
+      "bankName": "Vietcombank",
+      "accountNumber": "105718293049",
+      "accountHolder": "VI TINH PHAT DAT (HA NOI)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9db3"
+  },
+  "userID": "SL000035",
+  "userName": "quoclong81",
+  "fullName": "Đặng Quốc Long",
+  "email": "quoclong81@gmail.com",
+  "phoneNumber": "0982391029",
+  "password": "quoclong123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 870,
+  "eWasteRecycledKg": 19,
+  "joinDate": "2026-06-15",
+  "sellerDetails": {
+    "address": "Số 18 Đường 6, Quận 7, TP.HCM",
+    "taxCode": "0388192736",
+    "bankInfo": {
+      "bankName": "BIDV",
+      "accountNumber": "107182930495",
+      "accountHolder": "DANG QUOC LONG"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9db4"
+  },
+  "userID": "SL000036",
+  "userName": "cuusaigon25",
+  "fullName": "Linh kiện Cũ Sài Gòn (Đà Nẵng)",
+  "email": "cuusaigon25@seller.vn",
+  "phoneNumber": "0938192830",
+  "password": "cuusaigon123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 1820,
+  "eWasteRecycledKg": 47,
+  "joinDate": "2026-06-18",
+  "sellerDetails": {
+    "address": "Số 92 Đường 2, Quận Hải Châu, Đà Nẵng",
+    "taxCode": "0451829384",
+    "bankInfo": {
+      "bankName": "ACB",
+      "accountNumber": "2151829304",
+      "accountHolder": "LINH KIEN CU SAI GON (DA NANG)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9db5"
+  },
+  "userID": "SL000037",
+  "userName": "thanhha79",
+  "fullName": "Ngô Thanh Hà",
+  "email": "thanhha79@gmail.com",
+  "phoneNumber": "0978192039",
+  "password": "thanhha123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 390,
+  "eWasteRecycledKg": 8.7,
+  "joinDate": "2026-06-21",
+  "sellerDetails": {
+    "address": "Số 154 Đường 20, Quận Cầu Giấy, Hà Nội",
+    "taxCode": "0188192736",
+    "bankInfo": {
+      "bankName": "VPBank",
+      "accountNumber": "1551829304",
+      "accountHolder": "NGO THANH HA"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9db6"
+  },
+  "userID": "SL000038",
+  "userName": "nghexanh62",
+  "fullName": "Shop Công Nghệ Xanh (TP.HCM)",
+  "email": "nghexanh62@seller.vn",
+  "phoneNumber": "0918293019",
+  "password": "nghexanh123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 3600,
+  "eWasteRecycledKg": 98,
+  "joinDate": "2026-06-24",
+  "sellerDetails": {
+    "address": "Số 205 Đường 16, TP. Thủ Đức, TP.HCM",
+    "taxCode": "0301829384",
+    "bankInfo": {
+      "bankName": "TPBank",
+      "accountNumber": "04518293049",
+      "accountHolder": "SHOP CONG NGHE XANH (TP.HCM)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9db7"
+  },
+  "userID": "SL000039",
+  "userName": "vanan45",
+  "fullName": "Nguyễn Văn An",
+  "email": "vanan45@gmail.com",
+  "phoneNumber": "0918293019",
+  "password": "vanan123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 760,
+  "eWasteRecycledKg": 16.3,
+  "joinDate": "2026-06-27",
+  "sellerDetails": {
+    "address": "Số 28 Đường 27, TP. Dĩ An, Bình Dương",
+    "taxCode": "3771829384",
+    "bankInfo": {
+      "bankName": "VietinBank",
+      "accountNumber": "105182930485",
+      "accountHolder": "NGUYEN VAN AN"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9db8"
+  },
+  "userID": "SL000040",
+  "userName": "tinhnam16",
+  "fullName": "Kho Máy Tính Miền Nam (Cần Thơ)",
+  "email": "tinhnam16@seller.vn",
+  "phoneNumber": "0948192039",
+  "password": "tinhnam123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 2150,
+  "eWasteRecycledKg": 56.5,
+  "joinDate": "2026-06-30",
+  "sellerDetails": {
+    "address": "Số 139 Đường 7, Quận Ninh Kiều, Cần Thơ",
+    "taxCode": "1871829384",
+    "bankInfo": {
+      "bankName": "Techcombank",
+      "accountNumber": "190681920394",
+      "accountHolder": "KHO MAY TINH MIEN NAM (CAN THO)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9db9"
+  },
+  "userID": "SL000041",
+  "userName": "huutri59",
+  "fullName": "Phạm Hữu Trí",
+  "email": "huutri59@gmail.com",
+  "phoneNumber": "0948192039",
+  "password": "huutri123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 580,
+  "eWasteRecycledKg": 12.6,
+  "joinDate": "2026-07-03",
+  "sellerDetails": {
+    "address": "Số 82 Đường 15, Quận 10, TP.HCM",
+    "taxCode": "0377182938",
+    "bankInfo": {
+      "bankName": "MBBank",
+      "accountNumber": "034182930495",
+      "accountHolder": "PHAM HUU TRI"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9dba"
+  },
+  "userID": "SL000042",
+  "userName": "nhatminh73",
+  "fullName": "Điện Tử Nhật Minh (Hà Nội)",
+  "email": "nhatminh73@seller.vn",
+  "phoneNumber": "0971829304",
+  "password": "nhatminh123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 2400,
+  "eWasteRecycledKg": 63,
+  "joinDate": "2026-07-06",
+  "sellerDetails": {
+    "address": "Số 168 Đường 9, Quận Ba Đình, Hà Nội",
+    "taxCode": "0121829384",
+    "bankInfo": {
+      "bankName": "Vietcombank",
+      "accountNumber": "106718293049",
+      "accountHolder": "DIEN TU NHAT MINH (HA NOI)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9dbb"
+  },
+  "userID": "SL000043",
+  "userName": "quocnam24",
+  "fullName": "Đặng Quốc Nam",
+  "email": "quocnam24@gmail.com",
+  "phoneNumber": "0919283019",
+  "password": "quocnam123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 830,
+  "eWasteRecycledKg": 17.8,
+  "joinDate": "2026-07-09",
+  "sellerDetails": {
+    "address": "Số 47 Đường 18, Quận Ngô Quyền, Hải Phòng",
+    "taxCode": "0288192736",
+    "bankInfo": {
+      "bankName": "BIDV",
+      "accountNumber": "108182930495",
+      "accountHolder": "DANG QUOC NAM"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9dbc"
+  },
+  "userID": "SL000044",
+  "userName": "phatmobile87",
+  "fullName": "Hoàng Phát Mobile (Đà Nẵng)",
+  "email": "phatmobile87@seller.vn",
+  "phoneNumber": "0934182930",
+  "password": "phatmobile123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 1980,
+  "eWasteRecycledKg": 51,
+  "joinDate": "2026-07-12",
+  "sellerDetails": {
+    "address": "Số 110 Đường 3, Quận Sơn Trà, Đà Nẵng",
+    "taxCode": "0441829384",
+    "bankInfo": {
+      "bankName": "ACB",
+      "accountNumber": "2141829304",
+      "accountHolder": "HOANG PHAT MOBILE (DA NANG)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9dbd"
+  },
+  "userID": "SL000045",
+  "userName": "minhthao36",
+  "fullName": "Hồ Minh Thảo",
+  "email": "minhthao36@gmail.com",
+  "phoneNumber": "0968192830",
+  "password": "minhthao123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 420,
+  "eWasteRecycledKg": 9.4,
+  "joinDate": "2026-07-15",
+  "sellerDetails": {
+    "address": "Số 93 Đường 12, Quận Bình Thạnh, TP.HCM",
+    "taxCode": "0366182938",
+    "bankInfo": {
+      "bankName": "VPBank",
+      "accountNumber": "1541829304",
+      "accountHolder": "HO MINH THAO"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9dbe"
+  },
+  "userID": "SL000046",
+  "userName": "laptopzin82",
+  "fullName": "Trung Tâm Laptop Zin (TP.HCM)",
+  "email": "laptopzin82@seller.vn",
+  "phoneNumber": "0978192830",
+  "password": "laptopzin123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 3750,
+  "eWasteRecycledKg": 102,
+  "joinDate": "2026-07-18",
+  "sellerDetails": {
+    "address": "Số 245 Đường 1, Quận Tân Bình, TP.HCM",
+    "taxCode": "0390182736",
+    "bankInfo": {
+      "bankName": "TPBank",
+      "accountNumber": "04418293049",
+      "accountHolder": "TRUNG TAM LAPTOP ZIN (TP.HCM)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9dbf"
+  },
+  "userID": "SL000047",
+  "userName": "vanthinh19",
+  "fullName": "Nguyễn Văn Thịnh",
+  "email": "vanthinh19@gmail.com",
+  "phoneNumber": "0918293049",
+  "password": "vanthinh123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 890,
+  "eWasteRecycledKg": 19.8,
+  "joinDate": "2026-07-21",
+  "sellerDetails": {
+    "address": "Số 66 Đường 14, TP. Biên Hòa, Đồng Nai",
+    "taxCode": "3671829384",
+    "bankInfo": {
+      "bankName": "VietinBank",
+      "accountNumber": "104182930485",
+      "accountHolder": "NGUYEN VAN THINH"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9dc0"
+  },
+  "userID": "SL000048",
+  "userName": "hungcomputer61",
+  "fullName": "Gia Hưng Computer (Hà Nội)",
+  "email": "hungcomputer61@seller.vn",
+  "phoneNumber": "0948192038",
+  "password": "hungcomputer123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 2800,
+  "eWasteRecycledKg": 74,
+  "joinDate": "2026-07-24",
+  "sellerDetails": {
+    "address": "Số 134 Đường 17, Quận Cầu Giấy, Hà Nội",
+    "taxCode": "0111829384",
+    "bankInfo": {
+      "bankName": "Techcombank",
+      "accountNumber": "190781920394",
+      "accountHolder": "GIA HUNG COMPUTER (HA NOI)"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9dc1"
+  },
+  "userID": "SL000049",
+  "userName": "giaan95",
+  "fullName": "Hoàng Gia An",
+  "email": "giaan95@gmail.com",
+  "phoneNumber": "0901829384",
+  "password": "giaan123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 470,
+  "eWasteRecycledKg": 10.2,
+  "joinDate": "2026-07-27",
+  "sellerDetails": {
+    "address": "Số 58 Đường 22, Quận 7, TP.HCM",
+    "taxCode": "0355182938",
+    "bankInfo": {
+      "bankName": "MBBank",
+      "accountNumber": "033182930495",
+      "accountHolder": "HOANG GIA AN"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9dc2"
+  },
+  "userID": "SL000050",
+  "userName": "kiencu34",
+  "fullName": "Thế Giới Phụ Kiện Cũ (TP.HCM)",
+  "email": "kiencu34@seller.vn",
+  "phoneNumber": "0981928384",
+  "password": "kiencu123",
+  "role": "SELLER",
+  "status": "ACTIVE",
+  "greenCoins": 3150,
+  "eWasteRecycledKg": 86,
+  "joinDate": "2026-07-30",
+  "sellerDetails": {
+    "address": "Số 218 Đường 28, TP. Thủ Đức, TP.HCM",
+    "taxCode": "0380182736",
+    "bankInfo": {
+      "bankName": "Vietcombank",
+      "accountNumber": "102839485716",
+      "accountHolder": "THE GIOI PHU KIEN CU (TP.HCM)"
+    }
+  }
+}]

@@ -1,0 +1,700 @@
+[{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e32"
+  },
+  "repairOrderID": "RP000001",
+  "requestID": "RQ000001",
+  "customerID": "CM000001",
+  "storeID": "BR000002",
+  "orderDate": "2026-09-03 16:29:08",
+  "pickupDate": "2026-09-04",
+  "shippingAddress": "456 Nguyễn Trãi, Quận 5, TP.HCM",
+  "finalCost": "300.000đ",
+  "status": "Chờ xác nhận"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e33"
+  },
+  "repairOrderID": "RP000002",
+  "requestID": "RQ000002",
+  "customerID": "CM000002",
+  "storeID": "BR000003",
+  "orderDate": "2026-06-27 20:41:46",
+  "pickupDate": "2026-06-30",
+  "shippingAddress": "789 Lê Văn Việt, TP. Thủ Đức, TP.HCM",
+  "finalCost": "900.000đ",
+  "status": "Đã hủy"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e34"
+  },
+  "repairOrderID": "RP000003",
+  "requestID": "RQ000003",
+  "customerID": "CM000003",
+  "storeID": "BR000004",
+  "orderDate": "2026-04-15 11:31:18",
+  "pickupDate": "2026-04-16",
+  "shippingAddress": "12 Trần Hưng Đạo, Quận 1, TP.HCM",
+  "finalCost": "400.000đ",
+  "status": "Đã giao hàng"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e35"
+  },
+  "repairOrderID": "RP000004",
+  "requestID": "RQ000004",
+  "customerID": "CM000004",
+  "storeID": "BR000005",
+  "orderDate": "2026-09-08 17:20:12",
+  "pickupDate": "2026-09-09",
+  "shippingAddress": "34 Hoàng Diệu, Quận 4, TP.HCM",
+  "finalCost": "1.200.000đ",
+  "status": "Đang sửa chữa"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e36"
+  },
+  "repairOrderID": "RP000005",
+  "requestID": "RQ000005",
+  "customerID": "CM000005",
+  "storeID": "BR000001",
+  "orderDate": "2026-03-29 15:26:19",
+  "pickupDate": "2026-04-02",
+  "shippingAddress": "56 Lê Đại Hành, Quận 11, TP.HCM",
+  "finalCost": "1.500.000đ",
+  "status": "Đã hoàn thành"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e37"
+  },
+  "repairOrderID": "RP000006",
+  "requestID": "RQ000006",
+  "customerID": "CM000006",
+  "storeID": "BR000002",
+  "orderDate": "2026-01-29 16:54:39",
+  "pickupDate": "2026-02-03",
+  "shippingAddress": "89 Võ Văn Ngân, TP. Thủ Đức, TP.HCM",
+  "finalCost": "600.000đ",
+  "status": "Đã hoàn thành"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e38"
+  },
+  "repairOrderID": "RP000007",
+  "requestID": "RQ000007",
+  "customerID": "CM000007",
+  "storeID": "BR000003",
+  "orderDate": "2026-06-25 18:34:03",
+  "pickupDate": "2026-06-28",
+  "shippingAddress": "67 Quang Trung, Quận Gò Vấp, TP.HCM",
+  "finalCost": "1.400.000đ",
+  "status": "Đang sửa chữa"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e39"
+  },
+  "repairOrderID": "RP000008",
+  "requestID": "RQ000008",
+  "customerID": "CM000008",
+  "storeID": "BR000004",
+  "orderDate": "2026-04-08 07:01:33",
+  "pickupDate": "2026-04-13",
+  "shippingAddress": "123 Đường Xanh, Quận 1, TP.HCM",
+  "finalCost": "1.400.000đ",
+  "status": "Đã hoàn thành"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e3a"
+  },
+  "repairOrderID": "RP000009",
+  "requestID": "RQ000009",
+  "customerID": "CM000009",
+  "storeID": "BR000005",
+  "orderDate": "2026-05-10 07:38:19",
+  "pickupDate": "2026-05-11",
+  "shippingAddress": "456 Nguyễn Trãi, Quận 5, TP.HCM",
+  "finalCost": "1.000.000đ",
+  "status": "Đã giao hàng"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e3b"
+  },
+  "repairOrderID": "RP000010",
+  "requestID": "RQ000010",
+  "customerID": "CM000010",
+  "storeID": "BR000001",
+  "orderDate": "2026-08-31 14:03:05",
+  "pickupDate": "2026-09-03",
+  "shippingAddress": "789 Lê Văn Việt, TP. Thủ Đức, TP.HCM",
+  "finalCost": "700.000đ",
+  "status": "Chờ xác nhận"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e3c"
+  },
+  "repairOrderID": "RP000011",
+  "requestID": "RQ000011",
+  "customerID": "CM000011",
+  "storeID": "BR000002",
+  "orderDate": "2026-06-30 15:54:53",
+  "pickupDate": "2026-07-01",
+  "shippingAddress": "12 Trần Hưng Đạo, Quận 1, TP.HCM",
+  "finalCost": "1.300.000đ",
+  "status": "Đang sửa chữa"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e3d"
+  },
+  "repairOrderID": "RP000012",
+  "requestID": "RQ000012",
+  "customerID": "CM000012",
+  "storeID": "BR000003",
+  "orderDate": "2026-08-28 07:19:53",
+  "pickupDate": "2026-08-30",
+  "shippingAddress": "34 Hoàng Diệu, Quận 4, TP.HCM",
+  "finalCost": "300.000đ",
+  "status": "Đang sửa chữa"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e3e"
+  },
+  "repairOrderID": "RP000013",
+  "requestID": "RQ000013",
+  "customerID": "CM000013",
+  "storeID": "BR000004",
+  "orderDate": "2026-02-22 15:13:02",
+  "pickupDate": "2026-02-25",
+  "shippingAddress": "56 Lê Đại Hành, Quận 11, TP.HCM",
+  "finalCost": "1.100.000đ",
+  "status": "Chờ xác nhận"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e3f"
+  },
+  "repairOrderID": "RP000014",
+  "requestID": "RQ000014",
+  "customerID": "CM000014",
+  "storeID": "BR000005",
+  "orderDate": "2026-07-08 12:09:14",
+  "pickupDate": "2026-07-09",
+  "shippingAddress": "89 Võ Văn Ngân, TP. Thủ Đức, TP.HCM",
+  "finalCost": "700.000đ",
+  "status": "Đã hoàn thành"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e40"
+  },
+  "repairOrderID": "RP000015",
+  "requestID": "RQ000015",
+  "customerID": "CM000015",
+  "storeID": "BR000001",
+  "orderDate": "2026-03-25 08:16:53",
+  "pickupDate": "2026-03-30",
+  "shippingAddress": "67 Quang Trung, Quận Gò Vấp, TP.HCM",
+  "finalCost": "1.100.000đ",
+  "status": "Đã hủy"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e41"
+  },
+  "repairOrderID": "RP000016",
+  "requestID": "RQ000016",
+  "customerID": "CM000016",
+  "storeID": "BR000002",
+  "orderDate": "2026-07-17 07:04:06",
+  "pickupDate": "2026-07-19",
+  "shippingAddress": "123 Đường Xanh, Quận 1, TP.HCM",
+  "finalCost": "1.200.000đ",
+  "status": "Đã hoàn thành"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e42"
+  },
+  "repairOrderID": "RP000017",
+  "requestID": "RQ000017",
+  "customerID": "CM000017",
+  "storeID": "BR000003",
+  "orderDate": "2026-04-29 15:26:13",
+  "pickupDate": "2026-05-03",
+  "shippingAddress": "456 Nguyễn Trãi, Quận 5, TP.HCM",
+  "finalCost": "1.500.000đ",
+  "status": "Đang sửa chữa"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e43"
+  },
+  "repairOrderID": "RP000018",
+  "requestID": "RQ000018",
+  "customerID": "CM000018",
+  "storeID": "BR000004",
+  "orderDate": "2026-02-02 07:05:53",
+  "pickupDate": "2026-02-07",
+  "shippingAddress": "789 Lê Văn Việt, TP. Thủ Đức, TP.HCM",
+  "finalCost": "500.000đ",
+  "status": "Chờ xác nhận"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e44"
+  },
+  "repairOrderID": "RP000019",
+  "requestID": "RQ000019",
+  "customerID": "CM000019",
+  "storeID": "BR000005",
+  "orderDate": "2026-07-29 21:01:41",
+  "pickupDate": "2026-08-01",
+  "shippingAddress": "12 Trần Hưng Đạo, Quận 1, TP.HCM",
+  "finalCost": "1.400.000đ",
+  "status": "Đang sửa chữa"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e45"
+  },
+  "repairOrderID": "RP000020",
+  "requestID": "RQ000020",
+  "customerID": "CM000020",
+  "storeID": "BR000001",
+  "orderDate": "2026-02-21 19:11:26",
+  "pickupDate": "2026-02-26",
+  "shippingAddress": "34 Hoàng Diệu, Quận 4, TP.HCM",
+  "finalCost": "400.000đ",
+  "status": "Đã hủy"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e46"
+  },
+  "repairOrderID": "RP000021",
+  "requestID": "RQ000021",
+  "customerID": "CM000021",
+  "storeID": "BR000002",
+  "orderDate": "2026-07-24 20:47:47",
+  "pickupDate": "2026-07-26",
+  "shippingAddress": "56 Lê Đại Hành, Quận 11, TP.HCM",
+  "finalCost": "1.300.000đ",
+  "status": "Đã giao hàng"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e47"
+  },
+  "repairOrderID": "RP000022",
+  "requestID": "RQ000022",
+  "customerID": "CM000022",
+  "storeID": "BR000003",
+  "orderDate": "2026-05-31 12:38:29",
+  "pickupDate": "2026-06-01",
+  "shippingAddress": "89 Võ Văn Ngân, TP. Thủ Đức, TP.HCM",
+  "finalCost": "1.300.000đ",
+  "status": "Đang sửa chữa"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e48"
+  },
+  "repairOrderID": "RP000023",
+  "requestID": "RQ000023",
+  "customerID": "CM000023",
+  "storeID": "BR000004",
+  "orderDate": "2026-07-10 10:46:04",
+  "pickupDate": "2026-07-14",
+  "shippingAddress": "67 Quang Trung, Quận Gò Vấp, TP.HCM",
+  "finalCost": "900.000đ",
+  "status": "Chờ xác nhận"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e49"
+  },
+  "repairOrderID": "RP000024",
+  "requestID": "RQ000024",
+  "customerID": "CM000024",
+  "storeID": "BR000005",
+  "orderDate": "2026-01-28 15:05:09",
+  "pickupDate": "2026-02-02",
+  "shippingAddress": "123 Đường Xanh, Quận 1, TP.HCM",
+  "finalCost": "1.300.000đ",
+  "status": "Chờ xác nhận"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e4a"
+  },
+  "repairOrderID": "RP000025",
+  "requestID": "RQ000025",
+  "customerID": "CM000025",
+  "storeID": "BR000001",
+  "orderDate": "2026-06-19 11:50:58",
+  "pickupDate": "2026-06-22",
+  "shippingAddress": "456 Nguyễn Trãi, Quận 5, TP.HCM",
+  "finalCost": "800.000đ",
+  "status": "Đang sửa chữa"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e4b"
+  },
+  "repairOrderID": "RP000026",
+  "requestID": "RQ000026",
+  "customerID": "CM000026",
+  "storeID": "BR000002",
+  "orderDate": "2026-07-11 19:30:16",
+  "pickupDate": "2026-07-16",
+  "shippingAddress": "789 Lê Văn Việt, TP. Thủ Đức, TP.HCM",
+  "finalCost": "600.000đ",
+  "status": "Đã giao hàng"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e4c"
+  },
+  "repairOrderID": "RP000027",
+  "requestID": "RQ000027",
+  "customerID": "CM000027",
+  "storeID": "BR000003",
+  "orderDate": "2026-03-18 21:43:10",
+  "pickupDate": "2026-03-19",
+  "shippingAddress": "12 Trần Hưng Đạo, Quận 1, TP.HCM",
+  "finalCost": "1.500.000đ",
+  "status": "Đã hủy"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e4d"
+  },
+  "repairOrderID": "RP000028",
+  "requestID": "RQ000028",
+  "customerID": "CM000028",
+  "storeID": "BR000004",
+  "orderDate": "2026-08-15 15:45:42",
+  "pickupDate": "2026-08-16",
+  "shippingAddress": "34 Hoàng Diệu, Quận 4, TP.HCM",
+  "finalCost": "1.500.000đ",
+  "status": "Đang sửa chữa"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e4e"
+  },
+  "repairOrderID": "RP000029",
+  "requestID": "RQ000029",
+  "customerID": "CM000029",
+  "storeID": "BR000005",
+  "orderDate": "2026-06-17 13:57:48",
+  "pickupDate": "2026-06-20",
+  "shippingAddress": "56 Lê Đại Hành, Quận 11, TP.HCM",
+  "finalCost": "1.500.000đ",
+  "status": "Chờ xác nhận"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e4f"
+  },
+  "repairOrderID": "RP000030",
+  "requestID": "RQ000030",
+  "customerID": "CM000030",
+  "storeID": "BR000001",
+  "orderDate": "2026-02-27 21:00:53",
+  "pickupDate": "2026-02-28",
+  "shippingAddress": "89 Võ Văn Ngân, TP. Thủ Đức, TP.HCM",
+  "finalCost": "200.000đ",
+  "status": "Chờ xác nhận"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e50"
+  },
+  "repairOrderID": "RP000031",
+  "requestID": "RQ000031",
+  "customerID": "CM000031",
+  "storeID": "BR000002",
+  "orderDate": "2026-09-01 10:05:49",
+  "pickupDate": "2026-09-05",
+  "shippingAddress": "67 Quang Trung, Quận Gò Vấp, TP.HCM",
+  "finalCost": "800.000đ",
+  "status": "Chờ xác nhận"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e51"
+  },
+  "repairOrderID": "RP000032",
+  "requestID": "RQ000032",
+  "customerID": "CM000032",
+  "storeID": "BR000003",
+  "orderDate": "2026-02-05 09:16:18",
+  "pickupDate": "2026-02-09",
+  "shippingAddress": "123 Đường Xanh, Quận 1, TP.HCM",
+  "finalCost": "500.000đ",
+  "status": "Đã hủy"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e52"
+  },
+  "repairOrderID": "RP000033",
+  "requestID": "RQ000033",
+  "customerID": "CM000033",
+  "storeID": "BR000004",
+  "orderDate": "2026-08-25 19:05:04",
+  "pickupDate": "2026-08-30",
+  "shippingAddress": "456 Nguyễn Trãi, Quận 5, TP.HCM",
+  "finalCost": "600.000đ",
+  "status": "Chờ xác nhận"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e53"
+  },
+  "repairOrderID": "RP000034",
+  "requestID": "RQ000034",
+  "customerID": "CM000034",
+  "storeID": "BR000005",
+  "orderDate": "2026-06-24 14:18:32",
+  "pickupDate": "2026-06-29",
+  "shippingAddress": "789 Lê Văn Việt, TP. Thủ Đức, TP.HCM",
+  "finalCost": "700.000đ",
+  "status": "Chờ xác nhận"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e54"
+  },
+  "repairOrderID": "RP000035",
+  "requestID": "RQ000035",
+  "customerID": "CM000035",
+  "storeID": "BR000001",
+  "orderDate": "2026-06-25 12:15:54",
+  "pickupDate": "2026-06-29",
+  "shippingAddress": "12 Trần Hưng Đạo, Quận 1, TP.HCM",
+  "finalCost": "1.000.000đ",
+  "status": "Đã hoàn thành"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e55"
+  },
+  "repairOrderID": "RP000036",
+  "requestID": "RQ000036",
+  "customerID": "CM000036",
+  "storeID": "BR000002",
+  "orderDate": "2026-04-14 10:26:53",
+  "pickupDate": "2026-04-16",
+  "shippingAddress": "34 Hoàng Diệu, Quận 4, TP.HCM",
+  "finalCost": "1.100.000đ",
+  "status": "Đã hoàn thành"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e56"
+  },
+  "repairOrderID": "RP000037",
+  "requestID": "RQ000037",
+  "customerID": "CM000037",
+  "storeID": "BR000003",
+  "orderDate": "2026-02-25 11:16:01",
+  "pickupDate": "2026-03-01",
+  "shippingAddress": "56 Lê Đại Hành, Quận 11, TP.HCM",
+  "finalCost": "1.100.000đ",
+  "status": "Đã hoàn thành"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e57"
+  },
+  "repairOrderID": "RP000038",
+  "requestID": "RQ000038",
+  "customerID": "CM000038",
+  "storeID": "BR000004",
+  "orderDate": "2026-06-20 13:54:17",
+  "pickupDate": "2026-06-22",
+  "shippingAddress": "89 Võ Văn Ngân, TP. Thủ Đức, TP.HCM",
+  "finalCost": "400.000đ",
+  "status": "Đã giao hàng"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e58"
+  },
+  "repairOrderID": "RP000039",
+  "requestID": "RQ000039",
+  "customerID": "CM000039",
+  "storeID": "BR000005",
+  "orderDate": "2026-09-01 18:44:29",
+  "pickupDate": "2026-09-03",
+  "shippingAddress": "67 Quang Trung, Quận Gò Vấp, TP.HCM",
+  "finalCost": "1.300.000đ",
+  "status": "Đã hoàn thành"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e59"
+  },
+  "repairOrderID": "RP000040",
+  "requestID": "RQ000040",
+  "customerID": "CM000040",
+  "storeID": "BR000001",
+  "orderDate": "2026-04-14 17:48:43",
+  "pickupDate": "2026-04-16",
+  "shippingAddress": "123 Đường Xanh, Quận 1, TP.HCM",
+  "finalCost": "1.400.000đ",
+  "status": "Đã giao hàng"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e5a"
+  },
+  "repairOrderID": "RP000041",
+  "requestID": "RQ000041",
+  "customerID": "CM000041",
+  "storeID": "BR000002",
+  "orderDate": "2026-08-31 07:39:41",
+  "pickupDate": "2026-09-01",
+  "shippingAddress": "456 Nguyễn Trãi, Quận 5, TP.HCM",
+  "finalCost": "1.000.000đ",
+  "status": "Chờ xác nhận"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e5b"
+  },
+  "repairOrderID": "RP000042",
+  "requestID": "RQ000042",
+  "customerID": "CM000042",
+  "storeID": "BR000003",
+  "orderDate": "2026-04-11 09:23:56",
+  "pickupDate": "2026-04-12",
+  "shippingAddress": "789 Lê Văn Việt, TP. Thủ Đức, TP.HCM",
+  "finalCost": "300.000đ",
+  "status": "Đã hoàn thành"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e5c"
+  },
+  "repairOrderID": "RP000043",
+  "requestID": "RQ000043",
+  "customerID": "CM000043",
+  "storeID": "BR000004",
+  "orderDate": "2026-08-01 14:06:40",
+  "pickupDate": "2026-08-05",
+  "shippingAddress": "12 Trần Hưng Đạo, Quận 1, TP.HCM",
+  "finalCost": "1.400.000đ",
+  "status": "Chờ xác nhận"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e5d"
+  },
+  "repairOrderID": "RP000044",
+  "requestID": "RQ000044",
+  "customerID": "CM000044",
+  "storeID": "BR000005",
+  "orderDate": "2026-01-16 12:31:54",
+  "pickupDate": "2026-01-19",
+  "shippingAddress": "34 Hoàng Diệu, Quận 4, TP.HCM",
+  "finalCost": "300.000đ",
+  "status": "Đang sửa chữa"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e5e"
+  },
+  "repairOrderID": "RP000045",
+  "requestID": "RQ000045",
+  "customerID": "CM000045",
+  "storeID": "BR000001",
+  "orderDate": "2026-06-24 20:22:55",
+  "pickupDate": "2026-06-28",
+  "shippingAddress": "56 Lê Đại Hành, Quận 11, TP.HCM",
+  "finalCost": "1.200.000đ",
+  "status": "Đã hoàn thành"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e5f"
+  },
+  "repairOrderID": "RP000046",
+  "requestID": "RQ000046",
+  "customerID": "CM000046",
+  "storeID": "BR000002",
+  "orderDate": "2026-04-21 11:06:52",
+  "pickupDate": "2026-04-24",
+  "shippingAddress": "89 Võ Văn Ngân, TP. Thủ Đức, TP.HCM",
+  "finalCost": "1.200.000đ",
+  "status": "Chờ xác nhận"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e60"
+  },
+  "repairOrderID": "RP000047",
+  "requestID": "RQ000047",
+  "customerID": "CM000047",
+  "storeID": "BR000003",
+  "orderDate": "2026-06-16 17:42:27",
+  "pickupDate": "2026-06-19",
+  "shippingAddress": "67 Quang Trung, Quận Gò Vấp, TP.HCM",
+  "finalCost": "600.000đ",
+  "status": "Đã hủy"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e61"
+  },
+  "repairOrderID": "RP000048",
+  "requestID": "RQ000048",
+  "customerID": "CM000048",
+  "storeID": "BR000004",
+  "orderDate": "2026-03-19 20:50:56",
+  "pickupDate": "2026-03-24",
+  "shippingAddress": "123 Đường Xanh, Quận 1, TP.HCM",
+  "finalCost": "600.000đ",
+  "status": "Đã giao hàng"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e62"
+  },
+  "repairOrderID": "RP000049",
+  "requestID": "RQ000049",
+  "customerID": "CM000049",
+  "storeID": "BR000005",
+  "orderDate": "2026-08-19 17:36:57",
+  "pickupDate": "2026-08-21",
+  "shippingAddress": "456 Nguyễn Trãi, Quận 5, TP.HCM",
+  "finalCost": "400.000đ",
+  "status": "Đang sửa chữa"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddcea9e63"
+  },
+  "repairOrderID": "RP000050",
+  "requestID": "RQ000050",
+  "customerID": "CM000050",
+  "storeID": "BR000001",
+  "orderDate": "2026-02-15 15:39:53",
+  "pickupDate": "2026-02-20",
+  "shippingAddress": "789 Lê Văn Việt, TP. Thủ Đức, TP.HCM",
+  "finalCost": "1.300.000đ",
+  "status": "Đã giao hàng"
+}]

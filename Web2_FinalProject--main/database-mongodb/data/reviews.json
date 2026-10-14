@@ -1,0 +1,852 @@
+[{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1f5"
+  },
+  "reviewID": "RV000001",
+  "orderID": "OD000001",
+  "productID": "DV000003",
+  "userID": "CM000001",
+  "rating": 3,
+  "comment": "Máy có trầy xước nhiều ở nắp lưng, màn hình hơi ố vàng nhẹ.",
+  "reviewDate": "2026-01-11"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1f6"
+  },
+  "reviewID": "RV000002",
+  "orderID": "OD000002",
+  "productID": "DV000005",
+  "userID": "CM000002",
+  "rating": 4,
+  "comment": "Chất lượng sản phẩm tốt trong tầm giá, màn hình hiển thị sắc nét.",
+  "reviewDate": "2026-01-19"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1f7"
+  },
+  "reviewID": "RV000003",
+  "orderID": "OD000003",
+  "productID": "DV000074",
+  "userID": "CM000003",
+  "rating": 4,
+  "comment": "Hàng dùng khá mượt, phụ kiện đi kèm đầy đủ.",
+  "reviewDate": "2026-01-17"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1f8"
+  },
+  "reviewID": "RV000004",
+  "orderID": "OD000004",
+  "productID": "DV000076",
+  "userID": "CM000004",
+  "rating": 5,
+  "comment": "Sản phẩm đúng mô tả, nhân viên hỗ trợ nhiệt tình. Sẽ ủng hộ shop tiếp!",
+  "reviewDate": "2026-06-04"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1f9"
+  },
+  "reviewID": "RV000005",
+  "orderID": "OD000005",
+  "productID": "DV000078",
+  "userID": "CM000005",
+  "rating": 4,
+  "comment": "Máy dùng tốt, ngoại hình có trầy xước nhẹ viền nhưng không đáng kể.",
+  "reviewDate": "2026-07-02"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1fa"
+  },
+  "reviewID": "RV000006",
+  "orderID": "OD000006",
+  "productID": "DV000082",
+  "userID": "CM000006",
+  "rating": 5,
+  "comment": "Máy đẹp keng 98%, pin trâu và camera chụp sắc nét. Rất hài lòng!",
+  "reviewDate": "2026-08-31"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1fb"
+  },
+  "reviewID": "RV000007",
+  "orderID": "OD000007",
+  "productID": "DV000083",
+  "userID": "CM000007",
+  "rating": 2,
+  "comment": "Máy chạy rất giật lag khi dùng ứng dụng nhẹ, vỏ máy sứt góc không như ảnh.",
+  "reviewDate": "2026-03-06"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1fc"
+  },
+  "reviewID": "RV000008",
+  "orderID": "OD000008",
+  "productID": "DV000088",
+  "userID": "CM000008",
+  "rating": 5,
+  "comment": "Sản phẩm đúng mô tả, nhân viên hỗ trợ nhiệt tình. Sẽ ủng hộ shop tiếp!",
+  "reviewDate": "2026-08-20"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1fd"
+  },
+  "reviewID": "RV000009",
+  "orderID": "OD000009",
+  "productID": "DV000095",
+  "userID": "CM000009",
+  "rating": 5,
+  "comment": "Sản phẩm đúng mô tả, nhân viên hỗ trợ nhiệt tình. Sẽ ủng hộ shop tiếp!",
+  "reviewDate": "2026-01-14"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1fe"
+  },
+  "reviewID": "RV000010",
+  "orderID": "OD000011",
+  "productID": "DV000142",
+  "userID": "CM000011",
+  "rating": 3,
+  "comment": "Máy dùng tạm ổn nhưng pin hơi chai nhẹ so với mô tả, thất vọng nhẹ.",
+  "reviewDate": "2026-05-01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa1ff"
+  },
+  "reviewID": "RV000011",
+  "orderID": "OD000012",
+  "productID": "DV000147",
+  "userID": "CM000012",
+  "rating": 5,
+  "comment": "Giao hàng nhanh, đóng gói chống sốc kỹ càng. Sản phẩm dùng ngon lành.",
+  "reviewDate": "2026-07-01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa200"
+  },
+  "reviewID": "RV000012",
+  "orderID": "OD000013",
+  "productID": "DV000167",
+  "userID": "CM000013",
+  "rating": 2,
+  "comment": "Máy lỗi cảm ứng thỉnh thoảng bị đơ, không hài lòng với sản phẩm này.",
+  "reviewDate": "2026-04-06"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa201"
+  },
+  "reviewID": "RV000013",
+  "orderID": "OD000014",
+  "productID": "DV000191",
+  "userID": "CM000014",
+  "rating": 5,
+  "comment": "Giao hàng nhanh, đóng gói chống sốc kỹ càng. Sản phẩm dùng ngon lành.",
+  "reviewDate": "2026-07-13"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa202"
+  },
+  "reviewID": "RV000014",
+  "orderID": "OD000015",
+  "productID": "DV000003",
+  "userID": "CM000015",
+  "rating": 5,
+  "comment": "Chất lượng vượt ngoài mong đợi, giao hàng rất nhanh.",
+  "reviewDate": "2026-01-06"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa203"
+  },
+  "reviewID": "RV000015",
+  "orderID": "OD000016",
+  "productID": "DV000005",
+  "userID": "CM000016",
+  "rating": 2,
+  "comment": "Máy chạy rất giật lag khi dùng ứng dụng nhẹ, vỏ máy sứt góc không như ảnh.",
+  "reviewDate": "2026-07-26"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa204"
+  },
+  "reviewID": "RV000016",
+  "orderID": "OD000017",
+  "productID": "DV000074",
+  "userID": "CM000017",
+  "rating": 5,
+  "comment": "Máy đẹp keng 98%, pin trâu và camera chụp sắc nét. Rất hài lòng!",
+  "reviewDate": "2026-03-19"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa205"
+  },
+  "reviewID": "RV000017",
+  "orderID": "OD000018",
+  "productID": "DV000076",
+  "userID": "CM000018",
+  "rating": 4,
+  "comment": "Chất lượng sản phẩm tốt trong tầm giá, màn hình hiển thị sắc nét.",
+  "reviewDate": "2026-01-30"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa206"
+  },
+  "reviewID": "RV000018",
+  "orderID": "OD000019",
+  "productID": "DV000078",
+  "userID": "CM000019",
+  "rating": 5,
+  "comment": "Máy đẹp keng 98%, pin trâu và camera chụp sắc nét. Rất hài lòng!",
+  "reviewDate": "2026-05-05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa207"
+  },
+  "reviewID": "RV000019",
+  "orderID": "OD000020",
+  "productID": "DV000082",
+  "userID": "CM000020",
+  "rating": 4,
+  "comment": "Chất lượng sản phẩm tốt trong tầm giá, màn hình hiển thị sắc nét.",
+  "reviewDate": "2026-05-25"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa208"
+  },
+  "reviewID": "RV000020",
+  "orderID": "OD000023",
+  "productID": "DV000095",
+  "userID": "CM000023",
+  "rating": 3,
+  "comment": "Máy dùng tạm ổn nhưng pin hơi chai nhẹ so với mô tả, thất vọng nhẹ.",
+  "reviewDate": "2026-09-13"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa209"
+  },
+  "reviewID": "RV000021",
+  "orderID": "OD000024",
+  "productID": "DV000141",
+  "userID": "CM000024",
+  "rating": 5,
+  "comment": "Giao hàng nhanh, đóng gói chống sốc kỹ càng. Sản phẩm dùng ngon lành.",
+  "reviewDate": "2026-08-19"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa20a"
+  },
+  "reviewID": "RV000022",
+  "orderID": "OD000026",
+  "productID": "DV000147",
+  "userID": "CM000026",
+  "rating": 5,
+  "comment": "Sản phẩm đúng mô tả, nhân viên hỗ trợ nhiệt tình. Sẽ ủng hộ shop tiếp!",
+  "reviewDate": "2026-05-11"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa20b"
+  },
+  "reviewID": "RV000023",
+  "orderID": "OD000027",
+  "productID": "DV000167",
+  "userID": "CM000027",
+  "rating": 5,
+  "comment": "Chất lượng vượt ngoài mong đợi, giao hàng rất nhanh.",
+  "reviewDate": "2026-10-08"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa20c"
+  },
+  "reviewID": "RV000024",
+  "orderID": "OD000028",
+  "productID": "DV000191",
+  "userID": "CM000028",
+  "rating": 1,
+  "comment": "Sản phẩm hư hỏng nặng, màn hình sọc ngang không sử dụng được!",
+  "reviewDate": "2026-09-01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa20d"
+  },
+  "reviewID": "RV000025",
+  "orderID": "OD000029",
+  "productID": "DV000003",
+  "userID": "CM000029",
+  "rating": 4,
+  "comment": "Hàng dùng khá mượt, phụ kiện đi kèm đầy đủ.",
+  "reviewDate": "2026-04-30"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa20e"
+  },
+  "reviewID": "RV000026",
+  "orderID": "OD000030",
+  "productID": "DV000005",
+  "userID": "CM000030",
+  "rating": 2,
+  "comment": "Màn hình bị ám màu nhẹ, cắm sạc máy rất nóng. Thất vọng!",
+  "reviewDate": "2026-08-24"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa20f"
+  },
+  "reviewID": "RV000027",
+  "orderID": "OD000031",
+  "productID": "DV000074",
+  "userID": "CM000031",
+  "rating": 5,
+  "comment": "Máy đẹp keng 98%, pin trâu và camera chụp sắc nét. Rất hài lòng!",
+  "reviewDate": "2026-10-07"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa210"
+  },
+  "reviewID": "RV000028",
+  "orderID": "OD000032",
+  "productID": "DV000076",
+  "userID": "CM000032",
+  "rating": 5,
+  "comment": "Sản phẩm đóng gói cẩn thận, dùng mượt mà!",
+  "reviewDate": "2026-05-24"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa211"
+  },
+  "reviewID": "RV000029",
+  "orderID": "OD000033",
+  "productID": "DV000078",
+  "userID": "CM000033",
+  "rating": 4,
+  "comment": "Hàng dùng khá mượt, phụ kiện đi kèm đầy đủ.",
+  "reviewDate": "2026-06-25"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa212"
+  },
+  "reviewID": "RV000030",
+  "orderID": "OD000034",
+  "productID": "DV000082",
+  "userID": "CM000034",
+  "rating": 3,
+  "comment": "Giao hàng hơi lâu hơn dự kiến 2 ngày, chất lượng sản phẩm bình thường.",
+  "reviewDate": "2026-05-03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa213"
+  },
+  "reviewID": "RV000031",
+  "orderID": "OD000035",
+  "productID": "DV000083",
+  "userID": "CM000035",
+  "rating": 4,
+  "comment": "Máy dùng tốt, ngoại hình có trầy xước nhẹ viền nhưng không đáng kể.",
+  "reviewDate": "2026-08-30"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa214"
+  },
+  "reviewID": "RV000032",
+  "orderID": "OD000036",
+  "productID": "DV000088",
+  "userID": "CM000036",
+  "rating": 3,
+  "comment": "Máy dùng tạm ổn nhưng pin hơi chai nhẹ so với mô tả, thất vọng nhẹ.",
+  "reviewDate": "2026-06-03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa215"
+  },
+  "reviewID": "RV000033",
+  "orderID": "OD000037",
+  "productID": "DV000095",
+  "userID": "CM000037",
+  "rating": 3,
+  "comment": "Giao hàng hơi lâu hơn dự kiến 2 ngày, chất lượng sản phẩm bình thường.",
+  "reviewDate": "2026-02-12"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa216"
+  },
+  "reviewID": "RV000034",
+  "orderID": "OD000038",
+  "productID": "DV000141",
+  "userID": "CM000038",
+  "rating": 5,
+  "comment": "Sản phẩm đóng gói cẩn thận, dùng mượt mà!",
+  "reviewDate": "2026-01-16"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa217"
+  },
+  "reviewID": "RV000035",
+  "orderID": "OD000039",
+  "productID": "DV000142",
+  "userID": "CM000039",
+  "rating": 5,
+  "comment": "Chất lượng vượt ngoài mong đợi, giao hàng rất nhanh.",
+  "reviewDate": "2026-05-20"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa218"
+  },
+  "reviewID": "RV000036",
+  "orderID": "OD000043",
+  "productID": "DV000003",
+  "userID": "CM000043",
+  "rating": 3,
+  "comment": "Máy dùng tạm ổn nhưng pin hơi chai nhẹ so với mô tả, thất vọng nhẹ.",
+  "reviewDate": "2026-03-18"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa219"
+  },
+  "reviewID": "RV000037",
+  "orderID": "OD000044",
+  "productID": "DV000005",
+  "userID": "CM000044",
+  "rating": 5,
+  "comment": "Sản phẩm đúng mô tả, nhân viên hỗ trợ nhiệt tình. Sẽ ủng hộ shop tiếp!",
+  "reviewDate": "2026-01-06"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa21a"
+  },
+  "reviewID": "RV000038",
+  "orderID": "OD000045",
+  "productID": "DV000074",
+  "userID": "CM000045",
+  "rating": 4,
+  "comment": "Chất lượng sản phẩm tốt trong tầm giá, màn hình hiển thị sắc nét.",
+  "reviewDate": "2026-10-09"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa21b"
+  },
+  "reviewID": "RV000039",
+  "orderID": "OD000047",
+  "productID": "DV000078",
+  "userID": "CM000047",
+  "rating": 5,
+  "comment": "Sản phẩm đúng mô tả, nhân viên hỗ trợ nhiệt tình. Sẽ ủng hộ shop tiếp!",
+  "reviewDate": "2026-09-05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa21c"
+  },
+  "reviewID": "RV000040",
+  "orderID": "OD000048",
+  "productID": "DV000082",
+  "userID": "CM000048",
+  "rating": 5,
+  "comment": "Giao hàng nhanh, đóng gói chống sốc kỹ càng. Sản phẩm dùng ngon lành.",
+  "reviewDate": "2026-07-18"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa21d"
+  },
+  "reviewID": "RV000041",
+  "orderID": "OD000051",
+  "productID": "DV000001",
+  "userID": "CM000001",
+  "rating": 5,
+  "comment": "Máy đẹp keng 98%, pin trâu và camera chụp sắc nét. Rất hài lòng!",
+  "reviewDate": "2026-10-03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa21e"
+  },
+  "reviewID": "RV000042",
+  "orderID": "OD000053",
+  "productID": "DV000004",
+  "userID": "CM000003",
+  "rating": 4,
+  "comment": "Chất lượng sản phẩm tốt trong tầm giá, màn hình hiển thị sắc nét.",
+  "reviewDate": "2026-06-05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa21f"
+  },
+  "reviewID": "RV000043",
+  "orderID": "OD000054",
+  "productID": "DV000006",
+  "userID": "CM000004",
+  "rating": 5,
+  "comment": "Sản phẩm đóng gói cẩn thận, dùng mượt mà!",
+  "reviewDate": "2026-01-05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa220"
+  },
+  "reviewID": "RV000044",
+  "orderID": "OD000055",
+  "productID": "DV000007",
+  "userID": "CM000005",
+  "rating": 1,
+  "comment": "Máy chập chờn nguồn, cắm sạc không vào điện. Đóng gói rất sơ sài!",
+  "reviewDate": "2026-05-22"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa221"
+  },
+  "reviewID": "RV000045",
+  "orderID": "OD000056",
+  "productID": "DV000008",
+  "userID": "CM000006",
+  "rating": 4,
+  "comment": "Sản phẩm hoạt động ổn định, giao hàng đúng hẹn. Cho shop 4 sao nha.",
+  "reviewDate": "2026-05-02"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa222"
+  },
+  "reviewID": "RV000046",
+  "orderID": "OD000057",
+  "productID": "DV000009",
+  "userID": "CM000007",
+  "rating": 5,
+  "comment": "Chất lượng vượt ngoài mong đợi, giao hàng rất nhanh.",
+  "reviewDate": "2026-03-06"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa223"
+  },
+  "reviewID": "RV000047",
+  "orderID": "OD000060",
+  "productID": "DV000012",
+  "userID": "CM000010",
+  "rating": 1,
+  "comment": "Máy chập chờn nguồn, cắm sạc không vào điện. Đóng gói rất sơ sài!",
+  "reviewDate": "2026-05-01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa224"
+  },
+  "reviewID": "RV000048",
+  "orderID": "OD000061",
+  "productID": "DV000013",
+  "userID": "CM000011",
+  "rating": 5,
+  "comment": "Máy đẹp keng 98%, pin trâu và camera chụp sắc nét. Rất hài lòng!",
+  "reviewDate": "2026-07-02"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa225"
+  },
+  "reviewID": "RV000049",
+  "orderID": "OD000062",
+  "productID": "DV000014",
+  "userID": "CM000012",
+  "rating": 3,
+  "comment": "Giao hàng hơi lâu hơn dự kiến 2 ngày, chất lượng sản phẩm bình thường.",
+  "reviewDate": "2026-09-14"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa226"
+  },
+  "reviewID": "RV000050",
+  "orderID": "OD000063",
+  "productID": "DV000015",
+  "userID": "CM000013",
+  "rating": 3,
+  "comment": "Máy dùng tạm ổn nhưng pin hơi chai nhẹ so với mô tả, thất vọng nhẹ.",
+  "reviewDate": "2026-02-16"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa227"
+  },
+  "reviewID": "RV000051",
+  "orderID": "OD000064",
+  "productID": "DV000016",
+  "userID": "CM000014",
+  "rating": 3,
+  "comment": "Giao hàng hơi lâu hơn dự kiến 2 ngày, chất lượng sản phẩm bình thường.",
+  "reviewDate": "2026-03-25"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa228"
+  },
+  "reviewID": "RV000052",
+  "orderID": "OD000065",
+  "productID": "DV000017",
+  "userID": "CM000015",
+  "rating": 3,
+  "comment": "Giao hàng hơi lâu hơn dự kiến 2 ngày, chất lượng sản phẩm bình thường.",
+  "reviewDate": "2026-04-05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa229"
+  },
+  "reviewID": "RV000053",
+  "orderID": "OD000071",
+  "productID": "DV000023",
+  "userID": "CM000021",
+  "rating": 3,
+  "comment": "Máy có trầy xước nhiều ở nắp lưng, màn hình hơi ố vàng nhẹ.",
+  "reviewDate": "2026-06-29"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa22a"
+  },
+  "reviewID": "RV000054",
+  "orderID": "OD000075",
+  "productID": "DV000027",
+  "userID": "CM000025",
+  "rating": 5,
+  "comment": "Sản phẩm đúng mô tả, nhân viên hỗ trợ nhiệt tình. Sẽ ủng hộ shop tiếp!",
+  "reviewDate": "2026-06-15"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa22b"
+  },
+  "reviewID": "RV000055",
+  "orderID": "OD000077",
+  "productID": "DV000029",
+  "userID": "CM000027",
+  "rating": 4,
+  "comment": "Sản phẩm hoạt động ổn định, giao hàng đúng hẹn. Cho shop 4 sao nha.",
+  "reviewDate": "2026-04-20"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa22c"
+  },
+  "reviewID": "RV000056",
+  "orderID": "OD000078",
+  "productID": "DV000030",
+  "userID": "CM000028",
+  "rating": 5,
+  "comment": "Giao hàng nhanh, đóng gói chống sốc kỹ càng. Sản phẩm dùng ngon lành.",
+  "reviewDate": "2026-01-18"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa22d"
+  },
+  "reviewID": "RV000057",
+  "orderID": "OD000079",
+  "productID": "DV000031",
+  "userID": "CM000029",
+  "rating": 4,
+  "comment": "Chất lượng sản phẩm tốt trong tầm giá, màn hình hiển thị sắc nét.",
+  "reviewDate": "2026-10-04"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa22e"
+  },
+  "reviewID": "RV000058",
+  "orderID": "OD000080",
+  "productID": "DV000032",
+  "userID": "CM000030",
+  "rating": 5,
+  "comment": "Chất lượng vượt ngoài mong đợi, giao hàng rất nhanh.",
+  "reviewDate": "2026-05-06"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa22f"
+  },
+  "reviewID": "RV000059",
+  "orderID": "OD000081",
+  "productID": "DV000033",
+  "userID": "CM000031",
+  "rating": 4,
+  "comment": "Hàng dùng khá mượt, phụ kiện đi kèm đầy đủ.",
+  "reviewDate": "2026-06-04"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa230"
+  },
+  "reviewID": "RV000060",
+  "orderID": "OD000082",
+  "productID": "DV000034",
+  "userID": "CM000032",
+  "rating": 3,
+  "comment": "Máy dùng tạm ổn nhưng pin hơi chai nhẹ so với mô tả, thất vọng nhẹ.",
+  "reviewDate": "2026-06-25"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa231"
+  },
+  "reviewID": "RV000061",
+  "orderID": "OD000083",
+  "productID": "DV000035",
+  "userID": "CM000033",
+  "rating": 5,
+  "comment": "Sản phẩm đúng mô tả, nhân viên hỗ trợ nhiệt tình. Sẽ ủng hộ shop tiếp!",
+  "reviewDate": "2026-08-22"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa232"
+  },
+  "reviewID": "RV000062",
+  "orderID": "OD000086",
+  "productID": "DV000038",
+  "userID": "CM000036",
+  "rating": 5,
+  "comment": "Máy đẹp keng 98%, pin trâu và camera chụp sắc nét. Rất hài lòng!",
+  "reviewDate": "2026-04-04"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa233"
+  },
+  "reviewID": "RV000063",
+  "orderID": "OD000087",
+  "productID": "DV000039",
+  "userID": "CM000037",
+  "rating": 5,
+  "comment": "Sản phẩm đóng gói cẩn thận, dùng mượt mà!",
+  "reviewDate": "2026-05-14"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa234"
+  },
+  "reviewID": "RV000064",
+  "orderID": "OD000088",
+  "productID": "DV000040",
+  "userID": "CM000038",
+  "rating": 4,
+  "comment": "Sản phẩm hoạt động ổn định, giao hàng đúng hẹn. Cho shop 4 sao nha.",
+  "reviewDate": "2026-05-07"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa235"
+  },
+  "reviewID": "RV000065",
+  "orderID": "OD000091",
+  "productID": "DV000041",
+  "userID": "CM000041",
+  "rating": 4,
+  "comment": "Sản phẩm hoạt động ổn định, giao hàng đúng hẹn. Cho shop 4 sao nha.",
+  "reviewDate": "2026-04-24"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa236"
+  },
+  "reviewID": "RV000066",
+  "orderID": "OD000092",
+  "productID": "DV000042",
+  "userID": "CM000042",
+  "rating": 4,
+  "comment": "Chất lượng sản phẩm tốt trong tầm giá, màn hình hiển thị sắc nét.",
+  "reviewDate": "2026-02-26"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa237"
+  },
+  "reviewID": "RV000067",
+  "orderID": "OD000094",
+  "productID": "DV000044",
+  "userID": "CM000044",
+  "rating": 3,
+  "comment": "Giao hàng hơi lâu hơn dự kiến 2 ngày, chất lượng sản phẩm bình thường.",
+  "reviewDate": "2026-02-17"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa238"
+  },
+  "reviewID": "RV000068",
+  "orderID": "OD000095",
+  "productID": "DV000045",
+  "userID": "CM000045",
+  "rating": 2,
+  "comment": "Máy chạy rất giật lag khi dùng ứng dụng nhẹ, vỏ máy sứt góc không như ảnh.",
+  "reviewDate": "2026-06-10"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa239"
+  },
+  "reviewID": "RV000069",
+  "orderID": "OD000097",
+  "productID": "DV000047",
+  "userID": "CM000047",
+  "rating": 5,
+  "comment": "Chất lượng vượt ngoài mong đợi, giao hàng rất nhanh.",
+  "reviewDate": "2026-04-02"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa23a"
+  },
+  "reviewID": "RV000070",
+  "orderID": "OD000099",
+  "productID": "DV000049",
+  "userID": "CM000049",
+  "rating": 4,
+  "comment": "Chất lượng sản phẩm tốt trong tầm giá, màn hình hiển thị sắc nét.",
+  "reviewDate": "2026-05-02"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa23b"
+  },
+  "reviewID": "RV000071",
+  "orderID": "OD000100",
+  "productID": "DV000050",
+  "userID": "CM000050",
+  "rating": 5,
+  "comment": "Giao hàng nhanh, đóng gói chống sốc kỹ càng. Sản phẩm dùng ngon lành.",
+  "reviewDate": "2026-06-24"
+}]

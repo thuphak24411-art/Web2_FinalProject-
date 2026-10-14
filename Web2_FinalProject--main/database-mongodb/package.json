@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "start": "node index.js",
+    "import": "node import_data.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "body-parser": "^2.3.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.6",
+    "express": "^5.3.0",
+    "express-fileupload": "^1.5.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoclient": "^1.0.3",
+    "mongodb": "^7.7.0",
+    "mongoose": "^9.10.4"
+  },
+  "devDependencies": {
+    "morgan": "^1.12.1",
+    "nodemon": "^3.1.14"
+  }
+}

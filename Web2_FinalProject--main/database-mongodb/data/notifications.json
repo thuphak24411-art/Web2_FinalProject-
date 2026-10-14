@@ -1,0 +1,4680 @@
+[{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa015"
+  },
+  "notificationID": "NT000001",
+  "userID": "CM000001",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000001",
+  "content": "Đơn hàng #OD000001 của bạn đang trên đường vận chuyển tới địa chỉ nhận.",
+  "targetID": "OD000001",
+  "isRead": false,
+  "createdAt": "2026-01-08 12:21:50"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa016"
+  },
+  "notificationID": "NT000002",
+  "userID": "SL000000",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000001",
+  "content": "Khách hàng CM000001 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000001",
+  "isRead": false,
+  "createdAt": "2026-01-08 12:21:50"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa017"
+  },
+  "notificationID": "NT000003",
+  "userID": "CM000002",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000002",
+  "content": "Đơn hàng #OD000002 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000002",
+  "isRead": false,
+  "createdAt": "2026-01-14 20:04:15"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa018"
+  },
+  "notificationID": "NT000004",
+  "userID": "SL000001",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000002",
+  "content": "Khách hàng CM000002 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000002",
+  "isRead": true,
+  "createdAt": "2026-01-14 20:04:15"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa019"
+  },
+  "notificationID": "NT000005",
+  "userID": "CM000003",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000003",
+  "content": "Đơn hàng #OD000003 của bạn đang trên đường vận chuyển tới địa chỉ nhận.",
+  "targetID": "OD000003",
+  "isRead": true,
+  "createdAt": "2026-01-13 09:21:59"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa01a"
+  },
+  "notificationID": "NT000006",
+  "userID": "SL000002",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000003",
+  "content": "Khách hàng CM000003 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000003",
+  "isRead": false,
+  "createdAt": "2026-01-13 09:21:59"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa01b"
+  },
+  "notificationID": "NT000007",
+  "userID": "CM000004",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000004",
+  "content": "Đơn hàng #OD000004 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000004",
+  "isRead": false,
+  "createdAt": "2026-05-30 11:48:37"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa01c"
+  },
+  "notificationID": "NT000008",
+  "userID": "SL000003",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000004",
+  "content": "Khách hàng CM000004 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000004",
+  "isRead": false,
+  "createdAt": "2026-05-30 11:48:37"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa01d"
+  },
+  "notificationID": "NT000009",
+  "userID": "CM000005",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000005",
+  "content": "Đơn hàng #OD000005 của bạn đang trên đường vận chuyển tới địa chỉ nhận.",
+  "targetID": "OD000005",
+  "isRead": false,
+  "createdAt": "2026-06-30 12:29:12"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa01e"
+  },
+  "notificationID": "NT000010",
+  "userID": "SL000004",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000005",
+  "content": "Khách hàng CM000005 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000005",
+  "isRead": true,
+  "createdAt": "2026-06-30 12:29:12"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa01f"
+  },
+  "notificationID": "NT000011",
+  "userID": "CM000006",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000006",
+  "content": "Đơn hàng #OD000006 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000006",
+  "isRead": false,
+  "createdAt": "2026-08-26 16:37:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa020"
+  },
+  "notificationID": "NT000012",
+  "userID": "SL000005",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000006",
+  "content": "Khách hàng CM000006 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000006",
+  "isRead": false,
+  "createdAt": "2026-08-26 16:37:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa021"
+  },
+  "notificationID": "NT000013",
+  "userID": "CM000007",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000007",
+  "content": "Đơn hàng #OD000007 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000007",
+  "isRead": false,
+  "createdAt": "2026-03-04 13:00:23"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa022"
+  },
+  "notificationID": "NT000014",
+  "userID": "SL000006",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000007",
+  "content": "Khách hàng CM000007 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000007",
+  "isRead": true,
+  "createdAt": "2026-03-04 13:00:23"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa023"
+  },
+  "notificationID": "NT000015",
+  "userID": "CM000008",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000008",
+  "content": "Đơn hàng #OD000008 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000008",
+  "isRead": false,
+  "createdAt": "2026-08-18 14:04:31"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa024"
+  },
+  "notificationID": "NT000016",
+  "userID": "SL000007",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000008",
+  "content": "Khách hàng CM000008 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000008",
+  "isRead": true,
+  "createdAt": "2026-08-18 14:04:31"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa025"
+  },
+  "notificationID": "NT000017",
+  "userID": "CM000009",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000009",
+  "content": "Đơn hàng #OD000009 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000009",
+  "isRead": true,
+  "createdAt": "2026-01-12 13:02:07"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa026"
+  },
+  "notificationID": "NT000018",
+  "userID": "SL000008",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000009",
+  "content": "Khách hàng CM000009 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000009",
+  "isRead": true,
+  "createdAt": "2026-01-12 13:02:07"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa027"
+  },
+  "notificationID": "NT000019",
+  "userID": "CM000010",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000010",
+  "content": "Đơn hàng #OD000010 của bạn đã bị hủy.",
+  "targetID": "OD000010",
+  "isRead": false,
+  "createdAt": "2026-05-08 21:51:58"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa028"
+  },
+  "notificationID": "NT000020",
+  "userID": "SL000009",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000010",
+  "content": "Khách hàng CM000010 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000010",
+  "isRead": false,
+  "createdAt": "2026-05-08 21:51:58"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa029"
+  },
+  "notificationID": "NT000021",
+  "userID": "CM000011",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000011",
+  "content": "Đơn hàng #OD000011 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000011",
+  "isRead": false,
+  "createdAt": "2026-04-27 15:13:54"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa02a"
+  },
+  "notificationID": "NT000022",
+  "userID": "SL000010",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000011",
+  "content": "Khách hàng CM000011 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000011",
+  "isRead": true,
+  "createdAt": "2026-04-27 15:13:54"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa02b"
+  },
+  "notificationID": "NT000023",
+  "userID": "CM000012",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000012",
+  "content": "Đơn hàng #OD000012 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000012",
+  "isRead": true,
+  "createdAt": "2026-06-29 08:24:34"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa02c"
+  },
+  "notificationID": "NT000024",
+  "userID": "SL000011",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000012",
+  "content": "Khách hàng CM000012 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000012",
+  "isRead": true,
+  "createdAt": "2026-06-29 08:24:34"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa02d"
+  },
+  "notificationID": "NT000025",
+  "userID": "CM000013",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000013",
+  "content": "Đơn hàng #OD000013 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000013",
+  "isRead": true,
+  "createdAt": "2026-04-04 15:51:47"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa02e"
+  },
+  "notificationID": "NT000026",
+  "userID": "SL000012",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000013",
+  "content": "Khách hàng CM000013 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000013",
+  "isRead": true,
+  "createdAt": "2026-04-04 15:51:47"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa02f"
+  },
+  "notificationID": "NT000027",
+  "userID": "CM000014",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000014",
+  "content": "Đơn hàng #OD000014 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000014",
+  "isRead": true,
+  "createdAt": "2026-07-08 15:10:02"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa030"
+  },
+  "notificationID": "NT000028",
+  "userID": "SL000013",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000014",
+  "content": "Khách hàng CM000014 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000014",
+  "isRead": true,
+  "createdAt": "2026-07-08 15:10:02"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa031"
+  },
+  "notificationID": "NT000029",
+  "userID": "CM000015",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000015",
+  "content": "Đơn hàng #OD000015 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000015",
+  "isRead": true,
+  "createdAt": "2026-01-04 16:51:05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa032"
+  },
+  "notificationID": "NT000030",
+  "userID": "SL000014",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000015",
+  "content": "Khách hàng CM000015 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000015",
+  "isRead": true,
+  "createdAt": "2026-01-04 16:51:05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa033"
+  },
+  "notificationID": "NT000031",
+  "userID": "CM000016",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000016",
+  "content": "Đơn hàng #OD000016 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000016",
+  "isRead": false,
+  "createdAt": "2026-07-21 12:54:24"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa034"
+  },
+  "notificationID": "NT000032",
+  "userID": "SL000015",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000016",
+  "content": "Khách hàng CM000016 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000016",
+  "isRead": true,
+  "createdAt": "2026-07-21 12:54:24"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa035"
+  },
+  "notificationID": "NT000033",
+  "userID": "CM000017",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000017",
+  "content": "Đơn hàng #OD000017 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000017",
+  "isRead": true,
+  "createdAt": "2026-03-14 07:02:06"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa036"
+  },
+  "notificationID": "NT000034",
+  "userID": "SL000016",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000017",
+  "content": "Khách hàng CM000017 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000017",
+  "isRead": true,
+  "createdAt": "2026-03-14 07:02:06"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa037"
+  },
+  "notificationID": "NT000035",
+  "userID": "CM000018",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000018",
+  "content": "Đơn hàng #OD000018 của bạn đang trên đường vận chuyển tới địa chỉ nhận.",
+  "targetID": "OD000018",
+  "isRead": false,
+  "createdAt": "2026-01-27 07:30:21"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa038"
+  },
+  "notificationID": "NT000036",
+  "userID": "SL000017",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000018",
+  "content": "Khách hàng CM000018 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000018",
+  "isRead": true,
+  "createdAt": "2026-01-27 07:30:21"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa039"
+  },
+  "notificationID": "NT000037",
+  "userID": "CM000019",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000019",
+  "content": "Đơn hàng #OD000019 của bạn đang trên đường vận chuyển tới địa chỉ nhận.",
+  "targetID": "OD000019",
+  "isRead": true,
+  "createdAt": "2026-05-03 11:15:28"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa03a"
+  },
+  "notificationID": "NT000038",
+  "userID": "SL000018",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000019",
+  "content": "Khách hàng CM000019 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000019",
+  "isRead": false,
+  "createdAt": "2026-05-03 11:15:28"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa03b"
+  },
+  "notificationID": "NT000039",
+  "userID": "CM000020",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000020",
+  "content": "Đơn hàng #OD000020 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000020",
+  "isRead": false,
+  "createdAt": "2026-05-21 11:17:29"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa03c"
+  },
+  "notificationID": "NT000040",
+  "userID": "SL000019",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000020",
+  "content": "Khách hàng CM000020 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000020",
+  "isRead": true,
+  "createdAt": "2026-05-21 11:17:29"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa03d"
+  },
+  "notificationID": "NT000041",
+  "userID": "CM000021",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000021",
+  "content": "Đơn hàng #OD000021 của bạn đã bị hủy.",
+  "targetID": "OD000021",
+  "isRead": false,
+  "createdAt": "2026-03-27 13:30:19"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa03e"
+  },
+  "notificationID": "NT000042",
+  "userID": "SL000020",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000021",
+  "content": "Khách hàng CM000021 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000021",
+  "isRead": true,
+  "createdAt": "2026-03-27 13:30:19"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa03f"
+  },
+  "notificationID": "NT000043",
+  "userID": "CM000022",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000022",
+  "content": "Đơn hàng #OD000022 của bạn đã bị hủy.",
+  "targetID": "OD000022",
+  "isRead": false,
+  "createdAt": "2026-06-29 21:59:47"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa040"
+  },
+  "notificationID": "NT000044",
+  "userID": "SL000021",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000022",
+  "content": "Khách hàng CM000022 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000022",
+  "isRead": true,
+  "createdAt": "2026-06-29 21:59:47"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa041"
+  },
+  "notificationID": "NT000045",
+  "userID": "CM000023",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000023",
+  "content": "Đơn hàng #OD000023 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000023",
+  "isRead": true,
+  "createdAt": "2026-09-09 21:21:41"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa042"
+  },
+  "notificationID": "NT000046",
+  "userID": "SL000022",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000023",
+  "content": "Khách hàng CM000023 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000023",
+  "isRead": true,
+  "createdAt": "2026-09-09 21:21:41"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa043"
+  },
+  "notificationID": "NT000047",
+  "userID": "CM000024",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000024",
+  "content": "Đơn hàng #OD000024 của bạn đang trên đường vận chuyển tới địa chỉ nhận.",
+  "targetID": "OD000024",
+  "isRead": false,
+  "createdAt": "2026-08-14 12:49:28"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa044"
+  },
+  "notificationID": "NT000048",
+  "userID": "SL000023",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000024",
+  "content": "Khách hàng CM000024 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000024",
+  "isRead": true,
+  "createdAt": "2026-08-14 12:49:28"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa045"
+  },
+  "notificationID": "NT000049",
+  "userID": "CM000025",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000025",
+  "content": "Đơn hàng #OD000025 của bạn đã bị hủy.",
+  "targetID": "OD000025",
+  "isRead": true,
+  "createdAt": "2026-07-06 10:45:23"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa046"
+  },
+  "notificationID": "NT000050",
+  "userID": "SL000024",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000025",
+  "content": "Khách hàng CM000025 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000025",
+  "isRead": false,
+  "createdAt": "2026-07-06 10:45:23"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa047"
+  },
+  "notificationID": "NT000051",
+  "userID": "CM000026",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000026",
+  "content": "Đơn hàng #OD000026 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000026",
+  "isRead": false,
+  "createdAt": "2026-05-08 20:09:01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa048"
+  },
+  "notificationID": "NT000052",
+  "userID": "SL000025",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000026",
+  "content": "Khách hàng CM000026 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000026",
+  "isRead": false,
+  "createdAt": "2026-05-08 20:09:01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa049"
+  },
+  "notificationID": "NT000053",
+  "userID": "CM000027",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000027",
+  "content": "Đơn hàng #OD000027 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000027",
+  "isRead": true,
+  "createdAt": "2026-10-04 20:50:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa04a"
+  },
+  "notificationID": "NT000054",
+  "userID": "SL000026",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000027",
+  "content": "Khách hàng CM000027 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000027",
+  "isRead": false,
+  "createdAt": "2026-10-04 20:50:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa04b"
+  },
+  "notificationID": "NT000055",
+  "userID": "CM000028",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000028",
+  "content": "Đơn hàng #OD000028 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000028",
+  "isRead": true,
+  "createdAt": "2026-08-30 18:41:27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa04c"
+  },
+  "notificationID": "NT000056",
+  "userID": "SL000027",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000028",
+  "content": "Khách hàng CM000028 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000028",
+  "isRead": false,
+  "createdAt": "2026-08-30 18:41:27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa04d"
+  },
+  "notificationID": "NT000057",
+  "userID": "CM000029",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000029",
+  "content": "Đơn hàng #OD000029 của bạn đang trên đường vận chuyển tới địa chỉ nhận.",
+  "targetID": "OD000029",
+  "isRead": false,
+  "createdAt": "2026-04-27 19:55:52"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa04e"
+  },
+  "notificationID": "NT000058",
+  "userID": "SL000028",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000029",
+  "content": "Khách hàng CM000029 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000029",
+  "isRead": false,
+  "createdAt": "2026-04-27 19:55:52"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa04f"
+  },
+  "notificationID": "NT000059",
+  "userID": "CM000030",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000030",
+  "content": "Đơn hàng #OD000030 của bạn đang trên đường vận chuyển tới địa chỉ nhận.",
+  "targetID": "OD000030",
+  "isRead": true,
+  "createdAt": "2026-08-21 20:21:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa050"
+  },
+  "notificationID": "NT000060",
+  "userID": "SL000029",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000030",
+  "content": "Khách hàng CM000030 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000030",
+  "isRead": true,
+  "createdAt": "2026-08-21 20:21:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa051"
+  },
+  "notificationID": "NT000061",
+  "userID": "CM000031",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000031",
+  "content": "Đơn hàng #OD000031 của bạn đang trên đường vận chuyển tới địa chỉ nhận.",
+  "targetID": "OD000031",
+  "isRead": true,
+  "createdAt": "2026-10-04 15:08:56"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa052"
+  },
+  "notificationID": "NT000062",
+  "userID": "SL000030",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000031",
+  "content": "Khách hàng CM000031 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000031",
+  "isRead": false,
+  "createdAt": "2026-10-04 15:08:56"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa053"
+  },
+  "notificationID": "NT000063",
+  "userID": "CM000032",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000032",
+  "content": "Đơn hàng #OD000032 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000032",
+  "isRead": false,
+  "createdAt": "2026-05-21 17:45:26"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa054"
+  },
+  "notificationID": "NT000064",
+  "userID": "SL000031",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000032",
+  "content": "Khách hàng CM000032 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000032",
+  "isRead": true,
+  "createdAt": "2026-05-21 17:45:26"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa055"
+  },
+  "notificationID": "NT000065",
+  "userID": "CM000033",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000033",
+  "content": "Đơn hàng #OD000033 của bạn đang trên đường vận chuyển tới địa chỉ nhận.",
+  "targetID": "OD000033",
+  "isRead": true,
+  "createdAt": "2026-06-21 15:07:06"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa056"
+  },
+  "notificationID": "NT000066",
+  "userID": "SL000032",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000033",
+  "content": "Khách hàng CM000033 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000033",
+  "isRead": true,
+  "createdAt": "2026-06-21 15:07:06"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa057"
+  },
+  "notificationID": "NT000067",
+  "userID": "CM000034",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000034",
+  "content": "Đơn hàng #OD000034 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000034",
+  "isRead": true,
+  "createdAt": "2026-04-30 11:15:51"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa058"
+  },
+  "notificationID": "NT000068",
+  "userID": "SL000033",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000034",
+  "content": "Khách hàng CM000034 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000034",
+  "isRead": false,
+  "createdAt": "2026-04-30 11:15:51"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa059"
+  },
+  "notificationID": "NT000069",
+  "userID": "CM000035",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000035",
+  "content": "Đơn hàng #OD000035 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000035",
+  "isRead": true,
+  "createdAt": "2026-08-27 18:52:13"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa05a"
+  },
+  "notificationID": "NT000070",
+  "userID": "SL000034",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000035",
+  "content": "Khách hàng CM000035 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000035",
+  "isRead": true,
+  "createdAt": "2026-08-27 18:52:13"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa05b"
+  },
+  "notificationID": "NT000071",
+  "userID": "CM000036",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000036",
+  "content": "Đơn hàng #OD000036 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000036",
+  "isRead": true,
+  "createdAt": "2026-05-30 13:43:34"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa05c"
+  },
+  "notificationID": "NT000072",
+  "userID": "SL000035",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000036",
+  "content": "Khách hàng CM000036 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000036",
+  "isRead": true,
+  "createdAt": "2026-05-30 13:43:34"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa05d"
+  },
+  "notificationID": "NT000073",
+  "userID": "CM000037",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000037",
+  "content": "Đơn hàng #OD000037 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000037",
+  "isRead": true,
+  "createdAt": "2026-02-08 17:36:51"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa05e"
+  },
+  "notificationID": "NT000074",
+  "userID": "SL000036",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000037",
+  "content": "Khách hàng CM000037 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000037",
+  "isRead": false,
+  "createdAt": "2026-02-08 17:36:51"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa05f"
+  },
+  "notificationID": "NT000075",
+  "userID": "CM000038",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000038",
+  "content": "Đơn hàng #OD000038 của bạn đang trên đường vận chuyển tới địa chỉ nhận.",
+  "targetID": "OD000038",
+  "isRead": true,
+  "createdAt": "2026-01-13 09:29:05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa060"
+  },
+  "notificationID": "NT000076",
+  "userID": "SL000037",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000038",
+  "content": "Khách hàng CM000038 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000038",
+  "isRead": true,
+  "createdAt": "2026-01-13 09:29:05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa061"
+  },
+  "notificationID": "NT000077",
+  "userID": "CM000039",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000039",
+  "content": "Đơn hàng #OD000039 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000039",
+  "isRead": true,
+  "createdAt": "2026-05-15 17:34:16"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa062"
+  },
+  "notificationID": "NT000078",
+  "userID": "SL000038",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000039",
+  "content": "Khách hàng CM000039 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000039",
+  "isRead": false,
+  "createdAt": "2026-05-15 17:34:16"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa063"
+  },
+  "notificationID": "NT000079",
+  "userID": "CM000040",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000040",
+  "content": "Đơn hàng #OD000040 của bạn đã bị hủy.",
+  "targetID": "OD000040",
+  "isRead": false,
+  "createdAt": "2026-07-24 08:49:00"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa064"
+  },
+  "notificationID": "NT000080",
+  "userID": "SL000039",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000040",
+  "content": "Khách hàng CM000040 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000040",
+  "isRead": false,
+  "createdAt": "2026-07-24 08:49:00"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa065"
+  },
+  "notificationID": "NT000081",
+  "userID": "CM000041",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000041",
+  "content": "Đơn hàng #OD000041 của bạn đã bị hủy.",
+  "targetID": "OD000041",
+  "isRead": false,
+  "createdAt": "2026-02-23 07:48:52"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa066"
+  },
+  "notificationID": "NT000082",
+  "userID": "SL000040",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000041",
+  "content": "Khách hàng CM000041 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000041",
+  "isRead": true,
+  "createdAt": "2026-02-23 07:48:52"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa067"
+  },
+  "notificationID": "NT000083",
+  "userID": "CM000042",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000042",
+  "content": "Đơn hàng #OD000042 của bạn đã bị hủy.",
+  "targetID": "OD000042",
+  "isRead": true,
+  "createdAt": "2026-04-01 17:29:27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa068"
+  },
+  "notificationID": "NT000084",
+  "userID": "SL000041",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000042",
+  "content": "Khách hàng CM000042 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000042",
+  "isRead": true,
+  "createdAt": "2026-04-01 17:29:27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa069"
+  },
+  "notificationID": "NT000085",
+  "userID": "CM000043",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000043",
+  "content": "Đơn hàng #OD000043 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000043",
+  "isRead": false,
+  "createdAt": "2026-03-14 17:38:12"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa06a"
+  },
+  "notificationID": "NT000086",
+  "userID": "SL000042",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000043",
+  "content": "Khách hàng CM000043 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000043",
+  "isRead": true,
+  "createdAt": "2026-03-14 17:38:12"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa06b"
+  },
+  "notificationID": "NT000087",
+  "userID": "CM000044",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000044",
+  "content": "Đơn hàng #OD000044 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000044",
+  "isRead": false,
+  "createdAt": "2026-01-04 13:37:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa06c"
+  },
+  "notificationID": "NT000088",
+  "userID": "SL000043",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000044",
+  "content": "Khách hàng CM000044 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000044",
+  "isRead": false,
+  "createdAt": "2026-01-04 13:37:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa06d"
+  },
+  "notificationID": "NT000089",
+  "userID": "CM000045",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000045",
+  "content": "Đơn hàng #OD000045 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000045",
+  "isRead": true,
+  "createdAt": "2026-10-04 12:37:43"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa06e"
+  },
+  "notificationID": "NT000090",
+  "userID": "SL000044",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000045",
+  "content": "Khách hàng CM000045 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000045",
+  "isRead": true,
+  "createdAt": "2026-10-04 12:37:43"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa06f"
+  },
+  "notificationID": "NT000091",
+  "userID": "CM000046",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000046",
+  "content": "Đơn hàng #OD000046 của bạn đã bị hủy.",
+  "targetID": "OD000046",
+  "isRead": false,
+  "createdAt": "2026-07-17 19:27:37"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa070"
+  },
+  "notificationID": "NT000092",
+  "userID": "SL000045",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000046",
+  "content": "Khách hàng CM000046 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000046",
+  "isRead": true,
+  "createdAt": "2026-07-17 19:27:37"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa071"
+  },
+  "notificationID": "NT000093",
+  "userID": "CM000047",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000047",
+  "content": "Đơn hàng #OD000047 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000047",
+  "isRead": false,
+  "createdAt": "2026-09-01 20:51:27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa072"
+  },
+  "notificationID": "NT000094",
+  "userID": "SL000046",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000047",
+  "content": "Khách hàng CM000047 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000047",
+  "isRead": false,
+  "createdAt": "2026-09-01 20:51:27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa073"
+  },
+  "notificationID": "NT000095",
+  "userID": "CM000048",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000048",
+  "content": "Đơn hàng #OD000048 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000048",
+  "isRead": true,
+  "createdAt": "2026-07-16 09:41:44"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa074"
+  },
+  "notificationID": "NT000096",
+  "userID": "SL000047",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000048",
+  "content": "Khách hàng CM000048 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000048",
+  "isRead": false,
+  "createdAt": "2026-07-16 09:41:44"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa075"
+  },
+  "notificationID": "NT000097",
+  "userID": "CM000049",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000049",
+  "content": "Đơn hàng #OD000049 của bạn đã bị hủy.",
+  "targetID": "OD000049",
+  "isRead": true,
+  "createdAt": "2026-09-10 08:46:09"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa076"
+  },
+  "notificationID": "NT000098",
+  "userID": "SL000048",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000049",
+  "content": "Khách hàng CM000049 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000049",
+  "isRead": true,
+  "createdAt": "2026-09-10 08:46:09"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa077"
+  },
+  "notificationID": "NT000099",
+  "userID": "CM000050",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000050",
+  "content": "Đơn hàng #OD000050 của bạn đã bị hủy.",
+  "targetID": "OD000050",
+  "isRead": false,
+  "createdAt": "2026-03-30 20:36:43"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa078"
+  },
+  "notificationID": "NT000100",
+  "userID": "SL000049",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000050",
+  "content": "Khách hàng CM000050 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000050",
+  "isRead": false,
+  "createdAt": "2026-03-30 20:36:43"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa079"
+  },
+  "notificationID": "NT000101",
+  "userID": "CM000001",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000051",
+  "content": "Đơn hàng #OD000051 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000051",
+  "isRead": false,
+  "createdAt": "2026-09-28 19:02:27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa07a"
+  },
+  "notificationID": "NT000102",
+  "userID": "SL000050",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000051",
+  "content": "Khách hàng CM000001 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000051",
+  "isRead": false,
+  "createdAt": "2026-09-28 19:02:27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa07b"
+  },
+  "notificationID": "NT000103",
+  "userID": "CM000002",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000052",
+  "content": "Yêu cầu trả hàng/hoàn tiền cho đơn hàng #OD000052 đã được chấp nhận.",
+  "targetID": "OD000052",
+  "isRead": true,
+  "createdAt": "2026-08-21 07:05:34"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa07c"
+  },
+  "notificationID": "NT000104",
+  "userID": "SL000000",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000052",
+  "content": "Khách hàng CM000002 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000052",
+  "isRead": true,
+  "createdAt": "2026-08-21 07:05:34"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa07d"
+  },
+  "notificationID": "NT000105",
+  "userID": "CM000003",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000053",
+  "content": "Đơn hàng #OD000053 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000053",
+  "isRead": false,
+  "createdAt": "2026-06-01 14:59:19"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa07e"
+  },
+  "notificationID": "NT000106",
+  "userID": "SL000001",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000053",
+  "content": "Khách hàng CM000003 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000053",
+  "isRead": false,
+  "createdAt": "2026-06-01 14:59:19"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa07f"
+  },
+  "notificationID": "NT000107",
+  "userID": "CM000004",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000054",
+  "content": "Đơn hàng #OD000054 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000054",
+  "isRead": true,
+  "createdAt": "2026-01-02 21:54:57"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa080"
+  },
+  "notificationID": "NT000108",
+  "userID": "SL000002",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000054",
+  "content": "Khách hàng CM000004 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000054",
+  "isRead": false,
+  "createdAt": "2026-01-02 21:54:57"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa081"
+  },
+  "notificationID": "NT000109",
+  "userID": "CM000005",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000055",
+  "content": "Đơn hàng #OD000055 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000055",
+  "isRead": false,
+  "createdAt": "2026-05-20 09:42:42"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa082"
+  },
+  "notificationID": "NT000110",
+  "userID": "SL000003",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000055",
+  "content": "Khách hàng CM000005 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000055",
+  "isRead": true,
+  "createdAt": "2026-05-20 09:42:42"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa083"
+  },
+  "notificationID": "NT000111",
+  "userID": "CM000006",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000056",
+  "content": "Đơn hàng #OD000056 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000056",
+  "isRead": true,
+  "createdAt": "2026-04-28 21:18:37"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa084"
+  },
+  "notificationID": "NT000112",
+  "userID": "SL000004",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000056",
+  "content": "Khách hàng CM000006 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000056",
+  "isRead": true,
+  "createdAt": "2026-04-28 21:18:37"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa085"
+  },
+  "notificationID": "NT000113",
+  "userID": "CM000007",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000057",
+  "content": "Đơn hàng #OD000057 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000057",
+  "isRead": true,
+  "createdAt": "2026-03-02 12:41:03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa086"
+  },
+  "notificationID": "NT000114",
+  "userID": "SL000005",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000057",
+  "content": "Khách hàng CM000007 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000057",
+  "isRead": true,
+  "createdAt": "2026-03-02 12:41:03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa087"
+  },
+  "notificationID": "NT000115",
+  "userID": "CM000008",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000058",
+  "content": "Đơn hàng #OD000058 của bạn đã bị hủy.",
+  "targetID": "OD000058",
+  "isRead": true,
+  "createdAt": "2026-02-08 12:04:00"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa088"
+  },
+  "notificationID": "NT000116",
+  "userID": "SL000006",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000058",
+  "content": "Khách hàng CM000008 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000058",
+  "isRead": true,
+  "createdAt": "2026-02-08 12:04:00"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa089"
+  },
+  "notificationID": "NT000117",
+  "userID": "CM000009",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000059",
+  "content": "Đơn hàng #OD000059 của bạn đã bị hủy.",
+  "targetID": "OD000059",
+  "isRead": false,
+  "createdAt": "2026-07-22 16:33:49"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa08a"
+  },
+  "notificationID": "NT000118",
+  "userID": "SL000007",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000059",
+  "content": "Khách hàng CM000009 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000059",
+  "isRead": false,
+  "createdAt": "2026-07-22 16:33:49"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa08b"
+  },
+  "notificationID": "NT000119",
+  "userID": "CM000010",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000060",
+  "content": "Đơn hàng #OD000060 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000060",
+  "isRead": false,
+  "createdAt": "2026-04-27 08:07:40"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa08c"
+  },
+  "notificationID": "NT000120",
+  "userID": "SL000008",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000060",
+  "content": "Khách hàng CM000010 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000060",
+  "isRead": false,
+  "createdAt": "2026-04-27 08:07:40"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa08d"
+  },
+  "notificationID": "NT000121",
+  "userID": "CM000011",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000061",
+  "content": "Đơn hàng #OD000061 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000061",
+  "isRead": true,
+  "createdAt": "2026-06-28 14:41:20"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa08e"
+  },
+  "notificationID": "NT000122",
+  "userID": "SL000009",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000061",
+  "content": "Khách hàng CM000011 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000061",
+  "isRead": false,
+  "createdAt": "2026-06-28 14:41:20"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa08f"
+  },
+  "notificationID": "NT000123",
+  "userID": "CM000012",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000062",
+  "content": "Đơn hàng #OD000062 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000062",
+  "isRead": true,
+  "createdAt": "2026-09-09 17:40:13"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa090"
+  },
+  "notificationID": "NT000124",
+  "userID": "SL000010",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000062",
+  "content": "Khách hàng CM000012 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000062",
+  "isRead": true,
+  "createdAt": "2026-09-09 17:40:13"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa091"
+  },
+  "notificationID": "NT000125",
+  "userID": "CM000013",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000063",
+  "content": "Đơn hàng #OD000063 của bạn đang trên đường vận chuyển tới địa chỉ nhận.",
+  "targetID": "OD000063",
+  "isRead": true,
+  "createdAt": "2026-02-11 07:48:20"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa092"
+  },
+  "notificationID": "NT000126",
+  "userID": "SL000011",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000063",
+  "content": "Khách hàng CM000013 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000063",
+  "isRead": true,
+  "createdAt": "2026-02-11 07:48:20"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa093"
+  },
+  "notificationID": "NT000127",
+  "userID": "CM000014",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000064",
+  "content": "Đơn hàng #OD000064 của bạn đang trên đường vận chuyển tới địa chỉ nhận.",
+  "targetID": "OD000064",
+  "isRead": false,
+  "createdAt": "2026-03-22 08:22:43"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa094"
+  },
+  "notificationID": "NT000128",
+  "userID": "SL000012",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000064",
+  "content": "Khách hàng CM000014 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000064",
+  "isRead": true,
+  "createdAt": "2026-03-22 08:22:43"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa095"
+  },
+  "notificationID": "NT000129",
+  "userID": "CM000015",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000065",
+  "content": "Đơn hàng #OD000065 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000065",
+  "isRead": true,
+  "createdAt": "2026-04-02 08:58:58"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa096"
+  },
+  "notificationID": "NT000130",
+  "userID": "SL000013",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000065",
+  "content": "Khách hàng CM000015 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000065",
+  "isRead": false,
+  "createdAt": "2026-04-02 08:58:58"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa097"
+  },
+  "notificationID": "NT000131",
+  "userID": "CM000016",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000066",
+  "content": "Yêu cầu trả hàng/hoàn tiền cho đơn hàng #OD000066 đã được chấp nhận.",
+  "targetID": "OD000066",
+  "isRead": false,
+  "createdAt": "2026-03-03 10:01:27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa098"
+  },
+  "notificationID": "NT000132",
+  "userID": "SL000014",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000066",
+  "content": "Khách hàng CM000016 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000066",
+  "isRead": false,
+  "createdAt": "2026-03-03 10:01:27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa099"
+  },
+  "notificationID": "NT000133",
+  "userID": "CM000017",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000067",
+  "content": "Yêu cầu trả hàng/hoàn tiền cho đơn hàng #OD000067 đã được chấp nhận.",
+  "targetID": "OD000067",
+  "isRead": true,
+  "createdAt": "2026-01-15 12:32:34"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa09a"
+  },
+  "notificationID": "NT000134",
+  "userID": "SL000015",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000067",
+  "content": "Khách hàng CM000017 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000067",
+  "isRead": false,
+  "createdAt": "2026-01-15 12:32:34"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa09b"
+  },
+  "notificationID": "NT000135",
+  "userID": "CM000018",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000068",
+  "content": "Đơn hàng #OD000068 của bạn đã bị hủy.",
+  "targetID": "OD000068",
+  "isRead": true,
+  "createdAt": "2026-01-17 15:44:42"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa09c"
+  },
+  "notificationID": "NT000136",
+  "userID": "SL000016",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000068",
+  "content": "Khách hàng CM000018 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000068",
+  "isRead": true,
+  "createdAt": "2026-01-17 15:44:42"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa09d"
+  },
+  "notificationID": "NT000137",
+  "userID": "CM000019",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000069",
+  "content": "Đơn hàng #OD000069 của bạn đã bị hủy.",
+  "targetID": "OD000069",
+  "isRead": false,
+  "createdAt": "2026-03-02 16:56:55"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa09e"
+  },
+  "notificationID": "NT000138",
+  "userID": "SL000017",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000069",
+  "content": "Khách hàng CM000019 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000069",
+  "isRead": true,
+  "createdAt": "2026-03-02 16:56:55"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa09f"
+  },
+  "notificationID": "NT000139",
+  "userID": "CM000020",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000070",
+  "content": "Yêu cầu trả hàng/hoàn tiền cho đơn hàng #OD000070 đã được chấp nhận.",
+  "targetID": "OD000070",
+  "isRead": false,
+  "createdAt": "2026-06-16 12:02:12"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0a0"
+  },
+  "notificationID": "NT000140",
+  "userID": "SL000018",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000070",
+  "content": "Khách hàng CM000020 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000070",
+  "isRead": true,
+  "createdAt": "2026-06-16 12:02:12"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0a1"
+  },
+  "notificationID": "NT000141",
+  "userID": "CM000021",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000071",
+  "content": "Đơn hàng #OD000071 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000071",
+  "isRead": true,
+  "createdAt": "2026-06-24 09:18:25"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0a2"
+  },
+  "notificationID": "NT000142",
+  "userID": "SL000019",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000071",
+  "content": "Khách hàng CM000021 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000071",
+  "isRead": false,
+  "createdAt": "2026-06-24 09:18:25"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0a3"
+  },
+  "notificationID": "NT000143",
+  "userID": "CM000022",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000072",
+  "content": "Đơn hàng #OD000072 của bạn đã bị hủy.",
+  "targetID": "OD000072",
+  "isRead": true,
+  "createdAt": "2026-06-25 08:50:36"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0a4"
+  },
+  "notificationID": "NT000144",
+  "userID": "SL000020",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000072",
+  "content": "Khách hàng CM000022 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000072",
+  "isRead": true,
+  "createdAt": "2026-06-25 08:50:36"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0a5"
+  },
+  "notificationID": "NT000145",
+  "userID": "CM000023",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000073",
+  "content": "Yêu cầu trả hàng/hoàn tiền cho đơn hàng #OD000073 đã được chấp nhận.",
+  "targetID": "OD000073",
+  "isRead": true,
+  "createdAt": "2026-02-22 14:01:55"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0a6"
+  },
+  "notificationID": "NT000146",
+  "userID": "SL000021",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000073",
+  "content": "Khách hàng CM000023 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000073",
+  "isRead": true,
+  "createdAt": "2026-02-22 14:01:55"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0a7"
+  },
+  "notificationID": "NT000147",
+  "userID": "CM000024",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000074",
+  "content": "Đơn hàng #OD000074 của bạn đã bị hủy.",
+  "targetID": "OD000074",
+  "isRead": false,
+  "createdAt": "2026-05-01 15:15:31"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0a8"
+  },
+  "notificationID": "NT000148",
+  "userID": "SL000022",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000074",
+  "content": "Khách hàng CM000024 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000074",
+  "isRead": true,
+  "createdAt": "2026-05-01 15:15:31"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0a9"
+  },
+  "notificationID": "NT000149",
+  "userID": "CM000025",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000075",
+  "content": "Đơn hàng #OD000075 của bạn đang trên đường vận chuyển tới địa chỉ nhận.",
+  "targetID": "OD000075",
+  "isRead": false,
+  "createdAt": "2026-06-10 16:26:30"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0aa"
+  },
+  "notificationID": "NT000150",
+  "userID": "SL000023",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000075",
+  "content": "Khách hàng CM000025 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000075",
+  "isRead": true,
+  "createdAt": "2026-06-10 16:26:30"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0ab"
+  },
+  "notificationID": "NT000151",
+  "userID": "CM000026",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000076",
+  "content": "Đơn hàng #OD000076 của bạn đã bị hủy.",
+  "targetID": "OD000076",
+  "isRead": false,
+  "createdAt": "2026-03-21 14:05:23"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0ac"
+  },
+  "notificationID": "NT000152",
+  "userID": "SL000024",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000076",
+  "content": "Khách hàng CM000026 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000076",
+  "isRead": false,
+  "createdAt": "2026-03-21 14:05:23"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0ad"
+  },
+  "notificationID": "NT000153",
+  "userID": "CM000027",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000077",
+  "content": "Đơn hàng #OD000077 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000077",
+  "isRead": false,
+  "createdAt": "2026-04-15 21:40:05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0ae"
+  },
+  "notificationID": "NT000154",
+  "userID": "SL000025",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000077",
+  "content": "Khách hàng CM000027 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000077",
+  "isRead": false,
+  "createdAt": "2026-04-15 21:40:05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0af"
+  },
+  "notificationID": "NT000155",
+  "userID": "CM000028",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000078",
+  "content": "Đơn hàng #OD000078 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000078",
+  "isRead": false,
+  "createdAt": "2026-01-15 20:59:11"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0b0"
+  },
+  "notificationID": "NT000156",
+  "userID": "SL000026",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000078",
+  "content": "Khách hàng CM000028 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000078",
+  "isRead": true,
+  "createdAt": "2026-01-15 20:59:11"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0b1"
+  },
+  "notificationID": "NT000157",
+  "userID": "CM000029",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000079",
+  "content": "Đơn hàng #OD000079 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000079",
+  "isRead": true,
+  "createdAt": "2026-09-29 12:55:03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0b2"
+  },
+  "notificationID": "NT000158",
+  "userID": "SL000027",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000079",
+  "content": "Khách hàng CM000029 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000079",
+  "isRead": true,
+  "createdAt": "2026-09-29 12:55:03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0b3"
+  },
+  "notificationID": "NT000159",
+  "userID": "CM000030",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000080",
+  "content": "Đơn hàng #OD000080 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000080",
+  "isRead": false,
+  "createdAt": "2026-05-01 21:09:59"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0b4"
+  },
+  "notificationID": "NT000160",
+  "userID": "SL000028",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000080",
+  "content": "Khách hàng CM000030 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000080",
+  "isRead": true,
+  "createdAt": "2026-05-01 21:09:59"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0b5"
+  },
+  "notificationID": "NT000161",
+  "userID": "CM000031",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000081",
+  "content": "Đơn hàng #OD000081 của bạn đang trên đường vận chuyển tới địa chỉ nhận.",
+  "targetID": "OD000081",
+  "isRead": false,
+  "createdAt": "2026-05-30 09:14:26"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0b6"
+  },
+  "notificationID": "NT000162",
+  "userID": "SL000029",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000081",
+  "content": "Khách hàng CM000031 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000081",
+  "isRead": false,
+  "createdAt": "2026-05-30 09:14:26"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0b7"
+  },
+  "notificationID": "NT000163",
+  "userID": "CM000032",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000082",
+  "content": "Đơn hàng #OD000082 của bạn đang trên đường vận chuyển tới địa chỉ nhận.",
+  "targetID": "OD000082",
+  "isRead": true,
+  "createdAt": "2026-06-22 17:17:49"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0b8"
+  },
+  "notificationID": "NT000164",
+  "userID": "SL000030",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000082",
+  "content": "Khách hàng CM000032 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000082",
+  "isRead": false,
+  "createdAt": "2026-06-22 17:17:49"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0b9"
+  },
+  "notificationID": "NT000165",
+  "userID": "CM000033",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000083",
+  "content": "Đơn hàng #OD000083 của bạn đang trên đường vận chuyển tới địa chỉ nhận.",
+  "targetID": "OD000083",
+  "isRead": true,
+  "createdAt": "2026-08-20 09:35:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0ba"
+  },
+  "notificationID": "NT000166",
+  "userID": "SL000031",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000083",
+  "content": "Khách hàng CM000033 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000083",
+  "isRead": false,
+  "createdAt": "2026-08-20 09:35:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0bb"
+  },
+  "notificationID": "NT000167",
+  "userID": "CM000034",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000084",
+  "content": "Đơn hàng #OD000084 của bạn đã bị hủy.",
+  "targetID": "OD000084",
+  "isRead": false,
+  "createdAt": "2026-01-01 15:51:30"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0bc"
+  },
+  "notificationID": "NT000168",
+  "userID": "SL000032",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000084",
+  "content": "Khách hàng CM000034 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000084",
+  "isRead": true,
+  "createdAt": "2026-01-01 15:51:30"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0bd"
+  },
+  "notificationID": "NT000169",
+  "userID": "CM000035",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000085",
+  "content": "Yêu cầu trả hàng/hoàn tiền cho đơn hàng #OD000085 đã được chấp nhận.",
+  "targetID": "OD000085",
+  "isRead": false,
+  "createdAt": "2026-04-16 08:41:00"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0be"
+  },
+  "notificationID": "NT000170",
+  "userID": "SL000033",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000085",
+  "content": "Khách hàng CM000035 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000085",
+  "isRead": true,
+  "createdAt": "2026-04-16 08:41:00"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0bf"
+  },
+  "notificationID": "NT000171",
+  "userID": "CM000036",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000086",
+  "content": "Đơn hàng #OD000086 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000086",
+  "isRead": false,
+  "createdAt": "2026-04-01 12:54:30"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0c0"
+  },
+  "notificationID": "NT000172",
+  "userID": "SL000034",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000086",
+  "content": "Khách hàng CM000036 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000086",
+  "isRead": false,
+  "createdAt": "2026-04-01 12:54:30"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0c1"
+  },
+  "notificationID": "NT000173",
+  "userID": "CM000037",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000087",
+  "content": "Đơn hàng #OD000087 của bạn đang trên đường vận chuyển tới địa chỉ nhận.",
+  "targetID": "OD000087",
+  "isRead": false,
+  "createdAt": "2026-05-11 14:22:14"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0c2"
+  },
+  "notificationID": "NT000174",
+  "userID": "SL000035",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000087",
+  "content": "Khách hàng CM000037 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000087",
+  "isRead": false,
+  "createdAt": "2026-05-11 14:22:14"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0c3"
+  },
+  "notificationID": "NT000175",
+  "userID": "CM000038",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000088",
+  "content": "Đơn hàng #OD000088 của bạn đang trên đường vận chuyển tới địa chỉ nhận.",
+  "targetID": "OD000088",
+  "isRead": true,
+  "createdAt": "2026-05-02 11:19:21"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0c4"
+  },
+  "notificationID": "NT000176",
+  "userID": "SL000036",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000088",
+  "content": "Khách hàng CM000038 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000088",
+  "isRead": false,
+  "createdAt": "2026-05-02 11:19:21"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0c5"
+  },
+  "notificationID": "NT000177",
+  "userID": "CM000039",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000089",
+  "content": "Yêu cầu trả hàng/hoàn tiền cho đơn hàng #OD000089 đã được chấp nhận.",
+  "targetID": "OD000089",
+  "isRead": true,
+  "createdAt": "2026-05-13 12:33:41"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0c6"
+  },
+  "notificationID": "NT000178",
+  "userID": "SL000037",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000089",
+  "content": "Khách hàng CM000039 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000089",
+  "isRead": true,
+  "createdAt": "2026-05-13 12:33:41"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0c7"
+  },
+  "notificationID": "NT000179",
+  "userID": "CM000040",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000090",
+  "content": "Yêu cầu trả hàng/hoàn tiền cho đơn hàng #OD000090 đã được chấp nhận.",
+  "targetID": "OD000090",
+  "isRead": false,
+  "createdAt": "2026-05-22 16:25:24"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0c8"
+  },
+  "notificationID": "NT000180",
+  "userID": "SL000038",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000090",
+  "content": "Khách hàng CM000040 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000090",
+  "isRead": false,
+  "createdAt": "2026-05-22 16:25:24"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0c9"
+  },
+  "notificationID": "NT000181",
+  "userID": "CM000041",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000091",
+  "content": "Đơn hàng #OD000091 của bạn đang trên đường vận chuyển tới địa chỉ nhận.",
+  "targetID": "OD000091",
+  "isRead": false,
+  "createdAt": "2026-04-20 17:10:34"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0ca"
+  },
+  "notificationID": "NT000182",
+  "userID": "SL000039",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000091",
+  "content": "Khách hàng CM000041 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000091",
+  "isRead": true,
+  "createdAt": "2026-04-20 17:10:34"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0cb"
+  },
+  "notificationID": "NT000183",
+  "userID": "CM000042",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000092",
+  "content": "Đơn hàng #OD000092 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000092",
+  "isRead": false,
+  "createdAt": "2026-02-21 12:30:50"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0cc"
+  },
+  "notificationID": "NT000184",
+  "userID": "SL000040",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000092",
+  "content": "Khách hàng CM000042 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000092",
+  "isRead": true,
+  "createdAt": "2026-02-21 12:30:50"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0cd"
+  },
+  "notificationID": "NT000185",
+  "userID": "CM000043",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000093",
+  "content": "Đơn hàng #OD000093 của bạn đã bị hủy.",
+  "targetID": "OD000093",
+  "isRead": false,
+  "createdAt": "2026-01-28 20:22:55"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0ce"
+  },
+  "notificationID": "NT000186",
+  "userID": "SL000041",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000093",
+  "content": "Khách hàng CM000043 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000093",
+  "isRead": true,
+  "createdAt": "2026-01-28 20:22:55"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0cf"
+  },
+  "notificationID": "NT000187",
+  "userID": "CM000044",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000094",
+  "content": "Đơn hàng #OD000094 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000094",
+  "isRead": false,
+  "createdAt": "2026-02-13 07:07:56"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0d0"
+  },
+  "notificationID": "NT000188",
+  "userID": "SL000042",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000094",
+  "content": "Khách hàng CM000044 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000094",
+  "isRead": true,
+  "createdAt": "2026-02-13 07:07:56"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0d1"
+  },
+  "notificationID": "NT000189",
+  "userID": "CM000045",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000095",
+  "content": "Đơn hàng #OD000095 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000095",
+  "isRead": true,
+  "createdAt": "2026-06-08 20:53:03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0d2"
+  },
+  "notificationID": "NT000190",
+  "userID": "SL000043",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000095",
+  "content": "Khách hàng CM000045 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000095",
+  "isRead": false,
+  "createdAt": "2026-06-08 20:53:03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0d3"
+  },
+  "notificationID": "NT000191",
+  "userID": "CM000046",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000096",
+  "content": "Yêu cầu trả hàng/hoàn tiền cho đơn hàng #OD000096 đã được chấp nhận.",
+  "targetID": "OD000096",
+  "isRead": false,
+  "createdAt": "2026-05-04 20:11:31"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0d4"
+  },
+  "notificationID": "NT000192",
+  "userID": "SL000044",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000096",
+  "content": "Khách hàng CM000046 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000096",
+  "isRead": false,
+  "createdAt": "2026-05-04 20:11:31"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0d5"
+  },
+  "notificationID": "NT000193",
+  "userID": "CM000047",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000097",
+  "content": "Đơn hàng #OD000097 của bạn đã được giao thành công. Cảm ơn bạn đã mua hàng!",
+  "targetID": "OD000097",
+  "isRead": true,
+  "createdAt": "2026-03-29 13:33:42"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0d6"
+  },
+  "notificationID": "NT000194",
+  "userID": "SL000045",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000097",
+  "content": "Khách hàng CM000047 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000097",
+  "isRead": false,
+  "createdAt": "2026-03-29 13:33:42"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0d7"
+  },
+  "notificationID": "NT000195",
+  "userID": "CM000048",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000098",
+  "content": "Đơn hàng #OD000098 của bạn đã bị hủy.",
+  "targetID": "OD000098",
+  "isRead": true,
+  "createdAt": "2026-07-24 10:43:33"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0d8"
+  },
+  "notificationID": "NT000196",
+  "userID": "SL000046",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000098",
+  "content": "Khách hàng CM000048 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000098",
+  "isRead": false,
+  "createdAt": "2026-07-24 10:43:33"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0d9"
+  },
+  "notificationID": "NT000197",
+  "userID": "CM000049",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000099",
+  "content": "Đơn hàng #OD000099 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000099",
+  "isRead": true,
+  "createdAt": "2026-04-30 17:05:35"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0da"
+  },
+  "notificationID": "NT000198",
+  "userID": "SL000047",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000099",
+  "content": "Khách hàng CM000049 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000099",
+  "isRead": false,
+  "createdAt": "2026-04-30 17:05:35"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0db"
+  },
+  "notificationID": "NT000199",
+  "userID": "CM000050",
+  "type": "order",
+  "title": "Cập nhật đơn hàng #OD000100",
+  "content": "Đơn hàng #OD000100 của bạn đã được đặt thành công và đang chờ xác nhận.",
+  "targetID": "OD000100",
+  "isRead": true,
+  "createdAt": "2026-06-20 10:21:47"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0dc"
+  },
+  "notificationID": "NT000200",
+  "userID": "SL000048",
+  "type": "seller",
+  "title": "Đơn hàng mới #OD000100",
+  "content": "Khách hàng CM000050 vừa đặt sản phẩm từ gian hàng của bạn.",
+  "targetID": "OD000100",
+  "isRead": true,
+  "createdAt": "2026-06-20 10:21:47"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0dd"
+  },
+  "notificationID": "NT000201",
+  "userID": "CM000001",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000001",
+  "content": "Đơn dịch vụ sửa chữa #RP000001 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RP000001",
+  "isRead": false,
+  "createdAt": "2026-09-03 16:29:08"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0de"
+  },
+  "notificationID": "NT000202",
+  "userID": "CM000002",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000002",
+  "content": "Đơn dịch vụ sửa chữa #RP000002 hiện đang ở trạng thái: Đã hủy.",
+  "targetID": "RP000002",
+  "isRead": false,
+  "createdAt": "2026-06-27 20:41:46"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0df"
+  },
+  "notificationID": "NT000203",
+  "userID": "CM000003",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000003",
+  "content": "Đơn dịch vụ sửa chữa #RP000003 hiện đang ở trạng thái: Đã giao hàng.",
+  "targetID": "RP000003",
+  "isRead": true,
+  "createdAt": "2026-04-15 11:31:18"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0e0"
+  },
+  "notificationID": "NT000204",
+  "userID": "CM000004",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000004",
+  "content": "Đơn dịch vụ sửa chữa #RP000004 hiện đang ở trạng thái: Đang sửa chữa.",
+  "targetID": "RP000004",
+  "isRead": true,
+  "createdAt": "2026-09-08 17:20:12"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0e1"
+  },
+  "notificationID": "NT000205",
+  "userID": "CM000005",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000005",
+  "content": "Đơn dịch vụ sửa chữa #RP000005 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RP000005",
+  "isRead": false,
+  "createdAt": "2026-03-29 15:26:19"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0e2"
+  },
+  "notificationID": "NT000206",
+  "userID": "CM000006",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000006",
+  "content": "Đơn dịch vụ sửa chữa #RP000006 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RP000006",
+  "isRead": false,
+  "createdAt": "2026-01-29 16:54:39"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0e3"
+  },
+  "notificationID": "NT000207",
+  "userID": "CM000007",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000007",
+  "content": "Đơn dịch vụ sửa chữa #RP000007 hiện đang ở trạng thái: Đang sửa chữa.",
+  "targetID": "RP000007",
+  "isRead": false,
+  "createdAt": "2026-06-25 18:34:03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0e4"
+  },
+  "notificationID": "NT000208",
+  "userID": "CM000008",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000008",
+  "content": "Đơn dịch vụ sửa chữa #RP000008 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RP000008",
+  "isRead": true,
+  "createdAt": "2026-04-08 07:01:33"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0e5"
+  },
+  "notificationID": "NT000209",
+  "userID": "CM000009",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000009",
+  "content": "Đơn dịch vụ sửa chữa #RP000009 hiện đang ở trạng thái: Đã giao hàng.",
+  "targetID": "RP000009",
+  "isRead": false,
+  "createdAt": "2026-05-10 07:38:19"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0e6"
+  },
+  "notificationID": "NT000210",
+  "userID": "CM000010",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000010",
+  "content": "Đơn dịch vụ sửa chữa #RP000010 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RP000010",
+  "isRead": true,
+  "createdAt": "2026-08-31 14:03:05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0e7"
+  },
+  "notificationID": "NT000211",
+  "userID": "CM000011",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000011",
+  "content": "Đơn dịch vụ sửa chữa #RP000011 hiện đang ở trạng thái: Đang sửa chữa.",
+  "targetID": "RP000011",
+  "isRead": true,
+  "createdAt": "2026-06-30 15:54:53"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0e8"
+  },
+  "notificationID": "NT000212",
+  "userID": "CM000012",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000012",
+  "content": "Đơn dịch vụ sửa chữa #RP000012 hiện đang ở trạng thái: Đang sửa chữa.",
+  "targetID": "RP000012",
+  "isRead": false,
+  "createdAt": "2026-08-28 07:19:53"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0e9"
+  },
+  "notificationID": "NT000213",
+  "userID": "CM000013",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000013",
+  "content": "Đơn dịch vụ sửa chữa #RP000013 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RP000013",
+  "isRead": false,
+  "createdAt": "2026-02-22 15:13:02"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0ea"
+  },
+  "notificationID": "NT000214",
+  "userID": "CM000014",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000014",
+  "content": "Đơn dịch vụ sửa chữa #RP000014 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RP000014",
+  "isRead": false,
+  "createdAt": "2026-07-08 12:09:14"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0eb"
+  },
+  "notificationID": "NT000215",
+  "userID": "CM000015",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000015",
+  "content": "Đơn dịch vụ sửa chữa #RP000015 hiện đang ở trạng thái: Đã hủy.",
+  "targetID": "RP000015",
+  "isRead": false,
+  "createdAt": "2026-03-25 08:16:53"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0ec"
+  },
+  "notificationID": "NT000216",
+  "userID": "CM000016",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000016",
+  "content": "Đơn dịch vụ sửa chữa #RP000016 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RP000016",
+  "isRead": true,
+  "createdAt": "2026-07-17 07:04:06"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0ed"
+  },
+  "notificationID": "NT000217",
+  "userID": "CM000017",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000017",
+  "content": "Đơn dịch vụ sửa chữa #RP000017 hiện đang ở trạng thái: Đang sửa chữa.",
+  "targetID": "RP000017",
+  "isRead": false,
+  "createdAt": "2026-04-29 15:26:13"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0ee"
+  },
+  "notificationID": "NT000218",
+  "userID": "CM000018",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000018",
+  "content": "Đơn dịch vụ sửa chữa #RP000018 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RP000018",
+  "isRead": false,
+  "createdAt": "2026-02-02 07:05:53"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0ef"
+  },
+  "notificationID": "NT000219",
+  "userID": "CM000019",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000019",
+  "content": "Đơn dịch vụ sửa chữa #RP000019 hiện đang ở trạng thái: Đang sửa chữa.",
+  "targetID": "RP000019",
+  "isRead": false,
+  "createdAt": "2026-07-29 21:01:41"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0f0"
+  },
+  "notificationID": "NT000220",
+  "userID": "CM000020",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000020",
+  "content": "Đơn dịch vụ sửa chữa #RP000020 hiện đang ở trạng thái: Đã hủy.",
+  "targetID": "RP000020",
+  "isRead": false,
+  "createdAt": "2026-02-21 19:11:26"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0f1"
+  },
+  "notificationID": "NT000221",
+  "userID": "CM000021",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000021",
+  "content": "Đơn dịch vụ sửa chữa #RP000021 hiện đang ở trạng thái: Đã giao hàng.",
+  "targetID": "RP000021",
+  "isRead": false,
+  "createdAt": "2026-07-24 20:47:47"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0f2"
+  },
+  "notificationID": "NT000222",
+  "userID": "CM000022",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000022",
+  "content": "Đơn dịch vụ sửa chữa #RP000022 hiện đang ở trạng thái: Đang sửa chữa.",
+  "targetID": "RP000022",
+  "isRead": false,
+  "createdAt": "2026-05-31 12:38:29"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0f3"
+  },
+  "notificationID": "NT000223",
+  "userID": "CM000023",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000023",
+  "content": "Đơn dịch vụ sửa chữa #RP000023 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RP000023",
+  "isRead": true,
+  "createdAt": "2026-07-10 10:46:04"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0f4"
+  },
+  "notificationID": "NT000224",
+  "userID": "CM000024",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000024",
+  "content": "Đơn dịch vụ sửa chữa #RP000024 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RP000024",
+  "isRead": true,
+  "createdAt": "2026-01-28 15:05:09"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0f5"
+  },
+  "notificationID": "NT000225",
+  "userID": "CM000025",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000025",
+  "content": "Đơn dịch vụ sửa chữa #RP000025 hiện đang ở trạng thái: Đang sửa chữa.",
+  "targetID": "RP000025",
+  "isRead": true,
+  "createdAt": "2026-06-19 11:50:58"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0f6"
+  },
+  "notificationID": "NT000226",
+  "userID": "CM000026",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000026",
+  "content": "Đơn dịch vụ sửa chữa #RP000026 hiện đang ở trạng thái: Đã giao hàng.",
+  "targetID": "RP000026",
+  "isRead": false,
+  "createdAt": "2026-07-11 19:30:16"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0f7"
+  },
+  "notificationID": "NT000227",
+  "userID": "CM000027",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000027",
+  "content": "Đơn dịch vụ sửa chữa #RP000027 hiện đang ở trạng thái: Đã hủy.",
+  "targetID": "RP000027",
+  "isRead": false,
+  "createdAt": "2026-03-18 21:43:10"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0f8"
+  },
+  "notificationID": "NT000228",
+  "userID": "CM000028",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000028",
+  "content": "Đơn dịch vụ sửa chữa #RP000028 hiện đang ở trạng thái: Đang sửa chữa.",
+  "targetID": "RP000028",
+  "isRead": false,
+  "createdAt": "2026-08-15 15:45:42"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0f9"
+  },
+  "notificationID": "NT000229",
+  "userID": "CM000029",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000029",
+  "content": "Đơn dịch vụ sửa chữa #RP000029 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RP000029",
+  "isRead": false,
+  "createdAt": "2026-06-17 13:57:48"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0fa"
+  },
+  "notificationID": "NT000230",
+  "userID": "CM000030",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000030",
+  "content": "Đơn dịch vụ sửa chữa #RP000030 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RP000030",
+  "isRead": true,
+  "createdAt": "2026-02-27 21:00:53"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0fb"
+  },
+  "notificationID": "NT000231",
+  "userID": "CM000031",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000031",
+  "content": "Đơn dịch vụ sửa chữa #RP000031 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RP000031",
+  "isRead": true,
+  "createdAt": "2026-09-01 10:05:49"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0fc"
+  },
+  "notificationID": "NT000232",
+  "userID": "CM000032",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000032",
+  "content": "Đơn dịch vụ sửa chữa #RP000032 hiện đang ở trạng thái: Đã hủy.",
+  "targetID": "RP000032",
+  "isRead": true,
+  "createdAt": "2026-02-05 09:16:18"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0fd"
+  },
+  "notificationID": "NT000233",
+  "userID": "CM000033",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000033",
+  "content": "Đơn dịch vụ sửa chữa #RP000033 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RP000033",
+  "isRead": true,
+  "createdAt": "2026-08-25 19:05:04"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0fe"
+  },
+  "notificationID": "NT000234",
+  "userID": "CM000034",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000034",
+  "content": "Đơn dịch vụ sửa chữa #RP000034 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RP000034",
+  "isRead": false,
+  "createdAt": "2026-06-24 14:18:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa0ff"
+  },
+  "notificationID": "NT000235",
+  "userID": "CM000035",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000035",
+  "content": "Đơn dịch vụ sửa chữa #RP000035 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RP000035",
+  "isRead": false,
+  "createdAt": "2026-06-25 12:15:54"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa100"
+  },
+  "notificationID": "NT000236",
+  "userID": "CM000036",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000036",
+  "content": "Đơn dịch vụ sửa chữa #RP000036 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RP000036",
+  "isRead": true,
+  "createdAt": "2026-04-14 10:26:53"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa101"
+  },
+  "notificationID": "NT000237",
+  "userID": "CM000037",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000037",
+  "content": "Đơn dịch vụ sửa chữa #RP000037 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RP000037",
+  "isRead": true,
+  "createdAt": "2026-02-25 11:16:01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa102"
+  },
+  "notificationID": "NT000238",
+  "userID": "CM000038",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000038",
+  "content": "Đơn dịch vụ sửa chữa #RP000038 hiện đang ở trạng thái: Đã giao hàng.",
+  "targetID": "RP000038",
+  "isRead": false,
+  "createdAt": "2026-06-20 13:54:17"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa103"
+  },
+  "notificationID": "NT000239",
+  "userID": "CM000039",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000039",
+  "content": "Đơn dịch vụ sửa chữa #RP000039 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RP000039",
+  "isRead": false,
+  "createdAt": "2026-09-01 18:44:29"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa104"
+  },
+  "notificationID": "NT000240",
+  "userID": "CM000040",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000040",
+  "content": "Đơn dịch vụ sửa chữa #RP000040 hiện đang ở trạng thái: Đã giao hàng.",
+  "targetID": "RP000040",
+  "isRead": true,
+  "createdAt": "2026-04-14 17:48:43"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa105"
+  },
+  "notificationID": "NT000241",
+  "userID": "CM000041",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000041",
+  "content": "Đơn dịch vụ sửa chữa #RP000041 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RP000041",
+  "isRead": false,
+  "createdAt": "2026-08-31 07:39:41"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa106"
+  },
+  "notificationID": "NT000242",
+  "userID": "CM000042",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000042",
+  "content": "Đơn dịch vụ sửa chữa #RP000042 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RP000042",
+  "isRead": false,
+  "createdAt": "2026-04-11 09:23:56"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa107"
+  },
+  "notificationID": "NT000243",
+  "userID": "CM000043",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000043",
+  "content": "Đơn dịch vụ sửa chữa #RP000043 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RP000043",
+  "isRead": false,
+  "createdAt": "2026-08-01 14:06:40"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa108"
+  },
+  "notificationID": "NT000244",
+  "userID": "CM000044",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000044",
+  "content": "Đơn dịch vụ sửa chữa #RP000044 hiện đang ở trạng thái: Đang sửa chữa.",
+  "targetID": "RP000044",
+  "isRead": false,
+  "createdAt": "2026-01-16 12:31:54"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa109"
+  },
+  "notificationID": "NT000245",
+  "userID": "CM000045",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000045",
+  "content": "Đơn dịch vụ sửa chữa #RP000045 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RP000045",
+  "isRead": true,
+  "createdAt": "2026-06-24 20:22:55"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa10a"
+  },
+  "notificationID": "NT000246",
+  "userID": "CM000046",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000046",
+  "content": "Đơn dịch vụ sửa chữa #RP000046 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RP000046",
+  "isRead": false,
+  "createdAt": "2026-04-21 11:06:52"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa10b"
+  },
+  "notificationID": "NT000247",
+  "userID": "CM000047",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000047",
+  "content": "Đơn dịch vụ sửa chữa #RP000047 hiện đang ở trạng thái: Đã hủy.",
+  "targetID": "RP000047",
+  "isRead": true,
+  "createdAt": "2026-06-16 17:42:27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa10c"
+  },
+  "notificationID": "NT000248",
+  "userID": "CM000048",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000048",
+  "content": "Đơn dịch vụ sửa chữa #RP000048 hiện đang ở trạng thái: Đã giao hàng.",
+  "targetID": "RP000048",
+  "isRead": true,
+  "createdAt": "2026-03-19 20:50:56"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa10d"
+  },
+  "notificationID": "NT000249",
+  "userID": "CM000049",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000049",
+  "content": "Đơn dịch vụ sửa chữa #RP000049 hiện đang ở trạng thái: Đang sửa chữa.",
+  "targetID": "RP000049",
+  "isRead": false,
+  "createdAt": "2026-08-19 17:36:57"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa10e"
+  },
+  "notificationID": "NT000250",
+  "userID": "CM000050",
+  "type": "repair",
+  "title": "Dịch vụ sửa chữa #RP000050",
+  "content": "Đơn dịch vụ sửa chữa #RP000050 hiện đang ở trạng thái: Đã giao hàng.",
+  "targetID": "RP000050",
+  "isRead": true,
+  "createdAt": "2026-02-15 15:39:53"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa10f"
+  },
+  "notificationID": "NT000251",
+  "userID": "CM000001",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000001",
+  "content": "Đơn thu gom tái chế rác thải #RC000001 hiện đang ở trạng thái: Đã hủy.",
+  "targetID": "RC000001",
+  "isRead": true,
+  "createdAt": "2026-06-28 21:22:44"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa110"
+  },
+  "notificationID": "NT000252",
+  "userID": "CM000002",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000002",
+  "content": "Đơn thu gom tái chế rác thải #RC000002 hiện đang ở trạng thái: Đang thu gom.",
+  "targetID": "RC000002",
+  "isRead": false,
+  "createdAt": "2026-09-06 08:28:36"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa111"
+  },
+  "notificationID": "NT000253",
+  "userID": "CM000003",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000003",
+  "content": "Đơn thu gom tái chế rác thải #RC000003 hiện đang ở trạng thái: Đang thu gom.",
+  "targetID": "RC000003",
+  "isRead": false,
+  "createdAt": "2026-09-04 18:29:01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa112"
+  },
+  "notificationID": "NT000254",
+  "userID": "CM000004",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000004",
+  "content": "Đơn thu gom tái chế rác thải #RC000004 hiện đang ở trạng thái: Đã hủy.",
+  "targetID": "RC000004",
+  "isRead": true,
+  "createdAt": "2026-04-18 07:10:30"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa113"
+  },
+  "notificationID": "NT000255",
+  "userID": "CM000005",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000005",
+  "content": "Đơn thu gom tái chế rác thải #RC000005 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RC000005",
+  "isRead": true,
+  "createdAt": "2026-08-14 20:10:11"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa114"
+  },
+  "notificationID": "NT000256",
+  "userID": "CM000006",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000006",
+  "content": "Đơn thu gom tái chế rác thải #RC000006 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RC000006",
+  "isRead": true,
+  "createdAt": "2026-06-11 21:15:36"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa115"
+  },
+  "notificationID": "NT000257",
+  "userID": "CM000007",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000007",
+  "content": "Đơn thu gom tái chế rác thải #RC000007 hiện đang ở trạng thái: Đang thu gom.",
+  "targetID": "RC000007",
+  "isRead": true,
+  "createdAt": "2026-04-21 16:59:58"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa116"
+  },
+  "notificationID": "NT000258",
+  "userID": "CM000008",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000008",
+  "content": "Đơn thu gom tái chế rác thải #RC000008 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RC000008",
+  "isRead": false,
+  "createdAt": "2026-06-26 14:39:29"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa117"
+  },
+  "notificationID": "NT000259",
+  "userID": "CM000009",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000009",
+  "content": "Đơn thu gom tái chế rác thải #RC000009 hiện đang ở trạng thái: Đã hủy.",
+  "targetID": "RC000009",
+  "isRead": false,
+  "createdAt": "2026-07-24 21:38:13"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa118"
+  },
+  "notificationID": "NT000260",
+  "userID": "CM000010",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000010",
+  "content": "Đơn thu gom tái chế rác thải #RC000010 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RC000010",
+  "isRead": false,
+  "createdAt": "2026-02-11 13:04:10"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa119"
+  },
+  "notificationID": "NT000261",
+  "userID": "CM000011",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000011",
+  "content": "Đơn thu gom tái chế rác thải #RC000011 hiện đang ở trạng thái: Đã hủy.",
+  "targetID": "RC000011",
+  "isRead": true,
+  "createdAt": "2026-06-30 21:28:19"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa11a"
+  },
+  "notificationID": "NT000262",
+  "userID": "CM000012",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000012",
+  "content": "Đơn thu gom tái chế rác thải #RC000012 hiện đang ở trạng thái: Đã hủy.",
+  "targetID": "RC000012",
+  "isRead": false,
+  "createdAt": "2026-06-05 13:49:26"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa11b"
+  },
+  "notificationID": "NT000263",
+  "userID": "CM000013",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000013",
+  "content": "Đơn thu gom tái chế rác thải #RC000013 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RC000013",
+  "isRead": false,
+  "createdAt": "2026-03-31 16:20:05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa11c"
+  },
+  "notificationID": "NT000264",
+  "userID": "CM000014",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000014",
+  "content": "Đơn thu gom tái chế rác thải #RC000014 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RC000014",
+  "isRead": false,
+  "createdAt": "2026-06-30 19:35:23"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa11d"
+  },
+  "notificationID": "NT000265",
+  "userID": "CM000015",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000015",
+  "content": "Đơn thu gom tái chế rác thải #RC000015 hiện đang ở trạng thái: Đã hủy.",
+  "targetID": "RC000015",
+  "isRead": true,
+  "createdAt": "2026-07-30 17:17:17"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa11e"
+  },
+  "notificationID": "NT000266",
+  "userID": "CM000016",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000016",
+  "content": "Đơn thu gom tái chế rác thải #RC000016 hiện đang ở trạng thái: Đang thu gom.",
+  "targetID": "RC000016",
+  "isRead": false,
+  "createdAt": "2026-07-23 08:21:25"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa11f"
+  },
+  "notificationID": "NT000267",
+  "userID": "CM000017",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000017",
+  "content": "Đơn thu gom tái chế rác thải #RC000017 hiện đang ở trạng thái: Đã hủy.",
+  "targetID": "RC000017",
+  "isRead": false,
+  "createdAt": "2026-03-28 10:26:49"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa120"
+  },
+  "notificationID": "NT000268",
+  "userID": "CM000018",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000018",
+  "content": "Đơn thu gom tái chế rác thải #RC000018 hiện đang ở trạng thái: Đã hủy.",
+  "targetID": "RC000018",
+  "isRead": false,
+  "createdAt": "2026-05-22 19:28:42"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa121"
+  },
+  "notificationID": "NT000269",
+  "userID": "CM000019",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000019",
+  "content": "Đơn thu gom tái chế rác thải #RC000019 hiện đang ở trạng thái: Đang thu gom.",
+  "targetID": "RC000019",
+  "isRead": false,
+  "createdAt": "2026-07-29 14:36:41"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa122"
+  },
+  "notificationID": "NT000270",
+  "userID": "CM000020",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000020",
+  "content": "Đơn thu gom tái chế rác thải #RC000020 hiện đang ở trạng thái: Đang thu gom.",
+  "targetID": "RC000020",
+  "isRead": true,
+  "createdAt": "2026-04-18 11:55:52"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa123"
+  },
+  "notificationID": "NT000271",
+  "userID": "CM000021",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000021",
+  "content": "Đơn thu gom tái chế rác thải #RC000021 hiện đang ở trạng thái: Đang thu gom.",
+  "targetID": "RC000021",
+  "isRead": false,
+  "createdAt": "2026-05-09 12:02:15"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa124"
+  },
+  "notificationID": "NT000272",
+  "userID": "CM000022",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000022",
+  "content": "Đơn thu gom tái chế rác thải #RC000022 hiện đang ở trạng thái: Đang thu gom.",
+  "targetID": "RC000022",
+  "isRead": true,
+  "createdAt": "2026-07-04 11:40:14"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa125"
+  },
+  "notificationID": "NT000273",
+  "userID": "CM000023",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000023",
+  "content": "Đơn thu gom tái chế rác thải #RC000023 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RC000023",
+  "isRead": true,
+  "createdAt": "2026-07-07 13:55:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa126"
+  },
+  "notificationID": "NT000274",
+  "userID": "CM000024",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000024",
+  "content": "Đơn thu gom tái chế rác thải #RC000024 hiện đang ở trạng thái: Đang thu gom.",
+  "targetID": "RC000024",
+  "isRead": true,
+  "createdAt": "2026-06-04 16:55:01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa127"
+  },
+  "notificationID": "NT000275",
+  "userID": "CM000025",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000025",
+  "content": "Đơn thu gom tái chế rác thải #RC000025 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RC000025",
+  "isRead": false,
+  "createdAt": "2026-01-13 09:23:04"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa128"
+  },
+  "notificationID": "NT000276",
+  "userID": "CM000026",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000026",
+  "content": "Đơn thu gom tái chế rác thải #RC000026 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RC000026",
+  "isRead": false,
+  "createdAt": "2026-03-09 17:26:18"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa129"
+  },
+  "notificationID": "NT000277",
+  "userID": "CM000027",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000027",
+  "content": "Đơn thu gom tái chế rác thải #RC000027 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RC000027",
+  "isRead": false,
+  "createdAt": "2026-04-06 18:24:02"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa12a"
+  },
+  "notificationID": "NT000278",
+  "userID": "CM000028",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000028",
+  "content": "Đơn thu gom tái chế rác thải #RC000028 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RC000028",
+  "isRead": true,
+  "createdAt": "2026-02-23 21:15:05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa12b"
+  },
+  "notificationID": "NT000279",
+  "userID": "CM000029",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000029",
+  "content": "Đơn thu gom tái chế rác thải #RC000029 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RC000029",
+  "isRead": true,
+  "createdAt": "2026-07-17 07:13:16"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa12c"
+  },
+  "notificationID": "NT000280",
+  "userID": "CM000030",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000030",
+  "content": "Đơn thu gom tái chế rác thải #RC000030 hiện đang ở trạng thái: Đã hủy.",
+  "targetID": "RC000030",
+  "isRead": false,
+  "createdAt": "2026-07-20 09:38:48"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa12d"
+  },
+  "notificationID": "NT000281",
+  "userID": "CM000031",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000031",
+  "content": "Đơn thu gom tái chế rác thải #RC000031 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RC000031",
+  "isRead": true,
+  "createdAt": "2026-07-05 19:41:14"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa12e"
+  },
+  "notificationID": "NT000282",
+  "userID": "CM000032",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000032",
+  "content": "Đơn thu gom tái chế rác thải #RC000032 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RC000032",
+  "isRead": true,
+  "createdAt": "2026-01-04 14:07:54"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa12f"
+  },
+  "notificationID": "NT000283",
+  "userID": "CM000033",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000033",
+  "content": "Đơn thu gom tái chế rác thải #RC000033 hiện đang ở trạng thái: Đang thu gom.",
+  "targetID": "RC000033",
+  "isRead": false,
+  "createdAt": "2026-06-12 15:59:49"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa130"
+  },
+  "notificationID": "NT000284",
+  "userID": "CM000034",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000034",
+  "content": "Đơn thu gom tái chế rác thải #RC000034 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RC000034",
+  "isRead": true,
+  "createdAt": "2026-07-04 16:51:01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa131"
+  },
+  "notificationID": "NT000285",
+  "userID": "CM000035",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000035",
+  "content": "Đơn thu gom tái chế rác thải #RC000035 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RC000035",
+  "isRead": false,
+  "createdAt": "2026-05-10 11:27:10"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa132"
+  },
+  "notificationID": "NT000286",
+  "userID": "CM000036",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000036",
+  "content": "Đơn thu gom tái chế rác thải #RC000036 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RC000036",
+  "isRead": true,
+  "createdAt": "2026-08-16 07:42:00"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa133"
+  },
+  "notificationID": "NT000287",
+  "userID": "CM000037",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000037",
+  "content": "Đơn thu gom tái chế rác thải #RC000037 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RC000037",
+  "isRead": true,
+  "createdAt": "2026-05-27 19:13:45"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa134"
+  },
+  "notificationID": "NT000288",
+  "userID": "CM000038",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000038",
+  "content": "Đơn thu gom tái chế rác thải #RC000038 hiện đang ở trạng thái: Đang thu gom.",
+  "targetID": "RC000038",
+  "isRead": true,
+  "createdAt": "2026-01-03 10:15:48"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa135"
+  },
+  "notificationID": "NT000289",
+  "userID": "CM000039",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000039",
+  "content": "Đơn thu gom tái chế rác thải #RC000039 hiện đang ở trạng thái: Đã hủy.",
+  "targetID": "RC000039",
+  "isRead": false,
+  "createdAt": "2026-09-07 21:55:17"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa136"
+  },
+  "notificationID": "NT000290",
+  "userID": "CM000040",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000040",
+  "content": "Đơn thu gom tái chế rác thải #RC000040 hiện đang ở trạng thái: Đã hủy.",
+  "targetID": "RC000040",
+  "isRead": false,
+  "createdAt": "2026-07-07 09:02:31"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa137"
+  },
+  "notificationID": "NT000291",
+  "userID": "CM000041",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000041",
+  "content": "Đơn thu gom tái chế rác thải #RC000041 hiện đang ở trạng thái: Đã hủy.",
+  "targetID": "RC000041",
+  "isRead": false,
+  "createdAt": "2026-03-24 10:11:45"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa138"
+  },
+  "notificationID": "NT000292",
+  "userID": "CM000042",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000042",
+  "content": "Đơn thu gom tái chế rác thải #RC000042 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RC000042",
+  "isRead": false,
+  "createdAt": "2026-05-24 19:35:40"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa139"
+  },
+  "notificationID": "NT000293",
+  "userID": "CM000043",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000043",
+  "content": "Đơn thu gom tái chế rác thải #RC000043 hiện đang ở trạng thái: Chờ xác nhận.",
+  "targetID": "RC000043",
+  "isRead": false,
+  "createdAt": "2026-08-25 10:17:23"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa13a"
+  },
+  "notificationID": "NT000294",
+  "userID": "CM000044",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000044",
+  "content": "Đơn thu gom tái chế rác thải #RC000044 hiện đang ở trạng thái: Đã hủy.",
+  "targetID": "RC000044",
+  "isRead": false,
+  "createdAt": "2026-02-28 09:05:01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa13b"
+  },
+  "notificationID": "NT000295",
+  "userID": "CM000045",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000045",
+  "content": "Đơn thu gom tái chế rác thải #RC000045 hiện đang ở trạng thái: Đang thu gom.",
+  "targetID": "RC000045",
+  "isRead": true,
+  "createdAt": "2026-02-18 18:40:58"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa13c"
+  },
+  "notificationID": "NT000296",
+  "userID": "CM000046",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000046",
+  "content": "Đơn thu gom tái chế rác thải #RC000046 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RC000046",
+  "isRead": false,
+  "createdAt": "2026-06-19 13:22:54"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa13d"
+  },
+  "notificationID": "NT000297",
+  "userID": "CM000047",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000047",
+  "content": "Đơn thu gom tái chế rác thải #RC000047 hiện đang ở trạng thái: Đã hủy.",
+  "targetID": "RC000047",
+  "isRead": false,
+  "createdAt": "2026-05-07 08:57:45"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa13e"
+  },
+  "notificationID": "NT000298",
+  "userID": "CM000048",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000048",
+  "content": "Đơn thu gom tái chế rác thải #RC000048 hiện đang ở trạng thái: Đã hoàn thành.",
+  "targetID": "RC000048",
+  "isRead": true,
+  "createdAt": "2026-03-22 17:01:34"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa13f"
+  },
+  "notificationID": "NT000299",
+  "userID": "CM000049",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000049",
+  "content": "Đơn thu gom tái chế rác thải #RC000049 hiện đang ở trạng thái: Đang thu gom.",
+  "targetID": "RC000049",
+  "isRead": false,
+  "createdAt": "2026-05-02 14:16:23"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa140"
+  },
+  "notificationID": "NT000300",
+  "userID": "CM000050",
+  "type": "recycle",
+  "title": "Thu gom tái chế #RC000050",
+  "content": "Đơn thu gom tái chế rác thải #RC000050 hiện đang ở trạng thái: Đang thu gom.",
+  "targetID": "RC000050",
+  "isRead": true,
+  "createdAt": "2026-05-17 09:04:30"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa141"
+  },
+  "notificationID": "NT000301",
+  "userID": "CM000001",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000001",
+  "isRead": false,
+  "createdAt": "2026-01-08 12:21:50"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa142"
+  },
+  "notificationID": "NT000302",
+  "userID": "CM000002",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000002",
+  "isRead": false,
+  "createdAt": "2026-01-14 20:04:15"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa143"
+  },
+  "notificationID": "NT000303",
+  "userID": "CM000003",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000003",
+  "isRead": false,
+  "createdAt": "2026-01-13 09:21:59"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa144"
+  },
+  "notificationID": "NT000304",
+  "userID": "CM000004",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000004",
+  "isRead": true,
+  "createdAt": "2026-05-30 11:48:37"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa145"
+  },
+  "notificationID": "NT000305",
+  "userID": "CM000005",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000005",
+  "isRead": true,
+  "createdAt": "2026-06-30 12:29:12"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa146"
+  },
+  "notificationID": "NT000306",
+  "userID": "CM000006",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000006",
+  "isRead": false,
+  "createdAt": "2026-08-26 16:37:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa147"
+  },
+  "notificationID": "NT000307",
+  "userID": "CM000007",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000007",
+  "isRead": true,
+  "createdAt": "2026-03-04 13:00:23"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa148"
+  },
+  "notificationID": "NT000308",
+  "userID": "CM000008",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000008",
+  "isRead": false,
+  "createdAt": "2026-08-18 14:04:31"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa149"
+  },
+  "notificationID": "NT000309",
+  "userID": "CM000009",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000009",
+  "isRead": false,
+  "createdAt": "2026-01-12 13:02:07"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa14a"
+  },
+  "notificationID": "NT000310",
+  "userID": "CM000011",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000010",
+  "isRead": false,
+  "createdAt": "2026-04-27 15:13:54"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa14b"
+  },
+  "notificationID": "NT000311",
+  "userID": "CM000012",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000011",
+  "isRead": true,
+  "createdAt": "2026-06-29 08:24:34"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa14c"
+  },
+  "notificationID": "NT000312",
+  "userID": "CM000013",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000012",
+  "isRead": true,
+  "createdAt": "2026-04-04 15:51:47"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa14d"
+  },
+  "notificationID": "NT000313",
+  "userID": "CM000014",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000013",
+  "isRead": true,
+  "createdAt": "2026-07-08 15:10:02"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa14e"
+  },
+  "notificationID": "NT000314",
+  "userID": "CM000015",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000014",
+  "isRead": true,
+  "createdAt": "2026-01-04 16:51:05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa14f"
+  },
+  "notificationID": "NT000315",
+  "userID": "CM000016",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000015",
+  "isRead": true,
+  "createdAt": "2026-07-21 12:54:24"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa150"
+  },
+  "notificationID": "NT000316",
+  "userID": "CM000017",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000016",
+  "isRead": true,
+  "createdAt": "2026-03-14 07:02:06"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa151"
+  },
+  "notificationID": "NT000317",
+  "userID": "CM000018",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000017",
+  "isRead": false,
+  "createdAt": "2026-01-27 07:30:21"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa152"
+  },
+  "notificationID": "NT000318",
+  "userID": "CM000019",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000018",
+  "isRead": false,
+  "createdAt": "2026-05-03 11:15:28"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa153"
+  },
+  "notificationID": "NT000319",
+  "userID": "CM000020",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000019",
+  "isRead": false,
+  "createdAt": "2026-05-21 11:17:29"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa154"
+  },
+  "notificationID": "NT000320",
+  "userID": "CM000023",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000020",
+  "isRead": true,
+  "createdAt": "2026-09-09 21:21:41"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa155"
+  },
+  "notificationID": "NT000321",
+  "userID": "CM000024",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000021",
+  "isRead": false,
+  "createdAt": "2026-08-14 12:49:28"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa156"
+  },
+  "notificationID": "NT000322",
+  "userID": "CM000026",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000022",
+  "isRead": false,
+  "createdAt": "2026-05-08 20:09:01"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa157"
+  },
+  "notificationID": "NT000323",
+  "userID": "CM000027",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000023",
+  "isRead": false,
+  "createdAt": "2026-10-04 20:50:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa158"
+  },
+  "notificationID": "NT000324",
+  "userID": "CM000028",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000024",
+  "isRead": true,
+  "createdAt": "2026-08-30 18:41:27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa159"
+  },
+  "notificationID": "NT000325",
+  "userID": "CM000029",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000025",
+  "isRead": true,
+  "createdAt": "2026-04-27 19:55:52"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa15a"
+  },
+  "notificationID": "NT000326",
+  "userID": "CM000030",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000026",
+  "isRead": true,
+  "createdAt": "2026-08-21 20:21:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa15b"
+  },
+  "notificationID": "NT000327",
+  "userID": "CM000031",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000027",
+  "isRead": true,
+  "createdAt": "2026-10-04 15:08:56"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa15c"
+  },
+  "notificationID": "NT000328",
+  "userID": "CM000032",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000028",
+  "isRead": false,
+  "createdAt": "2026-05-21 17:45:26"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa15d"
+  },
+  "notificationID": "NT000329",
+  "userID": "CM000033",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000029",
+  "isRead": true,
+  "createdAt": "2026-06-21 15:07:06"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa15e"
+  },
+  "notificationID": "NT000330",
+  "userID": "CM000034",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000030",
+  "isRead": true,
+  "createdAt": "2026-04-30 11:15:51"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa15f"
+  },
+  "notificationID": "NT000331",
+  "userID": "CM000035",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000031",
+  "isRead": false,
+  "createdAt": "2026-08-27 18:52:13"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa160"
+  },
+  "notificationID": "NT000332",
+  "userID": "CM000036",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000032",
+  "isRead": true,
+  "createdAt": "2026-05-30 13:43:34"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa161"
+  },
+  "notificationID": "NT000333",
+  "userID": "CM000037",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000033",
+  "isRead": true,
+  "createdAt": "2026-02-08 17:36:51"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa162"
+  },
+  "notificationID": "NT000334",
+  "userID": "CM000038",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000034",
+  "isRead": false,
+  "createdAt": "2026-01-13 09:29:05"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa163"
+  },
+  "notificationID": "NT000335",
+  "userID": "CM000039",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000035",
+  "isRead": false,
+  "createdAt": "2026-05-15 17:34:16"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa164"
+  },
+  "notificationID": "NT000336",
+  "userID": "CM000043",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000036",
+  "isRead": true,
+  "createdAt": "2026-03-14 17:38:12"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa165"
+  },
+  "notificationID": "NT000337",
+  "userID": "CM000044",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000037",
+  "isRead": true,
+  "createdAt": "2026-01-04 13:37:32"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa166"
+  },
+  "notificationID": "NT000338",
+  "userID": "CM000045",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000038",
+  "isRead": true,
+  "createdAt": "2026-10-04 12:37:43"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa167"
+  },
+  "notificationID": "NT000339",
+  "userID": "CM000047",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000039",
+  "isRead": true,
+  "createdAt": "2026-09-01 20:51:27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa168"
+  },
+  "notificationID": "NT000340",
+  "userID": "CM000048",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000040",
+  "isRead": false,
+  "createdAt": "2026-07-16 09:41:44"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa169"
+  },
+  "notificationID": "NT000341",
+  "userID": "CM000001",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000041",
+  "isRead": false,
+  "createdAt": "2026-09-28 19:02:27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa16a"
+  },
+  "notificationID": "NT000342",
+  "userID": "SL000050",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +20.000 Green Coins từ hoạt động Đăng bán.",
+  "targetID": "TS000042",
+  "isRead": false,
+  "createdAt": "2026-09-28 19:02:27"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa16b"
+  },
+  "notificationID": "NT000343",
+  "userID": "CM000003",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000043",
+  "isRead": true,
+  "createdAt": "2026-06-01 14:59:19"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa16c"
+  },
+  "notificationID": "NT000344",
+  "userID": "SL000001",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +20.000 Green Coins từ hoạt động Đăng bán.",
+  "targetID": "TS000044",
+  "isRead": true,
+  "createdAt": "2026-06-01 14:59:19"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa16d"
+  },
+  "notificationID": "NT000345",
+  "userID": "CM000004",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000045",
+  "isRead": false,
+  "createdAt": "2026-01-02 21:54:57"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa16e"
+  },
+  "notificationID": "NT000346",
+  "userID": "SL000002",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +20.000 Green Coins từ hoạt động Đăng bán.",
+  "targetID": "TS000046",
+  "isRead": false,
+  "createdAt": "2026-01-02 21:54:57"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa16f"
+  },
+  "notificationID": "NT000347",
+  "userID": "CM000005",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000047",
+  "isRead": false,
+  "createdAt": "2026-05-20 09:42:42"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa170"
+  },
+  "notificationID": "NT000348",
+  "userID": "SL000003",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +20.000 Green Coins từ hoạt động Đăng bán.",
+  "targetID": "TS000048",
+  "isRead": true,
+  "createdAt": "2026-05-20 09:42:42"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa171"
+  },
+  "notificationID": "NT000349",
+  "userID": "CM000006",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000049",
+  "isRead": true,
+  "createdAt": "2026-04-28 21:18:37"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa172"
+  },
+  "notificationID": "NT000350",
+  "userID": "SL000004",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +20.000 Green Coins từ hoạt động Đăng bán.",
+  "targetID": "TS000050",
+  "isRead": true,
+  "createdAt": "2026-04-28 21:18:37"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa173"
+  },
+  "notificationID": "NT000351",
+  "userID": "CM000007",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000051",
+  "isRead": false,
+  "createdAt": "2026-03-02 12:41:03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa174"
+  },
+  "notificationID": "NT000352",
+  "userID": "SL000005",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +20.000 Green Coins từ hoạt động Đăng bán.",
+  "targetID": "TS000052",
+  "isRead": false,
+  "createdAt": "2026-03-02 12:41:03"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa175"
+  },
+  "notificationID": "NT000353",
+  "userID": "CM000010",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000053",
+  "isRead": false,
+  "createdAt": "2026-04-27 08:07:40"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa176"
+  },
+  "notificationID": "NT000354",
+  "userID": "SL000008",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +20.000 Green Coins từ hoạt động Đăng bán.",
+  "targetID": "TS000054",
+  "isRead": false,
+  "createdAt": "2026-04-27 08:07:40"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa177"
+  },
+  "notificationID": "NT000355",
+  "userID": "CM000011",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000055",
+  "isRead": false,
+  "createdAt": "2026-06-28 14:41:20"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa178"
+  },
+  "notificationID": "NT000356",
+  "userID": "SL000009",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +20.000 Green Coins từ hoạt động Đăng bán.",
+  "targetID": "TS000056",
+  "isRead": false,
+  "createdAt": "2026-06-28 14:41:20"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa179"
+  },
+  "notificationID": "NT000357",
+  "userID": "CM000012",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000057",
+  "isRead": false,
+  "createdAt": "2026-09-09 17:40:13"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa17a"
+  },
+  "notificationID": "NT000358",
+  "userID": "SL000010",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +20.000 Green Coins từ hoạt động Đăng bán.",
+  "targetID": "TS000058",
+  "isRead": false,
+  "createdAt": "2026-09-09 17:40:13"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa17b"
+  },
+  "notificationID": "NT000359",
+  "userID": "CM000013",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +10.000 Green Coins từ hoạt động Mua hàng.",
+  "targetID": "TS000059",
+  "isRead": false,
+  "createdAt": "2026-02-11 07:48:20"
+},
+{
+  "_id": {
+    "$oid": "6ac8fc94d553882ddceaa17c"
+  },
+  "notificationID": "NT000360",
+  "userID": "SL000011",
+  "type": "green_coin",
+  "title": "Biến động xu xanh Green Coins",
+  "content": "Chúc mừng! Bạn đã nhận được +20.000 Green Coins từ hoạt động Đăng bán.",
+  "targetID": "TS000060",
+  "isRead": false,
+  "createdAt": "2026-02-11 07:48:20"
+}]
