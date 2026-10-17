@@ -1,4 +1,4 @@
-import { TestBed } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
 import { ToastService } from './toast';
 
 describe('ToastService', () => {

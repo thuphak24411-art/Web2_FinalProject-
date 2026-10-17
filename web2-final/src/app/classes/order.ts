@@ -17,13 +17,23 @@ export interface OrderSellerInfo {
   phone?: string;
 }
 
+export interface OrderShippingInfo {
+  fullName: string;
+  phoneNumber: string;
+  province: string;
+  district: string;
+  addressDetail: string;
+  note?: string;
+  paymentMethod: string;
+}
+
 export class Order {
   _id?: string;
   orderID!: string;
   orderId?: string;
-  orderType: 'brandnew' | 'resell' | string = 'brandnew';
-  customerID: string = 'CM000001';
-  sellerID: string = 'SL000000';
+  orderType: 'brandnew' | 'resell' = 'brandnew';
+  customerID = '';
+  sellerID = '';
   sellerInfo?: OrderSellerInfo;
   invoiceNumber?: string;
   orderDate?: string;
@@ -37,5 +47,5 @@ export class Order {
   totalAmount?: number;
   status: string = 'Chờ xác nhận';
   earnedCoins: number = 10000;
-  shippingInfo?: any;
+  shippingInfo?: OrderShippingInfo;
 }

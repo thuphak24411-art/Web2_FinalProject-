@@ -4,6 +4,7 @@ import { BehaviorSubject } from 'rxjs';
 export interface ToastMessage {
   message: string;
   type: 'success' | 'error' | 'info';
+  title?: string;
 }
 
 @Injectable({
@@ -12,11 +13,19 @@ export interface ToastMessage {
 export class ToastService {
   private _toastSource = new BehaviorSubject<ToastMessage | null>(null);
   toast$ = this._toastSource.asObservable();
+  private timeout?: ReturnType<typeof setTimeout>;
 
-  showToast(message: string, type: 'success' | 'error' | 'info' = 'success'): void {
-    this._toastSource.next({ message, type });
-    setTimeout(() => {
+  showToast(
+    message: string,
+    type: 'success' | 'error' | 'info' = 'success',
+    title?: string,
+    duration = 5000
+  ): void {
+    if (this.timeout) clearTimeout(this.timeout);
+    this._toastSource.next({ message, type, title });
+    this.timeout = setTimeout(() => {
       this._toastSource.next(null);
-    }, 3500);
+      this.timeout = undefined;
+    }, duration);
   }
 }

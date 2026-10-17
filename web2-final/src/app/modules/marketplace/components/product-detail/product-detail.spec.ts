@@ -1,10 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AppModule } from '../../../../app-module';
 import { ProductDetail } from './product-detail';
-import { ProductService } from '../../services/product';
-import { CartService } from '../../../order/services/cart';
-import { ToastService } from '../../../../services/toast';
 
 describe('ProductDetail', () => {
   let component: ProductDetail;
@@ -12,9 +8,7 @@ describe('ProductDetail', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ProductDetail],
-      imports: [HttpClientTestingModule, RouterTestingModule],
-      providers: [ProductService, CartService, ToastService]
+      imports: [AppModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(ProductDetail);

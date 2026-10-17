@@ -243,6 +243,7 @@
                     <img 
                       [src]="prod.img" 
                       [alt]="prod.title" 
+                      (error)="onProductImageError($event)"
                       class="max-h-full max-w-full object-contain group-hover:scale-108 transition-transform duration-300"
                     />
                   </div>

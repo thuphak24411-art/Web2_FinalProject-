@@ -13,6 +13,7 @@ import { extractIdFromSlug, getIdentityType } from '../../../../classes/slug-hel
   templateUrl: './product-detail.html',
 })
 export class ProductDetail implements OnInit {
+  readonly fallbackImage = '/assets/ecocycle-logo.svg';
   product: Product | null = null;
   isLoading: boolean = true;
   errorMessage: string = '';
@@ -125,5 +126,11 @@ export class ProductDetail implements OnInit {
       this.cartService.setSelectedCheckoutItems(singleCheckoutItem);
       this.router.navigate(['/thanh-toan']);
     }
+  }
+
+  onImageError(event: Event): void {
+    const image = event.target as HTMLImageElement;
+    if (image.src.endsWith(this.fallbackImage)) return;
+    image.src = this.fallbackImage;
   }
 }

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
 import { Product } from '../../../classes/product';
 import { ToastService } from '../../../services/toast';
+import { AuthService } from '../../../services/auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,14 +12,20 @@ export class CartService {
   private _cartCountSource = new BehaviorSubject<number>(0);
   cartCount$ = this._cartCountSource.asObservable();
 
-  private _currentUserId: string = 'CM000001';
+  private _currentUserId = '';
   private _selectedCheckoutItems: any[] = [];
+  private readonly memoryStorage = new Map<string, string>();
 
   constructor(
     private _http: HttpClient,
-    private _toastService: ToastService
+    private _toastService: ToastService,
+    private readonly authService: AuthService
   ) {
-    this.loadCartFromBackend();
+    this.authService.currentUser$.subscribe(user => {
+      this._currentUserId = user?.userID || '';
+      if (this._currentUserId) this.loadCartFromBackend();
+      else this._cartCountSource.next(0);
+    });
   }
 
   getCurrentUserId(): string {
@@ -35,7 +42,7 @@ export class CartService {
   }
 
   getCartItems(): any[] {
-    const data = localStorage.getItem(this.getCartStorageKey());
+    const data = this.readStorage(this.getCartStorageKey());
     return data ? JSON.parse(data) : [];
   }
 
@@ -46,23 +53,45 @@ export class CartService {
   }
 
   private saveCart(cart: any[]): void {
-    localStorage.setItem(this.getCartStorageKey(), JSON.stringify(cart));
+    this.writeStorage(this.getCartStorageKey(), JSON.stringify(cart));
     this.syncCartCount();
+    if (!this._currentUserId) return;
     this._http.post(`http://localhost:3000/carts/${this._currentUserId}`, { items: cart }).subscribe({
       error: (err) => console.warn('Lỗi đồng bộ giỏ hàng tới MongoDB backend:', err)
     });
   }
 
   loadCartFromBackend(): void {
+    if (!this._currentUserId) {
+      this._cartCountSource.next(0);
+      return;
+    }
     this._http.get<any[]>(`http://localhost:3000/carts/${this._currentUserId}`).subscribe({
       next: (items) => {
         if (items) {
-          localStorage.setItem(this.getCartStorageKey(), JSON.stringify(items));
+          this.writeStorage(this.getCartStorageKey(), JSON.stringify(items));
           this.syncCartCount();
         }
       },
       error: () => this.syncCartCount()
     });
+  }
+
+  private readStorage(key: string): string | null {
+    if (typeof localStorage !== 'undefined') {
+      return localStorage.getItem(key);
+    }
+
+    return this.memoryStorage.get(key) ?? null;
+  }
+
+  private writeStorage(key: string, value: string): void {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem(key, value);
+      return;
+    }
+
+    this.memoryStorage.set(key, value);
   }
 
   addToCart(product: Product, qty: number = 1): boolean {

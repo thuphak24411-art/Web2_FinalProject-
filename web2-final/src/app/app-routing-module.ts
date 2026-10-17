@@ -7,6 +7,11 @@ import { Cart } from './modules/order/components/cart/cart';
 import { Checkout } from './modules/order/components/checkout/checkout';
 import { OrdersList } from './modules/order/components/orders-list/orders-list';
 import { OrderDetail } from './modules/order/components/order-detail/order-detail';
+import { Logincomponent } from './modules/auth/logincomponent/logincomponent';
+import { Registercomponent } from './modules/auth/registercomponent/registercomponent';
+import { ProfileComponent } from './modules/auth/profile/profile';
+import { RepairComponent } from './modules/repair/repair.component';
+import { AdminRepairComponent } from './modules/admin/admin-repair.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'mua-hang', pathMatch: 'full' },
@@ -17,6 +22,11 @@ const routes: Routes = [
   { path: 'thanh-toan', component: Checkout },
   { path: 'don-hang-da-dat', component: OrdersList },
   { path: 'chi-tiet-don-hang/:id', component: OrderDetail },
+  { path: 'login', component: Logincomponent },
+  { path: 'register', component: Registercomponent },
+  { path: 'tai-khoan', component: ProfileComponent },
+  { path: 'sua-chua', component: RepairComponent },
+  { path: 'admin', component: AdminRepairComponent },
   { path: '**', redirectTo: 'mua-hang' }
 ];
 

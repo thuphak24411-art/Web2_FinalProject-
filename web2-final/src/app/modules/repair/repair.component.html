@@ -1,0 +1,276 @@
+<section class="assessment-page">
+  <div class="assessment-hero">
+    <div>
+      <p class="eyebrow">ECOCycle Care · Sửa chữa rác thải điện tử</p>
+      <h1>Đánh giá tình trạng thiết bị</h1>
+      <p>Trả lời vài câu hỏi để tạo yêu cầu kiểm tra, sửa chữa và nhận khuyến nghị phù hợp.</p>
+    </div>
+    <i class="bi bi-tools hero-icon"></i>
+  </div>
+
+  @if (errorMessage) { <div class="notice error"><i class="bi bi-exclamation-circle"></i>{{ errorMessage }}</div> }
+  @if (successMessage) { <div class="notice success"><i class="bi bi-check-circle"></i>{{ successMessage }}</div> }
+
+  @if (showResult) {
+    <section class="result-card">
+      <div class="result-heading">
+        <div class="result-icon"><i class="bi bi-check2"></i></div>
+        <div><p class="eyebrow">Đã tiếp nhận</p><h2>Đánh giá sơ bộ hoàn tất</h2><p>Thông tin đã được lưu để bộ phận kỹ thuật tiếp tục kiểm tra.</p></div>
+      </div>
+      <div class="result-grid">
+        <div><span>Thiết bị</span><strong>{{ result?.request.deviceName }}</strong><small>{{ result?.assessment.brand }} · {{ result?.request.deviceType }}</small></div>
+        <div><span>Ngoại quan</span><strong>{{ result?.assessment.appearance.overall }}</strong><small>Màn hình: {{ result?.assessment.appearance.screen }}</small></div>
+        <div><span>Pin</span><strong>{{ result?.assessment.battery.condition }}</strong><small>{{ result?.assessment.battery.maximumCapacity !== undefined ? result?.assessment.battery.maximumCapacity + '%' : 'Chưa cung cấp dung lượng' }}</small></div>
+        <div><span>Trạng thái xử lý</span><strong>{{ getNormalizedAiStatus(result?.request.aiAssessmentStatus)?.startsWith('Đang') || result?.request.aiAssessmentStatus === 'Lỗi đánh giá Gemini' ? getNormalizedAiStatus(result?.request.aiAssessmentStatus) : result?.request.status || 'Chưa sửa chữa' }}</strong><small>{{ result?.request.aiAssessmentStatus === 'Lỗi đánh giá Gemini' ? 'Bạn có thể thử gửi đánh giá AI lại từ lịch sử yêu cầu.' : getNormalizedAiStatus(result?.request.aiAssessmentStatus)?.startsWith('Đang') ? 'Yêu cầu đã lưu; đang chờ kết quả phân tích.' : 'Thông tin đã được lưu để bộ phận kỹ thuật tiếp tục xử lý.' }}</small></div>
+      </div>
+      <div class="result-section">
+        <h3>Lỗi đã khai báo</h3>
+        <p>{{ result?.assessment.functionality.issues.join(', ') || 'Chưa ghi nhận lỗi cụ thể' }}</p>
+      </div>
+      <div class="result-section">
+        <h3>Hướng xử lý sơ bộ</h3>
+        <div class="recommendations"><span><i class="bi bi-tools"></i> Đánh giá khả năng sửa chữa</span><span><i class="bi bi-tag"></i> Tham khảo phương án bán lại</span></div>
+      </div>
+      @if (result?.assessment.battery.needsTechnicalInspection) {
+        <div class="notice warning"><i class="bi bi-shield-exclamation"></i> Thiết bị cần được kiểm tra kỹ thuật trước khi sử dụng hoặc vận chuyển.</div>
+      }
+      @if (result?.assessment.images?.length) {
+        <div class="result-section"><h3>Ảnh đã tải lên</h3><div class="result-photos">@for (photo of result?.assessment.images; track photo.name) { <img [src]="photo.preview" [alt]="photo.area"> }</div></div>
+      }
+      @if (aiAssessment && (aiAssessment.source === 'gemini' || aiAssessment.source === 'cache')) {
+        <div class="result-section result-ai"><h3>Đánh giá AI từ Gemini</h3><p>{{ aiAssessment.summary }}</p><div class="valuation-box"><span>Định giá sơ bộ</span><strong>{{ aiAssessment.estimatedPrice }}</strong><small>Chỉ là tham khảo từ AI, cần xác minh bởi kỹ thuật viên.</small></div><div class="ai-directions">
+          <article><b><i class="bi bi-tools"></i> {{ aiAssessment.recommendations.repair.title }}</b><span>{{ aiAssessment.recommendations.repair.recommendation }}</span><small>{{ aiAssessment.recommendations.repair.nextStep }}</small></article>
+          <article><b><i class="bi bi-tag"></i> {{ aiAssessment.recommendations.resell.title }}</b><span>{{ aiAssessment.recommendations.resell.recommendation }}</span><small>{{ aiAssessment.recommendations.resell.nextStep }}</small></article>
+        </div><small>{{ aiAssessment.status }} · {{ aiAssessment.source }} · Định giá: {{ aiAssessment.estimatedPrice }}</small></div>
+      }
+      <button type="button" class="primary-button" (click)="resetForm()"><i class="bi bi-plus-lg"></i> Đánh giá thiết bị khác</button>
+    </section>
+  } @else {
+    <div class="stepper" aria-label="Tiến trình đánh giá">
+      @for (step of steps; track step.title; let index = $index) {
+        <button type="button" class="step-item" [class.active]="currentStep === index" [class.completed]="currentStep > index" (click)="goToStep(index)" [disabled]="index > currentStep">
+          <span class="step-number">@if (currentStep > index) { <i class="bi bi-check"></i> } @else { {{ index + 1 }} }</span><span class="step-label">{{ step.title }}</span>
+        </button>
+      }
+    </div>
+
+    <form class="assessment-card" [formGroup]="form" (ngSubmit)="submit()">
+      @if (currentStep === 0) {
+        <div class="step-heading"><span class="section-icon"><i class="bi bi-phone"></i></span><div><h2>Thông tin thiết bị</h2><p>Cho chúng tôi biết thiết bị bạn muốn đánh giá.</p></div></div>
+        <div class="field-group"><label>Loại thiết bị <b>*</b></label><div class="choice-grid type-grid">@for (type of deviceTypes; track type) { <button type="button" class="choice-card" [class.selected]="deviceType === type" (click)="form.patchValue({deviceType: type}); onDeviceTypeChange()"><i class="bi" [class.bi-phone]="type === 'Điện thoại'" [class.bi-laptop]="type === 'Laptop'" [class.bi-tablet]="type === 'Máy tính bảng'" [class.bi-box]="type === 'Thiết bị khác'"></i><span>{{ type }}</span></button> }</div></div>
+        <div class="form-grid">
+          <label>Thương hiệu <b>*</b><select formControlName="brand" required><option value="" disabled selected hidden>Chọn thương hiệu</option>@for (brand of brands; track brand) { <option [value]="brand">{{ brand }}</option> }</select></label>
+          <label>Tên model <b>*</b><input formControlName="model" placeholder="Ví dụ: iPhone 12, Dell XPS 13"></label>
+        </div>
+        <div class="field-group"><label>Thời gian sử dụng <b>*</b></label><div class="chips">@for (period of usagePeriods; track period) { <button type="button" [class.selected]="form.get('usagePeriod')?.value === period" (click)="form.patchValue({usagePeriod: period})">{{ period }}</button> }</div></div>
+      }
+
+      @if (currentStep === 1) {
+        <div class="step-heading"><span class="section-icon"><i class="bi bi-eye"></i></span><div><h2>Tình trạng ngoại quan</h2><p>Đánh giá dựa trên quan sát bên ngoài thiết bị.</p></div></div>
+        <div class="field-group"><label>Tình trạng tổng thể <b>*</b></label><div class="chips wrap">@for (item of ['Như mới', 'Tốt', 'Có dấu hiệu sử dụng', 'Hư hỏng nặng']; track item) { <button type="button" [class.selected]="form.get('overall')?.value === item" (click)="form.patchValue({overall: item})">{{ item }}</button> }</div></div>
+        <div class="form-grid three"><label>Màn hình <b>*</b><select formControlName="screen" required><option value="" disabled selected hidden>Chọn tình trạng</option><option>Nguyên vẹn</option><option>Trầy xước</option><option>Nứt vỡ</option><option>Sọc hoặc điểm chết</option></select></label><label>Vỏ thiết bị <b>*</b><select formControlName="casing" required><option value="" disabled selected hidden>Chọn tình trạng</option><option>Nguyên vẹn</option><option>Trầy xước nhẹ</option><option>Móp hoặc nứt</option><option>Hư hỏng nặng</option></select></label><label>Dấu hiệu vào nước <b>*</b><select formControlName="waterDamage" required><option value="" disabled selected hidden>Chọn phương án</option><option>Không</option><option>Có</option><option>Không rõ</option></select></label></div>
+        @if (form.get('overall')?.value === 'Hư hỏng nặng' || form.get('screen')?.value === 'Nứt vỡ' || form.get('casing')?.value === 'Hư hỏng nặng') { <label>Mô tả hư hỏng bổ sung<textarea formControlName="damageDescription" rows="3" placeholder="Mô tả vị trí, mức độ hư hỏng..."></textarea></label> }
+        @if (isWaterDamaged) { <div class="notice warning"><i class="bi bi-droplet-half"></i> Có dấu hiệu vào nước: không nên bật nguồn hoặc sạc, hãy để kỹ thuật viên kiểm tra.</div> }
+      }
+
+      @if (currentStep === 2) {
+        <div class="step-heading"><span class="section-icon"><i class="bi bi-gear"></i></span><div><h2>Tình trạng hoạt động</h2><p>Chọn “Chưa kiểm tra” nếu bạn không chắc chắn.</p></div></div>
+        <div class="form-grid three"><label>Khả năng khởi động <b>*</b><select formControlName="startup" required><option value="" disabled selected hidden>Chọn tình trạng</option><option>Bình thường</option><option>Chập chờn</option><option>Không khởi động</option><option>Chưa kiểm tra</option></select></label><label>Chức năng chính <b>*</b><select formControlName="mainFunction" required><option value="" disabled selected hidden>Chọn tình trạng</option><option>Hoạt động bình thường</option><option>Có lỗi một phần</option><option>Không hoạt động</option><option>Chưa kiểm tra</option></select></label><label>Kết nối & cổng sạc <b>*</b><select formControlName="ports" required><option value="" disabled selected hidden>Chọn tình trạng</option><option>Bình thường</option><option>Có lỗi</option><option>Chưa kiểm tra</option></select></label></div>
+        <div class="dynamic-checks"><h3>Kiểm tra theo loại thiết bị</h3><div class="form-grid two" formGroupName="deviceChecks">@for (name of getDeviceCheckNames(); track name) { <label>{{ name }} <select [formControlName]="name" required><option value="" disabled selected hidden>Chọn tình trạng</option>@for (option of getDeviceCheckOptions(name); track option) { <option [value]="option">{{ option }}</option> }</select></label> }</div></div>
+        <div class="field-group"><label>Lỗi đang gặp (có thể chọn nhiều)</label><div class="chips wrap">@for (issue of issueOptions; track issue) { <button type="button" [class.selected]="selectedIssues.includes(issue)" [class.no-error]="issue === 'Không có lỗi'" (click)="toggleIssue(issue)">{{ issue }} <i [class]="selectedIssues.includes(issue) ? 'bi bi-check2' : 'bi bi-plus'"></i></button> }</div></div>
+        @if (selectedIssues.includes('Lỗi khác')) { <label>Chi tiết lỗi khác <b>*</b><textarea formControlName="otherIssue" rows="3" placeholder="Mô tả lỗi bạn quan sát được..."></textarea></label> }
+      }
+
+      @if (currentStep === 3) {
+        <div class="step-heading"><span class="section-icon"><i class="bi bi-battery-half"></i></span><div><h2>Pin và lịch sử sử dụng</h2><p>Không cần đoán thông số nếu bạn không biết.</p></div></div>
+        <div class="field-group"><label>Tình trạng pin <b>*</b></label><div class="chips wrap">@for (item of ['Tốt', 'Hao pin nhanh', 'Pin yếu', 'Pin phồng hoặc hư hỏng', 'Không rõ']; track item) { <button type="button" [class.selected]="form.get('batteryCondition')?.value === item" (click)="form.patchValue({batteryCondition: item})">{{ item }}</button> }</div></div>
+        @if (form.get('batteryCondition')?.value === 'Pin phồng hoặc hư hỏng') { <div class="notice warning"><i class="bi bi-exclamation-triangle"></i> Cảnh báo an toàn: ngừng sử dụng, không sạc và không tự tháo pin. Thiết bị sẽ được đánh dấu cần kiểm tra kỹ thuật.</div> }
+        <div class="form-grid"><label>Dung lượng pin tối đa (%) <span class="optional">Không bắt buộc</span><input type="number" min="0" max="100" step="1" formControlName="batteryCapacity" placeholder="0–100"></label><label>Lịch sử sửa chữa <b>*</b><select formControlName="repairHistory" required><option value="" disabled selected hidden>Chọn phương án</option><option>Chưa sửa chữa</option><option>Đã sửa chữa</option><option>Không rõ</option></select></label></div>
+        @if (isRepairHistoryKnown) { <div class="field-group"><label>Linh kiện đã thay</label><div class="chips wrap">@for (part of replacedPartOptions; track part) { <button type="button" [class.selected]="form.get('replacedParts')?.value.includes(part)" (click)="toggleReplacedPart(part)">{{ part }}</button> }</div><label>Mô tả lịch sử sửa chữa<textarea formControlName="repairDescription" rows="3" placeholder="Thời điểm sửa chữa, nơi sửa, tình trạng sau sửa..."></textarea></label></div> }
+      }
+
+      @if (currentStep === 4) {
+        <div class="step-heading"><span class="section-icon"><i class="bi bi-images"></i></span><div><h2>Hình ảnh và xác nhận</h2><p>Ảnh giúp kỹ thuật viên có thêm thông tin trước khi tiếp nhận.</p></div></div>
+        <div class="upload-box"><div class="upload-copy"><i class="bi bi-cloud-arrow-up"></i><strong>Thêm ảnh thiết bị</strong><small>JPG, PNG, WEBP · tối đa 5MB/ảnh · tối đa 8 ảnh</small></div><div class="upload-controls"><select [(ngModel)]="photoArea" [ngModelOptions]="{standalone: true}" aria-label="Vị trí ảnh">@for (area of photoAreas; track area) { <option [value]="area">{{ area }}</option> }</select><input id="device-photo-input" class="native-file-input" type="file" accept="image/jpeg,image/png,image/webp" (change)="onFileSelected($event)"><button type="button" class="upload-button" (click)="openFilePicker()"><i class="bi bi-plus-lg"></i> Chọn ảnh</button></div></div>
+        @if (photos.length) { <div class="photo-grid">@for (photo of photos; track photo.preview; let index = $index) { <article class="photo-item"><img [src]="photo.preview" [alt]="photo.area"><div><strong>{{ photo.area }}</strong><small>{{ photo.name }}</small><button type="button" (click)="replacePhoto(index)">Thay thế</button><button type="button" (click)="removePhoto(index)" class="delete-button">Xóa</button></div></article> }</div> }
+        <label>Mô tả thêm <span class="optional">Không bắt buộc</span><textarea formControlName="additionalDescription" rows="3" placeholder="Thông tin khác bạn muốn kỹ thuật viên biết..."></textarea></label>
+        <label>Giá trị thiết bị bạn ước tính (VNĐ) <span class="optional">Không bắt buộc</span><input type="number" min="0" formControlName="userEstimatedPriceVnd" placeholder="Ví dụ: 1500000"><small class="field-help">Nếu để trống, Gemini sẽ đối chiếu giá sản phẩm cùng model/loại đang bán trên ECOCycle. Giá bạn nhập chỉ là căn cứ tham khảo, không phải báo giá chính thức.</small></label>
+        <label class="confirm-row"><input type="checkbox" formControlName="confirmation"><span>Tôi xác nhận các thông tin đã khai báo là đúng với hiểu biết của mình và đồng ý để ECOCycle sử dụng thông tin này cho việc tiếp nhận, kiểm tra và sửa chữa thiết bị. <b>*</b></span></label>
+      }
+
+      <div class="form-actions"><div class="action-left"><button type="button" class="secondary-button" (click)="previousStep()" [disabled]="currentStep === 0"><i class="bi bi-arrow-left"></i> Quay lại</button><button type="button" class="clear-button" (click)="clearForm()"><i class="bi bi-trash3"></i> Xóa form</button><span class="step-counter">Bước {{ currentStep + 1 }}/{{ steps.length }}</span></div>@if (currentStep < steps.length - 1) { <button type="button" class="primary-button" (click)="nextStep()">Tiếp tục <i class="bi bi-arrow-right"></i></button> } @else { <button type="submit" class="primary-button" [disabled]="loading">{{ loading ? 'Đang gửi...' : 'Đánh giá thiết bị' }} <i class="bi bi-check2-circle"></i></button> }</div>
+    </form>
+  }
+
+  <section class="history assessment-card">
+    <div id="repair-history" class="history-heading"><div><h2>Yêu cầu sửa chữa của tôi</h2><p>Theo dõi trạng thái và lịch sử đánh giá. Sản phẩm đã đăng bán sẽ hiển thị trạng thái bán riêng.</p></div><button type="button" class="icon-button" (click)="loadRequests()" aria-label="Tải lại"><i class="bi bi-arrow-clockwise"></i></button></div>
+    @if (loadingList) { <p class="muted">Đang tải dữ liệu...</p> } @else if (!requests.length) { <p class="muted">Bạn chưa có yêu cầu sửa chữa nào.</p> } @else {
+      @for (item of requests; track item.repairOrderID || item.createdAt) {
+        <article class="request-row" [class.request-row-assessed]="hasAiAssessment(item)">
+          <div class="request-summary">
+            <div class="request-title-line"><h3>{{ item.deviceName }} <span>{{ item.deviceType }}</span></h3><span class="request-id">{{ item.repairOrderID }}</span></div>
+            <p>{{ item.issueDescription }}</p>
+            <div class="request-info-line"><small><i class="bi bi-calendar3"></i>{{ item.createdAt ? (item.createdAt | date:'dd/MM/yyyy HH:mm') : 'Vừa tạo' }}</small></div>
+            @if (item.assessment?.images?.length) { <div class="history-photos">@for (photo of item.assessment?.images; track photo.preview) { <img [src]="photo.preview" [alt]="photo.area" loading="lazy"> }</div> }
+            @if (item.userChoice?.option === 'resell') {
+              <p class="chosen-option"><i class="bi bi-shop"></i> Thiết bị đã đăng bán trên marketplace với trạng thái <strong>{{ item.status }}</strong>. <a routerLink="/mua-hang">Xem marketplace</a></p>
+            } @else if (item.specialistAssessment) {
+              <section class="user-expert-review">
+                <h4><i class="bi bi-person-check"></i> Chuyên gia đã đánh giá</h4>
+                <p>{{ item.specialistAssessment.summary }}</p>
+                <div class="user-expert-options">
+                  <article><strong>Sửa chữa</strong><span>{{ item.specialistAssessment.estimatedPrices.repair.display }}</span><small>{{ item.specialistAssessment.recommendations.repair }}</small></article>
+                  <article><strong>Bán lại</strong><span>{{ item.specialistAssessment.estimatedPrices.resell.display }}</span><small>{{ item.specialistAssessment.recommendations.resell }}</small></article>
+                </div>
+                @if (!item.userChoice) {
+                  <div class="user-choice-actions">
+                    <strong>Chọn phương án phù hợp:</strong>
+                    <button type="button" (click)="chooseRepairOption(item, 'repair')" [disabled]="choosingRepairOrderID === item.repairOrderID">Sửa chữa</button>
+                    <button type="button" (click)="chooseRepairOption(item, 'resell')" [disabled]="choosingRepairOrderID === item.repairOrderID">Bán lại</button>
+                  </div>
+                } @else {
+                  <p class="chosen-option"><i class="bi bi-check-circle-fill"></i> Bạn đã chọn: {{ choiceLabel(item.userChoice.option) }}</p>
+                }
+              </section>
+            } @else if (item.status === 'Chờ chuyên gia đánh giá') {
+              <p class="expert-waiting"><i class="bi bi-hourglass-split"></i> Yêu cầu đang chờ chuyên gia đánh giá.</p>
+            }
+          </div>
+          <div class="request-actions">
+            <div class="request-action-heading">
+              <span class="request-status-badge" [class]="statusClass(item.status)"><i class="bi bi-circle-fill"></i>{{ getNormalizedAiStatus(item.aiAssessmentStatus)?.startsWith('Đang') ? getNormalizedAiStatus(item.aiAssessmentStatus) : item.status || 'Chưa sửa chữa' }}</span>
+              <button type="button" class="history-link" (click)="openHistoryDetails(item)"><i class="bi bi-clock-history"></i> Xem lịch sử</button>
+            </div>
+            @if (hasAiAssessment(item)) {
+              <div class="ai-assessed-badge"><i class="bi bi-patch-check-fill"></i><span>Đã được AI đánh giá<small>{{ getAiAssessments(item).length }} kết quả Gemini</small></span></div>
+            } @else if (isAiAssessmentPending(item)) {
+              <button type="button" class="ai-button ai-pending-button" disabled><i class="bi bi-arrow-repeat"></i> AI đang xử lý...</button>
+            } @else {
+              @if (item.aiAssessmentStatus === 'Lỗi đánh giá Gemini') { <p class="notice error">Đánh giá tự động chưa hoàn tất. Bạn có thể thử lại.</p> }
+              <button type="button" class="ai-button" (click)="assess(item)"><i class="bi bi-stars"></i> {{ item.aiAssessmentStatus === 'Lỗi đánh giá Gemini' ? 'Thử lại đánh giá AI' : 'Đánh giá AI' }}</button>
+            }
+          </div>
+        </article>
+      }
+    }
+    @if (selectedHistoryRequest) {
+      <section class="history-detail">
+        <div class="history-heading"><div><h3>Chi tiết yêu cầu {{ selectedHistoryRequest.repairOrderID }}</h3><p>{{ selectedHistoryRequest.deviceName }} · {{ selectedHistoryRequest.status || 'Chưa sửa chữa' }}</p></div><button type="button" class="history-link" (click)="selectedHistoryRequest = null">Đóng</button></div>
+        <p>{{ selectedHistoryRequest.issueDescription }}</p>
+        @if (getAiAssessments(selectedHistoryRequest).length) {
+          <h4>Lịch sử đánh giá và định giá Gemini</h4>
+          @for (assessment of getAiAssessments(selectedHistoryRequest); track assessment.assessmentID) {
+            <article class="history-assessment">
+              <div><strong>{{ assessment.createdAt | date:'dd/MM/yyyy HH:mm' }}</strong><small>{{ assessment.status }} · {{ assessment.source }}</small></div>
+              <p>{{ assessment.summary }}</p>
+              <div class="ai-directions">
+                <article><b>Sửa chữa</b><strong>{{ assessment.estimatedPrices?.repair?.display }}</strong><small>{{ assessment.estimatedPrices?.repair?.rationale }}</small></article>
+                <article><b>Bán lại</b><strong>{{ assessment.estimatedPrices?.resell?.display }}</strong><small>{{ assessment.estimatedPrices?.resell?.rationale }}</small></article>
+              </div>
+              <button type="button" class="history-link" (click)="showStoredAssessment(assessment)">Xem nội dung đánh giá</button>
+            </article>
+          }
+        } @else {
+          <p class="muted">Yêu cầu này chưa có lịch sử đánh giá Gemini.</p>
+        }
+      </section>
+    }
+    @if (aiAssessment && (aiAssessment.source === 'gemini' || aiAssessment.source === 'cache')) {
+      <div class="ai-result">
+        <strong>{{ aiAssessment.recommendation }}</strong>
+        <p>{{ aiAssessment.summary }}</p>
+        <div class="ai-directions">
+          <article><b><i class="bi bi-tools"></i> {{ aiAssessment.recommendations.repair.title }}</b><strong>{{ aiAssessment.estimatedPrices?.repair?.display }}</strong><span>{{ aiAssessment.recommendations.repair.recommendation }}</span><small>{{ aiAssessment.estimatedPrices?.repair?.rationale }}</small></article>
+          <article><b><i class="bi bi-tag"></i> {{ aiAssessment.recommendations.resell.title }}</b><strong>{{ aiAssessment.estimatedPrices?.resell?.display }}</strong><span>{{ aiAssessment.recommendations.resell.recommendation }}</span><small>{{ aiAssessment.estimatedPrices?.resell?.rationale }}</small></article>
+        </div>
+        <p><strong>Định giá dự kiến: {{ aiAssessment.estimatedPrice }}</strong></p>
+        @if (aiAssessment.estimatedPriceDetails?.rationale) {
+          <small>Cơ sở định giá: {{ aiAssessment.estimatedPriceDetails?.rationale }}</small>
+        }
+        <small>{{ aiAssessment.status }} · Nguồn: {{ aiAssessment.source }}</small>
+      </div>
+    }
+    @if (aiMessage) { <p class="muted">{{ aiMessage }}</p> }
+  </section>
+
+  @if (resellRequest) {
+    <div class="resell-listing-backdrop" role="presentation" (click)="closeResellListing()">
+      <section class="resell-listing-modal" role="dialog" aria-modal="true" aria-labelledby="resell-listing-title" (click)="$event.stopPropagation()">
+        <header class="resell-listing-header">
+          <div><span class="resell-listing-icon"><i class="bi bi-shop"></i></span><div><p class="eyebrow">ĐĂNG BÁN TRÊN MARKETPLACE</p><h2 id="resell-listing-title">Thông tin sản phẩm</h2></div></div>
+          <button type="button" class="resell-listing-close" (click)="closeResellListing()" aria-label="Đóng"><i class="bi bi-x-lg"></i></button>
+        </header>
+        <form class="resell-listing-form" (ngSubmit)="requestResellConfirmation()">
+          <p class="resell-listing-hint"><i class="bi bi-info-circle"></i> Thông tin được điền từ yêu cầu sửa chữa và đánh giá chuyên gia. Bạn có thể chỉnh sửa trước khi đăng.</p>
+          @if (resellImages.length) {
+            <div class="resell-listing-images" aria-label="Ảnh thiết bị đã gửi">
+              @for (image of resellImages; track image; let index = $index) {
+                <img class="resell-listing-image" [src]="image" [alt]="resellListing.title + ' - ảnh ' + (index + 1)">
+              }
+            </div>
+          }
+          <label>Tên sản phẩm <b>*</b><input name="resellTitle" [(ngModel)]="resellListing.title" required minlength="3" maxlength="120"></label>
+          <div class="resell-listing-grid">
+            <label>Danh mục <b>*</b><select name="resellCategory" [(ngModel)]="resellListing.cateID" required>@for (category of resellCategories; track category.id) { <option [value]="category.id">{{ category.name }}</option> }</select></label>
+            <label>Tình trạng <b>*</b><select name="resellCondition" [(ngModel)]="resellListing.condition" required>@for (condition of resaleConditions; track condition) { <option [value]="condition">{{ condition }}</option> }</select></label>
+          </div>
+          <label>Giá bán mong muốn (VNĐ) <b>*</b><input name="resellPrice" type="number" min="1" max="1000000000" step="1000" [(ngModel)]="resellListing.priceVnd" required><small>Giá tham khảo từ đánh giá chuyên gia; bạn có thể điều chỉnh trước khi đăng.</small></label>
+          <label>Mô tả sản phẩm <textarea name="resellDescription" [(ngModel)]="resellListing.description" rows="5" maxlength="3000"></textarea></label>
+          @if (resellListingError) { <p class="resell-listing-error" role="alert">{{ resellListingError }}</p> }
+          <footer class="resell-listing-actions">
+            <button type="button" class="resell-cancel" (click)="closeResellListing()" [disabled]="publishingResellListing">Hủy</button>
+            <button type="submit" class="resell-submit" [disabled]="publishingResellListing">{{ publishingResellListing ? 'Đang đăng bán...' : 'Tiếp tục xác nhận đăng bán' }}</button>
+          </footer>
+        </form>
+      </section>
+    </div>
+  }
+
+  @if (selectedHistoryAssessment) {
+    <div class="assessment-detail-backdrop" role="presentation" (click)="closeStoredAssessment()">
+      <section class="assessment-detail-modal" role="dialog" aria-modal="true" aria-labelledby="stored-assessment-title" (click)="$event.stopPropagation()">
+        <header class="assessment-detail-header">
+          <div class="assessment-detail-title">
+            <span class="assessment-detail-icon"><i class="bi bi-stars"></i></span>
+            <div><p class="eyebrow">KẾT QUẢ PHÂN TÍCH AI</p><h2 id="stored-assessment-title">{{ selectedHistoryAssessment.deviceType }}</h2><small>{{ selectedHistoryAssessment.createdAt | date:'dd/MM/yyyy HH:mm' }} · {{ selectedHistoryAssessment.source }}</small></div>
+          </div>
+          <button type="button" class="assessment-detail-close" (click)="closeStoredAssessment()" aria-label="Đóng nội dung đánh giá"><i class="bi bi-x-lg"></i></button>
+        </header>
+        <div class="assessment-detail-body">
+          <div class="assessment-detail-summary">
+            <span><i class="bi bi-lightbulb"></i> KẾT LUẬN TỔNG QUAN</span>
+            <strong>{{ selectedHistoryAssessment.recommendation }}</strong>
+            <p>{{ selectedHistoryAssessment.summary }}</p>
+          </div>
+          <div class="assessment-detail-section-heading"><h3>Phương án và định giá tham khảo</h3><p>Giá chỉ mang tính tham khảo, cần được xác minh khi kiểm tra thực tế.</p></div>
+          <div class="assessment-detail-options">
+            <article class="assessment-option-repair"><span class="assessment-option-label"><i class="bi bi-tools"></i> SỬA CHỮA</span><strong>{{ selectedHistoryAssessment.estimatedPrices?.repair?.display }}</strong><p>{{ selectedHistoryAssessment.recommendations.repair.recommendation }}</p><small>{{ selectedHistoryAssessment.estimatedPrices?.repair?.rationale || selectedHistoryAssessment.recommendations.repair.nextStep }}</small></article>
+            <article class="assessment-option-resell"><span class="assessment-option-label"><i class="bi bi-tag"></i> BÁN LẠI</span><strong>{{ selectedHistoryAssessment.estimatedPrices?.resell?.display }}</strong><p>{{ selectedHistoryAssessment.recommendations.resell.recommendation }}</p><small>{{ selectedHistoryAssessment.estimatedPrices?.resell?.rationale || selectedHistoryAssessment.recommendations.resell.nextStep }}</small></article>
+          </div>
+          <div class="assessment-detail-footer"><span><i class="bi bi-info-circle"></i> {{ selectedHistoryAssessment.status }}</span><span>Định giá tổng quan: <strong>{{ selectedHistoryAssessment.estimatedPrice }}</strong></span></div>
+        </div>
+      </section>
+    </div>
+  }
+
+  @if (confirmationDialog) {
+    <div class="confirmation-backdrop" role="presentation" (click)="cancelConfirmation()">
+      <section
+        class="confirmation-dialog"
+        role="alertdialog"
+        aria-modal="true"
+        aria-labelledby="repair-confirmation-title"
+        (click)="$event.stopPropagation()">
+        <div class="confirmation-icon"><i class="bi" [class]=" 'bi ' + confirmationDialog.icon"></i></div>
+        <h2 id="repair-confirmation-title">{{ confirmationDialog.title }}</h2>
+        <p>{{ confirmationDialog.message }}</p>
+        <div class="confirmation-actions">
+          <button type="button" class="confirmation-cancel" (click)="cancelConfirmation()">Quay lại</button>
+          <button type="button" class="confirmation-submit" (click)="confirmAction()">
+            {{ confirmationDialog.confirmLabel }}
+          </button>
+        </div>
+      </section>
+    </div>
+  }
+</section>

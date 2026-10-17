@@ -1,11 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { FormsModule } from '@angular/forms';
+import { AppModule } from '../../../../app-module';
 import { Checkout } from './checkout';
-import { CartService } from '../../services/cart';
-import { OrderService } from '../../services/order';
-import { ToastService } from '../../../../services/toast';
 
 describe('Checkout', () => {
   let component: Checkout;
@@ -13,9 +8,7 @@ describe('Checkout', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [Checkout],
-      imports: [HttpClientTestingModule, RouterTestingModule, FormsModule],
-      providers: [CartService, OrderService, ToastService]
+      imports: [AppModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(Checkout);

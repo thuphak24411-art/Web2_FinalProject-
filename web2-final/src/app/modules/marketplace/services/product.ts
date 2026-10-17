@@ -21,6 +21,10 @@ export class ProductService {
     this._searchKeywordSource.next(keyword);
   }
 
+  clearProductsCache(): void {
+    this._cachedCategories = null;
+  }
+
   getProducts(forceRefresh: boolean = false): Observable<Category[]> {
     if (this._cachedCategories && !forceRefresh) {
       return of(this._cachedCategories);

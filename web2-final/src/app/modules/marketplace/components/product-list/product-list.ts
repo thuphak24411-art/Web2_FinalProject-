@@ -11,6 +11,7 @@ import { createSlug } from '../../../../classes/slug-helper';
   templateUrl: './product-list.html',
 })
 export class ProductList implements OnInit {
+  readonly fallbackImage = '/assets/ecocycle-logo.svg';
   public createSlug = createSlug;
   categories: Category[] = [];
   allProducts: Product[] = [];
@@ -222,5 +223,11 @@ export class ProductList implements OnInit {
     if (el) {
       el.scrollBy({ left: 300, behavior: 'smooth' });
     }
+  }
+
+  onProductImageError(event: Event): void {
+    const image = event.target as HTMLImageElement;
+    if (image.src.endsWith(this.fallbackImage)) return;
+    image.src = this.fallbackImage;
   }
 }

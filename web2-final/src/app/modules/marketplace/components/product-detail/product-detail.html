@@ -40,6 +40,7 @@
           <img 
             [src]="product.img" 
             [alt]="product.title" 
+            (error)="onImageError($event)"
             class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
           >
         </div>
@@ -143,6 +144,7 @@
               <img 
                 [src]="sellerInfo.avatar" 
                 [alt]="sellerInfo.name" 
+                (error)="onImageError($event)"
                 class="w-14 h-14 rounded-2xl object-cover border-2 border-emerald-500 shadow-sm"
               >
               @if (sellerInfo.isVerified) {

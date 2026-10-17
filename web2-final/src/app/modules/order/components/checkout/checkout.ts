@@ -69,15 +69,24 @@ export class Checkout implements OnInit {
   }
 
   loadCustomerProfile(): void {
-    const currentUserId = this.orderService.getCurrentUserId() || 'CM000001';
+    const currentUserId = this.orderService.getCurrentUserId();
+    if (!currentUserId) {
+      this.router.navigate(['/login'], { queryParams: { returnUrl: '/thanh-toan' } });
+      return;
+    }
     this.orderService.getUserProfile(currentUserId).subscribe({
       next: (user: any) => {
         if (user) {
           this.fullName = user.fullName || '';
           this.phoneNumber = user.phoneNumber || '';
-          const fullAddr = (user.customerDetails && user.customerDetails.address) ? user.customerDetails.address : '';
-          
-          if (fullAddr) {
+          const details = user.role === 'SELLER' ? user.sellerDetails : user.customerDetails;
+          if (details?.province || details?.district || details?.streetAddress) {
+            this.province = details.province || '';
+            this.district = details.district || '';
+            this.addressDetail = details.streetAddress || '';
+          } else {
+            const fullAddr = details?.address || '';
+            if (fullAddr) {
             const parts = fullAddr.split(',').map((s: string) => s.trim());
             if (parts.length >= 3) {
               this.addressDetail = parts.slice(0, parts.length - 2).join(', ');
@@ -89,18 +98,15 @@ export class Checkout implements OnInit {
             } else {
               this.addressDetail = fullAddr;
             }
+            }
           }
         }
        
         this.cdr.detectChanges();
       },
       error: (err: any) => {
-        console.warn('Dùng mặc định nếu lỗi tải thông tin user:', err);
-        this.fullName = 'Lê Quốc Khoa';
-        this.phoneNumber = '0912384756';
-        this.addressDetail = 'Số 142 Đường 12';
-        this.district = 'Quận Bình Thạnh';
-        this.province = 'TP.HCM';
+        console.error('Không thể tải hồ sơ nhận hàng:', err);
+        this.errorMessage = 'Không thể tải hồ sơ. Bạn vẫn có thể nhập thông tin nhận hàng thủ công.';
         this.cdr.detectChanges();
       }
     });
@@ -160,7 +166,7 @@ export class Checkout implements OnInit {
     this.errorMessage = '';
 
     const orderData = {
-      customerID: this.orderService.getCurrentUserId() || 'CM000001',
+      customerID: this.orderService.getCurrentUserId(),
       items: this.cartItems.map(item => ({
         productId: item.id,
         title: item.title,

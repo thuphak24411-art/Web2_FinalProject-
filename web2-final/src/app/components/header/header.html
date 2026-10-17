@@ -33,6 +33,7 @@
 
       <div class="header-actions">
         
+        @if (currentUser()) {
         <a 
           routerLink="/green-coin" 
           class="flex items-center gap-1.5 px-3 py-1.5 bg-amber-50 hover:bg-amber-100/80 border border-amber-200/80 rounded-full text-xs font-extrabold text-amber-800 transition-all shadow-sm"
@@ -41,7 +42,9 @@
           <i class="bi bi-coin text-amber-500 text-sm animate-pulse"></i>
           <span>{{ userCoins().toLocaleString('vi-VN') }} GreenCoins</span>
         </a>
+        }
 
+        @if (currentUser()) {
         <div class="relative">
           <button 
             type="button" 
@@ -151,6 +154,7 @@
             </div>
           }
         </div>
+        }
 
         <a class="icon-btn cart-btn" routerLink="/gio-hang" aria-label="Giỏ hàng">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -181,7 +185,12 @@
               class="absolute right-0 mt-2 w-52 bg-white rounded-2xl shadow-xl border border-gray-100 py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200"
             >
               <div class="px-4 py-2 border-b border-gray-100">
-                <p class="text-xs font-bold text-gray-900">Lê Quốc Khoa</p>
+                <p class="text-xs font-bold text-gray-900">
+                  {{ currentUser()?.fullName || currentUser()?.userName || 'Tài khoản' }}
+                </p>
+                @if (currentUser()) {
+                  <p class="text-[10px] text-gray-500 mt-0.5">{{ currentUser()?.userID }} · {{ currentUser()?.role }}</p>
+                }
               </div>
 
               <div class="py-1">
@@ -209,6 +218,18 @@
                   <i class="bi bi-receipt text-emerald-600 text-sm"></i>
                   <span>Đơn hàng của tôi</span>
                 </a>
+
+                @if (!currentUser()) {
+                  <a routerLink="/login" (click)="closeUserDropdown()" class="flex items-center gap-2.5 px-4 py-2.5 text-xs text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-semibold transition-colors">
+                    <i class="bi bi-box-arrow-in-right text-emerald-600 text-sm"></i>
+                    <span>Đăng nhập</span>
+                  </a>
+                } @else {
+                  <button type="button" (click)="logout()" class="w-full flex items-center gap-2.5 px-4 py-2.5 text-xs text-red-600 hover:bg-red-50 font-semibold transition-colors text-left">
+                    <i class="bi bi-box-arrow-right text-sm"></i>
+                    <span>Đăng xuất</span>
+                  </button>
+                }
 
                 <a 
                   routerLink="/tai-khoan" 
