@@ -4,6 +4,8 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { randomInt } = require("crypto");
 
+const JWT_SECRET = process.env.JWT_SECRET || "ecocycle-jwt-secret-key-2026";
+
 function createAuthRouter(db) {
   const router = express.Router();
   const users = db.collection("users");
@@ -60,7 +62,7 @@ function createAuthRouter(db) {
         userID: user.userID,
         role: user.role
       },
-      process.env.JWT_SECRET,
+      JWT_SECRET,
       { expiresIn: process.env.JWT_EXPIRES_IN || "1d" }
     );
   }
@@ -362,10 +364,6 @@ function createAuthRouter(db) {
         });
       }
 
-      if (!process.env.JWT_SECRET) {
-        throw new Error("Chưa cấu hình JWT_SECRET.");
-      }
-
       const token = createToken(user);
 
       return res.json({
@@ -396,7 +394,7 @@ function createAuthRouter(db) {
         });
       }
 
-      const decoded = jwt.verify(token, process.env.JWT_SECRET);
+      const decoded = jwt.verify(token, JWT_SECRET);
 
       const user = await users.findOne({
         userID: decoded.userID
@@ -425,7 +423,7 @@ function createAuthRouter(db) {
 
     let decoded;
     try {
-      decoded = jwt.verify(token, process.env.JWT_SECRET);
+      decoded = jwt.verify(token, JWT_SECRET);
     } catch (_error) {
       return res.status(401).json({ message: "Phiên đăng nhập không hợp lệ hoặc đã hết hạn." });
     }

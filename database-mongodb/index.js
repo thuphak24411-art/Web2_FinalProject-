@@ -20,9 +20,10 @@ const PORT = Number(process.env.PORT) || 3000;
 app.use(cors());
 app.use(express.json({ limit: '14mb' }));
 
-const URI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017";
+const URI = process.env.MONGODB_URI || "mongodb+srv://tuongvck24411_db_user:d71kcLaJwNeHBqWt@cluster0.vshnczr.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(URI);
 const DB_NAME = process.env.MONGODB_DB_NAME || "EcoCycleDatabase";
+const JWT_SECRET = process.env.JWT_SECRET || "ecocycle-jwt-secret-key-2026";
 
 async function ensureIndexes() {
   const db = client.db(DB_NAME);
@@ -79,7 +80,7 @@ function authenticate(req, res, next) {
   const token = authorization.startsWith('Bearer ') ? authorization.slice(7) : '';
   if (!token) return res.status(401).json({ message: 'Bạn cần đăng nhập.' });
   try {
-    req.auth = jwt.verify(token, process.env.JWT_SECRET);
+    req.auth = jwt.verify(token, JWT_SECRET);
     next();
   } catch {
     return res.status(401).json({ message: 'Phiên đăng nhập không hợp lệ.' });
@@ -175,7 +176,7 @@ async function processRepairAssessment(order) {
     marketPriceReferences: await findRepairMarketPriceReferences(order)
   }, {
     userID: order.customerID,
-    apiKey: process.env.GEMINI_API_KEY
+    apiKey: process.env.GEMINI_API_KEY || 'AIzaSyCJ9sKKSpGjPQT_mdaVyE4-E_6flHMlcYE'
   });
   const hasAiResult = assessment.source === 'gemini' || assessment.source === 'cache';
   await getCollection('AI_assessments').insertOne({
