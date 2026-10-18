@@ -1,0 +1,24 @@
+.coin-modal { width: min(460px, 100%); overflow: hidden; border-radius: 18px; background: #fff; box-shadow: 0 20px 60px rgb(0 0 0 / 18%); }
+.coin-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 22px; border-bottom: 1px solid #edf1ee; }
+.eyebrow { display: flex; align-items: center; gap: 7px; margin: 0 0 7px; color: #b8790d; font-size: .7rem; font-weight: 800; letter-spacing: .12em; }
+.coin-header h2 { margin: 0; color: #1b2a21; font-size: 1.3rem; }
+.description { margin: 7px 0 0; color: #748178; font-size: .82rem; }
+.close-button { border: 0; background: transparent; color: #718078; cursor: pointer; font-size: 1rem; }
+.error-message { margin: 16px 22px 0; padding: 10px 12px; border-radius: 9px; background: #fff0f0; color: #b42318; font-size: .8rem; }
+.coin-form { padding: 22px; }
+.coin-form label { display: block; margin-bottom: 8px; color: #4f5d54; font-size: .8rem; font-weight: 700; }
+.amount-field { display: flex; align-items: center; gap: 9px; padding: 0 12px; border: 1px solid #dbe5df; border-radius: 10px; color: #bc790b; }
+.amount-field input { width: 100%; padding: 12px 0; border: 0; outline: 0; color: #26352b; font-size: 1.1rem; font-weight: 700; }
+.current-balance { margin: 10px 0 22px; color: #7a867f; font-size: .78rem; }
+.current-balance strong { color: #bc790b; }
+.conversion-result { margin: 12px 0 0; color: #4f5d54; font-size: .8rem; }
+.conversion-result i { color: #16814b; }
+.conversion-result strong { color: #bc790b; }
+.conversion-result span { color: #8a958e; font-size: .72rem; }
+.form-actions { display: flex; justify-content: flex-end; gap: 9px; }
+.cancel-button, .submit-button { padding: 10px 14px; border: 0; border-radius: 9px; cursor: pointer; font-weight: 700; }
+.cancel-button { background: #f1f4f2; color: #627067; }
+.submit-button { background: #16814b; color: #fff; }
+button:disabled { cursor: not-allowed; opacity: .6; }
+.spin { animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }

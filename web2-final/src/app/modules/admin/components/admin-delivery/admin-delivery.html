@@ -1,0 +1,102 @@
+
+<main class="admin-page">
+  <header class="admin-heading">
+    <div>
+      <p class="eyebrow"><i class="bi bi-truck"></i> Quản lý đơn hàng</p>
+      <p class="muted">Theo dõi và tra cứu các đơn hàng của khách hàng.</p>
+    </div>
+    <div class="admin-heading-mark" aria-hidden="true"><i class="bi bi-box-seam"></i></div>
+  </header>
+
+  @if (errorMessage) { <p class="message error" role="alert">{{ errorMessage }}</p> }
+
+  <section class="orders-section" aria-labelledby="orders-title">
+    <div class="section-heading">
+      <div>
+        <h2 id="orders-title">Tất cả đơn hàng</h2>
+        <p>{{ filteredOrders.length }} đơn hàng hiển thị / {{ orders.length }} đơn hàng</p>
+      </div>
+      <div class="section-tools">
+        <label class="search-box">
+          <i class="bi bi-search"></i>
+          <input type="search" [(ngModel)]="searchTerm" placeholder="Tìm theo mã đơn hàng" aria-label="Tìm kiếm theo orderID">
+        </label>
+        <label class="filter-box">
+          <i class="bi bi-funnel"></i>
+          <select [(ngModel)]="selectedStatus" aria-label="Lọc đơn hàng theo trạng thái">
+            <option value="">Tất cả trạng thái</option>
+            @for (status of statuses; track status) {
+              <option [value]="status">{{ status }}</option>
+            }
+          </select>
+        </label>
+      </div>
+    </div>
+
+    @if (loading) {
+      <div class="state"><i class="bi bi-arrow-repeat spin"></i><strong>Đang tải danh sách đơn hàng...</strong></div>
+    } @else if (!filteredOrders.length) {
+      <div class="state"><i class="bi bi-box-seam"></i><strong>Chưa tìm thấy đơn hàng</strong><span>Thử thay đổi orderID hoặc trạng thái lọc.</span></div>
+    } @else {
+      <div class="order-list">
+        @for (order of filteredOrders; track order._id || getOrderID(order)) {
+          <article class="order-card">
+            <div class="order-icon"><i class="bi bi-receipt"></i></div>
+            <div class="order-info">
+              <h3>{{ getOrderID(order) }}</h3>
+              <p>Khách hàng: {{ order.customerID || 'Chưa có thông tin' }}</p>
+              <span>{{ order.orderDate || formatDate(order.createdAt) }}</span>
+            </div>
+            <div class="order-customer">
+              <strong>{{ order.sellerInfo?.name || order.sellerID || 'Chưa có người bán' }}</strong>
+              <small>{{ order.invoiceNumber || 'Chưa có hóa đơn' }}</small>
+            </div>
+            <div class="order-status">
+              <span class="status" [class]="getStatusClass(order.status)">{{ getDisplayStatus(order.status) }}</span>
+              <strong>{{ order.totalPrice || 'Chưa có tổng tiền' }}</strong>
+            </div>
+            <div class="order-actions">
+              <button type="button" class="details-button" (click)="openDetails(order)">
+                <i class="bi bi-eye"></i> Xem chi tiết
+              </button>
+            </div>
+          </article>
+        }
+      </div>
+    }
+  </section>
+
+  @if (selectedOrder) {
+    <div class="modal-backdrop" (click)="closeDetails()">
+      <section class="details-modal" role="dialog" aria-modal="true" aria-labelledby="order-detail-title" (click)="$event.stopPropagation()">
+        <header class="modal-header">
+          <div><p class="eyebrow">CHI TIẾT ĐƠN HÀNG</p><h2 id="order-detail-title">{{ getOrderID(selectedOrder) }}</h2></div>
+          <button type="button" class="modal-close" (click)="closeDetails()" aria-label="Đóng"><i class="bi bi-x-lg"></i></button>
+        </header>
+        <div class="modal-body">
+          <dl class="detail-list">
+            <div><dt>Mã đơn hàng</dt><dd>{{ getOrderID(selectedOrder) }}</dd></div>
+            <div><dt>Trạng thái</dt><dd>{{ getDisplayStatus(selectedOrder.status) }}</dd></div>
+            <div><dt>Mã khách hàng</dt><dd>{{ selectedOrder.customerID || '—' }}</dd></div>
+            <div><dt>Mã người bán</dt><dd>{{ selectedOrder.sellerID || '—' }}</dd></div>
+            <div><dt>Số hóa đơn</dt><dd>{{ selectedOrder.invoiceNumber || '—' }}</dd></div>
+            <div><dt>Địa chỉ giao hàng</dt><dd>{{ selectedOrder.shippingAddress || '—' }}</dd></div>
+            <div><dt>Tổng tiền</dt><dd>{{ selectedOrder.totalPrice || '—' }}</dd></div>
+            <div><dt>Ngày tạo</dt><dd>{{ formatDate(selectedOrder.createdAt) }}</dd></div>
+          </dl>
+          <h3>Sản phẩm trong đơn</h3>
+          <div class="product-list">
+            @for (product of getProducts(selectedOrder); track product.productID || product.title) {
+              <div class="product-row">
+                <span>{{ product.title || 'Sản phẩm chưa có tên' }}</span>
+                <small>{{ product.quantity || 0 }} sản phẩm · {{ product.price || '—' }}</small>
+              </div>
+            } @empty {
+              <p>Không có thông tin sản phẩm.</p>
+            }
+          </div>
+        </div>
+      </section>
+    </div>
+  }
+</main>

@@ -1,0 +1,41 @@
+<main class="admin-page">
+  <header class="admin-heading">
+    <div>
+      <p class="eyebrow"><i class="bi bi-bar-chart-line"></i> Báo cáo tổng quan</p>
+      <p class="muted">Theo dõi doanh thu, sản phẩm đã bán và tác động môi trường.</p>
+    </div>
+    <div class="admin-heading-mark" aria-hidden="true"><i class="bi bi-graph-up-arrow"></i></div>
+  </header>
+
+  @if (errorMessage) { <p class="message error" role="alert">{{ errorMessage }}</p> }
+  @if (loading) {
+    <div class="state"><i class="bi bi-arrow-repeat spin"></i><strong>Đang tải báo cáo...</strong></div>
+  } @else if (reports) {
+    <section class="report-grid" aria-label="Các chỉ số tổng quan">
+      <article class="report-card revenue">
+        <span class="report-icon"><i class="bi bi-cash-stack"></i></span>
+        <div><span class="report-label">Tổng doanh thu</span><strong>{{ formatNumber(reports.totalRevenue) }}</strong><small>VNĐ</small></div>
+      </article>
+      <article class="report-card orders">
+        <span class="report-icon"><i class="bi bi-receipt"></i></span>
+        <div><span class="report-label">Tổng đơn đã bán</span><strong>{{ formatNumber(reports.totalOrdersSold) }}</strong><small>đơn hàng</small></div>
+      </article>
+      <article class="report-card products">
+        <span class="report-icon"><i class="bi bi-box-seam"></i></span>
+        <div><span class="report-label">Tổng sản phẩm đã bán</span><strong>{{ formatNumber(reports.totalProductsSold) }}</strong><small>sản phẩm</small></div>
+      </article>
+      <article class="report-card coins">
+        <span class="report-icon"><i class="bi bi-coin"></i></span>
+        <div><span class="report-label">Tổng GreenCoin</span><strong>{{ formatNumber(reports.totalGreenCoins) }}</strong><small>GreenCoin</small></div>
+      </article>
+      <article class="report-card recycled">
+        <span class="report-icon"><i class="bi bi-recycle"></i></span>
+        <div><span class="report-label">Tổng rác thải đã xử lý</span><strong>{{ formatNumber(reports.totalEWasteRecycledKg, 2) }}</strong><small>kg</small></div>
+      </article>
+      <article class="report-card co2">
+        <span class="report-icon"><i class="bi bi-cloud-check"></i></span>
+        <div><span class="report-label">Tổng CO2 đã giảm</span><strong>{{ formatNumber(reports.totalCo2Reduced, 2) }}</strong><small>1 kg tái chế = 100 kg CO2</small></div>
+      </article>
+    </section>
+  }
+</main>

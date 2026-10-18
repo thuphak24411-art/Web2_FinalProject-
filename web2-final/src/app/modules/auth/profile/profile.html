@@ -1,0 +1,57 @@
+<main class="profile-page" *ngIf="user as account">
+  <section class="profile-card">
+    <header class="profile-heading">
+      <div class="avatar">{{ (account.fullName || account.userName || 'U').charAt(0).toUpperCase() }}</div>
+      <div>
+        <p class="eyebrow">HỒ SƠ TÀI KHOẢN</p>
+        <h1>{{ account.fullName || account.userName }}</h1>
+        <p>{{ account.userID }} · {{ account.role === 'SELLER' ? 'Cửa hàng' : account.role === 'ADMIN' ? 'Quản trị viên' : 'Người mua' }}</p>
+      </div>
+    </header>
+
+    <section class="profile-section">
+      <h2><i class="bi bi-person-vcard"></i> Thông tin cá nhân</h2>
+      <div class="profile-grid">
+        <label>Username<input [value]="account.userName" readonly></label>
+        <label>Họ và tên<input [(ngModel)]="fullName" autocomplete="name"></label>
+        <label>Email<input [(ngModel)]="email" type="email" autocomplete="email"></label>
+        <label>Số điện thoại<input [(ngModel)]="phoneNumber" type="tel" autocomplete="tel"></label>
+      </div>
+    </section>
+
+    @if (account.role === 'SELLER') {
+      <section class="profile-section">
+        <h2><i class="bi bi-shop"></i> Thông tin cửa hàng</h2>
+        <div class="profile-grid">
+          <label>Tên doanh nghiệp<input [(ngModel)]="businessName" maxlength="120"></label>
+          <label>Tên shop<input [(ngModel)]="shopName" maxlength="80"></label>
+        </div>
+      </section>
+    }
+
+    <section class="profile-section">
+      <h2><i class="bi bi-geo-alt"></i> Địa chỉ mặc định</h2>
+      <div class="profile-grid">
+        <label>Tỉnh / Thành phố<input [(ngModel)]="province" autocomplete="address-level1"></label>
+        <label>Quận / Huyện<input [(ngModel)]="district" autocomplete="address-level2"></label>
+        <label class="full-width">Số nhà, tên đường<input [(ngModel)]="streetAddress" autocomplete="street-address"></label>
+      </div>
+      <p class="profile-hint">Địa chỉ này được dùng để điền sẵn thông tin nhận hàng khi thanh toán.</p>
+    </section>
+
+    <p class="profile-success" *ngIf="message" role="status">{{ message }}</p>
+    <p class="profile-error" *ngIf="errorMessage" role="alert">{{ errorMessage }}</p>
+
+    <footer class="profile-actions">
+      <span>Trạng thái: {{ account.status }}</span>
+      <div class="profile-buttons">
+        <button type="button" class="save-button" (click)="save()" [disabled]="saving">
+          <i class="bi bi-check2-circle"></i> {{ saving ? 'Đang lưu...' : 'Lưu thay đổi' }}
+        </button>
+        <button type="button" class="logout-button" (click)="logout()">
+          <i class="bi bi-box-arrow-right"></i> Đăng xuất
+        </button>
+      </div>
+    </footer>
+  </section>
+</main>

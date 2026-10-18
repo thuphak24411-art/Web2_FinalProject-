@@ -1,0 +1,28 @@
+<div class="coin-modal" role="dialog" aria-modal="true" aria-labelledby="green-coin-title">
+  <header class="coin-header">
+    <div>
+      <p class="eyebrow"><i class="bi bi-coin"></i> CẬP NHẬT GREENCOIN</p>
+      <h2 id="green-coin-title">Thêm GreenCoin</h2>
+      <p class="description">Quy đổi khối lượng tái chế của {{ getDisplayName() }}.</p>
+    </div>
+    <button type="button" class="close-button" (click)="close()" aria-label="Đóng"><i class="bi bi-x-lg"></i></button>
+  </header>
+
+  @if (errorMessage) { <p class="error-message" role="alert">{{ errorMessage }}</p> }
+
+  <form class="coin-form" (submit)="$event.preventDefault(); submit()">
+    <label for="recycled-kg">Số kg tái chế</label>
+    <div class="amount-field">
+      <i class="bi bi-recycle"></i>
+      <input id="recycled-kg" type="number" min="0.001" step="0.001" [value]="recycledKg || ''" (input)="recycledKg = +$any($event.target).value" required autofocus>
+    </div>
+    <p class="conversion-result"><i class="bi bi-arrow-down"></i> Nhận được: <strong>{{ getCalculatedCoins().toLocaleString('vi-VN') }} GreenCoin</strong> <span> (1 kg = 1.000 coin)</span></p>
+    <p class="current-balance">Số dư hiện tại: <strong>{{ (user?.greenCoins || 0).toLocaleString('vi-VN') }} GreenCoin</strong></p>
+    <div class="form-actions">
+      <button type="button" class="cancel-button" (click)="close()" [disabled]="loading">Hủy</button>
+      <button type="submit" class="submit-button" [disabled]="loading || !recycledKg || recycledKg <= 0">
+        @if (loading) { <i class="bi bi-arrow-repeat spin"></i> Đang cập nhật } @else { <i class="bi bi-plus-circle"></i> Quy đổi và thêm }
+      </button>
+    </div>
+  </form>
+</div>
