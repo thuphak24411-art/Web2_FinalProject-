@@ -32,17 +32,16 @@ Hệ thống quản lý dữ liệu tập trung qua **14 collections** trong cơ
 | 1 | `users` | Lưu trữ toàn bộ tài khoản người dùng (Khách hàng, Người bán, Kỹ thuật viên, Quản trị viên). | `userID` |
 | 2 | `products` | Cây danh mục và thông tin chi tiết các sản phẩm/linh kiện đang được niêm yết. | `CateID`, `Products.id` |
 | 3 | `sellOrders` | Quản lý các đơn hàng mua sắm thiết bị điện tử (Brandnew & Resell). | `orderID` |
-| 4 | `orders` | Quản lý dữ liệu đơn hàng tổng hợp và đối soát giao dịch hệ thống. | `orderId` |
+| 4 | `productRequests` | Quản lý các yêu cầu đăng bán sản phâmt. | `requestId` |
 | 5 | `repairOrders` | Quản lý các đơn yêu cầu dịch vụ sửa chữa thiết bị. | `repairOrderID` |
-| 6 | `recycleOrders` | Quản lý các đơn đăng ký thu gom và tái chế rác thải điện tử. | `recycleOrderID` |
-| 7 | `invoices` | Quản lý thông tin hóa đơn điện tử, thanh toán và chiết khấu. | `invoiceID` |
-| 8 | `greencoins` | Ghi nhận sổ cái lịch sử giao dịch, tích lũy và sử dụng GreenCoins. | `transactionID` |
-| 9 | `carts` | Giỏ hàng của từng người dùng được đồng bộ và lưu trữ trên cơ sở dữ liệu. | `userID` / `cartID` |
-| 10 | `notifications` | Danh sách thông báo gửi đến từng người dùng về đơn hàng, dịch vụ, điểm thưởng. | `notificationID` |
-| 11 | `AI_assessments` | Kết quả phân tích, thẩm định thiết bị, ước tính giá và lượng CO₂ từ AI. | `assessmentID` |
-| 12 | `reviews` | Đánh giá, xếp hạng sao và bình luận của khách hàng về sản phẩm/dịch vụ. | `reviewID` |
-| 13 | `chats` | Quản lý các phòng hội thoại giữa người mua và người bán. | `chatID` |
-| 14 | `messages` | Nội dung chi tiết các tin nhắn trong từng cuộc hội thoại. | `messageID` |
+| 6 | `invoices` | Quản lý thông tin hóa đơn điện tử, thanh toán và chiết khấu. | `invoiceID` |
+| 7 | `greencoins` | Ghi nhận sổ cái lịch sử giao dịch, tích lũy và sử dụng GreenCoins. | `transactionID` |
+| 8 | `carts` | Giỏ hàng của từng người dùng được đồng bộ và lưu trữ trên cơ sở dữ liệu. | `userID` / `cartID` |
+| 9 | `notifications` | Danh sách thông báo gửi đến từng người dùng về đơn hàng, dịch vụ, điểm thưởng. | `notificationID` |
+| 10 | `AI_assessments` | Kết quả phân tích, thẩm định thiết bị, ước tính giá và lượng CO₂ từ AI. | `assessmentID` |
+| 11 | `reviews` | Đánh giá, xếp hạng sao và bình luận của khách hàng về sản phẩm/dịch vụ. | `reviewID` |
+| 12 | `chats` | Quản lý các phòng hội thoại giữa người mua và người bán. | `chatID` |
+| 13 | `messages` | Nội dung chi tiết các tin nhắn trong từng cuộc hội thoại. | `messageID` |
 
 ---
 
@@ -61,6 +60,7 @@ Mở một cửa sổ Terminal, di chuyển vào thư mục backend và chạy l
 
 ```bash
 cd database-mongodb
+npm install
 npm start
 ```
 
