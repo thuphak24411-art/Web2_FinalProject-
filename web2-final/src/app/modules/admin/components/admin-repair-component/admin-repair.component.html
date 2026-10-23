@@ -19,7 +19,7 @@
     <div class="request-filters">
       <label class="search-field">
         <i class="bi bi-search" aria-hidden="true"></i>
-        <input type="search" [(ngModel)]="searchTerm" placeholder="Tìm theo mã repairOrderID" aria-label="Tìm theo mã repairOrderID">
+        <input type="search" [(ngModel)]="searchTerm" placeholder="Tìm theo mã đơn sửa chữa" aria-label="Tìm theo mã repairOrderID">
       </label>
       <label class="status-filter">
         <span>Lọc trạng thái</span>
@@ -42,12 +42,12 @@
               <div class="device-heading">
                 <span class="device-icon"><i class="bi bi-laptop"></i></span>
                 <div>
-                  <h3>{{ request.deviceName || 'Thiết bị chưa khai báo' }}</h3>
+                  <h3>{{ getDeviceName(request) }}</h3>
                   <span class="device-type">{{ request.repairOrderID || 'Chưa có mã repair order' }}</span>
                 </div>
               </div>
             </div>
-            <p class="issue-description">{{ request.issueDescription || 'Chưa có mô tả lỗi.' }}</p>
+            <p class="issue-description">{{ getIssueDescription(request) }}</p>
             <div class="customer">
               <span><i class="bi bi-person"></i>{{ request.customer?.fullName || request.customerID }}</span>
               @if (request.customer?.phoneNumber || request.contactPhone) {
@@ -70,7 +70,7 @@
               <button type="button" class="expert-route-button" (click)="requestStatusConfirmation(request, 'Đang sửa chữa')" [disabled]="updatingStatusID === request.repairOrderID">
                 <i class="bi bi-check2-circle"></i> Xác nhận
               </button>
-              <button type="button" class="expert-route-button" (click)="requestStatusConfirmation(request, 'Đã hủy')" [disabled]="updatingStatusID === request.repairOrderID">
+              <button type="button" class="delete-button" (click)="requestStatusConfirmation(request, 'Đã hủy')" [disabled]="updatingStatusID === request.repairOrderID">
                 <i class="bi bi-x-circle"></i> Từ chối
               </button>
             }
@@ -94,7 +94,7 @@
     <div class="modal-backdrop" role="presentation" (click)="closeRequest()">
       <section class="details-modal" role="dialog" aria-modal="true" aria-labelledby="request-detail-title" (click)="$event.stopPropagation()">
         <header class="modal-header">
-          <div><p class="eyebrow">CHI TIẾT YÊU CẦU</p><h2 id="request-detail-title">{{ selectedRequest.deviceName }}</h2></div>
+          <div><p class="eyebrow">CHI TIẾT YÊU CẦU</p><h2 id="request-detail-title">{{ getDeviceName(selectedRequest) }}</h2></div>
           <button type="button" class="modal-close" (click)="closeRequest()" aria-label="Đóng"><i class="bi bi-x-lg"></i></button>
         </header>
         <div class="modal-body">
@@ -107,8 +107,8 @@
             <div><dt>Username</dt><dd>{{ selectedRequest.customer?.userName || selectedRequest.customerID || '—' }}</dd></div>
             <div><dt>Khách hàng</dt><dd>{{ selectedRequest.customer?.fullName || selectedRequest.customerID || '—' }}</dd></div>
             <div><dt>Liên hệ</dt><dd>{{ selectedRequest.customer?.phoneNumber || selectedRequest.contactPhone }}</dd></div>
-            <div><dt>Tên sản phẩm</dt><dd>{{ getLatestProductInfo(selectedRequest)?.productName || '—' }}</dd></div>
-            <div><dt>Tình trạng sản phẩm</dt><dd>{{ getLatestProductInfo(selectedRequest)?.condition || '—' }}</dd></div>
+            <div><dt>Tên sản phẩm</dt><dd>{{ getLatestProductName(selectedRequest) }}</dd></div>
+            <div><dt>Tình trạng sản phẩm</dt><dd>{{ getProductCondition(selectedRequest) }}</dd></div>
           </dl>
           @if (selectedRequest.assessment?.images?.length) {
             <div class="request-photos large">@for (photo of selectedRequest.assessment?.images; track photo.preview) { <img [src]="photo.preview" [alt]="photo.area"> }</div>

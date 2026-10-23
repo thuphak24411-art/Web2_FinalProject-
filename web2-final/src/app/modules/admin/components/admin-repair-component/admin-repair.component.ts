@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../../../../services/auth.service';
 import { RepairService } from '../../../repair/repair.service';
-import type { RepairRequest } from '../../../../classes/admin';
+import type { AiAssessment, RepairRequest } from '../../../../classes/admin';
 
 @Component({
   selector: 'app-admin-repair',
@@ -159,8 +159,53 @@ export class AdminRepairComponent implements OnInit, OnDestroy {
     return 'Phương án cũ không còn hỗ trợ';
   }
 
+  getDeviceName(request: RepairRequest): string {
+    return this.firstNonEmpty(
+      request.deviceName,
+      this.getLatestAiAssessment(request)?.productInfo?.productName
+    ) || 'Thiết bị chưa khai báo';
+  }
+
+  getIssueDescription(request: RepairRequest): string {
+    const assessment = this.getLatestAiAssessment(request);
+    return this.firstNonEmpty(
+      request.issueDescription,
+      assessment?.productInfo?.condition,
+      assessment?.summary,
+      assessment?.recommendation
+    ) || 'Chưa có mô tả lỗi.';
+  }
+
+  getLatestProductName(request: RepairRequest): string {
+    return this.firstNonEmpty(
+      this.getLatestProductInfo(request)?.productName,
+      request.deviceName,
+      this.getLatestAiAssessment(request)?.summary
+    ) || '—';
+  }
+
+  getProductCondition(request: RepairRequest): string {
+    const assessment = this.getLatestAiAssessment(request);
+    return this.firstNonEmpty(
+      this.getLatestProductInfo(request)?.condition,
+      assessment?.summary,
+      assessment?.recommendation,
+      request.issueDescription
+    ) || '—';
+  }
+
+  private getLatestAiAssessment(request: RepairRequest): AiAssessment | undefined {
+    return request.aiAssessmentHistory?.find(assessment =>
+      assessment.source === 'gemini' || assessment.source === 'cache'
+    );
+  }
+
   getLatestProductInfo(request: RepairRequest): NonNullable<RepairRequest['aiAssessmentHistory']>[number]['productInfo'] | undefined {
-    return request.aiAssessmentHistory?.[0]?.productInfo;
+    return this.getLatestAiAssessment(request)?.productInfo;
+  }
+
+  private firstNonEmpty(...values: Array<string | undefined | null>): string {
+    return values.find(value => Boolean(value?.trim()))?.trim() || '';
   }
 
   private normalizeStatus(status: string | undefined): string {
