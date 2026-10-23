@@ -1,0 +1,105 @@
+<main class="admin-page">
+  <header class="admin-heading">
+    <div>
+      <p class="eyebrow"><i class="bi bi-file-earmark-check"></i> Quản lý yêu cầu sản phẩm</p>
+      <p class="muted">Theo dõi và xử lý các yêu cầu đăng sản phẩm.</p>
+    </div>
+    <div class="admin-heading-mark" aria-hidden="true"><i class="bi bi-clipboard-check"></i></div>
+  </header>
+
+  @if (errorMessage) { <p class="message error" role="alert">{{ errorMessage }}</p> }
+  @if (successMessage) { <p class="message success" role="status">{{ successMessage }}</p> }
+
+  <section class="requests-section" aria-labelledby="product-requests-title">
+    <div class="section-heading">
+      <div>
+        <h2 id="product-requests-title">Tất cả yêu cầu sản phẩm</h2>
+        <p>{{ filteredRequests.length }} yêu cầu hiển thị / {{ requests.length }} yêu cầu</p>
+      </div>
+      <div class="section-tools">
+        <label class="search-box">
+          <i class="bi bi-search"></i>
+          <input type="search" [(ngModel)]="searchTerm" placeholder="Tìm theo requestId" aria-label="Tìm theo requestId">
+        </label>
+        <select [(ngModel)]="selectedStatus" aria-label="Lọc theo trạng thái">
+          <option value="">Tất cả trạng thái</option>
+          @for (status of statuses; track status) { <option [value]="status">{{ status }}</option> }
+        </select>
+        <select [(ngModel)]="selectedRole" aria-label="Lọc theo vai trò">
+          <option value="">Tất cả vai trò</option>
+          @for (role of userRoles; track role) { <option [value]="role">{{ role }}</option> }
+        </select>
+      </div>
+    </div>
+
+    @if (loading) {
+      <div class="state"><i class="bi bi-arrow-repeat spin"></i><strong>Đang tải yêu cầu sản phẩm...</strong></div>
+    } @else if (!filteredRequests.length) {
+      <div class="state"><i class="bi bi-inbox"></i><strong>Chưa tìm thấy yêu cầu</strong><span>Thử thay đổi requestId hoặc bộ lọc.</span></div>
+    } @else {
+      <div class="request-list">
+        @for (request of filteredRequests; track request._id || getRequestId(request)) {
+          <article class="request-card">
+            <div class="request-icon"><i class="bi bi-box-seam"></i></div>
+            <div class="request-info">
+              <h3>{{ request.productName || request.title || 'Sản phẩm chưa có tên' }}</h3>
+              <p>{{ getRequestId(request) || 'Chưa có requestId' }} · {{ getUserId(request) || 'Chưa có userId' }}</p>
+              <span>{{ formatDate(request.createdAt) }}</span>
+            </div>
+            <span class="role-badge">{{ request.userRole || 'Chưa rõ role' }}</span>
+            <div class="request-actions">
+              <span [class]="'status-badge ' + (request.status === 'Đã duyệt' ? 'approved' : request.status === 'Từ chối' ? 'rejected' : 'pending')">{{ request.status || 'Chờ duyệt' }}</span>
+              <button type="button" class="details-button" (click)="openDetails(request)">
+                <i class="bi bi-eye"></i> Xem chi tiết
+              </button>
+              @if (request.status === 'Chờ duyệt') {
+                <button type="button" class="approve-button" (click)="updateStatus(request, 'Đã duyệt')" [disabled]="updatingRequestId === getRequestId(request)">
+                  <i class="bi bi-check2"></i> Duyệt
+                </button>
+                <button type="button" class="reject-button" (click)="updateStatus(request, 'Từ chối')" [disabled]="updatingRequestId === getRequestId(request)">
+                  <i class="bi bi-x"></i> Từ chối
+                </button>
+              }
+            </div>
+          </article>
+        }
+      </div>
+    }
+  </section>
+
+  @if (selectedRequest) {
+    <div class="modal-backdrop" (click)="closeDetails()">
+      <section class="details-modal" role="dialog" aria-modal="true" aria-labelledby="request-detail-title" (click)="$event.stopPropagation()">
+        <header class="modal-header">
+          <div>
+            <p class="eyebrow">CHI TIẾT YÊU CẦU SẢN PHẨM</p>
+            <h2 id="request-detail-title">{{ selectedRequest.title || selectedRequest.productName || 'Sản phẩm chưa có tên' }}</h2>
+          </div>
+          <button type="button" class="modal-close" (click)="closeDetails()" aria-label="Đóng"><i class="bi bi-x-lg"></i></button>
+        </header>
+        <div class="modal-body">
+          @if (selectedRequest.img) {
+            <img class="request-image" [src]="selectedRequest.img" [alt]="selectedRequest.title || 'Ảnh sản phẩm'">
+          }
+          <dl class="detail-list">
+            <div><dt>requestId</dt><dd>{{ getRequestId(selectedRequest) || '—' }}</dd></div>
+            <div><dt>userName</dt><dd>{{ selectedRequest.userName || '—' }}</dd></div>
+            <div><dt>userId</dt><dd>{{ getUserId(selectedRequest) || '—' }}</dd></div>
+            <div><dt>Số điện thoại</dt><dd>{{ selectedRequest.userPhone || '—' }}</dd></div>
+            <div><dt>title</dt><dd>{{ selectedRequest.title || selectedRequest.productName || '—' }}</dd></div>
+            <div><dt>condition</dt><dd>{{ selectedRequest.condition || '—' }}</dd></div>
+            <div><dt>price</dt><dd>{{ selectedRequest.price ?? '—' }}</dd></div>
+            <div><dt>cateID</dt><dd>{{ selectedRequest.cateID || '—' }}</dd></div>
+            <div><dt>greenCoins</dt><dd>{{ selectedRequest.greenCoins ?? 0 }}</dd></div>
+            <div><dt>status</dt><dd>{{ selectedRequest.status || 'Chờ duyệt' }}</dd></div>
+            <div><dt>createdAt</dt><dd>{{ formatDate(selectedRequest.createdAt) }}</dd></div>
+          </dl>
+          <div class="description-block">
+            <strong>description</strong>
+            <p>{{ selectedRequest.description || '—' }}</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  }
+</main>

@@ -1,0 +1,94 @@
+<main class="admin-page">
+  <header class="admin-heading">
+    <div>
+      <p class="eyebrow"><i class="bi bi-people"></i> Quản lý tài khoản</p>
+      <p class="muted">Theo dõi thông tin tài khoản người dùng.</p>
+    </div>
+    <div class="admin-heading-mark" aria-hidden="true"><i class="bi bi-person-vcard"></i></div>
+  </header>
+
+  @if (errorMessage) { <p class="message error" role="alert">{{ errorMessage }}</p> }
+  @if (successMessage) { <p class="message success" role="status">{{ successMessage }}</p> }
+
+  <section class="accounts-section" aria-labelledby="accounts-title">
+    <div class="section-heading">
+      <div>
+        <h2 id="accounts-title">Tất cả tài khoản</h2>
+        <p>{{ filteredUsers.length }} tài khoản hiển thị / {{ users.length }} tài khoản</p>
+      </div>
+      <div class="section-tools">
+        <label class="search-box">
+          <i class="bi bi-search"></i>
+          <input type="search" [(ngModel)]="searchTerm" placeholder="Username hoặc Fullname" aria-label="Tìm kiếm tài khoản">
+        </label>
+      </div>
+    </div>
+
+    @if (loading) {
+      <div class="state"><i class="bi bi-arrow-repeat spin"></i><strong>Đang tải danh sách tài khoản...</strong></div>
+    } @else if (!filteredUsers.length) {
+      <div class="state"><i class="bi bi-person-x"></i><strong>Chưa tìm thấy tài khoản</strong><span>Thử tìm bằng username hoặc fullname khác.</span></div>
+    } @else {
+      <div class="account-list">
+        @for (user of filteredUsers; track user.userID || user._id) {
+          <article class="account-card">
+            <div class="avatar">
+              @if (user.avatar) { <img [src]="user.avatar" [alt]="getDisplayName(user)"> }
+              @else { {{ getInitials(user) }} }
+            </div>
+            <div class="account-info">
+              <h3>{{ getDisplayName(user) }}</h3>
+              <p>{{ user.email || 'Chưa cập nhật email' }}</p>
+              <span class="account-id">{{ user.userID || 'Chưa có mã người dùng' }}</span>
+            </div>
+            <div class="account-role">
+              <span class="role">{{ user.role || 'CUSTOMER' }}</span>
+              <span class="status" [class.inactive]="user.status === 'INACTIVE'">{{ user.status === 'INACTIVE' ? 'Ngừng hoạt động' : 'Đang hoạt động' }}</span>
+            </div>
+            <div class="coin-balance"><i class="bi bi-coin"></i><strong>{{ formatNumber(user.greenCoins) }}</strong><small>GreenCoin</small></div>
+            <div class="account-actions">
+              <button type="button" class="details-button" (click)="openDetails(user)"><i class="bi bi-eye"></i> Xem chi tiết</button>
+              @if (user.role === 'CUSTOMER') {
+                <button type="button" class="coin-button" (click)="openGreenCoinForm(user)"><i class="bi bi-plus-circle"></i> Thêm GreenCoin</button>
+              }
+            </div>
+          </article>
+        }
+      </div>
+    }
+  </section>
+
+  @if (selectedUser) {
+    <div class="modal-backdrop" (click)="closeDetails()">
+      <section class="details-modal" role="dialog" aria-modal="true" aria-labelledby="account-detail-title" (click)="$event.stopPropagation()">
+        <header class="modal-header">
+          <div><p class="eyebrow">CHI TIẾT TÀI KHOẢN</p><h2 id="account-detail-title">{{ getDisplayName(selectedUser) }}</h2></div>
+          <button type="button" class="modal-close" (click)="closeDetails()" aria-label="Đóng"><i class="bi bi-x-lg"></i></button>
+        </header>
+        <div class="modal-body">
+          <dl class="detail-list">
+            <div><dt>Mã người dùng</dt><dd>{{ selectedUser.userID || '—' }}</dd></div>
+            <div><dt>Tên đăng nhập</dt><dd>{{ selectedUser.userName || '—' }}</dd></div>
+            <div><dt>Email</dt><dd>{{ selectedUser.email || '—' }}</dd></div>
+            <div><dt>Số điện thoại</dt><dd>{{ selectedUser.phoneNumber || '—' }}</dd></div>
+            <div><dt>Địa chỉ</dt><dd>{{ getAddress(selectedUser) }}</dd></div>
+            <div><dt>Vai trò</dt><dd>{{ selectedUser.role || 'CUSTOMER' }}</dd></div>
+            <div><dt>GreenCoin</dt><dd class="coin-value"><i class="bi bi-coin"></i> {{ formatNumber(selectedUser.greenCoins) }}</dd></div>
+            <div><dt>Đã tái chế</dt><dd>{{ (selectedUser.eWasteRecycledKg || 0).toLocaleString('vi-VN') }} kg</dd></div>
+            <div><dt>Ngày tham gia</dt><dd>{{ formatDate(selectedUser.joinDate) }}</dd></div>
+          </dl>
+        </div>
+      </section>
+    </div>
+  }
+  @if (greenCoinUser) {
+    <div class="modal-backdrop" (click)="closeGreenCoinForm()">
+      <app-admin-greencoin-update
+        [user]="greenCoinUser"
+        (updated)="onGreenCoinsUpdated($any($event))"
+        (cancelled)="closeGreenCoinForm()"
+        (click)="$event.stopPropagation()">
+      </app-admin-greencoin-update>
+    </div>
+  }
+</main>

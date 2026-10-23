@@ -1,0 +1,146 @@
+<div class="max-w-[800px] mx-auto px-4 py-8">
+  <div class="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-gray-100">
+    
+    <div class="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
+      <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl font-bold">
+        <i class="bi bi-plus-circle-fill"></i>
+      </div>
+      <div>
+        <h1 class="text-xl font-bold text-gray-900">Đăng Bán Thiết Bị Điện Tử Cũ</h1>
+        <p class="text-xs text-gray-500">Tạo yêu cầu đăng bán thiết bị trên sàn thương mại điện tử ECOCycle</p>
+      </div>
+    </div>
+
+    <!-- Banner chính sách Green Coin theo Role -->
+    @if (currentUser?.role === 'SELLER') {
+      <div class="mb-6 p-4 rounded-2xl bg-amber-50/80 border border-amber-200/80 text-amber-900 text-xs flex items-start gap-2.5">
+        <i class="bi bi-info-circle-fill text-amber-600 text-sm mt-0.5 flex-shrink-0"></i>
+        <div class="leading-relaxed">
+          <p class="font-bold">Chính sách dành cho Người bán (SELLER):</p>
+          <p class="text-amber-800 mt-0.5">Tài khoản Người bán đăng sản phẩm kinh doanh thương mại sẽ không áp dụng tích lũy Green Coin. Sản phẩm sau khi được Admin phê duyệt sẽ hiển thị trực tiếp trên sàn Mua sắm.</p>
+        </div>
+      </div>
+    } @else {
+      <div class="mb-6 p-4 rounded-2xl bg-emerald-50/80 border border-emerald-200/80 text-emerald-900 text-xs flex items-start gap-2.5">
+        <i class="bi bi-coin text-amber-500 text-base mt-0.5 flex-shrink-0"></i>
+        <div class="leading-relaxed">
+          <p class="font-bold">Ưu đãi Tái chế Xanh dành cho Khách hàng:</p>
+          <p class="text-emerald-800 mt-0.5">Tham gia bảo vệ môi trường! Bạn sẽ nhận ngay <b class="text-amber-700 font-extrabold">+1.000 Green Coin</b> sau khi sản phẩm tái chế của bạn được Admin duyệt lên sàn.</p>
+        </div>
+      </div>
+    }
+
+    @if (errorMessage) {
+      <div class="mb-6 p-3.5 rounded-2xl bg-red-50 border border-red-200 text-red-700 text-xs font-semibold flex items-center gap-2">
+        <i class="bi bi-exclamation-circle-fill text-red-500"></i>
+        <span>{{ errorMessage }}</span>
+      </div>
+    }
+
+    <form (ngSubmit)="onSubmit()" class="space-y-5">
+      <div>
+        <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Tên sản phẩm thiết bị *</label>
+        <input 
+          type="text" 
+          [(ngModel)]="title" 
+          name="title" 
+          required 
+          placeholder="Ví dụ: Laptop Dell XPS 13 9305 Core i5 8GB/256GB"
+          class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm focus:outline-none focus:border-emerald-500 focus:bg-white"
+        />
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Danh mục thiết bị *</label>
+          <select 
+            [(ngModel)]="cateID" 
+            name="cateID"
+            class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm focus:outline-none focus:border-emerald-500 focus:bg-white"
+          >
+            <option value="c1">Máy tính bảng</option>
+            <option value="c2">Điện thoại</option>
+            <option value="c3">Laptop</option>
+            <option value="c4">Linh kiện (RAM/SSD/CPU/GPU)</option>
+            <option value="c5">Phụ kiện điện tử</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Độ mới / Tình trạng máy *</label>
+          <select 
+            [(ngModel)]="condition" 
+            name="condition"
+            class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm focus:outline-none focus:border-emerald-500 focus:bg-white"
+          >
+            <option value="Mới 99%">Mới 99% (Như mới)</option>
+            <option value="Mới 95%">Mới 95% (Rất đẹp)</option>
+            <option value="Mới 90%">Mới 90% (Khá mới)</option>
+            <option value="Đã qua sử dụng">Đã qua sử dụng</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Giá mong muốn bán (VNĐ) *</label>
+          <input 
+            type="text" 
+            [(ngModel)]="fromPrice" 
+            name="fromPrice" 
+            required 
+            placeholder="Ví dụ: 5.500.000₫"
+            class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm focus:outline-none focus:border-emerald-500 focus:bg-white"
+          />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Đường dẫn ảnh sản phẩm (URL)</label>
+          <input 
+            type="text" 
+            [(ngModel)]="img" 
+            name="img" 
+            placeholder="https://... (để trống nếu dùng ảnh mặc định)"
+            class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm focus:outline-none focus:border-emerald-500 focus:bg-white"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Mô tả chi tiết tình trạng thiết bị</label>
+        <textarea 
+          rows="4" 
+          [(ngModel)]="description" 
+          name="description" 
+          placeholder="Nêu rõ tình trạng pin, vết xước, phụ kiện đi kèm..."
+          class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-sm focus:outline-none focus:border-emerald-500 focus:bg-white"
+        ></textarea>
+      </div>
+
+      <div class="flex items-center justify-end gap-3 pt-4 border-t border-gray-100">
+        <button 
+          type="button" 
+          (click)="cancel()"
+          [disabled]="isSubmitting"
+          class="px-6 py-3 rounded-xl border border-gray-200 text-sm font-semibold text-gray-600 hover:bg-gray-50 transition-all disabled:opacity-50"
+        >
+          Hủy bỏ
+        </button>
+        <button 
+          type="submit" 
+          [disabled]="isSubmitting"
+          class="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold shadow-md shadow-emerald-200 transition-all flex items-center gap-2 disabled:opacity-50"
+        >
+          @if (isSubmitting) {
+            <div class="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+            <span>Đang gửi yêu cầu...</span>
+          } @else {
+            <i class="bi bi-cloud-arrow-up-fill"></i>
+            <span>Đăng Bán Ngay</span>
+          }
+        </button>
+      </div>
+    </form>
+
+  </div>
+</div>
