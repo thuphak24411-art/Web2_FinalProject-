@@ -1,0 +1,144 @@
+
+<section class="chat-page">
+
+  <div class="chat-heading">
+    <h1>Tin nhắn EcoCycle</h1>
+    <p>Trao đổi trực tiếp với người mua và người bán.</p>
+  </div>
+
+  @if (errorMessage) {
+    <div class="chat-error">
+      {{ errorMessage }}
+    </div>
+  }
+
+  @if (authService.token) {
+
+    <div class="chat-layout">
+
+      <!-- DANH SÁCH CUỘC TRÒ CHUYỆN -->
+      <aside class="chat-sidebar">
+
+        <h2>Cuộc trò chuyện</h2>
+        <div class="conversation-search">
+        <span class="search-icon">⌕</span>
+
+        <input
+            type="search"
+            name="conversationSearch"
+            [(ngModel)]="conversationSearch"
+            placeholder="Tìm cuộc trò chuyện..."
+            aria-label="Tìm cuộc trò chuyện"
+        />
+        </div>
+        @if (loading && conversations.length === 0) {
+          <p class="chat-empty">Đang tải...</p>
+        }
+
+        @for (conversation of filteredConversations; track conversation._id) {
+          <button
+            type="button"
+            class="conversation-item"
+            [class.active]="selectedConversation?._id === conversation._id"
+            (click)="selectConversation(conversation)"
+          >
+            <strong>
+              {{ getOtherUserID(conversation) }}
+            </strong>
+
+            <span>
+              {{ conversation.lastMessage || 'Bắt đầu trò chuyện' }}
+            </span>
+          </button>
+
+        } @empty {
+
+          @if (!loading) {
+            <p class="chat-empty">
+              Bạn chưa có cuộc trò chuyện nào.
+            </p>
+          }
+
+        }
+
+      </aside>
+
+      <!-- KHUNG CHAT -->
+      <div class="chat-main">
+
+        @if (selectedConversation) {
+
+          <div class="chat-main-header">
+            <strong>
+              {{ getOtherUserID(selectedConversation) }}
+            </strong>
+          </div>
+
+          <!-- NỘI DUNG TIN NHẮN -->
+          <div class="chat-messages">
+
+            @for (message of messages; track message._id) {
+
+              <div
+                class="chat-message"
+                [class.mine]="isMyMessage(message)"
+              >
+
+                <div class="chat-bubble">
+                  {{ message.content }}
+                </div>
+
+                <small>
+                  {{ message.createdAt | date:'HH:mm dd/MM/yyyy' }}
+                </small>
+
+              </div>
+
+            } @empty {
+
+              <p class="chat-empty">
+                Chưa có tin nhắn. Hãy bắt đầu cuộc trò chuyện.
+              </p>
+
+            }
+
+          </div>
+
+          <!-- NHẬP VÀ GỬI TIN NHẮN -->
+          <form
+            class="chat-compose"
+            (ngSubmit)="sendMessage()"
+          >
+
+            <input
+              type="text"
+              name="message"
+              [(ngModel)]="messageInput"
+              maxlength="2000"
+              placeholder="Nhập tin nhắn..."
+            />
+
+            <button
+              type="submit"
+              [disabled]="sending || !messageInput.trim()"
+            >
+              {{ sending ? 'Đang gửi...' : 'Gửi' }}
+            </button>
+
+          </form>
+
+        } @else {
+
+          <div class="chat-placeholder">
+            Chọn một cuộc trò chuyện để bắt đầu nhắn tin.
+          </div>
+
+        }
+
+      </div>
+
+    </div>
+
+  }
+
+</section>

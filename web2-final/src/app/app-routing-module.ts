@@ -17,6 +17,8 @@ import { AdminDelivery } from './modules/admin/components/admin-delivery/admin-d
 import { AdminReports } from './modules/admin/components/admin-reports/admin-reports';
 import { AdminPostManagement } from './modules/admin/components/admin-post-management/admin-post-management';
 import { AdminAccounts } from './modules/admin/components/admin-accounts/admin-accounts';
+import { EnvironmentDashboard } from './modules/environment/components/environment-dashboard/environment-dashboard';
+import { ChatPageComponent } from './modules/chat/components/chat-page/chat-page';
 
 const routes: Routes = [
   { path: '', redirectTo: 'mua-hang', pathMatch: 'full' },
@@ -31,7 +33,9 @@ const routes: Routes = [
   { path: 'register', component: Registercomponent },
   { path: 'tai-khoan', component: ProfileComponent },
   { path: 'sua-chua', component: RepairComponent },
-  {path: 'admin',component: ManagementDashboard,
+  { path: 'moi-truong', component: EnvironmentDashboard },
+  { path: 'tin-nhan', component: ChatPageComponent },
+  {path: 'admin', component: ManagementDashboard,
     children: [
       { path: '', redirectTo: 'quan-ly-tai-khoan', pathMatch: 'full' },
       { path: 'quan-ly-tai-khoan', component: AdminAccounts },

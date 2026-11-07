@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../../services/product';
 import { CartService } from '../../../order/services/cart';
 import { AuthService } from '../../../../services/auth.service';
+import { ChatService } from '../../../chat/services/chat-service';
 import { ToastService } from '../../../../services/toast';
 import { Product } from '../../../../classes/product';
 import { User } from '../../../../classes/user';
@@ -29,6 +30,7 @@ export class ProductDetail implements OnInit {
     private cartService: CartService,
     private authService: AuthService,
     private toastService: ToastService,
+    private chatService: ChatService,
     private cdr: ChangeDetectorRef
   ) {}
 
@@ -147,6 +149,73 @@ export class ProductDetail implements OnInit {
       this.router.navigate(['/thanh-toan']);
     }
   }
+
+  contactSeller(): void {
+    if (!this.authService.isLoggedIn) {
+      this.toastService.showToast(
+        'Vui lòng đăng nhập để nhắn tin với người bán!',
+        'warning',
+        'Cảnh báo'
+      );
+
+      this.router.navigate(['/login'], {
+        queryParams: { returnUrl: this.router.url }
+      });
+      return;
+    }
+
+    if (!this.product) {
+      this.toastService.showToast(
+        'Không tìm thấy thông tin sản phẩm!',
+        'warning',
+        'Cảnh báo'
+      );
+      return;
+    }
+
+    const sellerID = String(this.product.sellerid || '').trim();
+    const productID = String(this.product.id || '').trim();
+
+    if (!sellerID || !productID) {
+      this.toastService.showToast(
+        'Sản phẩm chưa có đủ thông tin để liên hệ người bán.',
+        'warning',
+        'Cảnh báo'
+      );
+      return;
+    }
+
+    const myID = String(
+      (this.authService.currentUser as any)?.userID || ''
+    );
+
+    if (sellerID === myID) {
+      this.toastService.showToast(
+        'Bạn không thể nhắn tin cho chính mình!',
+        'warning',
+        'Cảnh báo'
+      );
+      return;
+    }
+
+    this.chatService.createConversation(sellerID, productID).subscribe({
+      next: (conversation) => {
+        this.router.navigate(['/tin-nhan'], {
+          queryParams: { conversationID: conversation._id }
+        });
+      },
+      error: (error) => {
+        console.error('Lỗi tạo cuộc trò chuyện:', error);
+
+        this.toastService.showToast(
+          'Không thể mở cuộc trò chuyện. Vui lòng thử lại!',
+          'warning',
+          'Cảnh báo'
+        );
+      }
+    });
+  }
+
 
   onImageError(event: Event): void {
     const image = event.target as HTMLImageElement;

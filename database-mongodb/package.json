@@ -12,7 +12,8 @@
     "jsonwebtoken": "^9.0.3",
     "mongoclient": "^1.0.3",
     "mongodb": "^7.7.0",
-    "mongoose": "^9.10.4"
+    "mongoose": "^9.10.4",
+    "socket.io": "^4.8.4"
   },
   "devDependencies": {
     "morgan": "^1.12.1",

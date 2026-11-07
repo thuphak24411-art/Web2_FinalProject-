@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit, HostListener, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ProductService } from '../../modules/marketplace/services/product';
@@ -17,8 +17,8 @@ import type { NavItem } from '../../classes/admin';
 export class HeaderComponent implements OnInit {
   navItems = signal<NavItem[]>([
     { id: 'sua-chua', label: 'Sửa chữa', href: '/sua-chua' },
-    { id: 'tai-che', label: 'Sản phẩm', href: '/tai-che' },
-    { id: 've-chung-toi', label: 'Về chúng tôi', href: '/ve-chung-toi' }
+    { id: 'mua-hang', label: 'Sản phẩm', href: '/mua-hang' },
+    { id: 'moi-truong', label: 'Môi trường', href: '/moi-truong' }
   ]);
 
   searchTerm = signal<string>('');
@@ -91,6 +91,9 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu(): void {
     this.isMenuOpen.update(v => !v);
+  }
+  closeMenu(): void {
+    this.isMenuOpen.set(false);
   }
 
   toggleNotificationDropdown(): void {
@@ -224,5 +227,31 @@ export class HeaderComponent implements OnInit {
     this.authService.logout();
     this.isUserDropdownOpen.set(false);
     this.router.navigate(['/login']);
+  }
+
+  closeIconDropdowns(): void {
+    this.isNotificationDropdownOpen.set(false);
+    this.isUserDropdownOpen.set(false);
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent): void {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+
+    // Giữ dropdown khi bấm nút kích hoạt hoặc thao tác trong chính dropdown.
+    // Bấm vào bất kỳ vùng nào khác (kể cả khoảng trống Header) sẽ đóng.
+    if (!target.closest('[data-header-popup]')) {
+      this.closeIconDropdowns();
+    }
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscape(): void {
+    this.closeIconDropdowns();
+  }
+
+  isIconRouteActive(path: string): boolean {
+    return this.router.url.split('?')[0].split('#')[0] === path;
   }
 }

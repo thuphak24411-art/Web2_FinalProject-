@@ -1,13 +1,20 @@
 .site-header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 2px;
+  left: 2px;
+  right: 2px;
   z-index: 1000;
-  width: 100%;
+
+  width: auto;
   background: #ffffff;
-  border-bottom: 1px solid rgba(36, 31, 26, 0.10);
-  box-shadow: 0 4px 20px rgba(36, 31, 26, 0.06);
+
+  border: 1px solid rgba(0, 155, 119, 0.12);
+  border-radius: 24px;
+
+  box-shadow:
+    0 8px 24px rgba(36, 31, 26, 0.08),
+    0 16px 40px rgba(0, 155, 119, 0.12);
+
   padding: 0 var(--space-4);
 }
 
@@ -51,9 +58,11 @@
   font-weight: 800;
   font-size: 24px;
   letter-spacing: -0.01em;
-  color: #466813;
+  color: #009B77;
+  transition: color .2s ease, text-shadow .2s ease;
 }
 
+.logo:hover .logo-text { color: #007A60; }
 
 .main-nav {
   display: flex;
@@ -62,26 +71,57 @@
 }
 
 .main-nav a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
   font-weight: 600;
   color: #6B6459;
-  padding: 8px 16px;
-  border-radius: var(--radius-pill);
-  transition: all var(--transition-fast);
+  padding: 9px 17px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill, 999px);
+  background: transparent;
   text-decoration: none;
   white-space: nowrap;
+  transition: background .25s ease, color .25s ease,
+              box-shadow .25s ease, transform .25s ease, border-color .25s ease;
 }
 
-.main-nav a:hover {
-  color: #33500E;
-  background: #E4EEDA;
+.main-nav a:hover:not(.is-active) {
+  color: #007A60;
+  background: #E3F6EE;
+  border-color: rgba(0, 155, 119, .16);
+  box-shadow: 0 5px 14px rgba(0, 122, 96, .10);
+  transform: translateY(-2px);
 }
 
-.main-nav a.is-active {
-  color: #ffffff;
-  background: #466813;
-  font-weight: 700;
-  box-shadow: 0 4px 12px rgba(70, 104, 19, 0.25);
+/* Áp dụng cho Sản phẩm, Sửa chữa, Môi trường khi có class is-active */
+.main-nav a.is-active,
+.main-nav a.is-active:hover {
+  color: #fff;
+  font-weight: 750;
+  background: linear-gradient(135deg, #16B996 0%, #009B77 55%, #007A60 100%);
+  border-color: rgba(255, 255, 255, .32);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .38),
+    inset 0 -2px 4px rgba(0, 75, 57, .12),
+    0 5px 12px rgba(0, 122, 96, .22),
+    0 9px 22px rgba(0, 155, 119, .16);
+  transform: translateY(-1px);
+}
+
+.main-nav a.is-active:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .45),
+    0 8px 17px rgba(0, 122, 96, .28),
+    0 12px 26px rgba(0, 155, 119, .18);
+  transform: translateY(-2px);
+}
+
+.main-nav a:focus-visible {
+  outline: 3px solid rgba(0, 155, 119, .35);
+  outline-offset: 3px;
 }
 
 
@@ -97,16 +137,59 @@
   height: 40px;
   display: grid;
   place-items: center;
-  border-radius: 50%;
+  border: 1px solid transparent;
+  border-radius: 14px;
   color: #6B6459;
   background: transparent;
-  transition: all var(--transition-fast);
+  cursor: pointer;
+
+  transition:
+    background .25s ease,
+    color .25s ease,
+    box-shadow .25s ease,
+    transform .25s ease;
 }
 
 .icon-btn:hover {
-  background: #E4EEDA;
-  color: #33500E;
+  color: #007A60;
+  background: #E3F6EE;
+  box-shadow: 0 5px 14px rgba(0, 155, 119, .13);
+  transform: translateY(-2px);
 }
+
+.icon-btn.icon-active,
+.icon-btn.icon-active:hover {
+  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    #16B996 0%,
+    #009B77 55%,
+    #007A60 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .38),
+    0 5px 12px rgba(0, 122, 96, .22),
+    0 9px 22px rgba(0, 155, 119, .16);
+  transform: translateY(-1px);
+}
+
+
+.icon-btn:focus-visible {
+  outline: 3px solid rgba(0, 155, 119, 0.35);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon-btn {
+    transition: none;
+  }
+
+  .icon-btn:hover,
+  .icon-btn.icon-active {
+    transform: none;
+  }
+}
+
 
 .icon-btn svg {
   width: 20px;
@@ -143,7 +226,7 @@
     align-items: center;
     gap: 10px;
     padding: 0 16px;
-    border: 1.5px solid rgba(70, 104, 19, 0.25);
+    border: 1.5px solid rgba(0, 155, 119, 0.25);
     border-radius: 999px;
     background: #FAF4EA;
     color: #241F1A;
@@ -154,8 +237,8 @@
     width: 460px;
     background: #ffffff;
     color: #241F1A;
-    border-color: #466813;
-    box-shadow: 0 6px 20px rgba(70, 104, 19, 0.18);
+    border-color: #009B77;
+    box-shadow: 0 6px 20px rgba(0, 155, 119, 0.18);
 }
 
 .search-box svg {
@@ -166,7 +249,7 @@
 }
 
 .search-box:focus-within svg {
-    color: #466813;
+    color: #009B77;
 }
 
 .search-box input {
@@ -242,4 +325,9 @@
   .search-box {
     width: 180px;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-nav a, .logo-text { transition: none; }
+  .main-nav a:hover, .main-nav a.is-active { transform: none; }
 }
