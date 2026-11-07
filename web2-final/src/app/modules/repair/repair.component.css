@@ -4,3 +4,14 @@
 .action-left{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap}.step-counter{flex-basis:100%;text-align:center;color:#64748b;font-weight:700;font-size:.9rem}.form-actions{align-items:center}.valuation-box{display:flex;flex-direction:column;gap:.2rem;margin:1rem 0;padding:1rem 1.15rem;border:1px solid #cfe4a8;border-radius:1rem;background:#f5faec}.valuation-box span{font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#52721e}.valuation-box strong{font-size:1.45rem;color:#33500e}.valuation-box small{color:#64748b}.upload-controls{display:flex;align-items:center;justify-content:center;gap:.75rem;flex-wrap:wrap}.upload-button{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;min-width:10rem;margin:0}.upload-controls select{min-height:2.75rem}@media (max-width:600px){.form-actions{align-items:stretch;flex-direction:column}.action-left{width:100%;justify-content:center}.form-actions>.primary-button{width:100%}.upload-controls{align-items:stretch;flex-direction:column}.upload-button,.upload-controls select{width:100%}}
 .history-photos{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.75rem}.history-photos img{width:56px;height:56px;object-fit:cover;border-radius:.5rem;border:1px solid #dee2e6}.history-link{margin-top:.5rem;border:0;background:none;color:#198754;font-weight:600;padding:0;cursor:pointer}.field-help{display:block;color:#6c757d;font-size:.8rem;margin-top:.25rem}
  .resell-listing-images{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:.65rem}.resell-listing-image{display:block;width:100%;max-height:180px;object-fit:cover;border-radius:.7rem}
+/* Đồng bộ font với trang Sản phẩm */
+.assessment-page {
+  font-family: var(--font-body);
+}
+
+.assessment-page button,
+.assessment-page input,
+.assessment-page select,
+.assessment-page textarea {
+  font-family: inherit;
+}

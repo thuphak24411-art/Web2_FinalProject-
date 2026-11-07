@@ -20,6 +20,8 @@ import { AdminReports } from './modules/admin/components/admin-reports/admin-rep
 import { AdminPostManagement } from './modules/admin/components/admin-post-management/admin-post-management';
 import { AdminAccounts } from './modules/admin/components/admin-accounts/admin-accounts';
 import { AdminGreencoinUpdate } from './modules/admin/components/admin-greencoin-update/admin-greencoin-update';
+import { EnvironmentDashboard } from './modules/environment/components/environment-dashboard/environment-dashboard';
+import { ChatPageComponent } from './modules/chat/components/chat-page/chat-page';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { AdminGreencoinUpdate } from './modules/admin/components/admin-greencoin
     AdminPostManagement,
     AdminAccounts,
     AdminGreencoinUpdate,
+    EnvironmentDashboard,
+    ChatPageComponent,
   ],
   imports: [
     BrowserModule,

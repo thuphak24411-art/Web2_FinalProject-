@@ -1,5 +1,8 @@
 require('dotenv').config();
 const express = require('express');
+const http = require('http');
+const { Server } = require('socket.io');
+const registerChat = require('./chat.socket');
 const cors = require('cors');
 const { MongoClient } = require('mongodb');
 const jwt = require('jsonwebtoken');
@@ -15,6 +18,14 @@ try {
 }
 
 const app = express();
+const httpServer = http.createServer(app);
+
+const io = new Server(httpServer, {
+  cors: {
+    origin: 'http://localhost:4200',
+    methods: ['GET', 'POST']
+  }
+});
 const PORT = Number(process.env.PORT) || 3000;
 
 app.use(cors());
@@ -59,11 +70,25 @@ async function ensureIndexes() {
 client.connect()
   .then(async () => {
     await ensureIndexes();
-    app.use('/api/auth', createAuthRouter(client.db(DB_NAME)));
+
+    const db = client.db(DB_NAME);
+
+    app.use('/api/auth', createAuthRouter(db));
     registerRepairRoutes();
+
+    await registerChat({
+      app,
+      io,
+      db,
+      jwt,
+      jwtSecret: JWT_SECRET,
+      authenticate
+    });
+
     console.log(`Đã kết nối thành công tới MongoDB (${DB_NAME})`);
-    app.listen(PORT, () => {
-      console.log(`Server MongoDB EcoCycleDatabase đang chạy tại http://localhost:${PORT}`);
+
+    httpServer.listen(PORT, () => {
+      console.log(`EcoCycle API + Socket.IO chạy tại http://localhost:${PORT}`);
     });
   })
   .catch(err => {
@@ -128,6 +153,155 @@ app.get('/api/admin/product-requests', authenticate, requireAdmin, async (_req, 
   } catch (err) {
     console.error('Lỗi khi tải danh sách yêu cầu sản phẩm admin:', err);
     res.status(500).json({ message: 'Không thể tải danh sách yêu cầu sản phẩm.' });
+  }
+});
+
+
+app.get('/api/environment/dashboard', async (req, res) => {
+  try {
+    // 1. Lấy dữ liệu từ ba collection MongoDB.
+    const [categories, orders, users] = await Promise.all([
+      getCollection('products').find({}).toArray(),
+      getCollection('sellOrders').find({}).toArray(),
+      getCollection('users')
+        .find({}, { projection: { eWasteRecycledKg: 1 } })
+        .toArray()
+    ]);
+
+    // 2. Chỉ đếm những tin sản phẩm còn đang bán.
+    const devicesListed = categories.reduce((total, category) => {
+      const products = Array.isArray(category.Products)
+        ? category.Products
+        : [];
+
+      const activeProducts = products.filter(product =>
+        product.Status !== 'Đã bán' &&
+        (product.quantity === undefined || Number(product.quantity) > 0)
+      );
+
+      return total + activeProducts.length;
+    }, 0);
+
+    // 3. Chỉ tính những đơn đã giao thành công.
+    const completedStatuses = [
+      'Đã giao',
+      'Đã giao hàng',
+      'Hoàn thành'
+    ];
+
+    const completedOrders = orders.filter(order =>
+      completedStatuses.includes(order.status)
+    );
+
+    // 4. Hàm cộng số lượng thiết bị trong các đơn hàng.
+    const countDevices = orderList => orderList.reduce((total, order) => {
+      const products = Array.isArray(order.products)
+        ? order.products
+        : Array.isArray(order.items)
+          ? order.items
+          : [];
+
+      const quantity = products.reduce(
+        (sum, product) => sum + (Number(product.quantity) || 0),
+        0
+      );
+
+      return total + quantity;
+    }, 0);
+
+    const devicesPurchased = countDevices(completedOrders);
+
+    // 5. Đếm riêng thiết bị cũ được mua lại.
+    const reusedDevicesPurchased = countDevices(
+      completedOrders.filter(order => order.orderType === 'resell')
+    );
+    // Hệ số phát thải vòng đời tham chiếu (kg CO₂e / thiết bị).
+    // Nguồn tham khảo: ADEME / Impact CO₂.
+    // Chỉ dùng cho danh mục tương ứng rõ ràng.
+    const co2eFactors = {
+      'Laptop': 193,
+      'Máy tính bảng': 87.1
+    };
+
+    // Liên kết mã sản phẩm với danh mục từ collection products.
+    const productCategoryMap = new Map();
+
+    categories.forEach(category => {
+      const products = Array.isArray(category.Products)
+        ? category.Products
+        : [];
+
+      products.forEach(product => {
+        if (product.id) {
+          productCategoryMap.set(
+            String(product.id),
+            category.CateName
+          );
+        }
+      });
+    });
+
+    // Chỉ lấy đơn mua lại thiết bị cũ đã hoàn thành.
+    const completedResellOrders = completedOrders.filter(
+      order => order.orderType === 'resell'
+    );
+
+    let co2eReferenceKg = 0;
+    let co2eCountedDevices = 0;
+    let co2eUncountedDevices = 0;
+
+    completedResellOrders.forEach(order => {
+      const items = Array.isArray(order.items)
+        ? order.items
+        : Array.isArray(order.products)
+          ? order.products
+          : [];
+
+      items.forEach(item => {
+        const categoryName = productCategoryMap.get(
+          String(item.productId)
+        );
+
+        const quantity = Number(item.quantity);
+
+        if (!Number.isFinite(quantity) || quantity <= 0) return;
+
+        const factor = co2eFactors[categoryName];
+
+        if (factor === undefined) {
+          co2eUncountedDevices += quantity;
+          return;
+        }
+
+        co2eReferenceKg += quantity * factor;
+        co2eCountedDevices += quantity;
+      });
+    });
+
+    co2eReferenceKg = Math.round(co2eReferenceKg * 100) / 100;
+
+    // 6. Tổng khối lượng rác điện tử đã được ghi nhận.
+    const eWasteProcessedKg = users.reduce(
+      (sum, user) => sum + (Number(user.eWasteRecycledKg) || 0),
+      0
+    );
+
+    // 7. Trả kết quả cho frontend Angular.
+    res.status(200).json({
+      devicesListed,
+      devicesPurchased,
+      reusedDevicesPurchased,
+      eWasteProcessedKg,
+      co2eReferenceKg,
+      co2eCountedDevices,
+      co2eUncountedDevices,
+      co2eNote: 'Tổng phát thải vòng đời tham chiếu của laptop và máy tính bảng cũ đã giao dịch thành công. Hệ số tham khảo ADEME/Impact CO₂. Đây không phải lượng CO₂e đã tiết kiệm.'
+    });
+  } catch (error) {
+    console.error('Lỗi Environmental Dashboard:', error);
+    res.status(500).json({
+      message: 'Không thể tải dữ liệu môi trường.'
+    });
   }
 });
 
@@ -1742,5 +1916,93 @@ app.put('/notifications/read-all', authenticate, async (req, res) => {
   } catch (err) {
     console.error("Lỗi khi đánh dấu tất cả thông báo:", err);
     res.status(500).json({ error: err.message });
+  }
+});
+
+// ENVIRONMENTAL DASHBOARD - PERSONAL
+app.get('/api/environment/me', authenticate, async (req, res) => {
+  try {
+    const userID = req.auth.userID;
+
+    if (!userID) {
+      return res.status(401).json({
+        message: 'Không xác định được tài khoản đăng nhập.'
+      });
+    }
+
+    const [user, categories, orders] = await Promise.all([
+      getCollection('users').findOne(
+        { userID },
+        { projection: { userID: 1, eWasteRecycledKg: 1 } }
+      ),
+      getCollection('products').find({}).toArray(),
+      getCollection('sellOrders').find({ customerID: userID }).toArray()
+    ]);
+
+    if (!user) {
+      return res.status(404).json({
+        message: 'Không tìm thấy tài khoản người dùng.'
+      });
+    }
+
+    const devicesListed = categories.reduce((total, category) => {
+      const products = Array.isArray(category.Products)
+        ? category.Products
+        : [];
+
+      const myActiveProducts = products.filter(product =>
+        String(product.sellerid) === String(userID) &&
+        product.Status !== 'Đã bán' &&
+        (product.quantity === undefined || Number(product.quantity) > 0)
+      );
+
+      return total + myActiveProducts.length;
+    }, 0);
+
+    const completedStatuses = [
+      'Đã giao',
+      'Đã giao hàng',
+      'Hoàn thành'
+    ];
+
+    const completedOrders = orders.filter(order =>
+      completedStatuses.includes(order.status)
+    );
+
+    const countDevices = orderList => orderList.reduce((total, order) => {
+      const products = Array.isArray(order.products)
+        ? order.products
+        : Array.isArray(order.items)
+          ? order.items
+          : [];
+
+      return total + products.reduce(
+        (sum, product) => sum + (Number(product.quantity) || 0),
+        0
+      );
+    }, 0);
+
+    const devicesPurchased = countDevices(completedOrders);
+
+    const reusedDevicesPurchased = countDevices(
+      completedOrders.filter(order => order.orderType === 'resell')
+    );
+
+    const eWasteProcessedKg = Number(user.eWasteRecycledKg) || 0;
+
+    res.status(200).json({
+      devicesListed,
+      devicesPurchased,
+      reusedDevicesPurchased,
+      eWasteProcessedKg,
+      co2eAvoidedKg: null,
+      co2eNote: 'Chưa có phương pháp tính CO₂e được xác minh.'
+    });
+
+  } catch (error) {
+    console.error('Lỗi Environmental Dashboard cá nhân:', error);
+    res.status(500).json({
+      message: 'Không thể tải thống kê môi trường cá nhân.'
+    });
   }
 });

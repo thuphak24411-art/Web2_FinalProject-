@@ -1,0 +1,2901 @@
+/* ==================================================
+   ECOCYCLE — ENVIRONMENTAL DASHBOARD
+   Đồng bộ container với trang Sản phẩm
+   ================================================== */
+
+:host {
+  --eco-green: #009b77;
+  --eco-green-dark: #007a60;
+  --eco-green-light: #e3f6ee;
+  --eco-green-soft: #f3faf7;
+  --eco-green-border: #c5e9db;
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.environment-dashboard {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--color-bg, #f0e7da);
+  color: var(--color-ink, #241f1a);
+  font-family: inherit;
+}
+
+.environment-dashboard *,
+.environment-dashboard *::before,
+.environment-dashboard *::after {
+  box-sizing: border-box;
+}
+
+.environment-dashboard button,
+.environment-dashboard a {
+  font: inherit;
+}
+
+/* ==================================================
+   1. CONTAINER — GIỐNG TRANG SẢN PHẨM
+   ================================================== */
+
+.environment-container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 16px 72px;
+  min-width: 0;
+}
+
+/* ==================================================
+   2. HERO BANNER
+   ================================================== */
+
+.environment-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+
+  width: 100%;
+  min-height: 258px;
+  padding: 32px 38px;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  border: 1px solid #c5e9db;
+  border-radius: 22px;
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(173, 233, 209, 0.45),
+      transparent 40%
+    ),
+    linear-gradient(
+      115deg,
+      #f3faf7 0%,
+      #fbfefd 62%,
+      #e3f6ee 100%
+    );
+
+  box-shadow: 0 6px 22px rgba(36, 31, 26, 0.045);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 610px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 11px;
+
+  color: #007a60;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.055em;
+}
+
+.environment-hero h1 {
+  margin: 0;
+
+  color: #164c40;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 800;
+  line-height: 1.24;
+  letter-spacing: -0.035em;
+}
+
+.environment-hero p {
+  max-width: 510px;
+  margin: 13px 0 0;
+
+  color: #68735c;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.hero-link,
+.primary-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  width: fit-content;
+  margin-top: 19px;
+  padding: 11px 18px;
+
+  border: 0;
+  border-radius: 11px;
+
+  background: #009b77;
+  color: #fff;
+
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  line-height: 1.4;
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.hero-link:hover,
+.primary-link:hover {
+  background: #007a60;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ==================================================
+   3. HERO ILLUSTRATION
+   Vẽ bằng CSS + Bootstrap Icons
+   ================================================== */
+
+.hero-illustration {
+  position: relative;
+  z-index: 1;
+
+  flex: 0 0 370px;
+  width: 370px;
+  height: 205px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+}
+
+.hero-glow {
+  position: absolute;
+  inset: 3px 15px 0;
+
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse,
+    rgba(142, 222, 190, 0.45) 0%,
+    rgba(197, 233, 219, 0.27) 55%,
+    transparent 75%
+  );
+}
+
+.hero-laptop {
+  position: relative;
+  z-index: 2;
+
+  width: 235px;
+  transform: rotate(-3deg);
+  filter: drop-shadow(0 12px 9px rgba(49, 78, 29, 0.12));
+}
+
+.laptop-screen {
+  display: grid;
+  place-items: center;
+
+  width: 218px;
+  height: 141px;
+  margin: 0 auto;
+
+  border: 9px solid #42685d;
+  border-bottom-width: 13px;
+  border-radius: 10px 10px 5px 5px;
+
+  background: linear-gradient(
+    140deg,
+    #e3f6ee,
+    #a5e3cd
+  );
+
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+.laptop-screen i {
+  color: #009b77;
+  font-size: 73px;
+  line-height: 1;
+}
+
+.laptop-base {
+  position: relative;
+  width: 250px;
+  height: 13px;
+  margin-left: -7px;
+
+  border-radius: 3px 3px 14px 14px;
+  background: linear-gradient(
+    to bottom,
+    #e5f0eb,
+    #9dbab0
+  );
+
+  box-shadow: 0 5px 7px rgba(47, 68, 36, 0.13);
+}
+
+.laptop-base::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 40%;
+
+  width: 20%;
+  height: 4px;
+
+  border-radius: 0 0 6px 6px;
+  background: #b4c9c0;
+}
+
+.hero-leaf {
+  position: absolute;
+  z-index: 1;
+
+  color: #009b77;
+  opacity: 0.85;
+}
+
+.hero-leaf i {
+  display: block;
+  line-height: 1;
+}
+
+.hero-leaf-left {
+  left: 4px;
+  bottom: 20px;
+  transform: rotate(-35deg);
+}
+
+.hero-leaf-left i {
+  font-size: 104px;
+}
+
+.hero-leaf-right {
+  right: 0;
+  top: 10px;
+  transform: rotate(28deg);
+}
+
+.hero-leaf-right i {
+  font-size: 115px;
+}
+
+/* ==================================================
+   4. SECTION HEADINGS
+   ================================================== */
+
+.environment-section {
+  width: 100%;
+  min-width: 0;
+  margin-top: 32px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.section-title-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  min-width: 0;
+}
+
+.section-title-icon {
+  flex: 0 0 auto;
+  margin-top: 4px;
+
+  color: #009b77;
+  font-size: 24px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  color: #292520;
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+}
+
+.section-heading p {
+  margin: 5px 0 0;
+
+  color: #777066;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.data-period {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+
+  padding: 10px 14px;
+
+  border: 1px solid #e7e3db;
+  border-radius: 12px;
+
+  background: #fff;
+  color: #59544b;
+
+  font-size: 11px;
+  font-weight: 650;
+
+  box-shadow: 0 3px 9px rgba(36, 31, 26, 0.035);
+}
+
+.data-period i {
+  color: #009b77;
+  font-size: 14px;
+}
+
+/* ==================================================
+   5. COMMUNITY KPI CARDS
+   ================================================== */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+
+  width: 100%;
+  min-width: 0;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-width: 0;
+  min-height: 180px;
+  padding: 20px;
+
+  border: 1px solid #ece9e4;
+  border-radius: 18px;
+
+  background: #fff;
+
+  box-shadow: 0 6px 18px rgba(40, 32, 22, 0.045);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(40, 32, 22, 0.075);
+}
+
+.stat-icon,
+.personal-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+
+  width: 43px;
+  height: 43px;
+
+  border-radius: 13px;
+  font-size: 21px;
+}
+
+.stat-icon {
+  margin-bottom: 15px;
+}
+
+.stat-icon.green,
+.personal-icon.green {
+  background: #e3f6ee;
+  color: #009b77;
+}
+
+.stat-icon.yellow,
+.personal-icon.yellow {
+  background: #fff3da;
+  color: #c28a20;
+}
+
+.stat-icon.mint,
+.personal-icon.mint {
+  background: #e3f6ee;
+  color: #009b77;
+}
+
+.stat-icon.orange,
+.personal-icon.orange {
+  background: #fff0e2;
+  color: #cb6c32;
+}
+
+.stat-label {
+  color: #615b52;
+  font-size: 12px;
+  font-weight: 550;
+  line-height: 1.5;
+}
+
+.stat-card > strong {
+  margin: 6px 0 7px;
+
+  color: #007a60;
+  font-size: clamp(25px, 2.7vw, 32px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  overflow-wrap: anywhere;
+}
+
+.stat-card strong em,
+.personal-card strong em {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.stat-card small {
+  margin-top: auto;
+
+  color: #999085;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* ==================================================
+   6. CHART CARDS
+   ================================================== */
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+
+  width: 100%;
+  min-width: 0;
+  margin-top: 16px;
+}
+
+.insight-card,
+.achievement-card {
+  position: relative;
+
+  min-width: 0;
+  padding: 24px;
+
+  border: 1px solid #ece9e4;
+  border-radius: 18px;
+
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(40, 32, 22, 0.045);
+}
+
+.insight-card {
+  min-height: 290px;
+}
+
+.card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.card-title-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+.card-title-with-icon > i {
+  flex: 0 0 auto;
+  color: #009b77;
+  font-size: 21px;
+}
+
+.card-title-with-icon h3 {
+  margin: 0;
+
+  color: #292520;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+/* ==================================================
+   7. DONUT CHART
+   ================================================== */
+
+.reuse-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+
+  min-width: 0;
+  padding-top: 24px;
+}
+
+.donut-chart {
+  display: grid;
+  place-items: center;
+  flex: 0 0 190px;
+
+  width: 190px;
+  height: 190px;
+
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #009b77 0 var(--reuse-percent),
+    #e9e1d7 var(--reuse-percent) 100%
+  );
+}
+
+.donut-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 139px;
+  height: 139px;
+
+  border-radius: 50%;
+  background: #fff;
+}
+
+.donut-center strong {
+  color: #007a60;
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.donut-center span {
+  margin-top: 4px;
+
+  color: #655f55;
+  font-size: 11px;
+}
+
+.reuse-legend {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 220px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+
+.legend-item > span:nth-child(2) {
+  min-width: 0;
+  color: #514d46;
+}
+
+.legend-item strong {
+  margin-left: auto;
+  color: #292520;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.legend-dot {
+  flex: 0 0 10px;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+}
+
+.legend-dot.reused {
+  background: #009b77;
+}
+
+.legend-dot.other {
+  background: #e9e1d7;
+}
+
+.reuse-legend p {
+  margin: 18px 0 0;
+
+  color: #91887c;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* ==================================================
+   8. CO2 CARD
+   ================================================== */
+
+.co2-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.co2-pending {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 45px;
+
+  color: #5c8b7a;
+  font-size: clamp(24px, 2.5vw, 31px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.co2-value {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 43px;
+
+  color: #007a60;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.co2-value span {
+  font-size: 14px;
+}
+
+.co2-description {
+  position: relative;
+  z-index: 2;
+
+  max-width: 410px;
+  margin: 13px 0 0;
+
+  color: #736c61;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.co2-footnote {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+
+  margin-top: auto;
+  padding: 11px 12px;
+
+  border: 1px solid #c5e9db;
+  border-radius: 11px;
+
+  background: rgba(247, 250, 241, 0.94);
+  color: #4c8674;
+
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.co2-footnote i {
+  flex: 0 0 auto;
+  margin-top: 1px;
+  font-size: 12px;
+}
+
+.co2-landscape {
+  position: absolute;
+  z-index: 0;
+  inset: auto 0 0;
+  height: 105px;
+
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.landscape-hill {
+  position: absolute;
+  display: block;
+
+  width: 120%;
+  height: 95px;
+
+  border-radius: 50% 50% 0 0;
+}
+
+.hill-back {
+  left: -10%;
+  bottom: -70px;
+  transform: rotate(-5deg);
+  background: #e3f6ee;
+}
+
+.hill-front {
+  right: -25%;
+  bottom: -83px;
+  transform: rotate(6deg);
+  background: #d2f0e4;
+}
+
+.co2-landscape .bi-tree-fill {
+  position: absolute;
+  bottom: 9px;
+
+  color: #68c6a5;
+  opacity: 0.8;
+}
+
+.tree-one {
+  right: 67px;
+  font-size: 30px;
+}
+
+.tree-two {
+  right: 21px;
+  font-size: 47px;
+}
+
+/* ==================================================
+   9. PERSONAL SECTION
+   ================================================== */
+
+.personal-section {
+  margin-top: 34px;
+}
+
+.personal-bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+
+  width: 100%;
+  min-width: 0;
+}
+
+.personal-impact-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.personal-description {
+  margin: 7px 0 0;
+
+  color: #81796d;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.personal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+
+  width: 100%;
+  min-width: 0;
+  margin-top: 23px;
+}
+
+.personal-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-width: 0;
+  min-height: 155px;
+  padding: 13px 10px;
+
+  border: 1px solid #eeece7;
+  border-radius: 13px;
+
+  background: #fff;
+}
+
+.personal-icon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 14px;
+
+  border-radius: 11px;
+  font-size: 18px;
+}
+
+.personal-card > span:not(.personal-icon) {
+  color: #716b62;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.personal-card strong {
+  margin-top: auto;
+  padding-top: 9px;
+
+  color: #007a60;
+  font-size: clamp(19px, 2vw, 25px);
+  font-weight: 800;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.personal-reuse-note {
+  margin-top: auto;
+  padding-top: 17px;
+
+  color: #777064;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.personal-reuse-note strong {
+  margin-left: 4px;
+  color: #007a60;
+  font-size: 15px;
+}
+
+/* ==================================================
+   10. ACHIEVEMENTS
+   ================================================== */
+
+.achievement-list {
+  margin-top: 19px;
+}
+
+.achievement {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  min-width: 0;
+  padding: 12px 0;
+
+  border-bottom: 1px solid #f0ede8;
+}
+
+.achievement:last-child {
+  border-bottom: 0;
+}
+
+.achievement-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 42px;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 12px;
+  background: #e3f6ee;
+  color: #009b77;
+
+  font-size: 20px;
+}
+
+.achievement > div {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.achievement strong,
+.achievement small {
+  display: block;
+}
+
+.achievement strong {
+  color: #343029;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.achievement small {
+  margin-top: 4px;
+
+  color: #8b8377;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.achievement-status {
+  flex: 0 0 auto;
+
+  padding: 6px 9px;
+  border-radius: 8px;
+
+  background: #f1f7f3;
+  color: #548c78;
+
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.achievement.unlocked .achievement-status {
+  background: #e3f6ee;
+  color: #007a60;
+}
+
+.achievement.unlocked .achievement-icon {
+  background: #e3f6ee;
+  color: #009b77;
+}
+
+/* ==================================================
+   11. LOGIN / LOADING / ERROR
+   ================================================== */
+
+.personal-guest,
+.state-card {
+  width: 100%;
+  min-width: 0;
+
+  border: 1px solid #ece9e4;
+  border-radius: 18px;
+
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(40, 32, 22, 0.045);
+}
+
+.personal-guest {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 25px;
+}
+
+.guest-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 54px;
+
+  width: 54px;
+  height: 54px;
+
+  border-radius: 14px;
+  background: #e3f6ee;
+  color: #009b77;
+
+  font-size: 25px;
+}
+
+.guest-content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.guest-content h3 {
+  margin: 0 0 6px;
+
+  color: #302c25;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.guest-content p {
+  margin: 0;
+
+  color: #80786e;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.personal-guest .primary-link {
+  flex: 0 0 auto;
+  margin-top: 0;
+}
+
+.state-card {
+  padding: 28px;
+
+  color: #777064;
+  font-size: 12px;
+}
+
+.error-state {
+  color: #a43f37;
+}
+
+.error-state button {
+  margin-left: 12px;
+  padding: 8px 13px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: #009b77;
+  color: #fff;
+
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ==================================================
+   12. RESPONSIVE — TABLET
+   ================================================== */
+
+@media (max-width: 1024px) {
+  .hero-illustration {
+    flex-basis: 285px;
+    width: 285px;
+    transform: scale(0.88);
+    transform-origin: center right;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .reuse-content {
+    gap: 16px;
+  }
+
+  .donut-chart {
+    flex-basis: 155px;
+    width: 155px;
+    height: 155px;
+  }
+
+  .donut-center {
+    width: 112px;
+    height: 112px;
+  }
+
+  .donut-center strong {
+    font-size: 29px;
+  }
+
+  .personal-bottom {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .personal-card {
+    min-height: 140px;
+  }
+}
+
+/* ==================================================
+   13. RESPONSIVE — MOBILE
+   ================================================== */
+
+@media (max-width: 700px) {
+  .environment-container {
+    padding: 18px 16px 48px;
+  }
+
+  .environment-hero {
+    min-height: 0;
+    padding: 25px 22px;
+    border-radius: 17px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .environment-hero h1 {
+    font-size: 26px;
+  }
+
+  .environment-hero h1 br {
+    display: none;
+  }
+
+  .environment-hero p {
+    font-size: 12px;
+  }
+
+  .hero-illustration {
+    display: none;
+  }
+
+  .environment-section,
+  .personal-section {
+    margin-top: 27px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+
+  .section-title-icon {
+    font-size: 20px;
+  }
+
+  .section-heading h2 {
+    font-size: 19px;
+  }
+
+  .data-period {
+    display: none;
+  }
+
+  .stats-grid {
+    gap: 11px;
+  }
+
+  .stat-card {
+    min-height: 165px;
+    padding: 15px;
+  }
+
+  .stat-icon {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 12px;
+    font-size: 19px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+  }
+
+  .stat-card > strong {
+    font-size: 25px;
+  }
+
+  .insights-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .insight-card,
+  .achievement-card {
+    padding: 19px;
+  }
+
+  .insight-card {
+    min-height: 260px;
+  }
+
+  .reuse-content {
+    gap: 20px;
+  }
+
+  .donut-chart {
+    flex-basis: 155px;
+    width: 155px;
+    height: 155px;
+  }
+
+  .personal-bottom {
+    gap: 12px;
+  }
+
+  .personal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .personal-card {
+    min-height: 130px;
+  }
+
+  .personal-guest {
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  .personal-guest .primary-link {
+    width: 100%;
+  }
+}
+
+@media (max-width: 390px) {
+  .stats-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .reuse-content {
+    flex-direction: column;
+  }
+
+  .reuse-legend {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .environment-hero h1 {
+    font-size: 23px;
+  }
+}
+/* Làm nổi bật phần chú thích biểu đồ */
+.reuse-legend .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 14px;
+  margin-bottom: 10px;
+
+  border-radius: 12px;
+  border: 1px solid transparent;
+
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/* Thiết bị cũ - xanh lá nhẹ */
+.reuse-legend .legend-item:nth-child(1) {
+  background: #e3f6ee;
+  border-color: #c5e9db;
+}
+
+/* Thiết bị khác - kem nhẹ */
+.reuse-legend .legend-item:nth-child(2) {
+  background: #f8f1e8;
+  border-color: #eee2d3;
+}
+
+.reuse-legend .legend-item:hover {
+  transform: translateX(3px);
+}
+
+.reuse-legend .legend-item strong {
+  color: #007a60;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.reuse-legend .legend-item:nth-child(2) strong {
+  color: #80654c;
+}
+/* ================================================
+   PERSONAL STATS — INTERACTIVE
+   ================================================ */
+
+.personal-card-clickable {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.personal-card-clickable:hover {
+  transform: translateY(-3px);
+  border-color: #a5ddc9;
+  background: #f7fcfa;
+  box-shadow: 0 8px 18px rgba(0, 155, 119, 0.09);
+}
+
+.personal-card-active {
+  border-color: #009b77;
+  background: #f3faf7;
+  box-shadow: inset 0 0 0 1px rgba(0, 155, 119, 0.12);
+}
+
+.personal-card-clickable:focus-visible {
+  outline: 3px solid #56c5a1;
+  outline-offset: 3px;
+}
+
+.personal-arrow {
+  position: absolute;
+  top: 15px;
+  right: 12px;
+
+  color: #6cae97;
+  font-size: 12px;
+
+  transition: transform 0.2s ease;
+}
+
+.personal-card-active .personal-arrow {
+  transform: rotate(90deg);
+  color: #009b77;
+}
+
+/* Chi tiết thống kê */
+
+.personal-detail-panel {
+  margin-top: 16px;
+  padding: 17px 18px;
+
+  border: 1px solid #c5e9db;
+  border-radius: 13px;
+
+  background: linear-gradient(135deg, #f3faf7, #fffdf8);
+}
+
+.personal-detail-heading {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #007a60;
+  font-size: 13px;
+}
+
+.personal-detail-heading i {
+  font-size: 17px;
+}
+
+.personal-detail-panel p {
+  margin: 10px 0 12px;
+
+  color: #6c675d;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.personal-detail-panel p b {
+  color: #007a60;
+  font-weight: 800;
+}
+
+.personal-detail-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #009b77;
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.personal-detail-link:hover {
+  color: #00634e;
+  text-decoration: underline;
+}
+
+.personal-detail-note {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 7px;
+
+  color: #658e81;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* Giữ nguyên bố cục 4 ô và căn lề */
+.personal-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+}
+
+@media (max-width: 700px) {
+  .personal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .personal-detail-panel {
+    padding: 15px;
+  }
+}
+/* ==========================================
+   THÀNH TÍCH XANH — TƯƠNG TÁC
+   ========================================== */
+
+.interactive-achievements {
+  width: 100%;
+  min-width: 0;
+}
+
+.achievement-interactive {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+}
+
+.achievement-trigger {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  width: 100%;
+  min-width: 0;
+  padding: 15px 0;
+
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.achievement-trigger:hover .achievement-info strong {
+  color: #009b77;
+}
+
+.achievement-trigger:focus-visible {
+  outline: 2px solid #009b77;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.achievement-trigger .achievement-icon {
+  flex: 0 0 auto;
+}
+
+.achievement-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  min-width: 0;
+}
+
+.achievement-info strong {
+  color: #302d28;
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.achievement-info small {
+  color: #948b7f;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.achievement-trigger .achievement-status {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.achievement-chevron {
+  flex: 0 0 auto;
+  color: #6cae97;
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+.achievement-chevron-open {
+  transform: rotate(180deg);
+}
+
+.achievement-expanded {
+  background: #f3faf7;
+  border-radius: 12px;
+}
+
+.achievement-expanded .achievement-trigger {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.achievement-detail {
+  margin: 0 10px 14px;
+  padding: 15px;
+
+  background: #ffffff;
+  border: 1px solid #c5e9db;
+  border-radius: 11px;
+}
+
+.achievement-progress-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  color: #716b61;
+  font-size: 12px;
+}
+
+.achievement-progress-heading strong {
+  color: #007a60;
+  font-weight: 750;
+}
+
+.achievement-progress-track {
+  height: 9px;
+  margin-top: 11px;
+  overflow: hidden;
+
+  background: #e1f0e9;
+  border-radius: 999px;
+}
+
+.achievement-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #68c6a5, #009b77);
+  border-radius: inherit;
+  transition: width 0.35s ease;
+}
+
+.achievement-detail p {
+  margin: 12px 0 0;
+  color: #777065;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.achievement-detail p b {
+  color: #007a60;
+}
+
+.achievement-detail .achievement-success {
+  color: #007a60;
+  font-weight: 650;
+}
+
+.achievement-success i {
+  margin-right: 5px;
+}
+
+.achievement-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-top: 12px;
+  color: #009b77;
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.achievement-action:hover {
+  color: #00634e;
+  text-decoration: underline;
+}
+
+.achievement-hint {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+
+  margin-top: 10px;
+  color: #898476;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .achievement-trigger {
+    gap: 9px;
+  }
+
+  .achievement-info strong {
+    font-size: 13px;
+  }
+
+  .achievement-info small {
+    font-size: 11px;
+  }
+
+  .achievement-trigger .achievement-status {
+    font-size: 10px;
+  }
+}
+/* CO2e - Độ bao phủ tính toán */
+
+.co2-coverage {
+  position: relative;
+  z-index: 2;
+  margin-top: 22px;
+  padding: 16px 18px;
+  background: #f3faf7;
+  border: 1px solid #c5e9db;
+  border-radius: 14px;
+}
+
+.co2-coverage-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: #716b61;
+}
+
+.co2-coverage-heading strong {
+  font-size: 13px;
+  font-weight: 750;
+  color: #007a60;
+}
+
+.co2-coverage-track {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  background: #e1f0e9;
+  border-radius: 999px;
+}
+
+.co2-coverage-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #68c6a5, #009b77);
+  border-radius: inherit;
+  transition: width 0.35s ease;
+}
+
+.co2-coverage-legend {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+  color: #777065;
+  font-size: 12px;
+}
+
+.co2-coverage-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.co2-coverage-legend .bi-check-circle {
+  color: #009b77;
+}
+
+.co2-coverage-legend .bi-info-circle {
+  color: #a38a5d;
+}
+
+.co2-card .co2-footnote {
+  position: relative;
+  z-index: 2;
+  margin-top: 16px;
+}
+
+@media (max-width: 600px) {
+  .co2-coverage {
+    padding: 13px;
+  }
+
+  .co2-coverage-heading,
+  .co2-coverage-legend {
+    font-size: 11px;
+  }
+}
+/* ==================================================
+   PERSONAL DASHBOARD — PREMIUM INTERACTION
+   ================================================== */
+
+/* 4 ô thống kê */
+.personal-grid {
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.personal-card-clickable {
+  position: relative;
+  min-height: 170px;
+  padding: 17px 15px;
+
+  border: 1.5px solid #e8e9e1;
+  border-radius: 18px;
+
+  background: #ffffff;
+  cursor: pointer;
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.personal-card-clickable::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+
+  background: #009b77;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.personal-card-clickable:hover {
+  transform: translateY(-5px);
+  border-color: #a5ddc9;
+  background: #f7fcfa;
+  box-shadow: 0 12px 26px rgba(0, 155, 119, 0.12);
+}
+
+.personal-card-clickable:hover::before,
+.personal-card-active::before {
+  transform: scaleX(1);
+}
+
+.personal-card-active {
+  border-color: #009b77;
+  background: linear-gradient(145deg, #f3faf7, #ffffff);
+  box-shadow:
+    0 8px 24px rgba(0, 155, 119, 0.10),
+    inset 0 0 0 1px rgba(0, 155, 119, 0.08);
+}
+
+.personal-card-active:hover {
+  background: linear-gradient(145deg, #e3f6ee, #ffffff);
+}
+
+/* Biểu tượng trong ô */
+.personal-card-clickable .personal-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 18px;
+  border-radius: 15px;
+  font-size: 23px;
+
+  transition: transform 0.25s ease;
+}
+
+.personal-card-clickable:hover .personal-icon {
+  transform: scale(1.09) rotate(-4deg);
+}
+
+.personal-card-clickable > span:not(.personal-icon) {
+  font-size: 12px;
+  font-weight: 650;
+  color: #6b675d;
+}
+
+.personal-card-clickable > strong {
+  font-size: 29px;
+  letter-spacing: -0.03em;
+}
+
+.personal-arrow {
+  top: 19px;
+  right: 17px;
+  font-size: 15px;
+}
+
+.personal-card-active .personal-arrow {
+  color: #009b77;
+}
+
+/* Khung chi tiết */
+.personal-detail-panel {
+  position: relative;
+  margin-top: 20px;
+  padding: 23px 25px;
+
+  border: 1px solid #c5e9db;
+  border-radius: 18px;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(155, 226, 198, 0.28),
+      transparent 38%
+    ),
+    linear-gradient(120deg, #f3faf7, #fffdf8);
+
+  box-shadow: 0 5px 18px rgba(0, 155, 119, 0.045);
+  overflow: hidden;
+}
+
+.personal-detail-panel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 18px;
+  bottom: 18px;
+  width: 4px;
+  border-radius: 0 8px 8px 0;
+  background: linear-gradient(#68c6a5, #009b77);
+}
+
+.personal-detail-heading {
+  gap: 12px;
+  font-size: 16px;
+}
+
+.personal-detail-heading i {
+  display: grid;
+  place-items: center;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 12px;
+  background: #e3f6ee;
+  color: #009b77;
+  font-size: 19px;
+}
+
+.personal-detail-heading strong {
+  font-weight: 800;
+}
+
+.personal-detail-panel p {
+  margin: 17px 0 18px;
+  color: #716d63;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.personal-detail-panel p b {
+  color: #007a60;
+  font-weight: 800;
+}
+
+/* Nút Khám phá thiết bị / Đăng bán / Xem đơn hàng */
+.personal-detail-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+
+  min-height: 46px;
+  padding: 7px 8px 7px 19px;
+
+  border: 1px solid #009b77;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #00a781, #009b77);
+  color: #ffffff !important;
+
+  font-size: 13px;
+  font-weight: 750;
+  text-decoration: none !important;
+
+  box-shadow: 0 5px 12px rgba(0, 155, 119, 0.17);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.personal-detail-link i {
+  display: grid;
+  place-items: center;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+
+  font-size: 15px;
+  transition: transform 0.2s ease;
+}
+
+.personal-detail-link:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #009b77, #00634e);
+  box-shadow: 0 10px 20px rgba(0, 155, 119, 0.24);
+}
+
+.personal-detail-link:hover i {
+  transform: translateX(3px);
+}
+
+.personal-detail-link:focus-visible {
+  outline: 3px solid #56c5a1;
+  outline-offset: 3px;
+}
+
+/* Ghi chú tái chế */
+.personal-detail-note {
+  padding: 11px 14px;
+  border-radius: 10px;
+  background: #e3f6ee;
+  color: #4c8674;
+  font-size: 12px;
+}
+
+/* Dòng tỷ lệ cuối */
+.personal-reuse-note {
+  margin-top: 19px;
+  padding-top: 16px;
+  border-top: 1px dashed #e1e6d9;
+  font-size: 12px;
+}
+
+.personal-reuse-note strong {
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .personal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .personal-card-clickable {
+    min-height: 145px;
+    padding: 14px;
+  }
+
+  .personal-card-clickable > strong {
+    font-size: 25px;
+  }
+
+  .personal-detail-panel {
+    padding: 18px;
+  }
+
+  .personal-detail-link {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .personal-card-clickable,
+  .personal-card-clickable::before,
+  .personal-card-clickable .personal-icon,
+  .personal-detail-link,
+  .personal-detail-link i {
+    transition: none;
+  }
+}
+/* ==========================================
+   THIẾT KẾ LẠI HAI Ô BIỂU ĐỒ
+   ========================================== */
+
+/* Hai ô cân đối, không bị kéo cao quá mức */
+.insights-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: stretch;
+  margin-top: 20px;
+}
+
+.insights-grid > .insight-card {
+  min-width: 0;
+  min-height: 390px;
+  padding: 28px;
+  border-radius: 22px;
+}
+
+/* ===== Ô TRÁI: DONUT ===== */
+
+.insights-grid > .insight-card:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.insights-grid .reuse-content {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 24px 0 4px;
+}
+
+/* Donut lớn vừa phải, không chiếm hết ô */
+.insights-grid .donut-chart {
+  flex: 0 0 235px;
+  width: 235px;
+  height: 235px;
+  max-width: 100%;
+}
+
+.insights-grid .donut-center {
+  width: 170px;
+  height: 170px;
+}
+
+.insights-grid .donut-center strong {
+  font-size: 43px;
+}
+
+.insights-grid .donut-center span {
+  font-size: 13px;
+}
+
+/* Chú thích bên phải biểu đồ */
+.insights-grid .reuse-legend {
+  flex: 1;
+  width: auto;
+  max-width: 240px;
+}
+
+.insights-grid .reuse-legend .legend-item {
+  margin-bottom: 12px;
+  padding: 15px;
+}
+
+.insights-grid .reuse-legend p {
+  margin-top: 18px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* ===== Ô PHẢI: CO2e ===== */
+
+.insights-grid .co2-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.insights-grid .co2-card .co2-value {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.insights-grid .co2-card .co2-value span {
+  font-size: 15px;
+}
+
+.insights-grid .co2-card .co2-description {
+  max-width: 100%;
+  margin: 8px 0 20px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.insights-grid .co2-card .co2-coverage {
+  margin-top: 0;
+  padding: 17px 18px;
+}
+
+.insights-grid .co2-card .co2-footnote {
+  margin-top: 18px;
+  margin-bottom: 12px;
+  padding: 12px 14px;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+/* Giữ hình cây ở dưới, không che nội dung */
+.insights-grid .co2-landscape {
+  height: 65px;
+  opacity: 0.65;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1100px) {
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .insights-grid > .insight-card {
+    min-height: 0;
+  }
+
+  .insights-grid .reuse-content {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .insights-grid > .insight-card {
+    padding: 20px;
+  }
+
+  .insights-grid .reuse-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .insights-grid .donut-chart {
+    flex-basis: auto;
+    width: 210px;
+    height: 210px;
+  }
+
+  .insights-grid .donut-center {
+    width: 150px;
+    height: 150px;
+  }
+
+  .insights-grid .reuse-legend {
+    width: 100%;
+    max-width: none;
+  }
+
+  .insights-grid .co2-card .co2-value {
+    font-size: 34px;
+  }
+}
+/* ==========================================
+   ECO INSIGHTS — COMPACT DASHBOARD
+   ========================================== */
+
+.eco-insights {
+  display: grid;
+  grid-template-columns: minmax(0, 0.38fr) minmax(0, 0.62fr);
+  gap: 20px;
+  align-items: stretch;
+  margin-top: 20px;
+}
+
+.eco-insights > .insight-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  height: auto;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px solid #e5eee9;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 155, 119, 0.045);
+}
+
+/* Tiêu đề: đồng bộ với 4 thẻ thống kê */
+.eco-card-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eco-header-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #e3f6ee;
+  color: #009b77;
+  font-size: 20px;
+}
+
+.eco-card-header h3 {
+  margin: 0;
+  color: #302e28;
+  font-size: 17px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+/* Ô trái */
+.eco-reuse-body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  padding: 16px 0 20px;
+}
+
+.eco-insights .eco-donut {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 190px;
+  height: 190px;
+  max-width: 100%;
+  aspect-ratio: 1;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: conic-gradient(
+    #009b77 0 var(--reuse-percent),
+    #e9e3db var(--reuse-percent) 100%
+  );
+}
+
+.eco-insights .eco-donut .donut-center {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
+  height: 65%;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.eco-donut-leaf {
+  color: #009b77;
+  font-size: 18px;
+}
+
+.eco-insights .eco-donut .donut-center strong {
+  color: #007a60;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.eco-insights .eco-donut .donut-center span {
+  color: #6f6a61;
+  font-size: 11px;
+}
+
+.eco-reuse-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  gap: 8px;
+  padding: 12px 10px;
+  border-radius: 13px;
+  background: #e3f6ee;
+}
+
+.eco-summary-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.eco-summary-item > i {
+  color: #009b77;
+  font-size: 20px;
+}
+
+.eco-summary-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.eco-summary-item strong {
+  color: #007a60;
+  font-size: 19px;
+  line-height: 1;
+}
+
+.eco-summary-item span {
+  color: #55584f;
+  font-size: 11px;
+}
+
+.eco-summary-divider {
+  flex: 0 0 1px;
+  height: 30px;
+  background: #c5e9db;
+}
+
+.eco-reuse-caption {
+  max-width: 100%;
+  margin: 0;
+  color: #817a6e;
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.eco-reuse-decoration {
+  position: absolute;
+  bottom: -40px;
+  left: -25px;
+  color: #c5e9db;
+  font-size: 110px;
+  transform: rotate(-35deg);
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+/* Ô phải */
+.eco-co2-highlight {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 15px 18px;
+  border-radius: 15px;
+  background: linear-gradient(115deg, #e3f6ee, #f3faf7);
+}
+
+.eco-co2-number {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  min-width: 0;
+}
+
+.eco-co2-number > strong {
+  color: #007a60;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.eco-co2-number > span {
+  color: #007a60;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.eco-co2-source {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex: 0 0 auto;
+  padding-left: 14px;
+  border-left: 1px solid #c5e9db;
+  color: #337c67;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.eco-co2-source i {
+  font-size: 21px;
+}
+
+.eco-co2-source strong {
+  font-weight: 700;
+}
+
+.eco-co2-description {
+  position: relative;
+  z-index: 2;
+  margin: 14px 0;
+  color: #706c62;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.eco-coverage {
+  position: relative;
+  z-index: 2;
+  padding: 15px;
+  border: 1px solid #c5e9db;
+  border-radius: 14px;
+  background: #fbfefd;
+}
+
+.eco-coverage-heading,
+.eco-coverage-heading > div,
+.eco-coverage-legend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eco-coverage-heading {
+  justify-content: space-between;
+}
+
+.eco-coverage-heading strong {
+  color: #323c2a;
+  font-size: 12px;
+}
+
+.eco-coverage-heading i {
+  color: #009b77;
+  font-size: 15px;
+}
+
+.eco-coverage-badge {
+  padding: 6px 10px;
+  border-radius: 9px;
+  background: #e3f6ee;
+  color: #007a60;
+  font-size: 11px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.eco-coverage-track {
+  height: 9px;
+  margin-top: 13px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e1f0e9;
+}
+
+.eco-coverage-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #64d9b4, #009b77);
+  transition: width 0.35s ease;
+}
+
+.eco-coverage-legend {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  color: #696a61;
+  font-size: 11px;
+}
+
+.eco-coverage-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.eco-coverage-legend span:first-child i {
+  color: #009b77;
+}
+
+.eco-coverage-legend span:last-child i {
+  color: #bc9551;
+}
+
+.eco-co2-note {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 14px;
+  margin-bottom: 36px;
+  padding: 12px;
+  border: 1px solid #c5e9db;
+  border-radius: 12px;
+  background: #f3faf7;
+}
+
+.eco-co2-note > i {
+  flex: 0 0 auto;
+  color: #009b77;
+  font-size: 16px;
+}
+
+.eco-co2-note p {
+  margin: 0;
+  color: #337c67;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* Trang trí nhỏ, không lấn nội dung */
+.eco-landscape {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 55px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.eco-hill {
+  position: absolute;
+  bottom: -48px;
+  width: 120%;
+  height: 75px;
+  border-radius: 50% 50% 0 0;
+}
+
+.eco-hill-back {
+  left: -15%;
+  background: #e3f6ee;
+}
+
+.eco-hill-front {
+  right: -35%;
+  bottom: -55px;
+  background: #b9e7d6;
+}
+
+.eco-tree {
+  position: absolute;
+  bottom: 8px;
+  color: #68c6a5;
+}
+
+.eco-tree-one { right: 115px; font-size: 19px; }
+.eco-tree-two { right: 75px; font-size: 26px; }
+.eco-tree-three { right: 35px; font-size: 34px; }
+
+.eco-earth {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  color: #009b77;
+  font-size: 45px;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .eco-insights {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .eco-insights > .insight-card {
+    padding: 18px;
+  }
+
+  .eco-card-header h3 {
+    font-size: 15px;
+  }
+
+  .eco-insights .eco-donut {
+    width: 180px;
+    height: 180px;
+  }
+
+  .eco-co2-highlight {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .eco-co2-number > strong {
+    font-size: 35px;
+  }
+
+  .eco-co2-source {
+    width: 100%;
+    padding: 10px 0 0;
+    border-top: 1px solid #c5e9db;
+    border-left: 0;
+  }
+
+  .eco-coverage-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* =====================================
+   ECO INSIGHTS — INTERACTIVE
+   ===================================== */
+
+/* Donut gradient */
+.eco-insights .eco-donut-interactive {
+  position: relative;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+
+  background: conic-gradient(
+    from 0deg,
+    #007a60 0%,
+    #009b77 calc(var(--reuse-percent) / 2),
+    #64d9b4 var(--reuse-percent),
+    #e9e3db var(--reuse-percent),
+    #e9e3db 100%
+  );
+
+  box-shadow: 0 8px 24px rgba(0, 155, 119, 0.08);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.eco-insights .eco-donut-interactive:hover {
+  transform: scale(1.035);
+  box-shadow: 0 12px 28px rgba(0, 155, 119, 0.15);
+}
+
+.eco-insights .eco-donut-interactive:focus-visible {
+  outline: 3px solid #56c5a1;
+  outline-offset: 5px;
+}
+
+/* Hai nút thống kê */
+.eco-summary-button {
+  flex: 1;
+  justify-content: center;
+  padding: 8px 5px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.eco-summary-button:hover {
+  background: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.eco-summary-selected {
+  background: #ffffff;
+  border-color: #c5e9db;
+  box-shadow: 0 3px 10px rgba(0, 155, 119, 0.08);
+}
+
+.eco-summary-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.eco-summary-text strong {
+  color: #007a60;
+  font-size: 19px;
+}
+
+.eco-summary-text > span {
+  color: #55584f;
+  font-size: 11px;
+}
+
+.eco-summary-button:focus-visible,
+.eco-co2-toggle:focus-visible {
+  outline: 2px solid #009b77;
+  outline-offset: 3px;
+}
+
+/* Nút mở giải thích CO2e */
+.eco-co2-toggle {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin: 0 0 12px;
+  padding: 11px 14px;
+  border: 1px solid #c5e9db;
+  border-radius: 12px;
+  background: #f3faf7;
+  color: #009b77;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 750;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.eco-co2-toggle:hover {
+  background: #e3f6ee;
+}
+
+.eco-co2-toggle > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eco-co2-toggle > .bi-chevron-down {
+  transition: transform 0.2s ease;
+}
+
+.eco-toggle-open {
+  transform: rotate(180deg);
+}
+
+.eco-co2-explanation {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 12px;
+  padding: 14px;
+  border: 1px solid #c5e9db;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.eco-co2-explanation > strong {
+  color: #007a60;
+  font-size: 12px;
+}
+
+.eco-co2-explanation p {
+  margin: 9px 0 0;
+  color: #716b61;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eco-insights .eco-donut-interactive,
+  .eco-summary-button,
+  .eco-co2-toggle,
+  .eco-co2-toggle > .bi-chevron-down {
+    transition: none;
+  }
+}
+/* =========================================
+   THÀNH TÍCH XANH — CARD NỔI BẬT
+   ========================================= */
+
+/* Khung thành tích đang mở */
+.achievement-interactive.achievement-expanded {
+  background: linear-gradient(
+    135deg,
+    #f3faf7 0%,
+    #f3faf7 65%,
+    #fff9ed 100%
+  );
+  border: 1px solid #a5ddc9;
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(0, 155, 119, 0.07);
+}
+
+/* Tiêu đề thành tích đang mở */
+.achievement-expanded .achievement-info strong {
+  color: #007a60;
+}
+
+/* Phần chi tiết */
+.achievement-expanded .achievement-detail {
+  padding: 18px;
+  border: 1px solid #c5e9db;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgba(0, 155, 119, 0.04);
+}
+
+/* Tiêu đề tiến độ */
+.achievement-progress-heading {
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.achievement-progress-heading strong {
+  color: #007a60;
+  font-size: 14px;
+}
+
+/* Thanh tiến độ */
+.achievement-progress-track {
+  height: 11px;
+  margin-top: 12px;
+  background: #e1f0e9;
+  border-radius: 999px;
+}
+
+.achievement-progress-fill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #68c6a5,
+    #009b77,
+    #009b77
+  );
+  border-radius: inherit;
+}
+
+/* Nội dung hướng dẫn */
+.achievement-detail p {
+  margin-top: 15px;
+  color: #706b60;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.achievement-detail p b {
+  color: #009b77;
+  font-weight: 800;
+}
+
+/* Nút Đăng bán / Khám phá sản phẩm */
+.achievement-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  min-height: 44px;
+  margin-top: 16px;
+  padding: 7px 8px 7px 18px;
+
+  border: 1px solid #009b77;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #00a781,
+    #009b77
+  );
+
+  color: #ffffff !important;
+  font-size: 13px;
+  font-weight: 750;
+  text-decoration: none !important;
+
+  box-shadow: 0 5px 13px rgba(0, 155, 119, 0.17);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+/* Mũi tên */
+.achievement-action i {
+  display: grid;
+  place-items: center;
+
+  width: 29px;
+  height: 29px;
+
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+
+  font-size: 15px;
+  transition: transform 0.2s ease;
+}
+
+/* Hover */
+.achievement-action:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #007a60, #00634e);
+  box-shadow: 0 10px 20px rgba(0, 155, 119, 0.23);
+}
+
+.achievement-action:hover i {
+  transform: translateX(3px);
+}
+
+/* Trạng thái chưa đạt */
+.achievement-status:not(.achievement-earned) {
+  background: #fff3d9;
+  color: #9a701d;
+  border-radius: 10px;
+}
+
+/* Trạng thái đã đạt */
+.achievement-earned {
+  background: #e3f6ee;
+  color: #007a60;
+  border-radius: 10px;
+}
+
+/* Truy cập bằng bàn phím */
+.achievement-action:focus-visible {
+  outline: 3px solid #56c5a1;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .achievement-action,
+  .achievement-action i {
+    transition: none;
+  }
+}

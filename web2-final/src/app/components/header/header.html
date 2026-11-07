@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="header-card">
     
-    <a class="logo" routerLink="/mua-hang">
+    <a class="logo" routerLink="/">
       <img class="logo-mark" src="./assets/ecocycle-logo.svg" alt="ECOCycle logo">
       <span class="logo-text">ECOCycle</span>
     </a>
@@ -25,7 +25,12 @@
     <div class="header-right flex items-center gap-2">
       <nav class="main-nav" [class.is-open]="isMenuOpen()">
         @for (item of navItems(); track item.href) {
-          <a [routerLink]="item.href" routerLinkActive="is-active">
+          <a
+            [routerLink]="item.href"
+            routerLinkActive="is-active"
+            [routerLinkActiveOptions]="{ exact: false }"
+            (click)="closeMenu()"
+          >
             {{ item.label }}
           </a>
         }
@@ -43,13 +48,36 @@
           <span>{{ userCoins().toLocaleString('vi-VN') }} GreenCoins</span>
         </a>
         }
+        @if (currentUser()) {
+        <a
+          routerLink="/tin-nhan"
+          routerLinkActive="active"
+          (click)="closeIconDropdowns()"
+          [class.icon-active]="!isNotificationDropdownOpen() && !isUserDropdownOpen() && isIconRouteActive('/tin-nhan')"          
+          class="icon-btn"
+          aria-label="Tin nhắn"
+          title="Tin nhắn"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8A8.5 8.5 0 0 1 12.5 3h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+        </a>
+      }
 
         @if (currentUser()) {
-        <div class="relative">
-          <button 
-            type="button" 
-            class="icon-btn notification-btn" 
-            (click)="toggleNotificationDropdown()" 
+        <div class="relative" data-header-popup>
+          <button
+            type="button"
+            class="icon-btn notification-btn"
+            [class.icon-active]="isNotificationDropdownOpen()"
+            (click)="toggleNotificationDropdown()"
             aria-label="Thông báo"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -156,7 +184,13 @@
         </div>
         }
 
-        <a class="icon-btn cart-btn" routerLink="/gio-hang" aria-label="Giỏ hàng">
+        <a
+          class="icon-btn cart-btn"
+          routerLink="/gio-hang"
+          (click)="closeIconDropdowns()"
+          [class.icon-active]="!isNotificationDropdownOpen() && !isUserDropdownOpen() && isIconRouteActive('/gio-hang')"
+          aria-label="Giỏ hàng"
+        >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="9" cy="20" r="1.4"/>
             <circle cx="18" cy="20" r="1.4"/>
@@ -167,10 +201,11 @@
           }
         </a>
 
-        <div class="relative">
+        <div class="relative" data-header-popup>
           <button 
             type="button" 
             class="icon-btn" 
+            [class.icon-active]="isUserDropdownOpen()"
             (click)="toggleUserDropdown()" 
             aria-label="Tài khoản"
           >
