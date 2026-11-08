@@ -1,6 +1,6 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Subscription, finalize } from 'rxjs';
 import { AuthService } from '../../../services/auth.service';
 import { User } from '../../../classes/user';
 
@@ -21,17 +21,20 @@ export class ProfileComponent implements OnInit, OnDestroy {
   businessName = '';
   shopName = '';
   saving = false;
+  uploadingAvatar = false;
+  avatarPreview: string | null = null;
   message = '';
   errorMessage = '';
   private userSubscription?: Subscription;
 
-  constructor(private authService: AuthService, private router: Router) {
+  constructor(private authService: AuthService, private router: Router, private cdr: ChangeDetectorRef) {
     this.user = authService.currentUser;
   }
 
   ngOnInit(): void {
     this.userSubscription = this.authService.currentUser$.subscribe(user => {
       this.user = user;
+      this.avatarPreview = null;
       if (!user) {
         this.router.navigate(['/login']);
         return;
@@ -56,11 +59,60 @@ export class ProfileComponent implements OnInit, OnDestroy {
       }
       this.businessName = user.sellerDetails?.businessName || '';
       this.shopName = user.sellerDetails?.shopName || '';
+      this.cdr.markForCheck();
     });
   }
 
   ngOnDestroy(): void {
     this.userSubscription?.unsubscribe();
+  }
+
+  onAvatarSelected(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    const file = input.files?.[0];
+    input.value = '';
+    if (!file) return;
+
+    this.message = '';
+    this.errorMessage = '';
+    const allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
+    if (!allowedTypes.includes(file.type)) {
+      this.errorMessage = 'Chỉ hỗ trợ ảnh JPG, PNG hoặc WebP.';
+      return;
+    }
+    if (file.size > 2 * 1024 * 1024) {
+      this.errorMessage = 'Ảnh đại diện không được vượt quá 2 MB.';
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onerror = () => {
+      this.errorMessage = 'Không thể đọc ảnh đã chọn.';
+      this.cdr.markForCheck();
+    };
+    reader.onload = () => {
+      const dataUrl = reader.result;
+      if (typeof dataUrl !== 'string') return;
+      this.avatarPreview = dataUrl;
+      this.uploadingAvatar = true;
+      this.cdr.markForCheck();
+      this.authService.updateAvatar(dataUrl).subscribe({
+        next: response => {
+          this.uploadingAvatar = false;
+          this.avatarPreview = null;
+          this.user = this.authService.currentUser;
+          this.message = response.message || 'Đã cập nhật ảnh đại diện.';
+          this.cdr.markForCheck();
+        },
+        error: error => {
+          this.uploadingAvatar = false;
+          this.avatarPreview = null;
+          this.errorMessage = error.error?.message || 'Không thể lưu ảnh đại diện.';
+          this.cdr.markForCheck();
+        }
+      });
+    };
+    reader.readAsDataURL(file);
   }
 
   logout(): void {
@@ -72,9 +124,12 @@ export class ProfileComponent implements OnInit, OnDestroy {
   }
 
   save(): void {
+    if (this.saving) return;
+
     this.saving = true;
     this.message = '';
     this.errorMessage = '';
+
     this.authService.updateProfile({
       fullName: this.fullName,
       email: this.email,
@@ -83,17 +138,29 @@ export class ProfileComponent implements OnInit, OnDestroy {
       district: this.district,
       streetAddress: this.streetAddress,
       ...(this.user?.role === 'SELLER'
-        ? { businessName: this.businessName, shopName: this.shopName }
+        ? {
+            businessName: this.businessName,
+            shopName: this.shopName
+          }
         : {})
-    }).subscribe({
-      next: response => {
+    })
+    .pipe(
+      finalize(() => {
         this.saving = false;
+        this.cdr.markForCheck();
+      })
+    )
+    .subscribe({
+      next: response => {
         this.user = this.authService.currentUser;
-        this.message = response.message;
+        this.message = response.message || 'Cập nhật hồ sơ thành công!';
+        this.cdr.markForCheck();
       },
       error: error => {
-        this.saving = false;
-        this.errorMessage = error.error?.message || 'Không thể cập nhật hồ sơ.';
+        console.error('Lỗi cập nhật hồ sơ:', error);
+        this.errorMessage =
+          error.error?.message || 'Không thể cập nhật hồ sơ.';
+        this.cdr.markForCheck();
       }
     });
   }

@@ -1,12 +1,25 @@
 <main class="profile-page" *ngIf="user as account">
   <section class="profile-card">
     <header class="profile-heading">
-      <div class="avatar">{{ (account.fullName || account.userName || 'U').charAt(0).toUpperCase() }}</div>
+      <div class="avatar-editor">
+        <div class="avatar">
+          @if (avatarPreview || account.avatar) {
+            <img [src]="avatarPreview || account.avatar" alt="Ảnh đại diện của bạn" />
+          } @else {
+            {{ (account.fullName || account.userName || 'U').charAt(0).toUpperCase() }}
+          }
+        </div>
+        <button type="button" class="avatar-change" (click)="avatarInput.click()" [disabled]="uploadingAvatar" aria-label="Thay ảnh đại diện" title="Thay ảnh đại diện">
+          <img src="https://cdn-icons-png.flaticon.com/128/10703/10703200.png" alt="" />
+        </button>
+        <input #avatarInput type="file" accept="image/jpeg,image/png,image/webp" class="avatar-file-input" (change)="onAvatarSelected($event)" />
+      </div>
       <div>
         <p class="eyebrow">HỒ SƠ TÀI KHOẢN</p>
         <h1>{{ account.fullName || account.userName }}</h1>
         <p>{{ account.userID }} · {{ account.role === 'SELLER' ? 'Cửa hàng' : account.role === 'ADMIN' ? 'Quản trị viên' : 'Người mua' }}</p>
       </div>
+      @if (uploadingAvatar) { <span class="avatar-upload-status" role="status">Đang tải ảnh đại diện...</span> }
     </header>
 
     <section class="profile-section">

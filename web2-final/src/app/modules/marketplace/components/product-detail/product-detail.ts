@@ -35,7 +35,9 @@ export class ProductDetail implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    if (!sessionStorage.getItem('ecocycleReturnScrollY')) {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
     const idParam = this.route.snapshot.paramMap.get('id');
     if (idParam) {
       const type = getIdentityType(idParam);
@@ -62,7 +64,23 @@ export class ProductDetail implements OnInit {
         }
         this.isLoading = false;
         this.cdr.detectChanges();
+        const savedScroll = sessionStorage.getItem('ecocycleReturnScrollY');
+
+        if (savedScroll !== null) {
+          sessionStorage.removeItem('ecocycleReturnScrollY');
+
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              window.scrollTo({
+                top: Number(savedScroll),
+                behavior: 'instant'
+              });
+            });
+          });
+        }
+
       },
+      
       error: (err) => {
         this.errorMessage = 'Lỗi tải chi tiết sản phẩm từ MongoDB!';
         this.isLoading = false;
@@ -197,11 +215,21 @@ export class ProductDetail implements OnInit {
       );
       return;
     }
+    const returnUrl = this.router.url;
+    const returnScrollY = window.scrollY;
 
     this.chatService.createConversation(sellerID, productID).subscribe({
       next: (conversation) => {
+        sessionStorage.setItem(
+          'ecocycleReturnScrollY',
+          String(returnScrollY)
+        );
+
         this.router.navigate(['/tin-nhan'], {
-          queryParams: { conversationID: conversation._id }
+          queryParams: {
+            conversationID: conversation._id,
+            returnUrl: returnUrl
+          }
         });
       },
       error: (error) => {

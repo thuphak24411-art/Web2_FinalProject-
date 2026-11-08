@@ -1,4 +1,5 @@
-import { Component, OnInit, HostListener, signal } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener, signal } from '@angular/core';
+import { Subscription, interval } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ProductService } from '../../modules/marketplace/services/product';
@@ -14,13 +15,15 @@ import type { NavItem } from '../../classes/admin';
   templateUrl: './header.html',
   styleUrl: './header.css'
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
+  // Điều hướng chính
   navItems = signal<NavItem[]>([
-    { id: 'sua-chua', label: 'Sửa chữa', href: '/sua-chua' },
     { id: 'mua-hang', label: 'Sản phẩm', href: '/mua-hang' },
+    { id: 'sua-chua', label: 'Sửa chữa', href: '/sua-chua' },
     { id: 'moi-truong', label: 'Môi trường', href: '/moi-truong' }
   ]);
 
+  // Trạng thái giao diện và dữ liệu Header
   searchTerm = signal<string>('');
   cartCount = signal<number>(3);
   userCoins = signal<number>(0);
@@ -32,6 +35,9 @@ export class HeaderComponent implements OnInit {
   isNotificationDropdownOpen = signal<boolean>(false);
   currentUser = signal<User | null>(null);
 
+  private readonly notificationRefresh = new Subscription();
+  private notificationLoading = false;
+
   constructor(
     private http: HttpClient,
     private router: Router,
@@ -40,6 +46,7 @@ export class HeaderComponent implements OnInit {
     private authService: AuthService
   ) {}
 
+  // Khởi tạo dữ liệu
   ngOnInit(): void {
     this.currentUser.set(this.authService.currentUser);
     this.authService.currentUser$.subscribe(user => {
@@ -54,11 +61,24 @@ export class HeaderComponent implements OnInit {
         this.hasNotification.set(false);
       }
     });
+    // Cập nhật badge thông báo định kỳ, không cần mở chuông.
+    this.notificationRefresh.add(interval(45000).subscribe(() => {
+      const userID = this.currentUser()?.userID;
+      if (userID) {
+        this.loadUserProfile(userID);
+        this.loadNotifications();
+      }
+    }));
     this.cartService.cartCount$.subscribe({
       next: (count) => this.cartCount.set(count)
     });
   }
 
+  ngOnDestroy(): void {
+    this.notificationRefresh.unsubscribe();
+  }
+
+  // Hồ sơ và thông báo
   loadUserProfile(userID: string): void {
     this.http.get<User>(`http://localhost:3000/users/${encodeURIComponent(userID)}`).subscribe({
       next: (user) => {
@@ -76,8 +96,13 @@ export class HeaderComponent implements OnInit {
       this.notifications.set([]);
       return;
     }
+    if (this.notificationLoading) return;
+    this.notificationLoading = true;
+    const requestedUserID = userID;
     this.http.get<NotificationItem[]>('http://localhost:3000/notifications').subscribe({
       next: (data) => {
+        this.notificationLoading = false;
+        if (this.currentUser()?.userID !== requestedUserID) return;
         if (Array.isArray(data)) {
           this.notifications.set(data);
           const unread = data.filter(n => !n.isRead).length;
@@ -85,10 +110,11 @@ export class HeaderComponent implements OnInit {
           this.hasNotification.set(unread > 0);
         }
       },
-      error: () => {}
+      error: () => { this.notificationLoading = false; }
     });
   }
 
+  // Điều khiển menu và dropdown
   toggleMenu(): void {
     this.isMenuOpen.update(v => !v);
   }
@@ -102,6 +128,8 @@ export class HeaderComponent implements OnInit {
     if (this.isNotificationDropdownOpen()) {
       this.isUserDropdownOpen.set(false);
       this.loadNotifications();
+      const userID = this.currentUser()?.userID;
+      if (userID) this.loadUserProfile(userID);
     }
   }
 
@@ -120,32 +148,33 @@ export class HeaderComponent implements OnInit {
     this.isUserDropdownOpen.set(false);
   }
 
-  openNotificationsFromDropdown(): void {
-    if (!this.currentUser()) return;
-    this.isUserDropdownOpen.set(false);
-    this.isNotificationDropdownOpen.set(true);
-    this.loadNotifications();
-  }
 
+  // Xử lý thông báo
   onNotificationClick(item: NotificationItem): void {
     if (!item.isRead && item.notificationID) {
-      item.isRead = true;
       this.http.put(
-        `http://localhost:3000/notifications/${item.notificationID}/read`,
+        `http://localhost:3000/notifications/${encodeURIComponent(item.notificationID)}/read`,
         {}
       ).subscribe({
         next: () => {
+          this.notifications.update(items => items.map(n =>
+            n.notificationID === item.notificationID ? { ...n, isRead: true } : n
+          ));
           const unread = this.notifications().filter(n => !n.isRead).length;
           this.unreadNotificationCount.set(unread);
           this.hasNotification.set(unread > 0);
-        }
+        },
+        error: (error) => console.error('Không thể đánh dấu đã đọc:', error)
       });
     }
 
     this.closeNotificationDropdown();
 
     if (item.targetID && item.targetID.startsWith('OD')) {
-      this.router.navigate(['/don-hang-da-dat']);
+      // Truyền mã đơn hàng để trang đích có thể chọn đúng đơn.
+      this.router.navigate(['/don-hang-da-dat'], {
+        queryParams: { orderID: item.targetID }
+      });
     } else if (item.targetID && item.targetID.startsWith('RP') && item.type === 'repair_admin') {
       this.router.navigate(['/admin'], {
         queryParams: { repairOrderID: item.targetID }
@@ -211,6 +240,7 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  // Tìm kiếm và tài khoản
   onSearchInput(val: string): void {
     this.searchTerm.set(val);
   }
@@ -253,5 +283,19 @@ export class HeaderComponent implements OnInit {
 
   isIconRouteActive(path: string): boolean {
     return this.router.url.split('?')[0].split('#')[0] === path;
+  }
+  getRoleLabel(role?: string): string {
+    switch (role) {
+      case 'ADMIN':
+        return 'Quản trị viên';
+      case 'CUSTOMER':
+        return 'Khách hàng';
+      case 'SELLER':
+        return 'Người bán';
+      case 'TECHNICIAN':
+        return 'Kỹ thuật viên';
+      default:
+        return 'Chưa xác định';
+    }
   }
 }
