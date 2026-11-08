@@ -108,6 +108,16 @@ export class AuthService {
     );
   }
 
+  updateAvatar(avatar: string): Observable<AuthResponse> {
+    return this.http.put<AuthResponse>(`${this.apiUrl}/avatar`, { avatar }).pipe(
+      tap(response => {
+        const user = this.normalizeUser(response.user);
+        localStorage.setItem('ecocycle_user', JSON.stringify(user));
+        this.userSubject.next(user);
+      })
+    );
+  }
+
   logout(): void {
     localStorage.removeItem('ecocycle_token');
     localStorage.removeItem('ecocycle_user');

@@ -8,10 +8,13 @@ import { AuthService } from '../../../services/auth.service';
 export interface ChatConversation {
   _id: string;
   participants: string[];
+  participantNames?: Record<string, string>;
+  participantAvatars?: Record<string, string>;
   productID: string;
   lastMessage: string;
   createdAt: string;
   updatedAt: string;
+  type?: 'product' | 'support';
 }
 
 export interface ChatMessage {
@@ -21,6 +24,8 @@ export interface ChatMessage {
   content: string;
   createdAt: string;
   isRead: boolean;
+  imageUrl?: string;
+  type?: 'text' | 'image' | 'system';
 }
 
 export interface ChatAck {
@@ -84,10 +89,43 @@ export class ChatService {
       { receiverID, productID }
     );
   }
+  // Tạo hoặc mở cuộc trò chuyện hỗ trợ Admin
+  createSupportConversation() {
+    return this.http.post<ChatConversation>(
+      `${this.apiUrl}/support`,
+      {}
+    );
+  }
+
+  sendSupportTopic(conversationID: string, topicID: string) {
+    return this.http.post(
+      `${this.apiUrl}/support/${conversationID}/topic`,
+      { topicID }
+    );
+  }
 
   getMessages(conversationID: string): Observable<ChatMessage[]> {
     return this.http.get<ChatMessage[]>(
       `${this.apiUrl}/conversations/${conversationID}/messages`
+    );
+  }
+  uploadImage(
+    conversationID: string,
+    file: File
+  ): Observable<ChatMessage> {
+    const formData = new FormData();
+    formData.append('image', file);
+
+    return this.http.post<ChatMessage>(
+      `${this.apiUrl}/conversations/${conversationID}/images`,
+      formData
+    );
+  }
+
+  getChatImage(imageUrl: string): Observable<Blob> {
+    return this.http.get(
+      `http://localhost:3000${imageUrl}`,
+      { responseType: 'blob' }
     );
   }
 
@@ -103,10 +141,28 @@ export class ChatService {
     content: string,
     callback?: (result: ChatAck) => void
   ): void {
-    this.socket?.emit(
+    if (!this.socket?.connected) {
+      callback?.({
+        ok: false,
+        message: 'Mất kết nối Chat. Vui lòng tải lại trang.'
+      });
+      return;
+    }
+
+    this.socket.timeout(10000).emit(
       'chat:send',
       { conversationID, content },
-      callback
+      (error: Error | null, result: ChatAck) => {
+        if (error) {
+          callback?.({
+            ok: false,
+            message: 'Server không phản hồi trong 10 giây.'
+          });
+          return;
+        }
+
+        callback?.(result);
+      }
     );
   }
 

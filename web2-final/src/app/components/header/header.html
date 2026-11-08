@@ -119,8 +119,9 @@
                 @for (item of notifications(); track item.notificationID || item._id) {
                   <div 
                     (click)="onNotificationClick(item)" 
-                    class="p-3.5 hover:bg-emerald-50/40 transition-colors cursor-pointer flex gap-3 items-start relative"
-                    [class.bg-emerald-50/20]="!item.isRead"
+                    class="notification-list-item p-3.5 cursor-pointer flex gap-3 items-start relative"
+                    [class.notification-unread]="!item.isRead"
+                    [class.notification-read]="item.isRead"
                   >
                     <div 
                       class="w-8 h-8 rounded-xl flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
@@ -216,86 +217,74 @@
           </button>
 
           @if (isUserDropdownOpen()) {
-            <div 
-              class="absolute right-0 mt-2 w-52 bg-white rounded-2xl shadow-xl border border-gray-100 py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200"
-            >
-              <div class="px-4 py-2 border-b border-gray-100">
-                <p class="text-xs font-bold text-gray-900">
-                  {{ currentUser()?.fullName || currentUser()?.userName || 'Tài khoản' }}
-                </p>
-                @if (currentUser()) {
-                  <p class="text-[10px] text-gray-500 mt-0.5">{{ currentUser()?.userID }} · {{ currentUser()?.role }}</p>
-                }
+            <div class="header-user-dropdown" role="menu" aria-label="Menu tài khoản">
+              <!-- THÔNG TIN TÀI KHOẢN -->
+              <div class="header-user-profile">
+
+                <!-- Avatar -->
+                <div class="header-user-avatar">
+                  <img
+                    [src]="currentUser()?.avatar || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150'"
+                    alt="Ảnh đại diện tài khoản"
+                  />
+                </div>
+
+                <!-- Tên, mã tài khoản và vai trò -->
+                <div class="header-user-details">
+
+                  <strong>
+                    {{ currentUser()?.fullName || currentUser()?.userName || 'Tài khoản' }}
+                  </strong>
+
+                  @if (currentUser()) {
+                    <div class="account-role-info">
+                      <span class="account-user-id">
+                        {{ currentUser()?.userID }}
+                      </span>
+
+                      <span class="account-role">
+                        {{ getRoleLabel(currentUser()?.role) }}
+                      </span>
+                    </div>
+                  }
+
+                </div>
+
               </div>
 
-              <div class="py-1">
-                <button 
-                  type="button"
-                  (click)="openNotificationsFromDropdown()"
-                  class="w-full flex items-center justify-between px-4 py-2.5 text-xs text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-semibold transition-colors text-left"
-                >
-                  <div class="flex items-center gap-2.5">
-                    <i class="bi bi-bell text-emerald-600 text-sm"></i>
-                    <span>Thông báo</span>
-                  </div>
-                  @if (unreadNotificationCount() > 0) {
-                    <span class="bg-red-500 text-white text-[10px] font-extrabold px-1.5 py-0.2 rounded-full">
-                      {{ unreadNotificationCount() }}
-                    </span>
-                  }
-                </button>
+              <div class="header-user-menu-items">
+                @if (currentUser()) {
+                  <a routerLink="/tai-khoan" (click)="closeUserDropdown()" class="header-user-menu-link" role="menuitem">
+                    <i class="bi bi-person-circle text-emerald-600 text-sm" aria-hidden="true"></i>
+                    <span>Tài khoản của tôi</span>
+                  </a>
+                }
 
-                <a 
-                  routerLink="/don-hang-da-dat" 
-                  (click)="closeUserDropdown()"
-                  class="flex items-center gap-2.5 px-4 py-2.5 text-xs text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-semibold transition-colors"
-                >
-                  <i class="bi bi-receipt text-emerald-600 text-sm"></i>
-                  <span>Đơn hàng của tôi</span>
-                </a>
-                
                 @if (currentUser()?.role === 'SELLER') {
-                  <a 
-                    routerLink="/dang-ban" 
-                    (click)="closeUserDropdown()"
-                    class="flex items-center gap-2.5 px-4 py-2.5 text-xs text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-semibold transition-colors"
-                  >
-                    <i class="bi bi-plus-circle text-emerald-600 text-sm"></i>
+                  <a routerLink="/dang-ban" (click)="closeUserDropdown()" class="header-user-menu-link" role="menuitem">
+                    <i class="bi bi-plus-circle text-emerald-600 text-sm" aria-hidden="true"></i>
                     <span>Đăng bán thiết bị</span>
                   </a>
                 }
 
                 @if (currentUser()?.role === 'ADMIN') {
-                  <a 
-                    routerLink="/admin" 
-                    (click)="closeUserDropdown()"
-                    class="flex items-center gap-2.5 px-4 py-2.5 text-xs text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-semibold transition-colors"
-                  >
-                    <i class="bi bi-tools text-emerald-600 text-sm"></i>
+                  <a routerLink="/admin" (click)="closeUserDropdown()" class="header-user-menu-link" role="menuitem">
+                    <i class="bi bi-tools text-emerald-600 text-sm" aria-hidden="true"></i>
                     <span>Quản lý hệ thống</span>
                   </a>
                 }
 
                 @if (!currentUser()) {
-                  <a routerLink="/login" (click)="closeUserDropdown()" class="flex items-center gap-2.5 px-4 py-2.5 text-xs text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-semibold transition-colors">
-                    <i class="bi bi-box-arrow-in-right text-emerald-600 text-sm"></i>
+                  <a routerLink="/login" (click)="closeUserDropdown()" class="header-user-menu-link" role="menuitem">
+                    <i class="bi bi-box-arrow-in-right text-emerald-600 text-sm" aria-hidden="true"></i>
                     <span>Đăng nhập</span>
                   </a>
                 } @else {
-                  <button type="button" (click)="logout()" class="w-full flex items-center gap-2.5 px-4 py-2.5 text-xs text-red-600 hover:bg-red-50 font-semibold transition-colors text-left">
-                    <i class="bi bi-box-arrow-right text-sm"></i>
+                  <button type="button" (click)="logout()" class="header-user-menu-link header-user-menu-logout" role="menuitem">
+                    <i class="bi bi-box-arrow-right text-sm" aria-hidden="true"></i>
                     <span>Đăng xuất</span>
                   </button>
                 }
-
-                <a 
-                  routerLink="/tai-khoan" 
-                  (click)="closeUserDropdown()"
-                  class="flex items-center gap-2.5 px-4 py-2.5 text-xs text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 font-semibold transition-colors"
-                >
-                  <i class="bi bi-person-circle text-emerald-600 text-sm"></i>
-                  <span>Tài khoản của tôi</span>
-                </a>
               </div>
             </div>
           }

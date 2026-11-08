@@ -528,6 +528,14 @@ app.patch('/api/admin/users/:userID/green-coins', authenticate, requireAdmin, as
     );
     if (!result) return res.status(404).json({ message: 'Không tìm thấy người dùng.' });
     res.status(200).json({ user: result, amount, recycledKg });
+    // Gửi thông báo sau phản hồi: không làm chậm thao tác cộng GreenCoins.
+    void createRepairNotification(
+      req.params.userID,
+      'Bạn đã nhận GreenCoins từ tái chế',
+      `Bạn được cộng ${amount.toLocaleString('vi-VN')} GreenCoins khi tái chế ${recycledKg} kg rác điện tử.`,
+      '',
+      'green_coin'
+    ).catch(err => console.error('Lỗi tạo thông báo GreenCoins tái chế:', err));
   } catch (err) {
     console.error('Lỗi khi thêm GreenCoin cho tài khoản:', err);
     res.status(500).json({ message: 'Không thể cập nhật GreenCoin.' });
@@ -1645,6 +1653,16 @@ app.put('/orders/status/:orderId', authenticate, requireAdmin, async (req, res) 
     }
 
     res.status(200).json({ success: true, message: `Đã chuyển trạng thái đơn hàng sang ${status}` });
+    // Chỉ bổ sung thông báo sau khi trả kết quả; KHÔNG sửa logic đơn hàng gốc.
+    if (deliveredStatuses.includes(status) && !deliveredStatuses.includes(previousStatus) && order.customerID) {
+      void createRepairNotification(
+        order.customerID,
+        'Bạn đã nhận 10.000 GreenCoins',
+        `Đơn hàng ${order.orderID || order.orderId || orderId} đã hoàn tất. Bạn được cộng 10.000 GreenCoins.`,
+        order.orderID || order.orderId || orderId,
+        'green_coin'
+      ).catch(err => console.error('Lỗi tạo thông báo GreenCoins đơn hàng:', err));
+    }
   } catch (err) {
     console.error("Lỗi khi cập nhật trạng thái đơn hàng:", err);
     res.status(500).json({ error: err.message });

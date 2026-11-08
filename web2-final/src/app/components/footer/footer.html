@@ -1,12 +1,15 @@
 <footer class="site-footer">
   <div class="footer-top">
-    <div class="footer-brand">
-      <a class="logo" href="/">
+    <section class="footer-brand" aria-label="Giới thiệu ECOCycle">
+      <a class="logo" routerLink="/" aria-label="Về trang chủ ECOCycle">
         <img class="logo-mark" src="./assets/ecocycle-logo.svg" alt="ECOCycle logo">
         <span class="logo-text">ECOCycle</span>
       </a>
       <p class="footer-tagline">Sống xanh mỗi ngày</p>
-      <p class="footer-desc">ECOCycle là nền tảng thương mại điện tử vì một lối sống bền vững hơn, nơi bạn có thể mua sắm, sửa chữa và tái chế thiết bị điện tử dễ dàng.</p>
+      <p class="footer-desc">
+        ECOCycle là nền tảng thương mại điện tử vì một lối sống bền vững hơn,
+        nơi bạn có thể mua sắm, sửa chữa và tái chế thiết bị điện tử dễ dàng.
+      </p>
 
       <div class="footer-social">
         <a href="#" aria-label="Facebook">
@@ -22,28 +25,32 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3h2.3c.3 1.7 1.5 3 3.3 3.3V8.6c-1.3 0-2.4-.4-3.3-1v6.7c0 3-2.4 5.2-5.3 5.2S5.7 17.3 5.7 14.3c0-2.9 2.3-5.2 5.2-5.2.4 0 .8 0 1.1.1v2.5a2.7 2.7 0 1 0 2 2.6z"/></svg>
         </a>
       </div>
-    </div>
+    </section>
 
-    @for (col of columns(); track col.title) {
-      <div class="footer-col">
+    @for (col of columns; track col.title) {
+      <nav class="footer-col" [attr.aria-label]="col.title">
         <h3>{{ col.title }}</h3>
         <ul>
           @for (link of col.links; track link.href) {
-            <li><a [href]="link.href">{{ link.label }}</a></li>
+            <li><a [routerLink]="link.href">{{ link.label }}</a></li>
           }
         </ul>
-      </div>
+      </nav>
     }
 
-    <div class="footer-newsletter">
-      <h3>Đăng ký nhận tin</h3>
-      <p>Nhận thông tin về sản phẩm mới, ưu đãi đặc biệt và mẹo sống xanh mỗi tuần.</p>
-      <form class="newsletter" (ngSubmit)="onSubscribe($event)">
+    <section class="footer-newsletter" aria-labelledby="footer-newsletter-title">
+      <h3 id="footer-newsletter-title">Đăng ký nhận tin</h3>
+      <p>
+        Nhận thông tin về sản phẩm mới, ưu đãi đặc biệt
+        và mẹo sống xanh mỗi tuần.
+      </p>
+      <form class="newsletter" (submit)="onSubscribe($event)">
         <input 
           type="email" 
           placeholder="Nhập email của bạn" 
           required 
-          aria-label="Email"
+          aria-label="Email đăng ký nhận tin"
+          autocomplete="email"
           [value]="email()"
           (input)="email.set($any($event.target).value)" 
         />
@@ -58,15 +65,15 @@
         <span>Tôi đồng ý nhận email từ ECOCycle.</span>
       </label>
       @if (noteMessage()) {
-        <p class="newsletter-note">{{ noteMessage() }}</p>
+        <p class="newsletter-note" role="status" aria-live="polite">{{ noteMessage() }}</p>
       }
-    </div>
+    </section>
   </div>
 
   <div class="footer-bottom">
     <div class="footer-bottom-inner">
-      <span class="copyright">{{ copyright() }}</span>
-      <div class="footer-tags">
+      <span class="copyright">{{ copyright }}</span>
+      <div class="footer-tags" aria-label="Giá trị ECOCycle">
         <span class="footer-tag">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.4 9 8 10 4.6-1 8-5 8-10V6z"/></svg>
           Tiêu dùng có trách nhiệm

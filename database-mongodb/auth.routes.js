@@ -501,6 +501,49 @@ function createAuthRouter(db) {
     }
   });
 
+  // Avatar được lưu dưới dạng data URL trong MongoDB (giới hạn 2 MB).
+  router.put('/avatar', async (req, res) => {
+    const header = req.headers.authorization || '';
+    const token = header.startsWith('Bearer ') ? header.slice(7) : '';
+    if (!token) return res.status(401).json({ message: 'Bạn chưa đăng nhập.' });
+
+    let decoded;
+    try {
+      decoded = jwt.verify(token, JWT_SECRET);
+    } catch {
+      return res.status(401).json({ message: 'Phiên đăng nhập không hợp lệ hoặc đã hết hạn.' });
+    }
+
+    const avatar = req.body?.avatar;
+    if (typeof avatar !== 'string') {
+      return res.status(400).json({ message: 'Dữ liệu ảnh không hợp lệ.' });
+    }
+    const match = /^data:image\/(jpeg|png|webp);base64,([A-Za-z0-9+/]+={0,2})$/.exec(avatar);
+    if (!match) return res.status(400).json({ message: 'Chỉ hỗ trợ JPG, PNG hoặc WebP.' });
+    const bytes = Buffer.from(match[2], 'base64');
+    if (!bytes.length || bytes.length > 2 * 1024 * 1024 || bytes.toString('base64') !== match[2]) {
+      return res.status(400).json({ message: 'Ảnh không hợp lệ hoặc vượt quá 2 MB.' });
+    }
+    const jpeg = bytes.length >= 3 && bytes.subarray(0, 3).equals(Buffer.from([0xff, 0xd8, 0xff]));
+    const png = bytes.length >= 8 && bytes.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10]));
+    const webp = bytes.length >= 12 && bytes.toString('ascii', 0, 4) === 'RIFF' && bytes.toString('ascii', 8, 12) === 'WEBP';
+    if (!((match[1] === 'jpeg' && jpeg) || (match[1] === 'png' && png) || (match[1] === 'webp' && webp))) {
+      return res.status(400).json({ message: 'Nội dung ảnh không khớp định dạng.' });
+    }
+    try {
+      const result = await users.updateOne(
+        { userID: decoded.userID, status: 'ACTIVE' },
+        { $set: { avatar } }
+      );
+      if (!result.matchedCount) return res.status(404).json({ message: 'Không tìm thấy tài khoản đang hoạt động.' });
+      const updated = await users.findOne({ userID: decoded.userID });
+      return res.json({ message: 'Đã cập nhật ảnh đại diện.', user: publicUser(updated) });
+    } catch (error) {
+      console.error('Avatar update error:', error);
+      return res.status(500).json({ message: 'Không thể cập nhật ảnh đại diện.' });
+    }
+  });
+
   return router;
 }
 

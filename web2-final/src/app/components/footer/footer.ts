@@ -8,13 +8,10 @@ import type { FooterColumn } from '../../classes/admin';
   styleUrl: './footer.css'
 })
 export class FooterComponent {
-  email = signal<string>('');
-  consent = signal<boolean>(false);
-  noteMessage = signal<string>('');
+  // Nội dung tĩnh: không cần signal vì không thay đổi trong quá trình sử dụng.
+  readonly copyright = `© ${new Date().getFullYear()} ECOCycle. Tất cả quyền được bảo lưu.`;
 
-  copyright = signal<string>('© 2026 ECOCycle. Tất cả quyền được bảo lưu.');
-
-  columns = signal<FooterColumn[]>([
+  readonly columns: FooterColumn[] = [
     {
       title: 'Về ECOCycle',
       links: [
@@ -42,11 +39,19 @@ export class FooterComponent {
         { label: 'Điều khoản sử dụng', href: '/dieu-khoan' }
       ]
     }
-  ]);
+  ];
+
+  // Trạng thái biểu mẫu đăng ký nhận tin.
+  readonly email = signal('');
+  readonly consent = signal(false);
+  readonly noteMessage = signal('');
 
   onSubscribe(event: Event): void {
     event.preventDefault();
-    if (!this.email().trim()) {
+
+    const email = this.email().trim();
+    if (!email) {
+      this.noteMessage.set('Vui lòng nhập địa chỉ email.');
       return;
     }
 
@@ -55,8 +60,7 @@ export class FooterComponent {
       return;
     }
 
-    console.log('Đăng ký nhận tin:', this.email().trim());
-    this.noteMessage.set('Đã đăng ký! Cảm ơn bạn.');
-    this.email.set('');
+    // TODO: Kết nối API đăng ký nhận tin trước khi thông báo thành công.
+    this.noteMessage.set('Chức năng đăng ký nhận tin đang được hoàn thiện.');
   }
 }
