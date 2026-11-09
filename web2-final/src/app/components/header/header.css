@@ -128,7 +128,8 @@
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
+  padding-right: 14px;
   flex-shrink: 0;
 }
 
@@ -375,6 +376,7 @@
   flex-direction: column;
   gap: 4px;
   min-width: 0;
+  margin-top: 2px;
 }
 
 .header-user-details strong {
@@ -426,9 +428,20 @@
   color: #b91c1c;
 }
 
-.header-user-avatar { overflow: hidden; }
-.header-user-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.header-user-avatar {
+  overflow: hidden;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
 
+.header-user-avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 50%;
+}
 /* Notifications: phân biệt trạng thái đã đọc / chưa đọc */
 .notification-list-item {
     transition: background-color 180ms ease, color 180ms ease;
