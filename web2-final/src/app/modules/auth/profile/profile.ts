@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit,  ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription, finalize } from 'rxjs';
 import { AuthService } from '../../../services/auth.service';
@@ -23,6 +23,16 @@ export class ProfileComponent implements OnInit, OnDestroy {
   saving = false;
   uploadingAvatar = false;
   avatarPreview: string | null = null;
+  // Trình chỉnh sửa ảnh đại diện
+  @ViewChild('cropCanvas')
+  cropCanvas?: ElementRef<HTMLCanvasElement>;
+
+  cropDialogOpen = false;
+  cropZoom = 100;
+  cropX = 50;
+  cropY = 50;
+
+  private selectedAvatarImage: HTMLImageElement | null = null;
   message = '';
   errorMessage = '';
   private userSubscription?: Subscription;
@@ -71,48 +81,177 @@ export class ProfileComponent implements OnInit, OnDestroy {
     const input = event.target as HTMLInputElement;
     const file = input.files?.[0];
     input.value = '';
+
     if (!file) return;
 
     this.message = '';
     this.errorMessage = '';
+
     const allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
+
     if (!allowedTypes.includes(file.type)) {
       this.errorMessage = 'Chỉ hỗ trợ ảnh JPG, PNG hoặc WebP.';
       return;
     }
+
     if (file.size > 2 * 1024 * 1024) {
       this.errorMessage = 'Ảnh đại diện không được vượt quá 2 MB.';
       return;
     }
 
     const reader = new FileReader();
+
     reader.onerror = () => {
       this.errorMessage = 'Không thể đọc ảnh đã chọn.';
       this.cdr.markForCheck();
     };
+
     reader.onload = () => {
-      const dataUrl = reader.result;
-      if (typeof dataUrl !== 'string') return;
-      this.avatarPreview = dataUrl;
-      this.uploadingAvatar = true;
-      this.cdr.markForCheck();
-      this.authService.updateAvatar(dataUrl).subscribe({
-        next: response => {
-          this.uploadingAvatar = false;
-          this.avatarPreview = null;
-          this.user = this.authService.currentUser;
-          this.message = response.message || 'Đã cập nhật ảnh đại diện.';
-          this.cdr.markForCheck();
-        },
-        error: error => {
-          this.uploadingAvatar = false;
-          this.avatarPreview = null;
-          this.errorMessage = error.error?.message || 'Không thể lưu ảnh đại diện.';
-          this.cdr.markForCheck();
-        }
-      });
+      if (typeof reader.result !== 'string') return;
+
+      const image = new Image();
+
+      image.onload = () => {
+        this.selectedAvatarImage = image;
+        this.cropZoom = 100;
+        this.cropX = 50;
+        this.cropY = 50;
+        this.cropDialogOpen = true;
+
+        // Tạo canvas sau khi modal được hiển thị
+        this.cdr.detectChanges();
+        this.renderCropPreview();
+      };
+
+      image.onerror = () => {
+        this.errorMessage = 'Ảnh không hợp lệ hoặc không thể đọc.';
+        this.cdr.markForCheck();
+      };
+
+      image.src = reader.result;
     };
+
     reader.readAsDataURL(file);
+  }
+
+  // Vẽ ảnh đã crop lên canvas xem trước
+  renderCropPreview(): void {
+    const image = this.selectedAvatarImage;
+    const canvas = this.cropCanvas?.nativeElement;
+
+    if (!image || !canvas) return;
+
+    this.drawCroppedImage(canvas, 280);
+  }
+
+  // Xử lý crop ảnh theo tỷ lệ vuông
+  private drawCroppedImage(
+    canvas: HTMLCanvasElement,
+    outputSize: number
+  ): void {
+    const image = this.selectedAvatarImage;
+
+    if (!image) return;
+
+    const ctx = canvas.getContext('2d');
+
+    if (!ctx) return;
+
+    canvas.width = outputSize;
+    canvas.height = outputSize;
+
+    const scale = Math.max(
+      outputSize / image.naturalWidth,
+      outputSize / image.naturalHeight
+    ) * (this.cropZoom / 100);
+
+    const sourceWidth = outputSize / scale;
+    const sourceHeight = outputSize / scale;
+
+    const maxX = Math.max(0, image.naturalWidth - sourceWidth);
+    const maxY = Math.max(0, image.naturalHeight - sourceHeight);
+
+    const sourceX = maxX * this.cropX / 100;
+    const sourceY = maxY * this.cropY / 100;
+
+    ctx.clearRect(0, 0, outputSize, outputSize);
+
+    ctx.drawImage(
+      image,
+      sourceX,
+      sourceY,
+      sourceWidth,
+      sourceHeight,
+      0,
+      0,
+      outputSize,
+      outputSize
+    );
+  }
+
+  // Khi thay đổi thanh điều chỉnh
+  onCropChange(): void {
+    this.renderCropPreview();
+  }
+
+  // Khôi phục vị trí ban đầu
+  resetCrop(): void {
+    this.cropZoom = 100;
+    this.cropX = 50;
+    this.cropY = 50;
+
+    this.renderCropPreview();
+  }
+
+  // Đóng trình chỉnh sửa
+  closeCropEditor(): void {
+    if (this.uploadingAvatar) return;
+
+    this.cropDialogOpen = false;
+    this.selectedAvatarImage = null;
+    this.avatarPreview = null;
+  }
+
+  // Lưu ảnh đã chỉnh sửa
+  saveCroppedAvatar(): void {
+    if (this.uploadingAvatar || !this.selectedAvatarImage) {
+      return;
+    }
+
+    const canvas = document.createElement('canvas');
+
+    this.drawCroppedImage(canvas, 512);
+
+    const croppedImage = canvas.toDataURL('image/jpeg', 0.9);
+
+    this.uploadingAvatar = true;
+    this.avatarPreview = croppedImage;
+    this.message = '';
+    this.errorMessage = '';
+
+    this.authService.updateAvatar(croppedImage).subscribe({
+      next: response => {
+        this.uploadingAvatar = false;
+        this.avatarPreview = null;
+        this.user = this.authService.currentUser;
+
+        this.cropDialogOpen = false;
+        this.selectedAvatarImage = null;
+
+        this.message = response.message || 'Đã cập nhật ảnh đại diện.';
+
+        this.cdr.markForCheck();
+      },
+      error: error => {
+        this.uploadingAvatar = false;
+        this.avatarPreview = null;
+
+        this.errorMessage =
+          error.error?.message || 'Không thể lưu ảnh đại diện.';
+
+        this.cdr.markForCheck();
+      }
+    });
   }
 
   logout(): void {
