@@ -129,8 +129,11 @@
 }
 
 .order-card {
-  justify-content: initial;
+  display: grid;
+  grid-template-columns: 44px minmax(220px, 1.4fr) minmax(180px, 1fr) minmax(160px, .8fr) auto;
+  align-items: center;
   padding: 18px 22px;
+  column-gap: 16px;
   border-bottom: 1px solid #edf1ee;
 }
 
@@ -146,7 +149,6 @@
 }
 
 .order-info {
-  flex: 1;
   min-width: 180px;
 }
 
@@ -369,10 +371,14 @@
 }
 
 @media (max-width: 820px) {
-  .section-heading,
-  .order-card {
+  .section-heading {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .order-card {
+    grid-template-columns: 1fr;
+    row-gap: 12px;
   }
 
   .section-tools {
