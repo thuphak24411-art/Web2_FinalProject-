@@ -19,7 +19,7 @@
     <div class="request-filters">
       <label class="search-field">
         <i class="bi bi-search" aria-hidden="true"></i>
-        <input type="search" [(ngModel)]="searchTerm" placeholder="Tìm theo mã đơn sửa chữa" aria-label="Tìm theo mã repairOrderID">
+        <input type="search" [(ngModel)]="searchTerm" placeholder="Tìm theo mã yêu cầu sửa chữa" aria-label="Tìm theo mã repairOrderID">
       </label>
       <label class="status-filter">
         <span>Lọc trạng thái</span>
@@ -43,13 +43,13 @@
                 <span class="device-icon"><i class="bi bi-laptop"></i></span>
                 <div>
                   <h3>{{ getDeviceName(request) }}</h3>
-                  <span class="device-type">{{ request.repairOrderID || 'Chưa có mã repair order' }}</span>
+                  <span class="device-type">Mã yêu cầu: {{ request.repairOrderID || 'Chưa có mã repair order' }}</span>
                 </div>
               </div>
             </div>
             <p class="issue-description">{{ getIssueDescription(request) }}</p>
             <div class="customer">
-              <span><i class="bi bi-person"></i>{{ request.customer?.fullName || request.customerID }}</span>
+              <span><i class="bi bi-person"></i>{{ request.customerID || 'Chưa có mã khách hàng' }}</span>
               @if (request.customer?.phoneNumber || request.contactPhone) {
                 <span><i class="bi bi-telephone"></i>{{ request.customer?.phoneNumber || request.contactPhone }}</span>
               }

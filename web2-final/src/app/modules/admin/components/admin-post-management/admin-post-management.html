@@ -19,7 +19,7 @@
       <div class="section-tools">
         <label class="search-box">
           <i class="bi bi-search"></i>
-          <input type="search" [(ngModel)]="searchTerm" placeholder="Tìm theo requestId" aria-label="Tìm theo requestId">
+          <input type="search" [(ngModel)]="searchTerm" placeholder="Tìm theo mã yêu cầu" aria-label="Tìm theo requestId">
         </label>
         <select [(ngModel)]="selectedStatus" aria-label="Lọc theo trạng thái">
           <option value="">Tất cả trạng thái</option>
@@ -35,7 +35,7 @@
     @if (loading) {
       <div class="state"><i class="bi bi-arrow-repeat spin"></i><strong>Đang tải yêu cầu sản phẩm...</strong></div>
     } @else if (!filteredRequests.length) {
-      <div class="state"><i class="bi bi-inbox"></i><strong>Chưa tìm thấy yêu cầu</strong><span>Thử thay đổi requestId hoặc bộ lọc.</span></div>
+      <div class="state"><i class="bi bi-inbox"></i><strong>Chưa tìm thấy yêu cầu</strong><span>Thử thay đổi mã yêu cầu hoặc bộ lọc.</span></div>
     } @else {
       <div class="request-list">
         @for (request of filteredRequests; track request._id || getRequestId(request)) {
@@ -43,7 +43,8 @@
             <div class="request-icon"><i class="bi bi-box-seam"></i></div>
             <div class="request-info">
               <h3>{{ request.productName || request.title || 'Sản phẩm chưa có tên' }}</h3>
-              <p>{{ getRequestId(request) || 'Chưa có requestId' }} · {{ getUserId(request) || 'Chưa có userId' }}</p>
+              <p>Mã yêu cầu: {{ getRequestId(request) || 'Chưa có requestId' }}</p>
+              <p>Khách hàng: {{ getUserId(request) || 'Chưa có userId' }}</p>
               <span>{{ formatDate(request.createdAt) }}</span>
             </div>
             <span class="role-badge">{{ request.userRole || 'Chưa rõ role' }}</span>

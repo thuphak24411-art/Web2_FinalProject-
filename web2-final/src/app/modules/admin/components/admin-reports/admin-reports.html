@@ -53,9 +53,9 @@
       <div class="charts-heading">
         <div>
           <p class="eyebrow"><i class="bi bi-activity"></i> Xu hướng theo thời gian</p>
-          <p class="muted">Theo dõi biến động các chỉ số từ dữ liệu sellOrders.</p>
+          <p class="muted">Theo dõi biến động các chỉ số từ dữ liệu đơn bán.</p>
         </div>
-        <label class="period-filter">Khoảng thời gian
+        <label class="period-filter">
           <select [(ngModel)]="selectedChartPeriod">
             @for (period of chartPeriods; track period.value) {
               <option [value]="period.value">{{ period.label }}</option>

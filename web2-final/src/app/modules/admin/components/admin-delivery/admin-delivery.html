@@ -44,7 +44,7 @@
             <div class="order-icon"><i class="bi bi-receipt"></i></div>
             <div class="order-info">
               <h3>{{ getOrderID(order) }}</h3>
-              <p>Khách hàng: {{ order.customerID || 'Chưa có thông tin' }}</p>
+              <p>Khách hàng: {{ order.shippingInfo?.fullName || order.shippingInfo?.recipientName || 'Chưa có thông tin' }}</p>
               <span>{{ order.orderDate || formatDate(order.createdAt) }}</span>
             </div>
             <div class="order-customer">

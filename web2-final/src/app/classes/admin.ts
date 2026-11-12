@@ -272,6 +272,7 @@ export interface AdminOrder {
     district?: string;
     province?: string;
     phone?: string;
+    fullName?: string;
     recipientName?: string;
   };
   products?: AdminOrderProduct[];
