@@ -1,8 +1,7 @@
 {
   "scripts": {
     "start": "node index.js",
-    "import": "node import_data.js",
-    "test": "node --test"
+    "import": "node import_data.js"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",

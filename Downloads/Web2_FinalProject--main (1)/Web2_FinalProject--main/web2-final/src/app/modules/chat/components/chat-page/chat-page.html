@@ -1,0 +1,291 @@
+
+<section class="chat-page">
+
+  @if (errorMessage) {
+    <div class="chat-error">
+      {{ errorMessage }}
+    </div>
+  }
+
+  @if (authService.token) {
+
+
+    <div class="chat-layout">
+
+      <!-- DANH SÁCH CUỘC TRÒ CHUYỆN -->
+      <aside class="chat-sidebar">
+
+        <div class="chat-sidebar-heading">
+          <h2>Cuộc trò chuyện</h2>
+
+          @if (returnUrl) {
+            <button
+              type="button"
+              class="chat-back-bubble"
+              title="Quay lại sản phẩm"
+              aria-label="Quay lại sản phẩm"
+              (click)="goBackToProduct()"
+            >
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/7756/7756221.png"
+                alt=""
+                class="chat-back-icon"
+              />
+            </button>
+          }
+        </div>
+
+        <div class="conversation-search">
+          <span class="search-icon">⌕</span>
+          <input
+            type="search"
+            name="conversationSearch"
+            [(ngModel)]="conversationSearch"
+            placeholder="Tìm cuộc trò chuyện..."
+            aria-label="Tìm cuộc trò chuyện"
+          />
+        </div>
+
+        <button
+          type="button"
+          class="chat-support-pinned"
+          [class.active]="selectedConversation?.type === 'support'"
+          [disabled]="openingSupport"
+          (click)="openSupportChat()"
+        >
+          <span class="support-avatar">
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/12441/12441159.png"
+              alt="Hỗ trợ EcoCycle"
+              class="support-avatar-icon"
+            />
+          </span>
+
+          <span class="support-info">
+            <strong>Hỗ trợ EcoCycle</strong>
+            <small>
+              {{ openingSupport ? 'Đang kết nối...' : 'Nhấn để liên hệ hỗ trợ' }}
+            </small>
+          </span>
+
+          <span class="support-pin">📌</span>
+        </button>
+
+        @if (loading && conversations.length === 0) {
+          <p class="chat-empty">Đang tải...</p>
+        }
+
+        @for (conversation of filteredConversations; track conversation._id) {
+          <button
+            type="button"
+            class="conversation-item"
+            [class.active]="selectedConversation?._id === conversation._id"
+            (click)="selectConversation(conversation)"
+          >
+            <img
+              [src]="getOtherUserAvatar(conversation)"
+              [alt]="getOtherUserName(conversation)"
+              class="conversation-avatar-img"
+            />
+
+            <div class="conversation-info">
+              <strong>{{ getOtherUserName(conversation) }}</strong>
+              <span>{{ conversation.lastMessage || 'Bắt đầu trò chuyện' }}</span>
+            </div>
+          </button>
+        } @empty {
+          @if (!loading) {
+            <p class="chat-empty">Bạn chưa có cuộc trò chuyện nào.</p>
+          }
+        }
+
+      </aside>
+
+      <!-- KHUNG CHAT -->
+      <div class="chat-main">
+
+        @if (selectedConversation) {
+
+          <div class="chat-main-header">
+            <img
+              [src]="selectedConversation.type === 'support'
+                ? 'https://cdn-icons-png.flaticon.com/128/12441/12441159.png'
+                : getOtherUserAvatar(selectedConversation)"
+              [alt]="getOtherUserName(selectedConversation)"
+              class="chat-header-avatar"
+            />
+
+            <strong>{{ getOtherUserName(selectedConversation) }}</strong>
+          </div>
+
+          <!-- NỘI DUNG TIN NHẮN -->
+          <div class="chat-messages" #chatMessagesContainer>
+
+            @for (message of messages; track message._id) {
+
+              <div
+                class="chat-message"
+                [class.mine]="isMyMessage(message)"
+                [class.system]="message.type === 'system'"
+              >
+
+              @if (!isMyMessage(message) && message.type !== 'system') {
+                <img
+                  [src]="getOtherUserAvatar(selectedConversation)"
+                  [alt]="getOtherUserName(selectedConversation)"
+                  class="chat-message-avatar"
+                />
+              }
+
+                <div class="chat-bubble">
+                  @if (message.imageUrl) {
+                    @if (imageUrls[message._id]) {
+                      <img
+                        [src]="imageUrls[message._id]"
+                        alt="Hình ảnh trong cuộc trò chuyện"
+                        class="chat-image"
+                        (click)="openImagePreview(imageUrls[message._id])"
+                      />
+                    } @else {
+                      <span>Đang tải hình ảnh...</span>
+                    }
+                  }
+
+                  @if (message.content) {
+                    <span>{{ message.content }}</span>
+                  }
+                </div>
+
+                <small>
+                  {{ message.createdAt | date:'HH:mm dd/MM/yyyy' }}
+                </small>
+
+              </div>
+
+            } @empty {
+
+              <p class="chat-empty">
+                Chưa có tin nhắn. Hãy bắt đầu cuộc trò chuyện.
+              </p>
+
+            }
+
+            @if (selectedConversation?.type === 'support' && showSupportTopics) {
+              <div class="chat-support-topics">
+
+                <p>Bạn cần hỗ trợ vấn đề gì?</p>
+
+                <div class="chat-support-topic-list">
+                  @for (topic of supportTopics; track topic.id) {
+                    <button
+                      type="button"
+                      class="chat-topic-button"
+                      [disabled]="sendingSupportTopic"
+                      (click)="selectSupportTopic(topic.id)"
+                    >
+                      <img
+                        [src]="topic.icon"
+                        [alt]="topic.label"
+                        class="chat-topic-icon"
+                      />
+
+                      <span>{{ topic.label }}</span>
+                    </button>
+                  }
+                </div>
+
+              </div>
+            } 
+
+          </div>
+
+          <!-- NHẬP VÀ GỬI TIN NHẮN -->
+          @if (imagePreview) {
+            <div class="chat-image-preview">
+              <img [src]="imagePreview" alt="Ảnh chuẩn bị gửi" />
+
+              <button type="button" (click)="removeSelectedImage()">
+                ✕
+              </button>
+            </div>
+          }
+          <form
+            class="chat-compose"
+            (ngSubmit)="submitMessage()"
+          >
+            <label class="chat-attach" title="Gửi hình ảnh">
+              <input
+                type="file"
+                accept="image/jpeg,image/png,image/webp,image/gif"
+                hidden
+                (change)="onImageSelected($event)"
+              />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/2659/2659360.png"
+                alt="Gửi hình ảnh"
+                class="chat-attach-icon"
+              />
+            </label>
+
+            <input
+              type="text"
+              name="message"
+              [(ngModel)]="messageInput"
+              (input)="onMessageInput($event)"
+              maxlength="2000"
+              placeholder="Nhập tin nhắn..."
+              (keyup.enter)="onMessageEnter($event)"
+            />
+
+            <button
+              type="submit"
+              [disabled]="sending || uploadingImage ||
+                (!messageInput.trim() && !selectedImage)"
+            >
+              {{ uploadingImage ? 'Đang gửi ảnh...' : 'Gửi' }}
+            </button>
+
+          </form>
+
+
+        } @else {
+
+          <div class="chat-placeholder chat-welcome">
+            <div class="chat-welcome-card">
+              <h2>Chọn một đoạn chat</h2>
+              <p>Chọn một cuộc trò chuyện bên trái để bắt đầu nhắn tin.</p>
+            </div>
+          </div>
+
+        }
+
+      </div>
+      @if (previewImageUrl) {
+        <div class="chat-image-overlay" (click)="closeImagePreview()">
+          <button
+            type="button"
+            class="chat-image-close"
+            aria-label="Đóng hình ảnh"
+            (click)="closeImagePreview()"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/15716/15716008.png"
+              alt="Đóng"
+              class="chat-close-icon"
+            />
+          </button>
+
+          <img
+            [src]="previewImageUrl"
+            alt="Xem ảnh phóng to"
+            class="chat-image-large"
+            (click)="$event.stopPropagation()"
+          />
+        </div>
+      }
+
+    </div>
+
+  }
+
+</section>

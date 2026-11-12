@@ -1,0 +1,222 @@
+/* ==========================================================
+   ECOCycle Footer
+   1. Khung và lưới | 2. Thương hiệu | 3. Liên kết
+   4. Nhận tin | 5. Thanh cuối | 6. Responsive / A11y
+   ========================================================== */
+
+/* 1. Khung và lưới */
+.site-footer {
+  position: relative;
+  margin-top: var(--space-6, 24px);
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(0, 155, 119, 0.08);
+  border-radius: 32px 32px 0 0;
+  box-shadow: 0 -12px 40px rgba(36, 31, 26, 0.055);
+}
+
+.footer-top,
+.footer-bottom-inner {
+  width: min(100%, var(--max-width, 1440px));
+  margin-inline: auto;
+  padding-inline: clamp(24px, 3vw, 48px);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: minmax(210px, 1.35fr) repeat(3, minmax(135px, 1fr)) minmax(235px, 1.3fr);
+  gap: clamp(22px, 2.6vw, 44px);
+  padding-block: 48px 42px;
+  align-items: start;
+}
+
+/* 2. Thương hiệu */
+.footer-brand .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.footer-brand .logo-mark { width: 44px; height: 44px; }
+.footer-brand .logo-text {
+  font-family: var(--font-display, inherit);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #009b77;
+  transition: color .2s ease;
+}
+.footer-brand .logo:hover .logo-text { color: #007a60; }
+
+.footer-tagline {
+  margin: 16px 0 8px;
+  font-family: var(--font-display, inherit);
+  font-size: 15px;
+  font-weight: 700;
+  font-style: italic;
+  color: #009b77;
+}
+
+.footer-desc {
+  max-width: 32ch;
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--color-ink-muted, #6b6459);
+}
+
+.footer-social { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.footer-social a {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #cce9de;
+  border-radius: 50%;
+  background: #fff;
+  color: #007a60;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+.footer-social a:hover { background: #009b77; color: #fff; transform: translateY(-2px); }
+.footer-social svg { width: 17px; height: 17px; }
+
+/* 3. Các nhóm liên kết */
+.footer-col h3,
+.footer-newsletter h3 {
+  margin: 0 0 16px;
+  color: #007a60;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 750;
+}
+
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer-col li { margin: 0; padding: 0; }
+.footer-col a {
+  color: var(--color-ink-muted, #6b6459);
+  font-size: 13.5px;
+  line-height: 1.55;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+.footer-col a:hover { color: #007a60; text-decoration: underline; text-underline-offset: 3px; }
+
+/* 4. Đăng ký nhận tin */
+.footer-newsletter p {
+  margin: 0 0 16px;
+  color: var(--color-ink-muted, #6b6459);
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+.newsletter {
+  display: flex;
+  min-width: 0;
+  min-height: 44px;
+  overflow: hidden;
+  border: 1px solid #cce9de;
+  border-radius: 10px;
+  background: #fff;
+}
+.newsletter input {
+  flex: 1 1 auto;
+  width: 0;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 0;
+  outline: 0;
+  background: #fff;
+  color: var(--color-ink, #241f1a);
+  font-size: 13px;
+}
+.newsletter input::placeholder { color: var(--color-ink-dim, #9c9385); }
+.newsletter button {
+  flex-shrink: 0;
+  padding: 0 14px;
+  border: 0;
+  background: #009b77;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+.newsletter button:hover { background: #007a60; }
+.newsletter:focus-within { box-shadow: 0 0 0 3px rgba(0,155,119,.14); }
+.newsletter-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 14px;
+  color: var(--color-ink-dim, #9c9385);
+  font-size: 12px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.newsletter-consent input { margin-top: 3px; accent-color: #009b77; }
+.footer-newsletter .newsletter-note { margin: 10px 0 0; color: #007a60; font-size: 12px; }
+
+/* 5. Thanh bản quyền */
+.footer-bottom { border-top: 1px solid #e5eee9; background: #fff; }
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  min-height: 64px;
+  padding-block: 14px;
+  color: #6b6459;
+  font-size: 12.5px;
+}
+.copyright { line-height: 1.5; }
+.footer-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; }
+.footer-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #007a60;
+  font-size: 12px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+.footer-tag svg { width: 14px; height: 14px; flex-shrink: 0; color: #009b77; }
+
+/* 6. Responsive và khả năng truy cập */
+@media (max-width: 1200px) {
+  .footer-top { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .footer-brand { grid-column: span 2; }
+  .footer-newsletter { grid-column: span 2; }
+}
+@media (max-width: 800px) {
+  .footer-top { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-block: 36px; }
+  .footer-brand, .footer-newsletter { grid-column: span 1; }
+  .footer-bottom-inner { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 520px) {
+  .footer-top { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-block: 32px; }
+  .footer-brand, .footer-newsletter { grid-column: auto; }
+  .footer-tags { gap: 10px 16px; }
+  .footer-tag { white-space: normal; }
+}
+.footer-brand .logo:focus-visible,
+.footer-social a:focus-visible,
+.footer-col a:focus-visible,
+.newsletter button:focus-visible {
+  outline: 2px solid #009b77;
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .footer-brand .logo-text,
+  .footer-social a,
+  .footer-col a,
+  .newsletter button { transition: none; }
+  .footer-social a:hover { transform: none; }
+}

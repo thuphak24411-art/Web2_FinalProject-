@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Check Gemini API",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"-e",
+				"process.chdir('Web2_FinalProject--main/database-mongodb'); require('dotenv').config(); const key=process.env.GEMINI_API_KEY; if(!key||key==='your_gemini_api_key_here'){console.error('GEMINI_API_KEY missing or placeholder'); process.exit(2)} fetch('https://generativelanguage.googleapis.com/v1beta/models/'+encodeURIComponent(process.env.GEMINI_MODEL||'gemini-2.5-flash')+':generateContent?key='+encodeURIComponent(key),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({contents:[{parts:[{text:'Reply with exactly OK'}]}]})}).then(async r=>{const text=await r.text(); console.log('HTTP '+r.status); console.log(text.slice(0,800)); process.exit(r.ok?0:1)}).catch(e=>{console.error(e.message); process.exit(1)})"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}

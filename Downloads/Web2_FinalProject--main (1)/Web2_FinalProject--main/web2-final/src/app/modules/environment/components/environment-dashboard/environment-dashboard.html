@@ -1,0 +1,859 @@
+<main class="environment-dashboard">
+  <div class="environment-container">
+
+    <!-- HERO BANNER -->
+    <section class="environment-hero">
+      <div class="hero-content">
+        <span class="eyebrow">CỘNG ĐỒNG ECOCYCLE</span>
+
+        <h1>
+          Hành trình giảm rác điện tử cùng EcoCycle
+        </h1>
+
+        <p>
+          Mua bán và tái sử dụng thiết bị để kéo dài vòng đời sản phẩm,
+          giảm thiểu tác động đến môi trường.
+        </p>
+
+        <a routerLink="/mua-hang" class="hero-link">
+          Khám phá sản phẩm
+          <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="hero-illustration" aria-hidden="true">
+        <div class="hero-glow"></div>
+        <div class="hero-leaf hero-leaf-left">
+          <i class="bi bi-leaf-fill"></i>
+        </div>
+        <div class="hero-laptop">
+          <div class="laptop-screen">
+            <i class="bi bi-recycle"></i>
+          </div>
+          <div class="laptop-base"></div>
+        </div>
+        <div class="hero-leaf hero-leaf-right">
+          <i class="bi bi-leaf-fill"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section class="environment-section">
+
+      <div class="section-heading">
+        <div class="section-title-group">
+          <i class="bi bi-leaf-fill section-title-icon"></i>
+
+          <div>
+            <h2>Tác động xanh của chúng ta</h2>
+            <p>Thống kê từ dữ liệu hoạt động thực tế của hệ thống.</p>
+          </div>
+        </div>
+
+        <span class="data-period">
+          <i class="bi bi-database-check"></i>
+          Toàn bộ dữ liệu
+        </span>
+      </div>
+
+      @if (loadingCommunity) {
+        <div class="state-card">
+          Đang tải thống kê môi trường...
+        </div>
+      } @else if (communityError) {
+        <div class="state-card error-state">
+          {{ communityError }}
+          <button type="button" (click)="loadCommunity()">
+            Thử lại
+          </button>
+        </div>
+      } @else if (community) {
+
+        <div class="stats-grid">
+
+          <article class="stat-card">
+            <div class="stat-icon green">
+              <i class="bi bi-box-seam"></i>
+            </div>
+
+            <span class="stat-label">Sản phẩm đang đăng bán</span>
+
+            <strong>
+              {{ formatNumber(community.devicesListed) }}
+            </strong>
+
+            <small>Tin đăng còn hoạt động</small>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon yellow">
+              <i class="bi bi-cart-check"></i>
+            </div>
+
+            <span class="stat-label">Thiết bị đã mua</span>
+
+            <strong>
+              {{ formatNumber(community.devicesPurchased) }}
+            </strong>
+
+            <small>Trong đơn hàng hoàn thành</small>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon mint">
+              <i class="bi bi-recycle"></i>
+            </div>
+
+            <span class="stat-label">Thiết bị cũ được mua lại</span>
+
+            <strong>
+              {{ formatNumber(community.reusedDevicesPurchased) }}
+            </strong>
+
+            <small>Kéo dài vòng đời thiết bị</small>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon orange">
+              <i class="bi bi-trash3"></i>
+            </div>
+
+            <span class="stat-label">Rác điện tử đã ghi nhận</span>
+
+            <strong>
+              {{ formatNumber(community.eWasteProcessedKg) }}
+              <em>kg</em>
+            </strong>
+
+            <small>Theo dữ liệu thu gom của hệ thống</small>
+          </article>
+
+        </div>
+
+        <!-- CHARTS -->
+        <div class="insights-grid eco-insights">
+
+          <!-- Ô TRÁI: TỶ LỆ TÁI SỬ DỤNG -->
+          <article class="insight-card eco-reuse-card">
+
+            <div class="eco-card-header">
+              <span class="eco-header-icon">
+                <i class="bi bi-recycle"></i>
+              </span>
+              <h3>Tỷ lệ tái sử dụng thiết bị</h3>
+            </div>
+
+            <div class="eco-reuse-body">
+
+              <button
+                type="button"
+                class="donut-chart eco-donut eco-donut-interactive"
+                [style.--reuse-percent]="reusePercent + '%'"
+                [attr.aria-label]="
+                  'Xem tỷ lệ ' +
+                  (selectedReuseSegment === 'reused' ? 'thiết bị khác' : 'thiết bị cũ')
+                "
+                (click)="selectReuseSegment(
+                  selectedReuseSegment === 'reused' ? 'other' : 'reused'
+                )">
+
+                <span class="donut-center">
+                  <i class="bi bi-leaf eco-donut-leaf"></i>
+
+                  <strong>{{ selectedReusePercent }}%</strong>
+
+                  <span>
+                    {{ selectedReuseSegment === 'reused' ? 'Thiết bị cũ' : 'Thiết bị khác' }}
+                  </span>
+                </span>
+
+              </button>
+
+              <div class="eco-reuse-summary">
+
+                <button
+                  type="button"
+                  class="eco-summary-item eco-summary-button"
+                  [class.eco-summary-selected]="selectedReuseSegment === 'reused'"
+                  [attr.aria-pressed]="selectedReuseSegment === 'reused'"
+                  (click)="selectReuseSegment('reused')">
+
+                  <i class="bi bi-recycle"></i>
+
+                  <span class="eco-summary-text">
+                    <strong>{{ formatNumber(community.reusedDevicesPurchased) }}</strong>
+                    <span>Thiết bị cũ</span>
+                  </span>
+
+                </button>
+
+                <div class="eco-summary-divider"></div>
+
+                <button
+                  type="button"
+                  class="eco-summary-item eco-summary-button"
+                  [class.eco-summary-selected]="selectedReuseSegment === 'other'"
+                  [attr.aria-pressed]="selectedReuseSegment === 'other'"
+                  (click)="selectReuseSegment('other')">
+
+                  <i class="bi bi-box-seam"></i>
+
+                  <span class="eco-summary-text">
+                    <strong>
+                      {{ formatNumber(
+                        community.devicesPurchased - community.reusedDevicesPurchased
+                      ) }}
+                    </strong>
+                    <span>Thiết bị khác</span>
+                  </span>
+
+                </button>
+
+              </div>
+
+              <p class="eco-reuse-caption">
+                Dựa trên {{ formatNumber(community.devicesPurchased) }}
+                thiết bị trong các đơn hàng hoàn thành.
+              </p>
+
+            </div>
+
+            <div class="eco-reuse-decoration" aria-hidden="true">
+              <i class="bi bi-leaf"></i>
+            </div>
+
+          </article>
+
+          <!-- Ô PHẢI: CO2e THAM CHIẾU -->
+          <article class="insight-card eco-co2-card">
+
+            <div class="eco-card-header">
+              <span class="eco-header-icon">
+                <i class="bi bi-leaf"></i>
+              </span>
+              <h3>Phát thải CO₂e tham chiếu</h3>
+            </div>
+
+            <div class="eco-co2-highlight">
+
+              <div class="eco-co2-number">
+                <strong>{{ formatNumber(community.co2eReferenceKg) }}</strong>
+                <span>kg CO₂e</span>
+              </div>
+
+              <div class="eco-co2-source">
+                <i class="bi bi-leaf"></i>
+                <span>
+                  Hệ số tham khảo<br>
+                  <strong>ADEME / Impact CO₂</strong>
+                </span>
+              </div>
+
+            </div>
+
+            <p class="eco-co2-description">
+              Tổng phát thải vòng đời tham chiếu của các thiết bị cũ
+              đã giao dịch thành công và có hệ số phù hợp.
+            </p>
+
+            <button
+              type="button"
+              class="eco-co2-toggle"
+              [attr.aria-expanded]="showCo2Details"
+              (click)="toggleCo2Details()">
+
+              <span>
+                <i class="bi bi-info-circle"></i>
+                {{ showCo2Details ? 'Ẩn giải thích số liệu' : 'Tìm hiểu cách tính CO₂e' }}
+              </span>
+
+              <i
+                class="bi bi-chevron-down"
+                [class.eco-toggle-open]="showCo2Details">
+              </i>
+
+            </button>
+
+            @if (showCo2Details) {
+              <div class="eco-co2-explanation">
+                <strong>CO₂e tham chiếu được hiểu như thế nào?</strong>
+
+                <p>
+                  Đây là tổng phát thải vòng đời tham chiếu của những thiết bị cũ
+                  đã giao dịch thành công và có hệ số phù hợp.
+                  Không phải lượng CO₂e mà EcoCycle đã tiết kiệm.
+                </p>
+
+                <p>
+                  Hiện có
+                  <b>{{ community.co2eCountedDevices }}</b>
+                  thiết bị được tính và
+                  <b>{{ community.co2eUncountedDevices }}</b>
+                  thiết bị chưa có hệ số phù hợp.
+                </p>
+              </div>
+            }
+
+            <div class="eco-coverage">
+
+              <div class="eco-coverage-heading">
+                <div>
+                  <i class="bi bi-bar-chart-fill"></i>
+                  <strong>Độ bao phủ tính toán</strong>
+                </div>
+
+                <span class="eco-coverage-badge">
+                  {{ community.co2eCountedDevices }} /
+                  {{ community.co2eCountedDevices + community.co2eUncountedDevices }}
+                  thiết bị
+                </span>
+              </div>
+
+              <div
+                class="eco-coverage-track"
+                role="progressbar"
+                [attr.aria-valuenow]="
+                  community.co2eCountedDevices + community.co2eUncountedDevices > 0
+                    ? community.co2eCountedDevices /
+                      (community.co2eCountedDevices + community.co2eUncountedDevices) * 100
+                    : 0
+                "
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-label="Độ bao phủ tính toán CO₂e">
+
+                <div
+                  class="eco-coverage-fill"
+                  [style.width.%]="
+                    community.co2eCountedDevices + community.co2eUncountedDevices > 0
+                      ? community.co2eCountedDevices /
+                        (community.co2eCountedDevices + community.co2eUncountedDevices) * 100
+                      : 0
+                  ">
+                </div>
+              </div>
+
+              <div class="eco-coverage-legend">
+                <span>
+                  <i class="bi bi-check-circle-fill"></i>
+                  Đã tính: {{ community.co2eCountedDevices }}
+                </span>
+
+                <span>
+                  <i class="bi bi-info-circle"></i>
+                  Chưa tính: {{ community.co2eUncountedDevices }}
+                </span>
+              </div>
+
+            </div>
+
+            <div class="eco-co2-note">
+              <i class="bi bi-info-circle"></i>
+              <p>{{ community.co2eNote }}</p>
+            </div>
+
+            <div class="eco-landscape" aria-hidden="true">
+              <span class="eco-hill eco-hill-back"></span>
+              <span class="eco-hill eco-hill-front"></span>
+              <i class="bi bi-tree-fill eco-tree eco-tree-one"></i>
+              <i class="bi bi-tree-fill eco-tree eco-tree-two"></i>
+              <i class="bi bi-tree-fill eco-tree eco-tree-three"></i>
+              <i class="bi bi-globe-asia-australia eco-earth"></i>
+            </div>
+
+          </article>
+
+        </div>
+      }
+    </section>
+
+    <!-- PERSONAL -->
+    <section class="environment-section personal-section">
+
+      <div class="section-heading">
+        <div class="section-title-group">
+          <i class="bi bi-person-circle section-title-icon"></i>
+
+          <div>
+            <h2>Hành trình của bạn</h2>
+            <p>Theo dõi đóng góp của riêng bạn tại EcoCycle.</p>
+          </div>
+        </div>
+      </div>
+
+      @if (!isLoggedIn) {
+
+        <div class="personal-guest">
+          <div class="guest-icon">
+            <i class="bi bi-person-check"></i>
+          </div>
+
+          <div class="guest-content">
+            <h3>Đăng nhập để xem hành trình xanh</h3>
+            <p>
+              Theo dõi sản phẩm, thiết bị tái sử dụng
+              và hoạt động tái chế của bạn.
+            </p>
+          </div>
+
+          <a routerLink="/login" class="primary-link">
+            Đăng nhập
+          </a>
+        </div>
+
+      } @else if (loadingPersonal) {
+
+        <div class="state-card">
+          Đang tải thống kê cá nhân...
+        </div>
+
+      } @else if (personalError) {
+
+        <div class="state-card error-state">
+          {{ personalError }}
+
+          <button type="button" (click)="loadPersonal()">
+            Thử lại
+          </button>
+        </div>
+
+      } @else if (personal) {
+
+        <div class="personal-bottom">
+
+          <!-- PERSONAL IMPACT -->
+          <article class="achievement-card personal-impact-card">
+
+            <div class="card-heading">
+              <div class="card-title-with-icon">
+                <i class="bi bi-person-fill"></i>
+                <h3>Hành trình của bạn</h3>
+              </div>
+            </div>
+
+            <p class="personal-description">
+              Những đóng góp của bạn tại EcoCycle.
+            </p>
+
+            <div class="personal-grid">
+              <button
+                type="button"
+                class="personal-card personal-card-clickable"
+                [class.personal-card-active]="selectedPersonalStat === 'listed'"
+                [attr.aria-pressed]="selectedPersonalStat === 'listed'"
+                (click)="selectPersonalStat('listed')">
+
+                <span class="personal-icon green">
+                  <i class="bi bi-shop"></i>
+                </span>
+
+                <span>Đang đăng bán</span>
+
+                <strong>
+                  {{ formatNumber(personal.devicesListed) }}
+                </strong>
+
+                <i class="bi bi-chevron-right personal-arrow"></i>
+              </button>
+
+              <button
+                type="button"
+                class="personal-card personal-card-clickable"
+                [class.personal-card-active]="selectedPersonalStat === 'purchased'"
+                [attr.aria-pressed]="selectedPersonalStat === 'purchased'"
+                (click)="selectPersonalStat('purchased')">
+
+                <span class="personal-icon yellow">
+                  <i class="bi bi-bag-check"></i>
+                </span>
+
+                <span>Đã mua</span>
+
+                <strong>
+                  {{ formatNumber(personal.devicesPurchased) }}
+                </strong>
+
+                <i class="bi bi-chevron-right personal-arrow"></i>
+              </button>
+
+              <button
+                type="button"
+                class="personal-card personal-card-clickable"
+                [class.personal-card-active]="selectedPersonalStat === 'reused'"
+                [attr.aria-pressed]="selectedPersonalStat === 'reused'"
+                (click)="selectPersonalStat('reused')">
+
+                <span class="personal-icon mint">
+                  <i class="bi bi-recycle"></i>
+                </span>
+
+                <span>Đã mua lại</span>
+
+                <strong>
+                  {{ formatNumber(personal.reusedDevicesPurchased) }}
+                </strong>
+
+                <i class="bi bi-chevron-right personal-arrow"></i>
+              </button>
+
+              <button
+                type="button"
+                class="personal-card personal-card-clickable"
+                [class.personal-card-active]="selectedPersonalStat === 'recycled'"
+                [attr.aria-pressed]="selectedPersonalStat === 'recycled'"
+                (click)="selectPersonalStat('recycled')">
+
+                <span class="personal-icon orange">
+                  <i class="bi bi-trash3"></i>
+                </span>
+
+                <span>Đã xử lý</span>
+
+                <strong>
+                  {{ formatNumber(personal.eWasteProcessedKg) }}
+                  <em>kg</em>
+                </strong>
+
+                <i class="bi bi-chevron-right personal-arrow"></i>
+              </button>
+            </div>
+
+              <!-- CHI TIẾT KHI CHỌN Ô THỐNG KÊ -->
+              @if (selectedPersonalStat !== null) {
+                <div class="personal-detail-panel">
+
+                @if (selectedPersonalStat === 'listed') {
+                  <div class="personal-detail-heading">
+                    <i class="bi bi-shop"></i>
+                    <strong>Sản phẩm đang đăng bán</strong>
+                  </div>
+
+                  <p>
+                    Bạn hiện có
+                    <b>{{ formatNumber(personal.devicesListed) }}</b>
+                    sản phẩm đang được đăng bán trên EcoCycle.
+                  </p>
+
+                  <a routerLink="/dang-ban" class="personal-detail-link">
+                    Đăng bán sản phẩm
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                }
+
+                @if (selectedPersonalStat === 'purchased') {
+                  <div class="personal-detail-heading">
+                    <i class="bi bi-bag-check"></i>
+                    <strong>Thiết bị đã mua</strong>
+                  </div>
+
+                  <p>
+                    Bạn đã mua thành công
+                    <b>{{ formatNumber(personal.devicesPurchased) }}</b>
+                    thiết bị trong các đơn hàng hoàn thành.
+                  </p>
+
+                  <a routerLink="/don-hang-da-dat" class="personal-detail-link">
+                    Xem đơn hàng
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                }
+
+                @if (selectedPersonalStat === 'reused') {
+                  <div class="personal-detail-heading">
+                    <i class="bi bi-recycle"></i>
+                    <strong>Thiết bị được tái sử dụng</strong>
+                  </div>
+
+                  <p>
+                    Bạn đã mua
+                    <b>{{ formatNumber(personal.reusedDevicesPurchased) }}</b>
+                    thiết bị cũ, chiếm
+                    <b>{{ personalReusePercent }}%</b>
+                    tổng số thiết bị đã mua thành công.
+                  </p>
+
+                  <a routerLink="/mua-hang" class="personal-detail-link">
+                    Khám phá thiết bị
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                }
+
+                @if (selectedPersonalStat === 'recycled') {
+                  <div class="personal-detail-heading">
+                    <i class="bi bi-trash3"></i>
+                    <strong>Hoạt động tái chế</strong>
+                  </div>
+
+                  <p>
+                    Hệ thống đã ghi nhận
+                    <b>{{ formatNumber(personal.eWasteProcessedKg) }} kg</b>
+                    rác điện tử được tái chế từ tài khoản của bạn.
+                  </p>
+
+                  <span class="personal-detail-note">
+                    <i class="bi bi-info-circle"></i>
+                    Số liệu được cập nhật theo dữ liệu ghi nhận của hệ thống.
+                  </span>
+                }
+
+              </div>
+            }
+
+
+          </article>
+
+          <!-- ACHIEVEMENTS -->
+          <article class="achievement-card">
+
+            <div class="card-heading">
+              <div class="card-title-with-icon">
+                <i class="bi bi-star-fill"></i>
+                <h3>Thành tích xanh</h3>
+              </div>
+            </div>
+
+            <p class="personal-description">
+              Huy hiệu của bạn
+            </p>
+
+            <div class="achievement-list interactive-achievements">
+
+              <!-- HUY HIỆU 1: KHỞI ĐẦU XANH -->
+              <div
+                class="achievement achievement-interactive"
+                [class.unlocked]="personal.devicesListed >= 1"
+                [class.achievement-expanded]="selectedAchievement === 'starter'">
+
+                <button
+                  type="button"
+                  class="achievement-trigger"
+                  [attr.aria-expanded]="selectedAchievement === 'starter'"
+                  (click)="toggleAchievement('starter')">
+
+                  <span class="achievement-icon">
+                    <i class="bi bi-flower1"></i>
+                  </span>
+
+                  <span class="achievement-info">
+                    <strong>Khởi đầu xanh</strong>
+                    <small>Đăng bán ít nhất 1 sản phẩm</small>
+                  </span>
+
+                  <span
+                    class="achievement-status"
+                    [class.achievement-earned]="personal.devicesListed >= 1">
+                    {{ personal.devicesListed >= 1 ? 'Đã đạt' : 'Chưa đạt' }}
+                  </span>
+
+                  <i
+                    class="bi bi-chevron-down achievement-chevron"
+                    [class.achievement-chevron-open]="selectedAchievement === 'starter'">
+                  </i>
+                </button>
+
+                @if (selectedAchievement === 'starter') {
+                  <div class="achievement-detail">
+                    <div class="achievement-progress-heading">
+                      <span>Tiến độ</span>
+                      <strong>{{ formatNumber(personal.devicesListed) }}/1 sản phẩm</strong>
+                    </div>
+
+                    <div
+                      class="achievement-progress-track"
+                      role="progressbar"
+                      [attr.aria-valuenow]="getAchievementProgress(personal.devicesListed, 1)"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Tiến độ huy hiệu Khởi đầu xanh">
+                      <div
+                        class="achievement-progress-fill"
+                        [style.width.%]="getAchievementProgress(personal.devicesListed, 1)">
+                      </div>
+                    </div>
+
+                    @if (personal.devicesListed >= 1) {
+                      <p class="achievement-success">
+                        <i class="bi bi-check-circle-fill"></i>
+                        Bạn đã đạt huy hiệu Khởi đầu xanh!
+                      </p>
+                    } @else {
+                      <p>
+                        Bạn cần đăng bán thêm
+                        <b>{{ formatNumber(getAchievementRemaining(personal.devicesListed, 1)) }}</b>
+                        sản phẩm đang hoạt động để đạt huy hiệu.
+                      </p>
+
+                      <a routerLink="/dang-ban" class="achievement-action">
+                        Đăng bán sản phẩm
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    }
+                  </div>
+                }
+              </div>
+
+              <!-- HUY HIỆU 2: NGƯỜI MUA BỀN VỮNG -->
+              <div
+                class="achievement achievement-interactive"
+                [class.unlocked]="personal.reusedDevicesPurchased >= 1"
+                [class.achievement-expanded]="selectedAchievement === 'buyer'">
+
+                <button
+                  type="button"
+                  class="achievement-trigger"
+                  [attr.aria-expanded]="selectedAchievement === 'buyer'"
+                  (click)="toggleAchievement('buyer')">
+
+                  <span class="achievement-icon">
+                    <i class="bi bi-recycle"></i>
+                  </span>
+
+                  <span class="achievement-info">
+                    <strong>Người mua bền vững</strong>
+                    <small>Mua thành công ít nhất 1 thiết bị cũ</small>
+                  </span>
+
+                  <span
+                    class="achievement-status"
+                    [class.achievement-earned]="personal.reusedDevicesPurchased >= 1">
+                    {{ personal.reusedDevicesPurchased >= 1 ? 'Đã đạt' : 'Chưa đạt' }}
+                  </span>
+
+                  <i
+                    class="bi bi-chevron-down achievement-chevron"
+                    [class.achievement-chevron-open]="selectedAchievement === 'buyer'">
+                  </i>
+                </button>
+
+                @if (selectedAchievement === 'buyer') {
+                  <div class="achievement-detail">
+                    <div class="achievement-progress-heading">
+                      <span>Tiến độ</span>
+                      <strong>
+                        {{ formatNumber(personal.reusedDevicesPurchased) }}/1 thiết bị
+                      </strong>
+                    </div>
+
+                    <div
+                      class="achievement-progress-track"
+                      role="progressbar"
+                      [attr.aria-valuenow]="getAchievementProgress(personal.reusedDevicesPurchased, 1)"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Tiến độ huy hiệu Người mua bền vững">
+                      <div
+                        class="achievement-progress-fill"
+                        [style.width.%]="getAchievementProgress(personal.reusedDevicesPurchased, 1)">
+                      </div>
+                    </div>
+
+                    @if (personal.reusedDevicesPurchased >= 1) {
+                      <p class="achievement-success">
+                        <i class="bi bi-check-circle-fill"></i>
+                        Bạn đã đạt huy hiệu Người mua bền vững!
+                      </p>
+                    } @else {
+                      <p>
+                        Bạn cần mua thành công thêm
+                        <b>{{ formatNumber(getAchievementRemaining(personal.reusedDevicesPurchased, 1)) }}</b>
+                        thiết bị cũ.
+                      </p>
+
+                      <a routerLink="/mua-hang" class="achievement-action">
+                        Khám phá sản phẩm
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    }
+                  </div>
+                }
+              </div>
+
+              <!-- HUY HIỆU 3: ĐẠI SỨ TÁI CHẾ -->
+              <div
+                class="achievement achievement-interactive"
+                [class.unlocked]="personal.eWasteProcessedKg >= 1"
+                [class.achievement-expanded]="selectedAchievement === 'recycler'">
+
+                <button
+                  type="button"
+                  class="achievement-trigger"
+                  [attr.aria-expanded]="selectedAchievement === 'recycler'"
+                  (click)="toggleAchievement('recycler')">
+
+                  <span class="achievement-icon">
+                    <i class="bi bi-award"></i>
+                  </span>
+
+                  <span class="achievement-info">
+                    <strong>Đại sứ tái chế</strong>
+                    <small>Tái chế ít nhất 1 kg rác điện tử</small>
+                  </span>
+
+                  <span
+                    class="achievement-status"
+                    [class.achievement-earned]="personal.eWasteProcessedKg >= 1">
+                    {{ personal.eWasteProcessedKg >= 1 ? 'Đã đạt' : 'Chưa đạt' }}
+                  </span>
+
+                  <i
+                    class="bi bi-chevron-down achievement-chevron"
+                    [class.achievement-chevron-open]="selectedAchievement === 'recycler'">
+                  </i>
+                </button>
+
+                @if (selectedAchievement === 'recycler') {
+                  <div class="achievement-detail">
+                    <div class="achievement-progress-heading">
+                      <span>Tiến độ</span>
+                      <strong>
+                        {{ formatNumber(personal.eWasteProcessedKg) }}/1 kg
+                      </strong>
+                    </div>
+
+                    <div
+                      class="achievement-progress-track"
+                      role="progressbar"
+                      [attr.aria-valuenow]="getAchievementProgress(personal.eWasteProcessedKg, 1)"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="Tiến độ huy hiệu Đại sứ tái chế">
+                      <div
+                        class="achievement-progress-fill"
+                        [style.width.%]="getAchievementProgress(personal.eWasteProcessedKg, 1)">
+                      </div>
+                    </div>
+
+                    @if (personal.eWasteProcessedKg >= 1) {
+                      <p class="achievement-success">
+                        <i class="bi bi-check-circle-fill"></i>
+                        Bạn đã đạt huy hiệu Đại sứ tái chế!
+                      </p>
+                    } @else {
+                      <p>
+                        Bạn cần thêm
+                        <b>{{ formatNumber(getAchievementRemaining(personal.eWasteProcessedKg, 1)) }} kg</b>
+                        rác điện tử được hệ thống ghi nhận.
+                      </p>
+
+                      <span class="achievement-hint">
+                        <i class="bi bi-info-circle"></i>
+                        Tiến độ được cập nhật khi hoạt động tái chế được xác nhận.
+                      </span>
+                    }
+                  </div>
+                }
+              </div>
+
+            </div>
+
+
+          </article>
+
+        </div>
+      }
+
+    </section>
+
+  </div>
+</main>

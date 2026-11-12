@@ -60,12 +60,12 @@
               }
             </div>
             <div class="request-meta">
-              <span class="ai-info" [class.ai-done]="request.aiAssessmentHistory?.length">
+              <span class="ai-info" [class.ai-done]="hasAiAssessment(request)">
                 <i class="bi bi-stars"></i>
-                {{ request.aiAssessmentStatus || (request.aiAssessmentHistory?.length ? 'Đã đánh giá Gemini' : 'Chưa đánh giá Gemini') }}
+                {{ getAiAssessmentStatusLabel(request) }}
               </span>
-            @if (request.aiAssessmentHistory?.length) {
-              <span class="ai-info">Lưu {{ request.aiAssessmentHistory?.length }} kết quả · {{ request.aiAssessmentHistory?.[0]?.estimatedPrice || 'Chưa có giá' }}</span>
+            @if (hasAiAssessment(request)) {
+              <span class="ai-info">Lưu {{ getAiAssessments(request).length }} kết quả · {{ getAiAssessments(request)[0]?.estimatedPrice || 'Chưa có giá' }}</span>
             }
             </div>
             @if (request.assessment?.images?.length) {
@@ -75,12 +75,12 @@
           <aside class="request-actions">
             <span class="status-label">TRẠNG THÁI</span>
             <select class="status-control" [value]="displayStatus(request.status)" (change)="updateStatus(request, $any($event.target).value, $any($event.target))" [disabled]="!!updatingStatusID" [attr.aria-label]="'Cập nhật trạng thái ' + request.repairOrderID">
-              @for (status of statuses; track status) { <option [value]="status" [disabled]="status === 'Chờ chuyên gia đánh giá' && !request.aiAssessmentHistory?.length">{{ status }}</option> }
+              @for (status of statuses; track status) { <option [value]="status" [disabled]="status === 'Chờ chuyên gia đánh giá' && !hasAiAssessment(request)">{{ status }}</option> }
             </select>
             <button type="button" class="details-button" (click)="openRequest(request)">
               <i class="bi bi-eye"></i> Xem chi tiết
             </button>
-            @if (!request.specialistAssessment && request.aiAssessmentHistory?.length) {
+            @if (!request.specialistAssessment && hasAiAssessment(request)) {
               <button type="button" class="expert-route-button" (click)="sendToSpecialist(request)" [disabled]="updatingStatusID === request.repairOrderID">
                 <i class="bi bi-person-workspace"></i>
                 {{ displayStatus(request.status) === 'Chờ chuyên gia đánh giá' ? 'Điền đánh giá chuyên gia' : 'Chuyển chuyên gia' }}
@@ -113,14 +113,13 @@
           @if (selectedRequest.assessment?.images?.length) {
             <div class="request-photos large">@for (photo of selectedRequest.assessment?.images; track photo.preview) { <img [src]="photo.preview" [alt]="photo.area"> }</div>
           }
-          @if (selectedRequest.aiAssessmentHistory?.length) {
+          @if (hasAiAssessment(selectedRequest)) {
             <h3>Lịch sử Gemini</h3>
-            @for (assessment of selectedRequest.aiAssessmentHistory; track assessment.assessmentID) {
+            @for (assessment of getAiAssessments(selectedRequest); track assessment.assessmentID) {
               <div class="assessment-history">
                 <strong>{{ assessment.createdAt | date:'dd/MM/yyyy HH:mm' }} · {{ assessment.source }}</strong>
                 <span>{{ assessment.summary }}</span>
                 <small>{{ assessment.estimatedPrice }}</small>
-                @if (assessment.error) { <small class="message error">{{ assessment.error }}</small> }
                 <div class="price-history">
                   <span>Sửa chữa: {{ assessment.estimatedPrices?.repair?.display || 'Chưa có giá' }}</span>
                   <span>Bán lại: {{ assessment.estimatedPrices?.resell?.display || 'Chưa có giá' }}</span>

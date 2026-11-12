@@ -1,0 +1,5 @@
+/* Keep the single application-controlled toggle as the only password reveal control. */
+input[type='password']::-ms-reveal,
+input[type='password']::-ms-clear {
+  display: none;
+}

@@ -1,0 +1,305 @@
+<header class="site-header">
+  <div class="header-card">
+    
+    <a class="logo" routerLink="/">
+      <img class="logo-mark" src="./assets/ecocycle-logo.svg" alt="ECOCycle logo">
+      <span class="logo-text">ECOCycle</span>
+    </a>
+
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="7"/>
+        <path d="m21 21-4.3-4.3"/>
+      </svg>
+
+      <input 
+        type="text" 
+        [value]="searchTerm()"
+        (input)="onSearchInput($any($event.target).value)"
+        (keyup.enter)="onSearch()"
+        placeholder="Bạn muốn tìm thiết bị hay linh kiện gì hôm nay..."
+        aria-label="Tìm kiếm"
+      />
+    </div>
+
+    <div class="header-right flex items-center gap-2">
+      <nav class="main-nav" [class.is-open]="isMenuOpen()">
+        @for (item of navItems(); track item.href) {
+          <a
+            [routerLink]="item.href"
+            routerLinkActive="is-active"
+            [routerLinkActiveOptions]="{ exact: false }"
+            (click)="closeMenu()"
+          >
+            {{ item.label }}
+          </a>
+        }
+      </nav>
+
+      <div class="header-actions">
+        
+        @if (currentUser()) {
+        <a 
+          routerLink="/green-coin" 
+          class="flex items-center gap-1.5 px-3 py-1.5 bg-amber-50 hover:bg-amber-100/80 border border-amber-200/80 rounded-full text-xs font-extrabold text-amber-800 transition-all shadow-sm"
+          title="Xem điểm thưởng GreenCoins"
+        >
+          <i class="bi bi-coin text-amber-500 text-sm animate-pulse"></i>
+          <span>{{ userCoins().toLocaleString('vi-VN') }} GreenCoins</span>
+        </a>
+        }
+        @if (currentUser()) {
+        <a
+          routerLink="/tin-nhan"
+          routerLinkActive="active"
+          (click)="closeIconDropdowns()"
+          [class.icon-active]="!isNotificationDropdownOpen() && !isUserDropdownOpen() && isIconRouteActive('/tin-nhan')"          
+          class="icon-btn"
+          aria-label="Tin nhắn"
+          title="Tin nhắn"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8A8.5 8.5 0 0 1 12.5 3h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+        </a>
+      }
+
+        @if (currentUser()) {
+        <div class="relative" data-header-popup>
+          <button
+            type="button"
+            class="icon-btn notification-btn"
+            [class.icon-active]="isNotificationDropdownOpen()"
+            (click)="toggleNotificationDropdown()"
+            aria-label="Thông báo"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+              <path d="M13.5 21a2 2 0 0 1-3 0"/>
+            </svg>
+            @if (hasNotification()) {
+              <span class="notification-dot"></span>
+            }
+          </button>
+
+          @if (isNotificationDropdownOpen()) {
+            <div 
+              class="absolute right-0 mt-2 w-[340px] sm:w-[420px] bg-white rounded-2xl shadow-2xl border border-gray-100 py-0 z-50 overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200 text-left"
+            >
+              <div class="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-emerald-50/70 via-white to-white border-b border-gray-100">
+                <div class="flex items-center gap-2">
+                  <div class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center">
+                    <i class="bi bi-bell-fill text-xs"></i>
+                  </div>
+                  <h3 class="font-bold text-xs text-gray-900">Thông báo</h3>
+                  @if (unreadNotificationCount() > 0) {
+                    <span class="bg-red-500 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-full ml-1">{{ unreadNotificationCount() }} mới</span>
+                  }
+                </div>
+
+                @if (unreadNotificationCount() > 0) {
+                  <button 
+                    type="button" 
+                    (click)="markAllAsRead()" 
+                    class="text-[11px] font-bold text-emerald-700 hover:text-emerald-800 hover:underline px-2 py-1 rounded"
+                  >
+                    Đã đọc tất cả
+                  </button>
+                }
+              </div>
+
+              <div class="max-h-[380px] overflow-y-auto divide-y divide-gray-100">
+                @for (item of notifications(); track item.notificationID || item._id) {
+                  <div 
+                    (click)="onNotificationClick(item)" 
+                    class="notification-list-item p-3.5 cursor-pointer flex gap-3 items-start relative"
+                    [class.notification-unread]="!item.isRead"
+                    [class.notification-read]="item.isRead"
+                  >
+                    <div 
+                      class="w-8 h-8 rounded-xl flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
+                      [ngClass]="getNotificationBadgeClass(item.type)"
+                    >
+                      <i [class]="'bi ' + getNotificationIcon(item.type) + ' text-sm'"></i>
+                    </div>
+
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center justify-between gap-1 mb-0.5">
+                        <h4 class="text-xs font-bold text-gray-900 truncate" [class.text-emerald-950]="!item.isRead">
+                          {{ item.title }}
+                        </h4>
+                        @if (!item.isRead) {
+                          <span class="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span>
+                        }
+                      </div>
+
+                      <p class="text-[11px] text-gray-600 line-clamp-2 leading-relaxed">
+                        {{ item.content }}
+                      </p>
+
+                      <div class="flex items-center justify-between mt-1.5 text-[10px] text-gray-400">
+                        <span class="flex items-center gap-1">
+                          <i class="bi bi-clock"></i>
+                          <span>{{ item.createdAt }}</span>
+                        </span>
+                        @if (item.targetID) {
+                          <span class="text-emerald-700 font-bold flex items-center gap-0.5 hover:underline">
+                            Xem chi tiết <i class="bi bi-chevron-right text-[8px]"></i>
+                          </span>
+                        }
+                      </div>
+                    </div>
+                  </div>
+                }
+
+                @if (notifications().length === 0) {
+                  <div class="py-12 text-center px-4">
+                    <div class="w-12 h-12 bg-gray-50 rounded-2xl flex items-center justify-center mx-auto mb-2 text-gray-300">
+                      <i class="bi bi-bell-slash text-2xl"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 font-bold">Không có thông báo nào</p>
+                    <p class="text-[11px] text-gray-400 mt-0.5">Các thông báo mới từ hệ thống sẽ xuất hiện tại đây.</p>
+                  </div>
+                }
+              </div>
+
+              <div class="px-4 py-2.5 bg-gray-50/80 border-t border-gray-100 flex items-center justify-end text-[11px]">
+                <a 
+                  routerLink="/don-hang-da-dat" 
+                  (click)="closeNotificationDropdown()" 
+                  class="font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-1"
+                >
+                  <span>Xem đơn hàng</span>
+                  <i class="bi bi-arrow-right text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+          }
+        </div>
+        }
+
+        <a
+          class="icon-btn cart-btn"
+          routerLink="/gio-hang"
+          (click)="closeIconDropdowns()"
+          [class.icon-active]="!isNotificationDropdownOpen() && !isUserDropdownOpen() && isIconRouteActive('/gio-hang')"
+          aria-label="Giỏ hàng"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="20" r="1.4"/>
+            <circle cx="18" cy="20" r="1.4"/>
+            <path d="M2.5 3h2.4l2.6 12.6h10.8L21 7.5H6"/>
+          </svg>
+          @if (cartCount() > 0) {
+            <span class="cart-badge">{{ cartCount() }}</span>
+          }
+        </a>
+
+        <div class="relative" data-header-popup>
+          <button 
+            type="button" 
+            class="icon-btn" 
+            [class.icon-active]="isUserDropdownOpen()"
+            (click)="toggleUserDropdown()" 
+            aria-label="Tài khoản"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>
+            </svg>
+          </button>
+
+          @if (isUserDropdownOpen()) {
+            <div class="header-user-dropdown" role="menu" aria-label="Menu tài khoản">
+              <div class="header-user-profile">
+
+                <div class="header-user-avatar">
+                  <img
+                    [src]="currentUser()?.avatar || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150'"
+                    alt="Ảnh đại diện tài khoản"
+                  />
+                </div>
+
+                <div class="header-user-details">
+
+                  <strong>
+                    {{ currentUser()?.fullName || currentUser()?.userName || 'Tài khoản' }}
+                  </strong>
+
+                  @if (currentUser()) {
+                    <div class="account-role-info">
+                      <span class="account-user-id">
+                        {{ currentUser()?.userID }}
+                      </span>
+
+                      <span class="account-role">
+                        {{ getRoleLabel(currentUser()?.role) }}
+                      </span>
+                    </div>
+                  }
+
+                </div>
+
+              </div>
+
+              <div class="header-user-menu-items">
+                @if (currentUser()) {
+                  <a routerLink="/tai-khoan" (click)="closeUserDropdown()" class="header-user-menu-link" role="menuitem">
+                    <i class="bi bi-person-circle text-emerald-600 text-sm" aria-hidden="true"></i>
+                    <span>Tài khoản của tôi</span>
+                  </a>
+                }
+
+                @if (currentUser()?.role === 'CUSTOMER') {
+                  <a routerLink="/don-hang-da-dat" (click)="closeUserDropdown()" class="header-user-menu-link" role="menuitem">
+                    <i class="bi bi-bag-check text-emerald-600 text-sm" aria-hidden="true"></i>
+                    <span>Đơn mua</span>
+                  </a>
+                }
+
+                @if (currentUser()?.role === 'SELLER') {
+                  <a routerLink="/dang-ban" (click)="closeUserDropdown()" class="header-user-menu-link" role="menuitem">
+                    <i class="bi bi-plus-circle text-emerald-600 text-sm" aria-hidden="true"></i>
+                    <span>Đăng bán thiết bị</span>
+                  </a>
+                }
+
+                @if (currentUser()?.role === 'ADMIN') {
+                  <a routerLink="/admin" (click)="closeUserDropdown()" class="header-user-menu-link" role="menuitem">
+                    <i class="bi bi-tools text-emerald-600 text-sm" aria-hidden="true"></i>
+                    <span>Quản lý hệ thống</span>
+                  </a>
+                }
+
+                @if (!currentUser()) {
+                  <a routerLink="/login" (click)="closeUserDropdown()" class="header-user-menu-link" role="menuitem">
+                    <i class="bi bi-box-arrow-in-right text-emerald-600 text-sm" aria-hidden="true"></i>
+                    <span>Đăng nhập</span>
+                  </a>
+                } @else {
+                  <button type="button" (click)="logout()" class="header-user-menu-link header-user-menu-logout" role="menuitem">
+                    <i class="bi bi-box-arrow-right text-sm" aria-hidden="true"></i>
+                    <span>Đăng xuất</span>
+                  </button>
+                }
+              </div>
+            </div>
+          }
+        </div>
+
+        <button class="menu-toggle" (click)="toggleMenu()" aria-label="Mở menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18M3 12h18M3 18h18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

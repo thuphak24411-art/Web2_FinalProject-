@@ -1,0 +1,42 @@
+<section class="management-dashboard">
+  <aside class="dashboard-sidebar" aria-label="Điều hướng quản trị">
+    <div class="sidebar-heading">
+      <span class="sidebar-icon"><i class="bi bi-grid-1x2-fill"></i></span>
+      <div>
+        <h1>Quản lý hệ thống</h1>
+      </div>
+    </div>
+
+    <nav class="dashboard-nav">
+      <a routerLink="quan-ly-tai-khoan" routerLinkActive="is-active" #accountLink="routerLinkActive" [attr.aria-current]="accountLink.isActive ? 'page' : null">
+        <i class="bi bi-person-vcard"></i>
+        <span>Quản lý tài khoản</span>
+      </a>
+      <a routerLink="quan-ly-dang-ban" routerLinkActive="is-active" #listingLink="routerLinkActive" [attr.aria-current]="listingLink.isActive ? 'page' : null">
+        <i class="bi bi-tag"></i>
+        <span>Quản lý đăng bán</span>
+      </a>
+      <a routerLink="quan-ly-sua-chua" routerLinkActive="is-active" #repairLink="routerLinkActive" [attr.aria-current]="repairLink.isActive ? 'page' : null">
+        <i class="bi bi-tools"></i>
+        <span>Quản lý sửa chữa</span>
+      </a>
+      <a routerLink="quan-ly-van-chuyen" routerLinkActive="is-active" #shippingLink="routerLinkActive" [attr.aria-current]="shippingLink.isActive ? 'page' : null">
+        <i class="bi bi-truck"></i>
+        <span>Quản lý vận chuyển</span>
+      </a>
+      <a routerLink="bao-cao-he-thong" routerLinkActive="is-active" #reportLink="routerLinkActive" [attr.aria-current]="reportLink.isActive ? 'page' : null">
+        <i class="bi bi-bar-chart-line"></i>
+        <span>Báo cáo hệ thống</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <i class="bi bi-shield-check"></i>
+      <span>Không gian quản lý an toàn</span>
+    </div>
+  </aside>
+
+  <main class="dashboard-content">
+    <router-outlet></router-outlet>
+  </main>
+</section>

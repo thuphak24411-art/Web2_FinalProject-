@@ -1,0 +1,404 @@
+:host {
+  display: block;
+  min-height: 100%;
+  background: #f6f8f7;
+}
+.admin-page {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 36px clamp(16px, 3vw, 40px) 64px;
+  color: #18251e;
+}
+.admin-heading,
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.admin-heading {
+  margin-bottom: 28px;
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 9px;
+  color: #14804a;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+.admin-heading h1 {
+  margin: 0;
+  color: #16241b;
+  font-size: clamp(1.6rem, 3vw, 2.15rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+.muted {
+  margin: 8px 0 0;
+  color: #68766e;
+  font-size: 0.92rem;
+}
+.admin-heading-mark {
+  display: grid;
+  width: 68px;
+  height: 68px;
+  flex: none;
+  place-items: center;
+  border: 1px solid #d8eee0;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #e9f8ee, #fff);
+  color: #16834c;
+  font-size: 2rem;
+}
+.message {
+  margin: 0 0 16px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  font-size: 0.86rem;
+}
+.message.error {
+  background: #fff0f0;
+  color: #b42318;
+}
+.message.success {
+  background: #eaf8ee;
+  color: #147b47;
+}
+.accounts-section {
+  overflow: hidden;
+  border: 1px solid #e5ebe7;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 4px 18px rgb(20 45 30 / 3%);
+}
+.section-heading {
+  padding: 20px 22px;
+  border-bottom: 1px solid #edf1ee;
+}
+.section-heading h2 {
+  margin: 0;
+  color: #1b2a21;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+.section-heading p {
+  margin: 5px 0 0;
+  color: #7a867f;
+  font-size: 0.8rem;
+}
+.section-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: min(280px, 38vw);
+  padding: 0 11px;
+  border: 1px solid #dbe5df;
+  border-radius: 9px;
+  background: #fff;
+  color: #7a867f;
+}
+.search-box input {
+  width: 100%;
+  min-width: 0;
+  padding: 9px 0;
+  border: 0;
+  outline: 0;
+  color: #26352b;
+  font-size: 0.78rem;
+}
+.details-button,
+.coin-button {
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 700;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.account-list {
+  display: grid;
+}
+.account-card {
+  display: grid;
+  grid-template-columns: 48px minmax(180px, 1.5fr) minmax(120px, 0.8fr) 120px minmax(245px, 1.2fr);
+  align-items: center;
+  gap: 16px;
+  padding: 17px 22px;
+  border-bottom: 1px solid #edf1ee;
+}
+.account-card:last-child {
+  border-bottom: 0;
+}
+.account-card:hover {
+  background: #fbfdfb;
+}
+.avatar {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 15px;
+  background: #e8f6ed;
+  color: #16814b;
+  font-weight: 800;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.account-info {
+  min-width: 0;
+}
+.account-info h3 {
+  overflow: hidden;
+  margin: 0 0 4px;
+  color: #1d2a22;
+  font-size: 0.95rem;
+  font-weight: 1000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.account-info p,
+.account-id {
+  overflow: hidden;
+  margin: 0;
+  color: #69776f;
+  font-size: 0.77rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.account-id {
+  display: block;
+  margin-top: 4px;
+  color: #9aa49e;
+}
+.account-role {
+  display: grid;
+  gap: 5px;
+}
+.role,
+.status {
+  width: max-content;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #eef8f1;
+  color: #147b47;
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+.status {
+  background: #f2f5f3;
+  color: #66736b;
+  font-weight: 600;
+}
+.status.inactive {
+  background: #fff1e9;
+  color: #b45309;
+}
+.coin-balance {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  align-items: center;
+  column-gap: 4px;
+  color: #bc790b;
+}
+.coin-balance i {
+  grid-row: span 2;
+}
+.coin-balance strong {
+  font-size: 0.92rem;
+}
+.coin-balance small {
+  color: #9b8a64;
+  font-size: 0.65rem;
+}
+.account-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+  gap: 8px;
+}
+.details-button {
+  padding: 9px 11px;
+  background: #edf5ff;
+  color: #2563a6;
+  white-space: nowrap;
+}
+.coin-form {
+  display: flex;
+  gap: 5px;
+}
+.coin-form input {
+  width: 85px;
+  min-width: 0;
+  padding: 8px 7px;
+  border: 1px solid #dbe5df;
+  border-radius: 8px;
+  color: #26352b;
+  font-size: 0.75rem;
+}
+.coin-button {
+  padding: 8px 9px;
+  background: #16814b;
+  color: #fff;
+  white-space: nowrap;
+}
+.state {
+  display: grid;
+  min-height: 220px;
+  place-content: center;
+  justify-items: center;
+  gap: 8px;
+  color: #7a867f;
+}
+.state i {
+  color: #16814b;
+  font-size: 2rem;
+}
+.state strong {
+  color: #35443b;
+  font-size: 0.95rem;
+}
+.state span {
+  font-size: 0.8rem;
+}
+.spin {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.modal-backdrop {
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgb(16 33 23 / 45%);
+}
+.details-modal {
+  width: min(700px, 100%);
+  max-height: 65vh;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 20px 60px rgb(0 0 0 / 18%);
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 22px;
+  border-bottom: 1px solid #edf1ee;
+}
+.modal-header .eyebrow {
+  margin-bottom: 5px;
+}
+.modal-header h2 {
+  margin: 0;
+  color: #1b2a21;
+  font-size: 1.25rem;
+}
+.modal-close {
+  border: 0;
+  background: transparent;
+  color: #718078;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.modal-body {
+  padding: 22px;
+}
+.detail-list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+.detail-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid #edf1ee;
+}
+.detail-list div:last-child {
+  border-bottom: 0;
+}
+.detail-list dt {
+  color: #78857d;
+  font-size: 0.82rem;
+}
+.detail-list dd {
+  margin: 0;
+  color: #26352b;
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-align: right;
+}
+.coin-value {
+  color: #bc790b !important;
+}
+@media (max-width: 1000px) {
+  .account-card {
+    grid-template-columns: 48px minmax(160px, 1fr) 105px;
+  }
+  .account-role,
+  .coin-balance {
+    grid-column: 2;
+  }
+  .account-actions {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 620px) {
+  .admin-heading {
+    align-items: flex-start;
+  }
+  .admin-heading-mark {
+    display: none;
+  }
+  .section-heading {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .section-tools {
+    width: 100%;
+  }
+  .search-box {
+    width: 100%;
+  }
+  .account-card {
+    grid-template-columns: 48px 1fr;
+    gap: 10px 12px;
+  }
+  .account-role,
+  .coin-balance,
+  .account-actions {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+  .account-actions {
+    grid-template-columns: 1fr;
+  }
+  .coin-form input {
+    flex: 1;
+  }
+}

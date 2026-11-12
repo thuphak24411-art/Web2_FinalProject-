@@ -1,0 +1,210 @@
+<main class="profile-page" *ngIf="user as account">
+  <section class="profile-card">
+    <header class="profile-heading">
+      <div class="avatar-editor">
+        <div class="avatar">
+          @if (avatarPreview || account.avatar) {
+            <img [src]="avatarPreview || account.avatar" alt="Ảnh đại diện của bạn" />
+          } @else {
+            {{ (account.fullName || account.userName || 'U').charAt(0).toUpperCase() }}
+          }
+        </div>
+        <button type="button" class="avatar-change" (click)="avatarInput.click()" [disabled]="uploadingAvatar" aria-label="Thay ảnh đại diện" title="Thay ảnh đại diện">
+          <img src="https://cdn-icons-png.flaticon.com/128/10703/10703200.png" alt="" />
+        </button>
+        <input #avatarInput type="file" accept="image/jpeg,image/png,image/webp" class="avatar-file-input" (change)="onAvatarSelected($event)" />
+      </div>
+      <div>
+        <p class="eyebrow">HỒ SƠ TÀI KHOẢN</p>
+        <h1>{{ account.fullName || account.userName }}</h1>
+        <p>{{ account.userID }} · {{ account.role === 'SELLER' ? 'Cửa hàng' : account.role === 'ADMIN' ? 'Quản trị viên' : 'Người mua' }}</p>
+      </div>
+      @if (uploadingAvatar) { <span class="avatar-upload-status" role="status">Đang tải ảnh đại diện...</span> }
+    </header>
+
+    <section class="profile-section">
+      <h2><i class="bi bi-person-vcard"></i> Thông tin cá nhân</h2>
+      <div class="profile-grid">
+        <label>Username<input [value]="account.userName" readonly></label>
+        <label>Họ và tên<input [(ngModel)]="fullName" autocomplete="name"></label>
+        <label>Email<input [(ngModel)]="email" type="email" autocomplete="email"></label>
+        <label>Số điện thoại<input [(ngModel)]="phoneNumber" type="tel" autocomplete="tel"></label>
+      </div>
+    </section>
+
+    @if (account.role === 'SELLER') {
+      <section class="profile-section">
+        <h2><i class="bi bi-shop"></i> Thông tin cửa hàng</h2>
+        <div class="profile-grid">
+          <label>Tên doanh nghiệp<input [(ngModel)]="businessName" maxlength="120"></label>
+          <label>Tên shop<input [(ngModel)]="shopName" maxlength="80"></label>
+        </div>
+      </section>
+    }
+
+    <section class="profile-section">
+      <h2><i class="bi bi-geo-alt"></i> Địa chỉ mặc định</h2>
+      <div class="profile-grid">
+        <label>Tỉnh / Thành phố<input [(ngModel)]="province" autocomplete="address-level1"></label>
+        <label>Phường<input [(ngModel)]="district" autocomplete="address-level2"></label>
+        <label class="full-width">Số nhà, tên đường<input [(ngModel)]="streetAddress" autocomplete="street-address"></label>
+      </div>
+      <p class="profile-hint">Địa chỉ này được dùng để điền sẵn thông tin nhận hàng khi thanh toán.</p>
+    </section>
+
+    <p class="profile-success" *ngIf="message" role="status">{{ message }}</p>
+    <p class="profile-error" *ngIf="errorMessage" role="alert">{{ errorMessage }}</p>
+
+    <footer class="profile-actions">
+      <span>Trạng thái: {{ account.status }}</span>
+      <div class="profile-buttons">
+        <button type="button" class="save-button" (click)="save()" [disabled]="saving">
+          <i class="bi bi-check2-circle"></i> {{ saving ? 'Đang lưu...' : 'Lưu thay đổi' }}
+        </button>
+        <button type="button" class="logout-button" (click)="logout()">
+          <i class="bi bi-box-arrow-right"></i> Đăng xuất
+        </button>
+      </div>
+    </footer>
+  </section>
+  <!-- MODAL CHỈNH SỬA AVATAR -->
+  @if (cropDialogOpen) {
+    <div class="avatar-crop-overlay"
+        (click)="closeCropEditor()">
+
+      <section class="avatar-crop-modal"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="crop-title"
+              (click)="$event.stopPropagation()">
+
+        <header class="crop-header">
+          <div>
+            <h2 id="crop-title">Chỉnh sửa ảnh đại diện</h2>
+            <p>Căn chỉnh ảnh theo ý muốn trước khi lưu.</p>
+          </div>
+
+          <button type="button"
+                  class="crop-close"
+                  (click)="closeCropEditor()"
+                  [disabled]="uploadingAvatar"
+                  aria-label="Đóng">
+            &times;
+          </button>
+        </header>
+
+        <!-- Khu vực xem trước -->
+        <div class="crop-preview-section">
+          <div class="crop-preview-circle">
+            <canvas #cropCanvas
+                    width="280"
+                    height="280"
+                    aria-label="Ảnh đại diện sau khi chỉnh sửa">
+            </canvas>
+          </div>
+
+          <p>Ảnh đại diện sẽ được hiển thị trong khung tròn.</p>
+        </div>
+
+        <!-- Điều chỉnh phóng to -->
+        <div class="crop-controls">
+
+          <div class="crop-control">
+            <label for="cropZoom">
+              <span>Phóng to / Thu nhỏ</span>
+              <strong>{{ cropZoom }}%</strong>
+            </label>
+
+            <div class="crop-slider">
+              <i class="bi bi-dash-lg"></i>
+              <input
+                id="cropZoom"
+                type="range"
+                min="100"
+                max="250"
+                step="1"
+                [(ngModel)]="cropZoom"
+                (input)="onCropChange()"
+                [disabled]="uploadingAvatar"
+              />
+              <i class="bi bi-plus-lg"></i>
+            </div>
+          </div>
+
+          <!-- Điều chỉnh ngang -->
+          <div class="crop-control">
+            <label for="cropX">
+              <span>Vị trí ngang</span>
+            </label>
+
+            <input
+              id="cropX"
+              type="range"
+              min="0"
+              max="100"
+              step="1"
+              [(ngModel)]="cropX"
+              (input)="onCropChange()"
+              [disabled]="uploadingAvatar"
+            />
+          </div>
+
+          <!-- Điều chỉnh dọc -->
+          <div class="crop-control">
+            <label for="cropY">
+              <span>Vị trí dọc</span>
+            </label>
+
+            <input
+              id="cropY"
+              type="range"
+              min="0"
+              max="100"
+              step="1"
+              [(ngModel)]="cropY"
+              (input)="onCropChange()"
+              [disabled]="uploadingAvatar"
+            />
+          </div>
+
+        </div>
+
+        <footer class="crop-actions">
+          <button
+            type="button"
+            class="crop-reset"
+            (click)="resetCrop()"
+            [disabled]="uploadingAvatar">
+            <i class="bi bi-arrow-counterclockwise"></i>
+            Đặt lại
+          </button>
+
+          <div class="crop-action-right">
+            <button
+              type="button"
+              class="crop-cancel"
+              (click)="closeCropEditor()"
+              [disabled]="uploadingAvatar">
+              Hủy
+            </button>
+
+            <button
+              type="button"
+              class="crop-save"
+              (click)="saveCroppedAvatar()"
+              [disabled]="uploadingAvatar">
+              @if (uploadingAvatar) {
+                <i class="bi bi-arrow-repeat"></i>
+                Đang lưu...
+              } @else {
+                <i class="bi bi-check2"></i>
+                Lưu ảnh
+              }
+            </button>
+          </div>
+        </footer>
+
+      </section>
+    </div>
+  }
+</main>

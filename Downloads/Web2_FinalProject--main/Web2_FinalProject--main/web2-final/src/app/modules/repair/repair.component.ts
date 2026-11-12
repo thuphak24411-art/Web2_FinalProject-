@@ -173,12 +173,45 @@ export class RepairComponent implements OnInit, OnDestroy {
     return this.result !== null;
   }
 
+  getAiAssessments(request: RepairRequest): AiAssessment[] {
+    return (request.aiAssessmentHistory || []).filter(assessment =>
+      assessment.source === 'gemini' || assessment.source === 'cache'
+    );
+  }
+
   hasAiAssessment(request: RepairRequest): boolean {
-    return !!request.aiAssessmentHistory?.length;
+    return this.getAiAssessments(request).length > 0;
   }
 
   isAiAssessmentPending(request: RepairRequest): boolean {
-    return request.aiAssessmentStatus?.startsWith('Đang') || false;
+    return this.getNormalizedAiStatus(request.aiAssessmentStatus)?.startsWith('Đang') || false;
+  }
+
+  getNormalizedAiStatus(status?: string | null): string {
+    return this.normalizeAiAssessmentStatus(status);
+  }
+
+  private normalizeAiAssessmentStatus(status?: string | null, fallback = 'Đang chờ Gemini đánh giá'): string {
+    if (!status) return fallback;
+    const raw = status.trim();
+    if (!raw) return fallback;
+    const forbiddenPatterns = [
+      /403\b/i,
+      /forbidden/i,
+      /access denied/i,
+      /lỗi.*gemini/i,
+      /gemini.*lỗi/i,
+      /gemini.*(quota|rate limit|error|unavailable|timeout|failed|blocked)/i,
+      /failed to (fetch|contact|process).*gemini/i
+    ];
+    if (forbiddenPatterns.some(pattern => pattern.test(raw))) {
+      return 'Lỗi đánh giá Gemini';
+    }
+    return raw;
+  }
+
+  private getWaitingGeminiMessage(): string {
+    return 'Đang chờ Gemini đánh giá. Hệ thống sẽ cập nhật kết quả ngay khi AI hoàn tất phân tích.';
   }
 
   chooseRepairOption(request: RepairRequest, option: RepairOption): void {
@@ -771,12 +804,15 @@ export class RepairComponent implements OnInit, OnDestroy {
     this.loadingList = true;
     this.repairService.getMyRequests().subscribe({
       next: response => {
-        this.requests = response.requests;
+        this.requests = (response.requests || []).map(item => ({
+          ...item,
+          aiAssessmentStatus: this.normalizeAiAssessmentStatus(item.aiAssessmentStatus)
+        }));
         this.loadingList = false;
         this.openRequestedHistory();
         this.changeDetector.markForCheck();
         const pending = this.requests.find(item =>
-          item.repairOrderID && item.aiAssessmentStatus?.startsWith('Đang')
+          item.repairOrderID && this.getNormalizedAiStatus(item.aiAssessmentStatus)?.startsWith('Đang')
         );
         if (pending?.repairOrderID) this.startAiPolling(pending.repairOrderID);
       },
@@ -794,9 +830,9 @@ export class RepairComponent implements OnInit, OnDestroy {
     this.aiAssessment = null;
     this.repairService.requestAiAssessment(request.repairOrderID).subscribe({
       next: response => {
-        if (response.assessment) {
+        if (response.assessment && this.isUsableAiAssessment(response.assessment)) {
           this.aiAssessment = this.normalizeAiAssessment(response.assessment, request);
-          request.aiAssessmentStatus = this.aiAssessment.status;
+          request.aiAssessmentStatus = this.normalizeAiAssessmentStatus(this.aiAssessment.status);
           request.aiAssessmentHistory = [
             this.aiAssessment,
             ...(request.aiAssessmentHistory || [])
@@ -804,20 +840,29 @@ export class RepairComponent implements OnInit, OnDestroy {
           this.changeDetector.markForCheck();
           return;
         }
-        request.aiAssessmentStatus = response.status || 'Đang đánh giá bằng Gemini';
+        if (response.assessment) {
+          request.aiAssessmentStatus = 'Lỗi đánh giá Gemini';
+          this.changeDetector.markForCheck();
+          return;
+        }
+        request.aiAssessmentStatus = this.normalizeAiAssessmentStatus(response.status || 'Đang đánh giá bằng Gemini');
+        const pendingMessage = this.getWaitingGeminiMessage();
+        this.aiMessage = pendingMessage;
         this.changeDetector.markForCheck();
         this.toastService.showToast(
-          'Yêu cầu đã vào hàng đợi. Kết quả sẽ được cập nhật tự động trong lịch sử sửa chữa.',
+          pendingMessage,
           'info',
-          'Gemini đang xử lý',
+          'Đang chờ Gemini đánh giá',
           7000
         );
         this.startAiPolling(request.repairOrderID);
       },
       error: error => {
-        this.aiMessage = error.error?.message || 'Không thể đánh giá thiết bị.';
+        const safeMessage = this.getWaitingGeminiMessage();
+        this.aiMessage = safeMessage;
+        request.aiAssessmentStatus = this.normalizeAiAssessmentStatus(error?.error?.message || 'Đang chờ Gemini đánh giá');
         this.changeDetector.markForCheck();
-        this.toastService.showToast(this.aiMessage, 'error', 'Không thể gửi Gemini');
+        this.toastService.showToast(safeMessage, 'info', 'Đang chờ Gemini đánh giá', 7000);
       }
     });
   }
@@ -843,7 +888,10 @@ export class RepairComponent implements OnInit, OnDestroy {
     this.aiPollTimeout = setTimeout(() => {
       this.repairService.getMyRequests().subscribe({
         next: response => {
-          this.requests = response.requests;
+          this.requests = (response.requests || []).map(item => ({
+            ...item,
+            aiAssessmentStatus: this.normalizeAiAssessmentStatus(item.aiAssessmentStatus)
+          }));
           const updated = this.requests.find(item => item.repairOrderID === repairOrderID);
           this.changeDetector.markForCheck();
           if (!updated) return;
@@ -859,27 +907,34 @@ export class RepairComponent implements OnInit, OnDestroy {
             );
             return;
           }
-          if (updated.aiAssessmentHistory?.length) {
+          if (this.hasAiAssessment(updated)) {
             const latest = this.getLatestAssessment(updated);
-            updated.aiAssessmentStatus = latest.status;
+            if (!latest) return;
+            updated.aiAssessmentStatus = this.normalizeAiAssessmentStatus(latest.status);
             if (this.result?.request.repairOrderID === repairOrderID) {
               this.aiAssessment = this.normalizeAiAssessment(latest, updated);
             }
-            if (latest.source === 'gemini') {
-              this.toastService.showToast(
-                'Gemini đã phân tích xong tình trạng và định giá các hướng xử lý.',
-                'success',
-                'Đã có kết quả Gemini',
-                8000
-              );
-            } else {
-              this.toastService.showToast(
-                latest.error || 'Gemini đang tạm thời quá tải. Bạn có thể thử đánh giá lại từ lịch sử sửa chữa.',
-                'error',
-                'Chưa nhận được kết quả AI',
-                9000
-              );
-            }
+            this.toastService.showToast(
+              'Gemini đã phân tích xong tình trạng và định giá các hướng xử lý.',
+              'success',
+              'Đã có kết quả Gemini',
+              8000
+            );
+            return;
+          }
+          if (updated.aiAssessmentHistory?.length) {
+            updated.aiAssessmentStatus = 'Lỗi đánh giá Gemini';
+            this.toastService.showToast(
+              'Gemini chưa thể hoàn tất đánh giá. Bạn có thể thử lại từ lịch sử yêu cầu.',
+              'info',
+              'Chưa có kết quả đánh giá',
+              8000
+            );
+            this.changeDetector.markForCheck();
+            return;
+          }
+          if (updated.aiAssessmentStatus === 'Đang chờ Gemini đánh giá') {
+            this.pollAiResult(repairOrderID);
             return;
           }
           this.pollAiResult(repairOrderID);
@@ -928,13 +983,13 @@ export class RepairComponent implements OnInit, OnDestroy {
         repair: this.emptyPrice(),
         resell: this.emptyPrice()
       },
-      status: assessment?.status || 'Chưa có kết quả AI',
-      error: assessment?.error || null,
+      status: this.normalizeAiAssessmentStatus(assessment?.status || 'Chưa có kết quả AI'),
       createdAt: assessment?.createdAt || new Date().toISOString()
     };
   }
 
   showStoredAssessment(assessment: AiAssessment): void {
+    if (!this.isUsableAiAssessment(assessment)) return;
     this.selectedHistoryAssessment = this.normalizeAiAssessment(assessment, {
       repairOrderID: assessment.repairOrderID,
       deviceName: '',
@@ -969,9 +1024,14 @@ export class RepairComponent implements OnInit, OnDestroy {
     }
   }
 
-  getLatestAssessment(request: RepairRequest): AiAssessment {
-    return request.aiAssessmentHistory?.[0]
-      || this.normalizeAiAssessment(null, request);
+  getLatestAssessment(request: RepairRequest): AiAssessment | null {
+    return this.getAiAssessments(request)[0] || null;
+  }
+
+  private isUsableAiAssessment(
+    assessment: Pick<AiAssessment, 'source'> | null | undefined
+  ): boolean {
+    return assessment?.source === 'gemini' || assessment?.source === 'cache';
   }
 
   private emptyPrice(): PriceEstimate {

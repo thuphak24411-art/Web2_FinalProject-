@@ -255,6 +255,24 @@ export class AdminRepairComponent implements OnInit, OnDestroy {
     return 'Phương án cũ không còn hỗ trợ';
   }
 
+  hasAiAssessment(request: RepairRequest): boolean {
+    return !!request.aiAssessmentHistory?.some(assessment =>
+      assessment.source === 'gemini' || assessment.source === 'cache'
+    );
+  }
+
+  getAiAssessmentStatusLabel(request: RepairRequest): string {
+    if (this.hasAiAssessment(request)) return 'Đã đánh giá Gemini';
+    if (request.aiAssessmentStatus?.startsWith('Đang')) return request.aiAssessmentStatus;
+    return request.aiAssessmentStatus ? 'Chưa có kết quả Gemini' : 'Chưa đánh giá Gemini';
+  }
+
+  getAiAssessments(request: RepairRequest): NonNullable<RepairRequest['aiAssessmentHistory']> {
+    return (request.aiAssessmentHistory || []).filter(assessment =>
+      assessment.source === 'gemini' || assessment.source === 'cache'
+    );
+  }
+
   private buildReport(): void {
     this.report = {
       total: this.requests.length,
@@ -264,7 +282,7 @@ export class AdminRepairComponent implements OnInit, OnDestroy {
       waitingExpert: this.requests.filter(item => this.normalizeStatus(item.status) === 'cho chuyen gia danh gia').length,
       inProgress: this.requests.filter(item => this.normalizeStatus(item.status) === 'dang sua chua').length,
       completed: this.requests.filter(item => this.normalizeStatus(item.status) === 'da sua chua').length,
-      assessed: this.requests.filter(item => !!item.aiAssessmentHistory?.length).length
+      assessed: this.requests.filter(item => this.hasAiAssessment(item)).length
     };
   }
 

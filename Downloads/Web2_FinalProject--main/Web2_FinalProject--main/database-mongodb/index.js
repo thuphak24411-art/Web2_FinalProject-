@@ -109,6 +109,9 @@ async function hydrateRepairOrder(order) {
 
 function normalizeAssessment(assessment) {
   const productInfo = assessment.productInfo || {};
+  const hasAiResult = assessment.source === 'gemini' || assessment.source === 'cache';
+  const safeAssessment = { ...assessment };
+  delete safeAssessment.error;
   const repair = Number.parseInt(String(assessment.estimatedRepairCost || '').replace(/[^\d]/g, ''), 10) || null;
   const resale = Number.parseInt(String(assessment.estimatedResalePrice || '').replace(/[^\d]/g, ''), 10) || null;
   const estimate = (amountVnd, rationale) => ({
@@ -120,21 +123,23 @@ function normalizeAssessment(assessment) {
   const existingRecommendations = assessment.recommendations || {};
   const existingPrices = assessment.estimatedPrices || {};
   return {
-    ...assessment,
+    ...safeAssessment,
     recommendations: {
       repair: existingRecommendations.repair,
       resell: existingRecommendations.resell
     },
     repairOrderID: assessment.repairOrderID || null,
     deviceName: assessment.deviceName || productInfo.productName || '',
-    summary: assessment.summary || productInfo.condition || '',
+    summary: hasAiResult
+      ? assessment.summary || productInfo.condition || ''
+      : 'Chưa có kết quả đánh giá tự động.',
     recommendation: assessment.recommendation || assessment.recommendedAction || '',
     estimatedPrice: assessment.estimatedPrice || assessment.estimatedRepairCost || 'Chưa có dữ liệu định giá',
     estimatedPrices: {
       repair: existingPrices.repair || estimate(repair, 'Chi phí sửa chữa tham khảo từ dữ liệu đánh giá.'),
       resell: existingPrices.resell || estimate(resale, 'Giá bán lại tham khảo từ dữ liệu đánh giá.')
     },
-    status: assessment.status || 'Đã đánh giá',
+    status: hasAiResult ? assessment.status || 'Đã đánh giá' : 'Lỗi đánh giá Gemini',
     createdAt: assessment.createdAt || new Date().toISOString()
   };
 }
@@ -147,12 +152,18 @@ async function processRepairAssessment(order) {
     userID: order.customerID,
     apiKey: process.env.GEMINI_API_KEY
   });
+  const hasAiResult = assessment.source === 'gemini' || assessment.source === 'cache';
   await getCollection('AI_assessments').insertOne({
     ...assessment,
     repairOrderID: order.repairOrderID,
     requestID: order.requestID
   });
   const assessmentCompletedAt = new Date().toISOString();
+  const repairOrderUpdate = {
+    aiAssessmentStatus: hasAiResult ? assessment.status : 'Lỗi đánh giá Gemini',
+    updatedAt: assessmentCompletedAt
+  };
+  if (hasAiResult) repairOrderUpdate.status = 'Chờ chuyên gia đánh giá';
   const transition = await getCollection('repairOrders').updateOne(
     {
       _id: order._id,
@@ -161,22 +172,18 @@ async function processRepairAssessment(order) {
       status: { $in: ['Chưa sửa chữa', 'Chờ chuyên gia đánh giá'] }
     },
     {
-      $set: {
-        aiAssessmentStatus: assessment.status,
-        status: 'Chờ chuyên gia đánh giá',
-        updatedAt: assessmentCompletedAt
-      }
+      $set: repairOrderUpdate
     }
   );
   const notifications = [createRepairNotification(
     order.customerID,
-    assessment.source === 'gemini' ? 'Đã có kết quả đánh giá Gemini' : 'Đã có kết quả đánh giá thiết bị',
-    assessment.source === 'gemini'
+    hasAiResult ? 'Đã có kết quả đánh giá Gemini' : 'Chưa thể hoàn tất đánh giá thiết bị',
+    hasAiResult
       ? `Gemini đã hoàn tất đánh giá và định giá tham khảo cho yêu cầu ${order.repairOrderID}.`
-      : `Yêu cầu ${order.repairOrderID} đã có kết quả sơ bộ; kỹ thuật viên cần kiểm tra thêm trước khi báo giá.`,
+      : `Yêu cầu ${order.repairOrderID} chưa có kết quả đánh giá tự động. Bạn có thể thử gửi đánh giá lại từ lịch sử yêu cầu.`,
     order.repairOrderID
   )];
-  if (transition.matchedCount) {
+  if (hasAiResult && transition.matchedCount) {
     notifications.push(notifyRepairManagers(
       'Yêu cầu sửa chữa cần chuyên gia đánh giá',
       `Gemini đã hoàn tất đánh giá yêu cầu ${order.repairOrderID}. Vui lòng mở yêu cầu và điền nhận xét cho hai phương án: sửa chữa và bán lại.`,
@@ -383,6 +390,7 @@ function registerRepairRoutes() {
         });
       }
       const existingAssessment = await getCollection('AI_assessments').findOne({
+        source: { $in: ['gemini', 'cache'] },
         $or: [
           { repairOrderID: order.repairOrderID },
           ...(order.requestID ? [{ requestID: order.requestID }] : [])
@@ -518,6 +526,7 @@ function registerRepairRoutes() {
       if (
         status === 'Chờ chuyên gia đánh giá' &&
         !await getCollection('AI_assessments').findOne({
+          source: { $in: ['gemini', 'cache'] },
           $or: [
             { repairOrderID: repairOrder.repairOrderID },
             ...(repairOrder.requestID ? [{ requestID: repairOrder.requestID }] : [])
@@ -592,6 +601,16 @@ function registerRepairRoutes() {
       if (!order) return res.status(404).json({ message: 'Không tìm thấy yêu cầu sửa chữa.' });
       if (order.status !== 'Chờ chuyên gia đánh giá') {
         return res.status(409).json({ message: 'Chỉ gửi đánh giá khi yêu cầu đang chờ chuyên gia.' });
+      }
+      const hasAiAssessment = await getCollection('AI_assessments').findOne({
+        source: { $in: ['gemini', 'cache'] },
+        $or: [
+          { repairOrderID },
+          ...(order.requestID ? [{ requestID: order.requestID }] : [])
+        ]
+      });
+      if (!hasAiAssessment) {
+        return res.status(409).json({ message: 'Yêu cầu chưa có kết quả đánh giá AI hợp lệ.' });
       }
       const specialist = await getCollection('users').findOne(
         { userID: req.auth.userID },

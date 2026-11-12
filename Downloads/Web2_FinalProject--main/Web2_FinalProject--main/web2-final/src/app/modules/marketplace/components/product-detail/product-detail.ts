@@ -128,17 +128,6 @@ export class ProductDetail implements OnInit {
     }
   }
 
-  requestRepair(): void {
-    if (!this.product) return;
-    this.router.navigate(['/sua-chua'], {
-      queryParams: {
-        productID: this.product.id,
-        deviceName: this.product.title,
-        deviceType: 'Điện thoại'
-      }
-    });
-  }
-
   onImageError(event: Event): void {
     const image = event.target as HTMLImageElement;
     if (image.src.endsWith(this.fallbackImage)) return;

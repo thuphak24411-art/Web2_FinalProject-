@@ -21,7 +21,7 @@
         <div><span>Thiết bị</span><strong>{{ result?.request.deviceName }}</strong><small>{{ result?.assessment.brand }} · {{ result?.request.deviceType }}</small></div>
         <div><span>Ngoại quan</span><strong>{{ result?.assessment.appearance.overall }}</strong><small>Màn hình: {{ result?.assessment.appearance.screen }}</small></div>
         <div><span>Pin</span><strong>{{ result?.assessment.battery.condition }}</strong><small>{{ result?.assessment.battery.maximumCapacity !== undefined ? result?.assessment.battery.maximumCapacity + '%' : 'Chưa cung cấp dung lượng' }}</small></div>
-        <div><span>Trạng thái xử lý</span><strong>{{ result?.request.aiAssessmentStatus?.startsWith('Đang') || result?.request.aiAssessmentStatus === 'Lỗi đánh giá Gemini' ? result?.request.aiAssessmentStatus : result?.request.status || 'Chưa sửa chữa' }}</strong><small>{{ result?.request.aiAssessmentStatus === 'Lỗi đánh giá Gemini' ? 'Bạn có thể thử gửi đánh giá AI lại từ lịch sử yêu cầu.' : result?.request.aiAssessmentStatus?.startsWith('Đang') ? 'Yêu cầu đã lưu; đang chờ kết quả phân tích.' : 'Thông tin đã được lưu để bộ phận kỹ thuật tiếp tục xử lý.' }}</small></div>
+        <div><span>Trạng thái xử lý</span><strong>{{ getNormalizedAiStatus(result?.request.aiAssessmentStatus)?.startsWith('Đang') || result?.request.aiAssessmentStatus === 'Lỗi đánh giá Gemini' ? getNormalizedAiStatus(result?.request.aiAssessmentStatus) : result?.request.status || 'Chưa sửa chữa' }}</strong><small>{{ result?.request.aiAssessmentStatus === 'Lỗi đánh giá Gemini' ? 'Bạn có thể thử gửi đánh giá AI lại từ lịch sử yêu cầu.' : getNormalizedAiStatus(result?.request.aiAssessmentStatus)?.startsWith('Đang') ? 'Yêu cầu đã lưu; đang chờ kết quả phân tích.' : 'Thông tin đã được lưu để bộ phận kỹ thuật tiếp tục xử lý.' }}</small></div>
       </div>
       <div class="result-section">
         <h3>Lỗi đã khai báo</h3>
@@ -37,13 +37,11 @@
       @if (result?.assessment.images?.length) {
         <div class="result-section"><h3>Ảnh đã tải lên</h3><div class="result-photos">@for (photo of result?.assessment.images; track photo.name) { <img [src]="photo.preview" [alt]="photo.area"> }</div></div>
       }
-      @if (aiAssessment) {
+      @if (aiAssessment && (aiAssessment.source === 'gemini' || aiAssessment.source === 'cache')) {
         <div class="result-section result-ai"><h3>Đánh giá AI từ Gemini</h3><p>{{ aiAssessment.summary }}</p><div class="valuation-box"><span>Định giá sơ bộ</span><strong>{{ aiAssessment.estimatedPrice }}</strong><small>Chỉ là tham khảo từ AI, cần xác minh bởi kỹ thuật viên.</small></div><div class="ai-directions">
           <article><b><i class="bi bi-tools"></i> {{ aiAssessment.recommendations.repair.title }}</b><span>{{ aiAssessment.recommendations.repair.recommendation }}</span><small>{{ aiAssessment.recommendations.repair.nextStep }}</small></article>
           <article><b><i class="bi bi-tag"></i> {{ aiAssessment.recommendations.resell.title }}</b><span>{{ aiAssessment.recommendations.resell.recommendation }}</span><small>{{ aiAssessment.recommendations.resell.nextStep }}</small></article>
         </div><small>{{ aiAssessment.status }} · {{ aiAssessment.source }} · Định giá: {{ aiAssessment.estimatedPrice }}</small></div>
-      } @else {
-        <div class="notice" aria-live="polite"><i class="bi bi-hourglass-split"></i> Đang gửi dữ liệu form đến Gemini để đánh giá và định giá sơ bộ...</div>
       }
       <button type="button" class="primary-button" (click)="resetForm()"><i class="bi bi-plus-lg"></i> Đánh giá thiết bị khác</button>
     </section>
@@ -140,11 +138,11 @@
           </div>
           <div class="request-actions">
             <div class="request-action-heading">
-              <span class="request-status-badge" [class]="statusClass(item.status)"><i class="bi bi-circle-fill"></i>{{ item.aiAssessmentStatus?.startsWith('Đang') ? item.aiAssessmentStatus : item.status || 'Chưa sửa chữa' }}</span>
+              <span class="request-status-badge" [class]="statusClass(item.status)"><i class="bi bi-circle-fill"></i>{{ getNormalizedAiStatus(item.aiAssessmentStatus)?.startsWith('Đang') ? getNormalizedAiStatus(item.aiAssessmentStatus) : item.status || 'Chưa sửa chữa' }}</span>
               <button type="button" class="history-link" (click)="openHistoryDetails(item)"><i class="bi bi-clock-history"></i> Xem lịch sử</button>
             </div>
             @if (hasAiAssessment(item)) {
-              <div class="ai-assessed-badge"><i class="bi bi-patch-check-fill"></i><span>Đã được AI đánh giá<small>{{ item.aiAssessmentHistory?.length }} kết quả Gemini</small></span></div>
+              <div class="ai-assessed-badge"><i class="bi bi-patch-check-fill"></i><span>Đã được AI đánh giá<small>{{ getAiAssessments(item).length }} kết quả Gemini</small></span></div>
             } @else if (isAiAssessmentPending(item)) {
               <button type="button" class="ai-button ai-pending-button" disabled><i class="bi bi-arrow-repeat"></i> AI đang xử lý...</button>
             } @else {
@@ -159,9 +157,9 @@
       <section class="history-detail">
         <div class="history-heading"><div><h3>Chi tiết yêu cầu {{ selectedHistoryRequest.repairOrderID }}</h3><p>{{ selectedHistoryRequest.deviceName }} · {{ selectedHistoryRequest.status || 'Chưa sửa chữa' }}</p></div><button type="button" class="history-link" (click)="selectedHistoryRequest = null">Đóng</button></div>
         <p>{{ selectedHistoryRequest.issueDescription }}</p>
-        @if (selectedHistoryRequest.aiAssessmentHistory?.length) {
+        @if (getAiAssessments(selectedHistoryRequest).length) {
           <h4>Lịch sử đánh giá và định giá Gemini</h4>
-          @for (assessment of selectedHistoryRequest.aiAssessmentHistory; track assessment.assessmentID) {
+          @for (assessment of getAiAssessments(selectedHistoryRequest); track assessment.assessmentID) {
             <article class="history-assessment">
               <div><strong>{{ assessment.createdAt | date:'dd/MM/yyyy HH:mm' }}</strong><small>{{ assessment.status }} · {{ assessment.source }}</small></div>
               <p>{{ assessment.summary }}</p>
@@ -177,7 +175,7 @@
         }
       </section>
     }
-    @if (aiAssessment) {
+    @if (aiAssessment && (aiAssessment.source === 'gemini' || aiAssessment.source === 'cache')) {
       <div class="ai-result">
         <strong>{{ aiAssessment.recommendation }}</strong>
         <p>{{ aiAssessment.summary }}</p>
@@ -244,7 +242,6 @@
             <strong>{{ selectedHistoryAssessment.recommendation }}</strong>
             <p>{{ selectedHistoryAssessment.summary }}</p>
           </div>
-          @if (selectedHistoryAssessment.error) { <p class="assessment-detail-error">{{ selectedHistoryAssessment.error }}</p> }
           <div class="assessment-detail-section-heading"><h3>Phương án và định giá tham khảo</h3><p>Giá chỉ mang tính tham khảo, cần được xác minh khi kiểm tra thực tế.</p></div>
           <div class="assessment-detail-options">
             <article class="assessment-option-repair"><span class="assessment-option-label"><i class="bi bi-tools"></i> SỬA CHỮA</span><strong>{{ selectedHistoryAssessment.estimatedPrices?.repair?.display }}</strong><p>{{ selectedHistoryAssessment.recommendations.repair.recommendation }}</p><small>{{ selectedHistoryAssessment.estimatedPrices?.repair?.rationale || selectedHistoryAssessment.recommendations.repair.nextStep }}</small></article>
